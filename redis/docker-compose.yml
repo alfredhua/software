@@ -28,16 +28,16 @@ services:
     networks:
       redis-master:
         ipv4_address: 172.50.0.3
-      ports:
-        - "6392:6392"
-        - "16392:16392"
-      stdin_open: true
-      tty: true
-      privileged: true
-      volumes: ["/c/project/docker/redis/config:/config"]
-      entrypoint:
-        - /bin/bash
-        - redis.sh
+    ports:
+      - "6392:6392"
+      - "16392:16392"
+    stdin_open: true
+    tty: true
+    privileged: true
+    volumes: ["/c/project/docker/redis/config:/config"]
+    entrypoint:
+      - /bin/bash
+      - redis.sh
   master3:
       image: redis:5.0
       container_name: master3
