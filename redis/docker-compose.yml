@@ -1,4 +1,4 @@
-version: "3.6"
+version: "3.3"
 services:
   master1: 
     image: redis:5.0 # 基础镜像
