@@ -15,7 +15,7 @@ services:
         ipv4_address: 172.50.0.2
     tty: true
     privileged: true # 拥有容器内命令执行的权限
-    volumes: ["/root/redis:/config"] # 映射数据卷，配置目录
+    volumes: ["./config:/config"] # 映射数据卷，配置目录
     entrypoint: # 设置服务默认的启动程序
       - /bin/bash
       - redis.sh
@@ -34,7 +34,7 @@ services:
     stdin_open: true
     tty: true
     privileged: true
-    volumes: ["/root/redis:/config"]
+    volumes: ["./config:/config"]
     entrypoint:
       - /bin/bash
       - redis.sh
@@ -53,7 +53,7 @@ services:
       stdin_open: true
       tty: true
       privileged: true
-      volumes: ["/root/redis:/config"]
+      volumes: ["./config:/config"]
       entrypoint:
         - /bin/bash
         - redis.sh
@@ -72,14 +72,14 @@ services:
       stdin_open: true
       tty: true
       privileged: true
-      volumes: ["/root/redis:/config"]
+      volumes: ["./config:/config"]
       entrypoint:
         - /bin/bash
         - redis.sh
   salve2:
       image: redis:5.0
       working_dir: /config
-      container_name: redis-salve2
+      container_name: salve2
       environment:
         - PORT=6395
       ports:
@@ -91,7 +91,7 @@ services:
           ipv4_address: 172.30.0.3
       tty: true
       privileged: true
-      volumes: ["/root/redis:/config"]
+      volumes: ["./config:/config"]
       entrypoint:
         - /bin/bash
         - redis.sh
@@ -110,7 +110,7 @@ services:
           ipv4_address: 172.30.0.4
       tty: true
       privileged: true
-      volumes: ["/root/redis:/config"]
+      volumes: ["./config:/config"]
       entrypoint:
         - /bin/bash
         - redis.sh
