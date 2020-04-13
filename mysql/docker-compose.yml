@@ -1,2 +1,28 @@
 version: "3.3"
 services:
+ mysql-master:
+    image: 'mysql:5.7'
+    restart: always
+    container_name: mysql-master
+    privileged: true
+    environment:
+      TZ: Asia/Shanghai
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    ports:
+      - '3339:3306'
+    volumes:
+      - "${MASTER}/data:/var/lib/mysql"
+      - "${MASTER}/conf:/etc/mysql/conf.d"
+ mysql-slave:
+    image: 'mysql:5.7'
+    restart: always
+    container_name: mysql-slave
+    privileged: true
+    environment:
+      TZ: Asia/Shanghai
+      MYSQL_ROOT_PASSWORD: ${SLAVE_ROOT_PASSWORD}
+    ports:
+      - '3340:3306'
+    volumes:
+      - "${SLAVE}/data:/var/lib/mysql"
+      - "${SLAVE}/conf:/etc/mysql/conf.d"
