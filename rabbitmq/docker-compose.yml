@@ -28,3 +28,5 @@ services:
     volumes:
       - ${RABBITMQ2_DIR}:/var/lib/rabbitmq
       - ${RABBITMQ2_DIR}/conf.d:/etc/rabbitmq
+    links:
+      - rabbitmq1
