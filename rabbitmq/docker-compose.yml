@@ -13,7 +13,7 @@ services:
       - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}
     volumes:
       - ${RABBITMQ1_DIR}:/var/lib/rabbitmq
-      - ${RABBITMQ1_CONFIG_DIR}:/etc/rabbitmq
+      - ${RABBITMQ1_DIR}/conf.d:/etc/rabbitmq
  rabbitmq2:
     image: 'rabbitmq'
     restart: always
@@ -27,4 +27,4 @@ services:
       - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}
     volumes:
       - ${RABBITMQ2_DIR}:/var/lib/rabbitmq
-      - ${RABBITMQ2_DIR}:/etc/rabbitmq
+      - ${RABBITMQ2_DIR}/conf.d:/etc/rabbitmq

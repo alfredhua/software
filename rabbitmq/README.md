@@ -1,0 +1,3 @@
+- 执行docker-compose up -d
+- 分别进入俩个容器：rabbitmq-plugins enable rabbitmq_management
+- 
