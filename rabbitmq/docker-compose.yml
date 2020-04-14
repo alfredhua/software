@@ -1,0 +1,30 @@
+version: "3.3"
+services:
+ rabbitmq1:
+    image: 'rabbitmq'
+    restart: always
+    privileged: true
+    container_name: rabbitmq1
+    ports:
+      - 5672:5672
+      - 15672:15672
+    environment:
+      - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER}
+      - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}
+    volumes:
+      - ${RABBITMQ1_DIR}:/var/lib/rabbitmq
+      - ${RABBITMQ1_CONFIG_DIR}:/etc/rabbitmq
+ rabbitmq2:
+    image: 'rabbitmq'
+    restart: always
+    privileged: true
+    container_name: rabbitmq2
+    ports:
+      - 5673:5672
+      - 15673:15672
+    environment:
+      - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER}
+      - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}
+    volumes:
+      - ${RABBITMQ2_DIR}:/var/lib/rabbitmq
+      - ${RABBITMQ2_DIR}:/etc/rabbitmq

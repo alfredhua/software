@@ -2,6 +2,6 @@
 
 - redis集群
 - mysql主从复制
-- rabbitmq镜像模式
+- rabbitmq镜像集群模式
 - 
   
