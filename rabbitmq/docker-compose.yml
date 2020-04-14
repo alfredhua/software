@@ -6,13 +6,15 @@ services:
     restart: always
     privileged: true
     container_name: rabbitmq1
+    networks:
+      net1:
+        ipv4_address: 172.30.0.2
     ports:
       - 5672:5672
       - 15672:15672
     environment:
       - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER}
       - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}
-     
     volumes:
       - ${RABBITMQ1_DIR}:/var/lib/rabbitmq
       - ${RABBITMQ1_DIR}/conf.d:/etc/rabbitmq
@@ -22,6 +24,9 @@ services:
     privileged: true
     hostname: rabbitmq2
     container_name: rabbitmq2
+    networks:
+      net1:
+        ipv4_address: 172.30.0.3
     ports:
       - 5673:5672
       - 15673:15672
@@ -35,3 +40,12 @@ services:
       - ${RABBITMQ2_DIR}/conf.d:/etc/rabbitmq
     links:
       - rabbitmq1
+    # extra_hosts:多机环境下替换links即可
+    #   - "rabbit1:10.5.0.3"
+networks:
+  net1:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.30.0.0/16
+          gateway: 172.30.0.1
