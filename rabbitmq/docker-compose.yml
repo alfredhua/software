@@ -11,6 +11,7 @@ services:
     environment:
       - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER}
       - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}
+     
     volumes:
       - ${RABBITMQ1_DIR}:/var/lib/rabbitmq
       - ${RABBITMQ1_DIR}/conf.d:/etc/rabbitmq
@@ -25,6 +26,8 @@ services:
     environment:
       - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER}
       - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}
+      - CLUSTERED=true
+      - CLUSTER_WITH=rabbitmq1
     volumes:
       - ${RABBITMQ2_DIR}:/var/lib/rabbitmq
       - ${RABBITMQ2_DIR}/conf.d:/etc/rabbitmq
