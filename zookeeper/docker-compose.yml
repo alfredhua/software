@@ -22,7 +22,7 @@ services:
       ZOO_MY_ID: 2
       ZOO_SERVERS: server.1=zk1:2888:3888 server.2=zk2:2888:3888 server.3=zk3:2888:3888
     networks:
-      zk-master:
+      zk-slave:
         ipv4_address: 172.30.0.2
  
   zk3:
@@ -35,7 +35,7 @@ services:
       ZOO_MY_ID: 3
       ZOO_SERVERS: server.1=zk1:2888:3888 server.2=zk2:2888:3888 server.3=zk3:2888:3888
     networks:
-      zk-master:
+      zk-slave:
         ipv4_address: 172.30.0.3
 
 networks:
