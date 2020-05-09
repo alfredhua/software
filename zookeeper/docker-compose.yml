@@ -23,7 +23,7 @@ services:
       ZOO_SERVERS: server.1=zk1:2888:3888 server.2=zk2:2888:3888 server.3=zk3:2888:3888
     networks:
       zk-master:
-        ipv4_address: 172.30.0.1
+        ipv4_address: 172.30.0.2
  
   zk3:
     image: zookeeper
@@ -36,7 +36,7 @@ services:
       ZOO_SERVERS: server.1=zk1:2888:3888 server.2=zk2:2888:3888 server.3=zk3:2888:3888
     networks:
       zk-master:
-        ipv4_address: 172.30.0.2
+        ipv4_address: 172.30.0.3
 
 networks:
   zk-master:
