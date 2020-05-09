@@ -1,4 +1,4 @@
-#
+# 搭建步骤
 
 - 执行docker-compose up -d
 - 进入mysql-master容器，进入mysql：
