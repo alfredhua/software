@@ -9,7 +9,7 @@ services:
     volumes:
       - ${ZK_MASTER_DIR}/data:/data
       - ${ZK_MASTER_DIR}/datalog:/datalog
-      # - ${ZK_MASTER_DIR}/conf/zoo.cfg:/conf/zoo.cfg
+      - ${ZK_MASTER_DIR}/conf:/conf
     environment:
       ZOO_MY_ID: 1
       ZOO_SERVERS: server.1=zk1:2888:3888 server.2=zk2:2888:3888 server.3=zk3:2888:3888
@@ -28,7 +28,7 @@ services:
     volumes:
       - ${ZK_SLAVE1_DIR}/data:/data
       - ${ZK_SLAVE1_DIR}/datalog:/datalog
-      # - ${ZK_SLAVE1_DIR}/conf/zoo.cfg:/conf/zoo.cfg
+      - ${ZK_SLAVE1_DIR}/conf:/conf
     # networks:
     #   zk-slave:
     #     ipv4_address: 172.30.0.2
@@ -45,7 +45,7 @@ services:
     volumes:
       - ${ZK_SLAVE2_DIR}/data:/data
       - ${ZK_SLAVE2_DIR}/datalog:/datalog
-      # - ${ZK_SLAVE2_DIR}/conf/zoo.cfg:/conf/zoo.cfg
+      - ${ZK_SLAVE2_DIR}/conf:/conf
     # networks:
     #   zk-slave:
     #     ipv4_address: 172.30.0.3
