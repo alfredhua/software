@@ -6,6 +6,10 @@ services:
     container_name: zk1
     ports:
       - "2181:2181"
+    volumes:
+      - ${ZK_MASTER_DIR}/data:/data
+      - ${ZK_MASTER_DIR}/datalog:/datalog
+      - ${ZK_MASTER_DIR}/conf/zoo.cfg:/conf/zoo.cfg
     environment:
       ZOO_MY_ID: 1
       ZOO_SERVERS: server.1=zk1:2888:3888 server.2=zk2:2888:3888 server.3=zk3:2888:3888
@@ -21,6 +25,10 @@ services:
     environment:
       ZOO_MY_ID: 2
       ZOO_SERVERS: server.1=zk1:2888:3888 server.2=zk2:2888:3888 server.3=zk3:2888:3888
+    volumes:
+      - ${ZK_SLAVE1_DIR}/data:/data
+      - ${ZK_SLAVE1_DIR}/datalog:/datalog
+      - ${ZK_SLAVE1_DIR}/conf/zoo.cfg:/conf/zoo.cfg
     # networks:
     #   zk-slave:
     #     ipv4_address: 172.30.0.2
@@ -34,6 +42,10 @@ services:
     environment:
       ZOO_MY_ID: 3
       ZOO_SERVERS: server.1=zk1:2888:3888 server.2=zk2:2888:3888 server.3=zk3:2888:3888
+    volumes:
+      - ${ZK_SLAVE2_DIR}/data:/data
+      - ${ZK_SLAVE2_DIR}/datalog:/datalog
+      - ${ZK_SLAVE2_DIR}/conf/zoo.cfg:/conf/zoo.cfg
     # networks:
     #   zk-slave:
     #     ipv4_address: 172.30.0.3
