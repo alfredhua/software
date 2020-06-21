@@ -15,4 +15,4 @@ scrape_configs:
       - targets: ['10.5.0.5:9090']
   - job_name: 'node'
     static_configs:
-      - targets: ['10.5.0.5:9100']
+      - targets: ['10.5.0.2:9100']
