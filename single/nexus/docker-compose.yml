@@ -1,0 +1,17 @@
+version: '3'
+services:
+  nexus:
+    image: 'sonatype/nexus3'
+    restart: always
+    privileged: true
+    container_name: nexus
+    ports:
+      - 8000:8000
+      - 8081:8081
+    volumes:
+      - ${NEXUS_DIR}:/nexus-data
+    networks:
+      - net-es
+networks:
+  net-es:
+    external: false

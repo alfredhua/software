@@ -1,0 +1,19 @@
+version: '3'
+services:
+  elasticsearch:
+    image: elasticsearch:6.8.7
+    container_name: es
+    environment:
+      - discovery.type=single-node
+    volumes:
+      - "${ES_DIR}/data:/usr/share/elasticsearch/data:rw"
+      - "${ES_DIR}/logs:/user/share/elasticsearch/logs:rw"
+      - "${ES_DIR}/conf/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml"
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    networks:
+      - net-es
+networks:
+  net-es:
+    external: false

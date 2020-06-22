@@ -1,0 +1,21 @@
+version: '3'
+services:
+  rabbitmq:
+    image: 'rabbitmq'
+    restart: always
+    privileged: true
+    container_name: rabbitmq
+    ports:
+      - 5672:5672
+      - 15672:15672
+    environment:
+      - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER}
+      - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}
+    volumes:
+      - ${RABBITMQ_DIR}:/var/lib/rabbitmq
+      - ${RABBITMQ_CONFIG_DIR}:/etc/rabbitmq
+    networks:
+      - net-es
+networks:
+  net-es:
+    external: false

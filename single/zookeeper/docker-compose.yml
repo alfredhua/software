@@ -1,0 +1,14 @@
+version: '3'
+services:
+  zookeeper:
+    image: 'zookeeper:3.4'
+    restart: always
+    privileged: true
+    container_name: zookeeper
+    ports:
+      - 2181:2181
+    networks:
+      - net-es
+networks:
+  net-es:
+    external: false

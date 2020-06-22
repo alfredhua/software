@@ -1,0 +1,19 @@
+version: '3'
+services:
+  redis:
+    image: 'redis'
+    restart: always
+    container_name: redis
+    privileged: true
+    ports:
+      - 6379:6379
+    command:
+      redis-server
+    volumes:
+      - "${REDIS_DIR}/conf:/usr/local/etc/redis"
+      - "${REDIS_DIR}/data:/data"
+    networks:
+      - net-es
+networks:
+  net-es:
+    external: false

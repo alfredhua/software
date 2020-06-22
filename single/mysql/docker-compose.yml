@@ -1,0 +1,21 @@
+version: '3'
+services:
+  mysql:
+    image: 'mysql:5.7'
+    restart: always
+    container_name: mysql
+    privileged: true
+    environment:
+      TZ: Asia/Shanghai
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    ports:
+      - '3306:3306'
+    volumes:
+      - "${MYSQL_DIR}/data:/var/lib/mysql"
+      - "${MYSQL_DIR}/conf:/etc/mysql/conf.d"
+    networks:
+      - net-es
+
+networks:
+  net-es:
+    external: false
