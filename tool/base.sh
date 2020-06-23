@@ -1,17 +1,14 @@
 #!/bin/sh
-current_path=`pwd`
+current_path='/Users/hua/workspace/self/docker'
 
-alias enter=$current_path/exec-docker.sh $1
+alias enter=$current_path/tool/exec-docker.sh $1
 
-####  migrate环境变量
-MIGRATIONS_HOME=/Users/hua/workspace/software/mybatis-migrations
-export MIGRATIONS=$MIGRATIONS_HOME/bin
-export PATH=$MIGRATIONS:$PATH
-############## end #############
+alias c='clear'
 
+# source $current_path/project/manage.sh
 
-####  jad环境变量
-JAD_HOME=/Users/hua/workspace/software/jad
-export PATH=$JAD_HOME:$PATH
-############## end #############
+# source $current_path/project/zrcaifu.sh
 
+alias status="$current_path/tool/git/git.sh status"
+alias pull="$current_path/tool/git/git.sh pull"
+alias push="$current_path/tool/git/git.sh push $1"
