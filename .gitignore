@@ -2,4 +2,7 @@
 
 /single/data/*
 /many/data/*
-!/soft/install/*
+/soft/*
+!/soft/install
+!/soft/linux_install.sh
+!/soft/mac_install.sh
