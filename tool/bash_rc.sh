@@ -1,6 +1,6 @@
 #!/bin/sh
 
-env_path='/Users/hua/workspace/self/software'
+env_path='/Users/hua/workspace/software'
 
 ####  migrate环境变量
 MIGRATIONS_HOME=$env_path/mybatis-migrations
