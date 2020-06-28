@@ -1,5 +1,5 @@
 #!/bin/sh
-current_path='/Users/hua/workspace/self/docker'
+current_path='/Users/hua/workspace/self/software'
 
 
 alias enter=$current_path/tool/exec-docker.sh $1

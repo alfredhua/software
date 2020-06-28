@@ -1,6 +1,6 @@
 #!/bin/sh
 
-env_path='/Users/hua/workspace/self/docker/soft'
+env_path='/Users/hua/workspace/self/software'
 
 ####  migrate环境变量
 MIGRATIONS_HOME=$env_path/mybatis-migrations
