@@ -14,6 +14,15 @@ services:
       - "9300:9300"
     networks:
       - net-es
+  kibana:
+    image: kibana:6.8.10
+    container_name: kibana
+    ports:
+      - "5601:5601"
+    volumes:
+      - "${KIBANA_DIR}/config/kibana.yml:/usr/share/kibana/config/kibana.yml"
+    networks:
+      - net-es
 networks:
   net-es:
     external: false
