@@ -8,6 +8,7 @@ services:
     - MODE=standalone
     ports:
      - "8848:8848"
+     - "9100:9100"
     networks:
       - net-es
 networks:
