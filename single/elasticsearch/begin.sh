@@ -1,6 +1,7 @@
 #! /bin/sh
 
 mkdir -pv ../data/elasticsearch/conf/
+mkdir -pv ../data/kibana/conf/
 
 cd ../data/elasticsearch/conf/
 
