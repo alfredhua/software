@@ -5,10 +5,12 @@ services:
     container_name: es
     environment:
       - discovery.type=single-node
+      - cluster.name=elasticsearch
+      - bootstrap.memory_lock=true
+      - network.host=0.0.0.0
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
     volumes:
-      - "${ES_DIR}/data:/usr/share/elasticsearch/data"
-      - "${ES_DIR}/logs:/user/share/elasticsearch/logs"
-      - "${ES_DIR}/conf/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml"
+      - esdata:/usr/share/elasticsearch/data
     ports:
       - "9200:9200"
       - "9300:9300"
@@ -23,6 +25,10 @@ services:
       - "${KIBANA_DIR}/config/kibana.yml:/usr/share/kibana/config/kibana.yml"
     networks:
       - net-es
+
+volumes:
+  esdata:
+    driver: local
 networks:
   net-es:
     external: false
