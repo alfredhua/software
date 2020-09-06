@@ -10,8 +10,8 @@ services:
       - network.host=0.0.0.0
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
     volumes:
-      - ${ES_DIR}/data:/usr/share/elasticsearch/data
-      - ${ES_DIR}/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+      - "${ES_DIR}/data:/usr/share/elasticsearch/data"
+      - "${ES_DIR}/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml"
     ports:
       - "9200:9200"
       - "9300:9300"
