@@ -2,8 +2,8 @@
 
 current_path=`pwd`
 
-mkdir -pv ../data/elasticsearch/conf/
-mkdir -pv ../data/kibana/conf/
+mkdir -pv ./data/elasticsearch/conf/
+mkdir -pv ./data/kibana/conf/
 
 cd ../data/elasticsearch/conf/
 
