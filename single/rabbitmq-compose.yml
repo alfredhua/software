@@ -15,7 +15,7 @@ services:
       - ${RABBITMQ_DIR}:/var/lib/rabbitmq
       - ${RABBITMQ_CONFIG_DIR}:/etc/rabbitmq
     networks:
-      - net-es
+      - net-mq
 networks:
-  net-es:
+  net-mq:
     external: false

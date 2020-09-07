@@ -13,7 +13,7 @@ services:
       - "${REDIS_DIR}/conf:/usr/local/etc/redis"
       - "${REDIS_DIR}/data:/data"
     networks:
-      - net-es
+      - net-redis
 networks:
-  net-es:
+  net-redis:
     external: false

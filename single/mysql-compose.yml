@@ -14,8 +14,8 @@ services:
       - "${MYSQL_DIR}/data:/var/lib/mysql"
       - "${MYSQL_DIR}/conf:/etc/mysql/conf.d"
     networks:
-      - net-es
+      - net-mysql
 
 networks:
-  net-es:
+  net-mysql:
     external: false
