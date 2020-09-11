@@ -29,5 +29,8 @@ alias c='clear'
 alias status="$env_path/tool/git/git.sh status"
 alias pull="$env_path/tool/git/git.sh pull"
 alias push="$env_path/tool/git/git.sh push $1"
+alias gdiff="$env_path/tool/git/git.sh gdiff $1"
+alias checkout="$env_path/tool/git/git.sh checkout $1"
+
 source $env_path/project/manage.sh
 source $env_path/project/zrcaifu.sh
