@@ -17,4 +17,7 @@ then
 elif [ $1 == 'gdiff' ];
 then
     git diff $2 
+elif [ $1 == 'merge' ];
+then
+    git merge $2 
 fi

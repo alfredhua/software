@@ -18,8 +18,6 @@ alias test2="ssh root@10.5.0.2"
 alias test3="ssh root@10.5.0.3"
 alias test4="ssh root@10.5.0.4"
 
-export vip=$ZRCAIFU_HOME"/zrcf-vip/red-all"
-
 alias vip=$ZRCAIFU_HOME"/zrcf-vip/red-all"
 alias sdmain="cd $vip && ./tools/start.sh dev-main"
 alias sdadmin="cd $vip && ./tools/start.sh dev-admin"
