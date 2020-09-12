@@ -42,3 +42,13 @@ alias c='clear'
 ## 项目相关
 source $env_path/tool/project/manage.sh
 source $env_path/tool/project/zrcaifu.sh
+
+## 服务器相关
+
+alias sshali="ssh root@39.98.143.124"
+alias sshtx="ssh root@193.112.56.221"
+
+alias ssh6="ssh root@192.168.1.6"
+alias ssh9="ssh root@192.168.1.9"
+
+

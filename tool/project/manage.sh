@@ -13,5 +13,3 @@ alias m-admin="cd $MANAGE_HOME && ./tool/dev/dev-start.sh admin "
 alias m-mq="cd $MANAGE_HOME && ./tool/dev/dev-start.sh mq "
 alias m-quartz="cd $MANAGE_HOME && ./tool/dev/dev-start.sh quartz "
 
-alias sshali="ssh root@39.98.143.124"
-alias sshtx="ssh root@193.112.56.221"
