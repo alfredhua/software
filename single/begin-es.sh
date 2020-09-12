@@ -12,7 +12,7 @@ echo 'network.host: 0.0.0.0' >> elasticsearch.yml
 
 cd $current_path
 
-cd ../data/kibana/conf/
+cd ./data/kibana/conf/
 
 echo 'elasticsearch.hosts: "http://es:9200"' >> kibana.yml
 echo 'server.name: kibana' >> kibana.yml
