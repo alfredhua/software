@@ -3,7 +3,7 @@
 env_path=''
 if [ "$(uname)"=="Darwin" ]
 then
-    env_path=`dirname $0`
+    env_path="`dirname $0`"
 elif [ "$(expr substr $(uname -s) 1 5)"=="Linux" ]
 then
     env_path="`pwd`"/"`dirname $0`"
@@ -49,7 +49,6 @@ alias c='clear'
 
 ## 项目相关
 
-echo $env_path
 source $env_path/project/manage.sh
 source $env_path/project/zrcaifu.sh
 
