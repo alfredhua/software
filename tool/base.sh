@@ -4,9 +4,11 @@ env_path=''
 if [ "$(uname)"=="Darwin" ]
 then
     env_path="`dirname $0`"
+    echo "mac"
 elif [ "$(expr substr $(uname -s) 1 5)"=="Linux" ]
 then
     env_path="/opt/software/tool"
+    echo "linux"
 fi
 
 echo $env_path
