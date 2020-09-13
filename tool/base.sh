@@ -1,6 +1,6 @@
 #!/bin/sh
-env_path='/Users/hua/workspace/software'
 
+env_path="`dirname $0`"
 ####  migrate环境变量
 MIGRATIONS_HOME=$env_path/mybatis-migrations
 export MIGRATIONS=$MIGRATIONS_HOME/bin
@@ -26,22 +26,22 @@ export PATH=$LEIN_HOME:$PATH
 ## 快捷脚本
 
 ##docker 相关
-alias denter="$env_path/tool/script/docker.sh enter $1"
-alias dstart="$env_path/tool/script/docker.sh start $1"
-alias dstop="$env_path/tool/script/docker.sh down $1"
+alias denter="$env_path/script/docker.sh enter $1"
+alias dstart="$env_path/script/docker.sh start $1"
+alias dstop="$env_path/script/docker.sh down $1"
 
 ## git相关
-alias gstatus="$env_path/tool/script/git.sh status"
-alias gpull="$env_path/tool/script/git.sh pull"
-alias gpush="$env_path/tool/script/git.sh push $1"
-alias gdiff="$env_path/tool/script/git.sh gdiff $1"
-alias gche="$env_path/tool/script/git.sh checkout $1"
+alias gstatus="$env_path/script/git.sh status"
+alias gpull="$env_path/script/git.sh pull"
+alias gpush="$env_path/script/git.sh push $1"
+alias gdiff="$env_path/script/git.sh gdiff $1"
+alias gche="$env_path/script/git.sh checkout $1"
 
 alias c='clear'
 
 ## 项目相关
-source $env_path/tool/project/manage.sh
-source $env_path/tool/project/zrcaifu.sh
+source $env_path/project/manage.sh
+source $env_path/project/zrcaifu.sh
 
 ## 服务器相关
 

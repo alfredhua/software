@@ -3,7 +3,8 @@
 
 #### 财富项目目录
 
-ZRCAIFU_HOME="/Users/hua/workspace/zrcf/"
+ZRCAIFU_HOME="/Users/hua/workspace/zrcf"
+
 ### 财富VIP项目
 alias vip=$ZRCAIFU_HOME"/zrcf-vip/red-all"
 alias sdmain="cd $vip && ./tools/start.sh dev-main"

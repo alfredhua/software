@@ -1,7 +1,6 @@
 #!/bin/sh
 
 PROJECT_HOME="/Users/hua/workspace/self"
-
 MANAGE_HOME=$PROJECT_HOME"/manage"
 
 alias topro="cd $PROJECT_HOME"
