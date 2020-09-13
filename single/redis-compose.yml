@@ -8,9 +8,9 @@ services:
     ports:
       - 6379:6379
     command:
-      redis-server
+      "redis-server ${REDIS_DIR}/conf/redis.conf"
     volumes:
-      - "${REDIS_DIR}/conf:/usr/local/etc/redis"
+      - "${REDIS_DIR}/conf/redis.conf:/usr/local/etc/redis/redis.conf"
       - "${REDIS_DIR}/data:/data"
     networks:
       - net-redis
