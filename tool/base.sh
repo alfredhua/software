@@ -6,7 +6,7 @@ then
     env_path="`dirname $0`"
 elif [ "$(expr substr $(uname -s) 1 5)"=="Linux" ]
 then
-    env_path="`pwd`"/"`dirname ${BASH_SOURCE[0]}`"
+    env_path="/opt/software/tool"
 fi
 
 echo $env_path
