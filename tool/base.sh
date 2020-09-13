@@ -1,17 +1,7 @@
 #!/bin/sh
 
-env_path=''
-if [ "$(uname)"=="Darwin" ]
-then
-    env_path="`dirname $0`"
-    echo "mac"
-elif [ "$(expr substr $(uname -s) 1 5)"=="Linux" ]
-then
-    env_path="/opt/software/tool"
-    echo "linux"
-fi
+env_path="/Users/hua/workspace/software/tool"
 
-echo $env_path
 ####  migrate环境变量
 MIGRATIONS_HOME=$env_path/mybatis-migrations
 export MIGRATIONS=$MIGRATIONS_HOME/bin
@@ -51,7 +41,6 @@ alias gche="$env_path/script/git.sh checkout $1"
 alias c='clear'
 
 ## 项目相关
-
 source $env_path/project/manage.sh
 source $env_path/project/zrcaifu.sh
 
