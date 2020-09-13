@@ -1,6 +1,17 @@
 #!/bin/sh
 
-env_path="`dirname $0`"
+env_path=''
+if [ "$(uname)"=="Darwin" ]
+then
+    env_path=`dirname $0`
+elif [ "$(expr substr $(uname -s) 1 5)"=="Linux" ]
+then
+    env_path="`pwd`"/"`dirname $0`"
+elif [ "$(expr substr $(uname -s) 1 10)"=="MINGW32_NT" ]
+then
+
+fi
+
 ####  migrate环境变量
 MIGRATIONS_HOME=$env_path/mybatis-migrations
 export MIGRATIONS=$MIGRATIONS_HOME/bin
