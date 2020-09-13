@@ -40,6 +40,8 @@ alias gche="$env_path/script/git.sh checkout $1"
 alias c='clear'
 
 ## 项目相关
+
+echo $env_path
 source $env_path/project/manage.sh
 source $env_path/project/zrcaifu.sh
 
