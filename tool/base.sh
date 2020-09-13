@@ -9,6 +9,7 @@ then
     env_path="`pwd`"/"`dirname $0`"
 fi
 
+echo $env_path
 ####  migrate环境变量
 MIGRATIONS_HOME=$env_path/mybatis-migrations
 export MIGRATIONS=$MIGRATIONS_HOME/bin
