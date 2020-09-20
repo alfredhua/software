@@ -32,11 +32,13 @@ alias dstart="$env_path/script/docker.sh start $1"
 alias dstop="$env_path/script/docker.sh down $1"
 
 ## git相关
-alias gstatus="$env_path/script/git.sh status"
-alias gpull="$env_path/script/git.sh pull"
-alias gpush="$env_path/script/git.sh push $1"
-alias gdiff="$env_path/script/git.sh gdiff $1"
-alias gche="$env_path/script/git.sh checkout $1"
+source $env_path/script/git.sh
+
+# alias gstatus="$env_path/script/git.sh status"
+# alias gpull="$env_path/script/git.sh pull"
+# alias gpush="$env_path/script/git.sh push $1"
+# alias gdiff="$env_path/script/git.sh gdiff $1"
+# alias gche="$env_path/script/git.sh checkout $1"
 
 alias c='clear'
 
