@@ -1,13 +1,18 @@
 #!/bin/sh
+alias denter="enter"
+alias compstart="compose_start"
+alias comstop="compose_stop"
 
-if [ $1 == 'enter' ]
-then
-    docker exec -it $2 bash
-elif [ $1 == 'start' ]
-then
-    docker-compose -f $2-compose.yml up -d
-elif [ $1 == 'down' ]
-then
-    docker-compose -f $2-compose.yml down
-fi
+function enter(){
+    docker exec -it $1 bash
+}
+
+
+function compose_start(){
+   docker-compose -f $1 up -d
+}
+
+function compose_stop(){
+   docker-compose -f $1 down
+}
 

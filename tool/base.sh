@@ -2,56 +2,28 @@
 
 env_path="/Users/hua/workspace/software/tool"
 
-####  migrate环境变量
-MIGRATIONS_HOME=$env_path/mybatis-migrations
-export MIGRATIONS=$MIGRATIONS_HOME/bin
-export PATH=$MIGRATIONS:$PATH
-############## end #############
 
-####  gradle环境变量
-GRADLE_HOME=$env_path/gradle/bin
-export PATH=$GRADLE_HOME:$PATH
-############## end #############
-
-####  jad环境变量
-JAD_HOME=$env_path/jad
-export PATH=$JAD_HOME:$PATH
-############## end #############
-
-####  lein
-LEIN_HOME=$env_path/soft/lein/
-export PATH=$LEIN_HOME:$PATH
-############## end #############
-
+source $env_path/script/path.sh
 
 ## 快捷脚本
 
 ##docker 相关
-alias denter="$env_path/script/docker.sh enter $1"
-alias dstart="$env_path/script/docker.sh start $1"
-alias dstop="$env_path/script/docker.sh down $1"
+source $env_path/script/docker.sh
 
 ## git相关
 source $env_path/script/git.sh
 
-# alias gstatus="$env_path/script/git.sh status"
-# alias gpull="$env_path/script/git.sh pull"
-# alias gpush="$env_path/script/git.sh push $1"
-# alias gdiff="$env_path/script/git.sh gdiff $1"
-# alias gche="$env_path/script/git.sh checkout $1"
+## centos操作习惯
 
-alias c='clear'
-
+source $env_path/script/centos.sh
 ## 项目相关
 source $env_path/project/manage.sh
 source $env_path/project/zrcaifu.sh
 
 ## 服务器相关
 
-alias sshali="ssh root@39.98.143.124"
-alias sshtx="ssh root@193.112.56.221"
+source $env_path/script/ssh.sh
 
-alias ssh6="ssh root@192.168.1.6"
-alias ssh9="ssh root@192.168.1.9"
+
 
 
