@@ -6,7 +6,7 @@ then
 elif [ $1 == 'start' ]
 then
     docker-compose -f $2-compose.yml up -d
-elif [ $1 == 'stop' ]
+elif [ $1 == 'down' ]
 then
     docker-compose -f $2-compose.yml down
 fi
