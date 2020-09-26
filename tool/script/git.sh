@@ -5,12 +5,14 @@ alias gstatus="git status"
 alias gpull="git pull"
 alias gpush="push $1"
 alias gdiff="git diff"
-alias gcheck="git checkout"
+alias gcheckout="git checkout"
 alias gmerge="git merge"
 alias grebase="git rebase"
 alias gstash="git stash"
 alias gpick="git cherry-pick"
 alias greset="git reset"
+alias gbranch="git branch"
+alias glog="git log"
 
 function push(){
     git add .
