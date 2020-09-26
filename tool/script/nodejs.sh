@@ -5,7 +5,6 @@
 alias nrstart="npm run start"
 alias nrdev="npm run dev"
 alias ninstall="npm install"
-alias ninstallg="npm install -g"
 alias ninstallg="npm_install_g"
 
 
