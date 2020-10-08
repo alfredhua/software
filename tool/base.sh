@@ -1,11 +1,12 @@
 #!/bin/sh
 
-env_path="/Users/hua/workspace/software/tool"
+ALL_PATH="/Users/hua/workspace/software/soft"
 
-
-source $env_path/script/path.sh
+source $env_path/path.sh
 
 ## 快捷脚本
+
+env_path="/Users/hua/workspace/software/tool"
 
 ##docker 相关
 source $env_path/script/docker.sh
@@ -23,7 +24,3 @@ source $env_path/project/zrcaifu.sh
 ## 服务器相关
 
 source $env_path/script/ssh.sh
-
-
-
-

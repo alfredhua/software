@@ -1,10 +1,15 @@
 #!/bin/sh
 current_path=`pwd`
 
-yum install java-1.8.0-openjdk* -y
+
+brew tap homebrew/cask-versions
+
+brew cask install java8
+
+
+# yum install java-1.8.0-openjdk* -y
 
 # brew tap homebrew/cask-versions
-# brew cask install java8
 
 # cp $current_path/tool/install/soft/jdk-8u241-linux-x64.tar.gz .
 # tar -xzvf jdk-8u241-linux-x64.tar.gz
