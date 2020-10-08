@@ -4,5 +4,5 @@
 /many/data/*
 /soft/*
 !/soft/install
-!/soft/linux_install.sh
-!/soft/mac_install.sh
+!/soft/install.sh
+!/soft/path.sh
