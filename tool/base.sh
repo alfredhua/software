@@ -2,7 +2,7 @@
 
 ALL_PATH="/Users/hua/workspace/software/soft"
 
-source $env_path/path.sh
+source $ALL_PATH/path.sh
 
 ## 快捷脚本
 
