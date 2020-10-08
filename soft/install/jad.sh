@@ -1,4 +1,7 @@
 #!/bin/sh
+
+echo ' begin install jad '
+
 current_path=`pwd`
 
 if [ ! -d $current_path/jad ]; then
@@ -7,3 +10,6 @@ if [ ! -d $current_path/jad ]; then
     unzip -n jad158g.mac.intel.zip -d jad/ 
     rm -rf $current_path/jad158g.mac.intel.zip
 fi
+
+echo ' end jad '
+

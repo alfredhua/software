@@ -1,4 +1,7 @@
 #!/bin/sh
+
+echo ' begin install openjdk8'
+
 current_path=`pwd`
 
 
@@ -20,3 +23,5 @@ brew cask install java8
 # echo "export CLASS_PATH=.:$current_path/jdk8/lib/dt.jar:$current_path/jdk8/lib/tools.jar:$current_path/jdk8/jre/lib" >> $current_path/tool/base.sh
 # echo "export PATH=\$JAVA_HOME/bin:\$PATH" >> $current_path/tool/base.sh
 # echo " " >> $current_path/tool/base.sh
+
+echo ' end openjdk8 '

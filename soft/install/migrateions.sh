@@ -1,4 +1,7 @@
 #!/bin/sh
+
+echo ' begin install migrateions '
+
 current_path=`pwd`
 
 if [ ! -d $current_path/mybatis-migrations ]; then
@@ -8,3 +11,6 @@ if [ ! -d $current_path/mybatis-migrations ]; then
     mv mybatis-migrations-3.3.5 mybatis-migrations
     rm -rf mybatis-migrations-3.3.5-bundle.zip
 fi
+
+echo ' end migrateions '
+

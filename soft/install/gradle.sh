@@ -1,4 +1,7 @@
 #!/bin/sh
+
+echo ' begin install gradle'
+
 current_path=`pwd`
 
 if [ ! -d $current_path/gradle ]; then
@@ -8,4 +11,5 @@ if [ ! -d $current_path/gradle ]; then
     mv gradle-6.0.1 gradle
 fi
 
+echo ' end gradle '
 

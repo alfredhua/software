@@ -1,6 +1,8 @@
 #!/bin/sh
 ## 钉钉内网穿透工具
 
+echo ' begin install  pierced'
+
 current_path=`pwd`
 
 if [ ! -d $current_path/pierced ]; then
@@ -11,3 +13,5 @@ if [ ! -d $current_path/pierced ]; then
   echo "./mac_64/ding -config=./mac_64/ding.cfg -subdomain=\$1 \$2">> $current_path/pierced/start.sh
   chmod -R 755 $current_path/pierced/start.sh
 fi
+
+echo ' end pierced '
