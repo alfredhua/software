@@ -13,6 +13,7 @@ alias gpick="git cherry-pick"
 alias greset="git reset"
 alias gbranch="git branch"
 alias glog="git log"
+alias gadd="git add"
 
 function push(){
     git add .
