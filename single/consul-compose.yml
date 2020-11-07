@@ -6,8 +6,7 @@ services:
     restart: always
     privileged: true
     volumes:
-      - ${CONSUL_IDR}/data:/consul/data
-      - ${CONSUL_IDR}/config:/consul/config
+      - consuldata:/consul
     ports:
       - 8300:8300
       - 8301:8301
@@ -18,5 +17,7 @@ services:
       - 8500:8500
       - 53:53/udp
     command: agent -server -bind=0.0.0.0 -client=0.0.0.0 -node=consul_Server1 -bootstrap-expect=1 -ui
-
+volumes:
+  consuldata:
+    driver: local
 ## CONSUL_IDR=./

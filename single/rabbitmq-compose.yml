@@ -12,10 +12,13 @@ services:
       - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER}
       - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}
     volumes:
-      - ${RABBITMQ_DIR}:/var/lib/rabbitmq
-      - ${RABBITMQ_CONFIG_DIR}:/etc/rabbitmq
+      - rabbitmqdata:/var/lib/rabbitmq
     networks:
       - net-mq
+volumes:
+  rabbitmqdata:
+    driver: local
+
 networks:
   net-mq:
     external: false

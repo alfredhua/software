@@ -5,11 +5,14 @@ services:
     container_name: hbase
     ports:
       - "16010:16010"
-    # volumes:
-    #   - "${HBASE_DIR}:/hbase"
+    volumes:
+      - hbasedata:/hbase
     networks:
       - net-hbase
-
+volumes:
+  hbasedata:
+    driver: local
+    
 networks:
   net-hbase:
     external: false

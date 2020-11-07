@@ -11,6 +11,11 @@ services:
      - "9100:9100"
     networks:
       - net-nacos
+
+volumes:
+  nacosdata:
+    driver: local
+    
 networks:
   net-nacos:
     external: false

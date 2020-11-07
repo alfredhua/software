@@ -9,9 +9,13 @@ services:
       - 8000:8000
       - 8081:8081
     volumes:
-      - ${NEXUS_DIR}:/nexus-data
+      - nexusdata:/nexus-data
     networks:
       - net-nexus
+volumes:
+  nexusdata:
+    driver: local
+
 networks:
   net-nexus:
     external: false
