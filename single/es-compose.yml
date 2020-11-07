@@ -1,5 +1,14 @@
 version: '3'
 services:
+  cerebro:
+    image: lmenezes/cerebro:0.8.3
+    container_name: cerebro
+    ports:
+      - "9000:9000"
+    command:
+      - -Dhosts.0.host=http://es:9200
+    networks:
+      - net-es
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.1.0
     container_name: es
