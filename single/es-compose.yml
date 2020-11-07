@@ -14,8 +14,8 @@ services:
         soft: -1
         hard: -1
     volumes:
-      - "${ES_DIR}/data:/usr/share/elasticsearch/data"
-      - "${ES_DIR}/conf/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml"
+      - esdata:/usr/share/elasticsearch
+      # - "esdata/conf/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml"
     ports:
       - "9200:9200"
       - "9300:9300"
@@ -36,6 +36,9 @@ services:
       - XPACK_MONITORING_COLLECTION_ENABLED="true"
     networks:
       - net-es
+volumes:
+  esdata:
+    driver: local
 
 networks:
   net-es:
