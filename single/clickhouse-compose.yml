@@ -2,7 +2,7 @@ version: '3'
 services:
   ch-client:
     image: yandex/clickhouse-client
-    command: ['--host', 'server']
+    command: ['--host ch-server:9001', 'server']
   ch-server:
     image: yandex/clickhouse-server
     privileged: true
@@ -12,8 +12,13 @@ services:
         hard: 262144
     ports:
       - 8123:8123
+      - 9001:9000
 volumes:
   chserver:
     driver: local
   chclient:
     driver: local
+
+networks:
+  net-clickhouse:
+    external: false
