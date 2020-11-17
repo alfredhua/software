@@ -1,0 +1,16 @@
+version: '3'
+services:
+  ch-client:
+    image: yandex/clickhouse-client
+    build: docker/client
+    command: ['--host', 'server']
+  ch-server:
+    image: yandex/clickhouse-server
+    build: docker/server
+    ports:
+      - 8123:8123
+volumes:
+  chserver:
+    driver: local
+  chclient:
+    driver: local
