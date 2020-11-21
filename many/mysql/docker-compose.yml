@@ -11,8 +11,8 @@ services:
     ports:
       - '3339:3306'
     volumes:
-      - "${MASTER}/data:/var/lib/mysql"
-      - "${MASTER}/conf:/etc/mysql/conf.d"
+      - "mysqlMaster/data:/var/lib/mysql"
+      - "mysqlMaster/conf:/etc/mysql/conf.d"
  mysql-slave:
     image: 'mysql:5.7'
     restart: always
@@ -24,5 +24,10 @@ services:
     ports:
       - '3340:3306'
     volumes:
-      - "${SLAVE}/data:/var/lib/mysql"
-      - "${SLAVE}/conf:/etc/mysql/conf.d"
+      - "mysqlSlave/data:/var/lib/mysql"
+      - "mysqlSlave/conf:/etc/mysql/conf.d"
+volumes:
+  mysqlMaster:
+    driver: local
+  mysqlSlave:
+    driver: local

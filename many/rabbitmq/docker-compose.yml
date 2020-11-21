@@ -13,11 +13,10 @@ services:
       - 5672:5672
       - 15672:15672
     environment:
-      - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER}
-      - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}
+      - RABBITMQ_DEFAULT_USER=demo
+      - RABBITMQ_DEFAULT_PASS=demo
     volumes:
-      - ${RABBITMQ1_DIR}:/var/lib/rabbitmq
-      - ${RABBITMQ1_DIR}/conf.d:/etc/rabbitmq
+      - rabbitmq1:/var/lib/rabbitmq
  rabbitmq2:
     image: 'rabbitmq'
     restart: always
@@ -31,17 +30,21 @@ services:
       - 5673:5672
       - 15673:15672
     environment:
-      - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER}
-      - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}
+      - RABBITMQ_DEFAULT_USER=demo
+      - RABBITMQ_DEFAULT_PASS=demo
       - CLUSTERED=true
       - CLUSTER_WITH=rabbitmq1
     volumes:
-      - ${RABBITMQ2_DIR}:/var/lib/rabbitmq
-      - ${RABBITMQ2_DIR}/conf.d:/etc/rabbitmq
+      - rabbitmq2:/var/lib/rabbitmq
     links:
       - rabbitmq1
     # extra_hosts:多机环境下替换links即可
     #   - "rabbit1:10.5.0.3"
+volumes:
+  rabbitmq:
+    driver: local
+  rabbitmq2:
+    driver: local
 networks:
   net1:
      driver: bridge # 创建一个docker 的桥接网络
