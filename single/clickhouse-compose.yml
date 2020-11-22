@@ -1,9 +1,5 @@
 version: '3'
 services:
-  ch-client:
-    image: yandex/clickhouse-client
-    container_name: clickhouse-client
-    command: ['--host ch-server:9001', 'server']
   ch-server:
     image: yandex/clickhouse-server
     container_name: clickhouse-server
@@ -17,8 +13,6 @@ services:
       - 9001:9000
 volumes:
   chserver:
-    driver: local
-  chclient:
     driver: local
 
 networks:
