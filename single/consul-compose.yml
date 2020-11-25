@@ -6,8 +6,7 @@ services:
     restart: always
     privileged: true
     volumes:
-      - ${CONSUL_IDR}/data:/consul/data
-      - ${CONSUL_IDR}/config:/consul/config
+      - consuldata:/consul
     ports:
       - 8300:8300
       - 8301:8301
@@ -25,5 +24,6 @@ services:
 networks:
   overlay:
     external: true
-~
-
+volumes:
+  consuldata:
+    driver: local

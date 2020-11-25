@@ -9,6 +9,11 @@ services:
       - 2181:2181
     networks:
       - net-zk
+
+volumes:
+  zkdata:
+    driver: local
+
 networks:
   net-zk:
     external: false
