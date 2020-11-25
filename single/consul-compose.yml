@@ -18,5 +18,12 @@ services:
       - 8500:8500
       - 53:53/udp
     command: agent -server -bind=0.0.0.0 -client=0.0.0.0 -node=consul_Server1 -bootstrap-expect=1 -ui
+    networks:
+      overlay:
+        ipv4_address: 192.168.88.80
 
-## CONSUL_IDR=./
+networks:
+  overlay:
+    external: true
+~
+
