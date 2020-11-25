@@ -19,7 +19,7 @@ services:
     command: agent -server -bind=0.0.0.0 -client=0.0.0.0 -node=consul_Server1 -bootstrap-expect=1 -ui
     networks:
       overlay:
-        ipv4_address: 192.168.88.80
+        ipv4_address: 10.5.0.2
 
 networks:
   overlay:
