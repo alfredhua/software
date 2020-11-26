@@ -5,10 +5,14 @@ services:
     contailer_name: tabix
     ports: 
        - 8120:80
+    volumes:
+      - tabix:/
   ch-server:
     image: yandex/clickhouse-server
     container_name: clickhouse-server
     privileged: true
+    volumes:
+      - chserver:/
     ulimits:
       nofile:
         soft: 262144
@@ -19,7 +23,8 @@ services:
 volumes:
   chserver:
     driver: local
-
+  tabix:
+    driver: local
 networks:
-  net-clickhouse:
-    external: false
+  overlay:
+    external: true
