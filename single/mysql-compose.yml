@@ -13,19 +13,14 @@ services:
     volumes:
       - mysqldata:/var/lib/mysql
     networks:
-      - net-mysql
-    networks:
       extnetwork:
-        ipv4_address: 172.19.0.2
+        ipv4_address: 172.19.1.2
 volumes:
   mysqldata:
     driver: local
-# networks:
-#   netoverlay:
-#     driver: overlay
 networks:
-   extnetwork:
-      netoverlay:
-         config:
-         - subnet: 172.19.0.0/16
-           gateway: 172.19.0.1
+  netoverlay:
+    driver: overlay
+    ipam:
+      config:
+        - subnet: 172.19.1.0/24
