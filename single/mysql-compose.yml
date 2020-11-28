@@ -13,7 +13,7 @@ services:
     volumes:
       - mysqldata:/var/lib/mysql
     networks:
-      extnetwork:
+      netoverlay:
         ipv4_address: 172.19.1.2
 volumes:
   mysqldata:
