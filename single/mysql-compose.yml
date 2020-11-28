@@ -13,13 +13,13 @@ services:
     volumes:
       - mysqldata:/var/lib/mysql
     networks:
-      netoverlay:
+      net:
         ipv4_address: 172.19.1.2
 volumes:
   mysqldata:
     driver: local
 networks:
-  netoverlay:
+  net:
     driver: overlay
     ipam:
       config:
