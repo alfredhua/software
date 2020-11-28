@@ -14,9 +14,12 @@ services:
       - mysqldata:/var/lib/mysql
     networks:
       - net-mysql
+    networks:
+      extnetwork:
+        ipv4_address: 172.19.0.2
 volumes:
   mysqldata:
     driver: local
 networks:
-  net-mysql:
+  netoverlay:
     external: false
