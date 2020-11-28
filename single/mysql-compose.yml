@@ -20,6 +20,12 @@ services:
 volumes:
   mysqldata:
     driver: local
+# networks:
+#   netoverlay:
+#     driver: overlay
 networks:
-  netoverlay:
-    driver: overlay
+   extnetwork:
+      ipam:
+         config:
+         - subnet: 172.19.0.0/16
+           gateway: 172.19.0.1
