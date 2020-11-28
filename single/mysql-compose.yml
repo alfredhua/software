@@ -13,14 +13,11 @@ services:
     volumes:
       - mysqldata:/var/lib/mysql
     networks:
-      net:
-        ipv4_address: 172.19.1.2
+      - net
+        
 volumes:
   mysqldata:
     driver: local
 networks:
   net:
-    driver: overlay
-    ipam:
-      config:
-        - subnet: 172.19.1.0/24
+    external: true
