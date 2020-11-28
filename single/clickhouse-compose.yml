@@ -2,7 +2,7 @@ version: '3'
 services:
   tabix:
     image: spoonest/clickhouse-tabix-web-client:latest
-    contailer_name: tabix
+    container_name: tabix
     ports: 
        - 8120:80
     volumes:
