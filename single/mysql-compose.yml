@@ -11,12 +11,15 @@ services:
     ports:
       - '3306:3306'
     volumes:
-      - mysqldata:/var/lib/mysql
+      - mysql_data:/var/lib/mysql
+      - mysql_conf:/etc/mysql/conf.d
     networks:
       - net
         
 volumes:
-  mysqldata:
+  mysql_data:
+    driver: local
+  mysql_conf:
     driver: local
 networks:
   net:
