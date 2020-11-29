@@ -6,13 +6,13 @@ services:
     ports:
       - "16010:16010"
     volumes:
-      - hbasedata:/hbase
+      - hbase_data:/hbase
     networks:
-      - net-hbase
+      - net
 volumes:
-  hbasedata:
+  hbase_data:
     driver: local
     
 networks:
-  net-hbase:
+  net:
     external: false

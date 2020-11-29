@@ -8,7 +8,7 @@ services:
     command:
       - -Dhosts.0.host=http://es:9200
     networks:
-      - net-es
+      - net
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.1.0
     container_name: es
@@ -23,12 +23,12 @@ services:
         soft: -1
         hard: -1
     volumes:
-      - esdata:/usr/share/elasticsearch
+      - es_data:/usr/share/elasticsearch
     ports:
       - "9200:9200"
       - "9300:9300"
     networks:
-      - net-es
+      - net
   kibana:
     image: docker.elastic.co/kibana/kibana:7.1.0
     container_name: kibana
@@ -43,11 +43,11 @@ services:
       - TIMELION_ENABLED=true
       - XPACK_MONITORING_COLLECTION_ENABLED="true"
     networks:
-      - net-es
+      - net
 volumes:
-  esdata:
+  es_data:
     driver: local
 
 networks:
-  net-es:
+  net:
     external: false

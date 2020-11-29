@@ -10,12 +10,12 @@ services:
      - "8848:8848"
      - "9100:9100"
     networks:
-      - net-nacos
+      - net
 
 volumes:
-  nacosdata:
+  nacos_data:
     driver: local
     
 networks:
-  net-nacos:
+  net:
     external: false

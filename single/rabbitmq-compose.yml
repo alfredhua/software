@@ -9,16 +9,16 @@ services:
       - 5672:5672
       - 15672:15672
     environment:
-      - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER}
-      - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}
+      - RABBITMQ_DEFAULT_USER=demo
+      - RABBITMQ_DEFAULT_PASS=demo
     volumes:
-      - rabbitmqdata:/var/lib/rabbitmq
+      - rabbitmq_data:/var/lib/rabbitmq
     networks:
-      - net-mq
+      - net
 volumes:
-  rabbitmqdata:
+  rabbitmq_data:
     driver: local
 
 networks:
-  net-mq:
+  net:
     external: false
