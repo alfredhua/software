@@ -7,8 +7,8 @@ services:
     privileged: true
     ports:
       - 6379:6379
-    command:
-      "redis-server /usr/local/etc/redis/redis.conf"
+    # command:
+    #   "redis-server /usr/local/etc/redis/redis.conf"
     volumes:
       - redis_data:/data
     networks:
