@@ -5,8 +5,6 @@ services:
     container_name: tabix
     ports: 
        - 8120:80
-    volumes:
-      - tabix:/
     networks:
       - net
   ch-server:
@@ -29,8 +27,6 @@ volumes:
   clickhouse_data:
     driver: local
   clickhouse_conf:
-    driver: local
-  tabix:
     driver: local
  
 networks:
