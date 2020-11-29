@@ -8,7 +8,7 @@ services:
     ports:
       - 6379:6379
     command: 
-      redis-server /etc/redis/redis.conf --appendonly yes
+      redis-server /etc/redis.conf --appendonly yes
     volumes:
       - redis_data:/data
       - redis_conf:/etc/redis
