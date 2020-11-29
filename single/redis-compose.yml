@@ -14,7 +14,6 @@ services:
       - redis_conf:/etc/redis
     networks:
       - net
-    command:
       
 volumes:
   redis_data:
