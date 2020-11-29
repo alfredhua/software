@@ -10,14 +10,14 @@ services:
     command:
       "redis-server /usr/local/etc/redis/redis.conf"
     volumes:
-      - redisdata:/data
+      - redis_data:/data
     networks:
-      - net-redis
+      - net
 
 volumes:
-  redisdata:
+  redis_data:
     driver: local
 
 networks:
-  net-redis:
+  net:
     external: false

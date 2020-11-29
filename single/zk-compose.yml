@@ -8,12 +8,12 @@ services:
     ports:
       - 2181:2181
     networks:
-      - net-zk
+      - net
 
 volumes:
-  zkdata:
+  zk_data:
     driver: local
 
 networks:
-  net-zk:
+  net:
     external: false
