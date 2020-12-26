@@ -1,12 +1,12 @@
 #!/bin/sh
 
-ALL_PATH="/Users/hua/workspace/software/soft"
+ALL_PATH="/Users/hua/software/soft"
 
 source $ALL_PATH/path.sh
 
 ## 快捷脚本
 
-env_path="/Users/hua/workspace/software/tool"
+env_path="/Users/hua/software/tool"
 
 ##docker 相关
 source $env_path/script/docker.sh
