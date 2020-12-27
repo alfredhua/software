@@ -14,6 +14,8 @@ alias greset="git reset"
 alias gbranch="git branch"
 alias glog="git log"
 alias gadd="git add"
+alias gclone="git clone"
+alias gshow="git show"
 
 function push(){
     git add .
