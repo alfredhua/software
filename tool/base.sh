@@ -18,6 +18,7 @@ source $env_path/script/git.sh
 
 source $env_path/script/centos.sh
 ## 项目相关
+source $env_path/project/jd.sh
 source $env_path/project/manage.sh
 source $env_path/project/zrcaifu.sh
 
