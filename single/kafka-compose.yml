@@ -22,6 +22,8 @@ services:
       KAFKA_CREATE_TOPICS: "kafeidou:2:0"   #kafka启动后初始化一个有2个partition(分区)0个副本名叫kafeidou的topic 
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_LISTENERS: PLAINTEXT://:9092
+      # socket.request.max.bytes: 104857600
+      SOCKET_REQUEST_MAX_BYTES: 104857600
       JMX_PORT: 9999
     volumes:
       - kafka_data:/kafka
