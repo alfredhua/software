@@ -25,6 +25,12 @@ export PATH=$MAVEN:$PATH
 export SPARK_HOME=/Users/guozhenhua7/software/soft/spark
 export PATH=$SPARK_HOME/bin:$PATH
 
+
+## hive
+export HIVE_HOME=/Users/guozhenhua7/software/soft/hive
+export PATH=$HIVE_HOME/bin:$PATH
+
+
 #### node 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
