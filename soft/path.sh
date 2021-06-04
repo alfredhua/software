@@ -21,6 +21,9 @@ MAVEN_HOME=$ALL_PATH/maven
 export MAVEN=$MAVEN_HOME/bin
 export PATH=$MAVEN:$PATH
 
+## SPARK
+export SPARK_HOME=/Users/guozhenhua7/software/soft/spark
+export PATH=$SPARK_HOME/bin:$PATH
 
 #### node 
 export NVM_DIR="$HOME/.nvm"
