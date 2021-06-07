@@ -1,7 +1,5 @@
 #!/bin/sh
 
-## 环境变量配置
-
 ####  gradle环境变量
 
 soft_path=$SOFTWARE_PATH/soft
@@ -43,6 +41,9 @@ export YARN_HOME=$HADOOP_HOME
 export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native 
 export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin/
 
+
+export HBASE_HOME=$soft_path/hbase
+export PATH=$PATH:$HBASE_HOME/bin/
 
 
 #### node 
