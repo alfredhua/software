@@ -3,36 +3,39 @@
 ## 环境变量配置
 
 ####  gradle环境变量
-GRADLE_HOME=$ALL_PATH/gradle/bin
+
+soft_path=$SOFTWARE_PATH/soft
+
+GRADLE_HOME=$soft_path/gradle/bin
 export PATH=$GRADLE_HOME:$PATH
 
 ####  jad环境变量
-JAD_HOME=$ALL_PATH/jad
+JAD_HOME=$soft_path/jad
 export PATH=$JAD_HOME:$PATH
 
 
 ####  migrate环境变量
-MIGRATIONS_HOME=$ALL_PATH/mybatis-migrations
+MIGRATIONS_HOME=$soft_path/mybatis-migrations
 export MIGRATIONS=$MIGRATIONS_HOME/bin
 export PATH=$MIGRATIONS:$PATH
 
 ####  maven环境变量
-MAVEN_HOME=$ALL_PATH/maven
+MAVEN_HOME=$soft_path/maven
 export MAVEN=$MAVEN_HOME/bin
 export PATH=$MAVEN:$PATH
 
 ## SPARK
-export SPARK_HOME=$ALL_PATH/spark
+export SPARK_HOME=$soft_path/spark
 export PATH=$SPARK_HOME/bin:$PATH
 
 
 ## hive
-export HIVE_HOME=$ALL_PATH/hive
+export HIVE_HOME=$soft_path/hive
 export PATH=$HIVE_HOME/bin:$PATH
 
 
 ## hadoop
-export HADOOP_HOME=$ALL_PATH/hadoop
+export HADOOP_HOME=$soft_path/hadoop
 export PATH=$HADOOP_HOME/bin:$PATH
 
 #### node 
