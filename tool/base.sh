@@ -1,12 +1,18 @@
 #!/bin/sh
 
 ALL_PATH="/Users/hua/software/soft"
+env_path="/Users/hua/software/tool"
+
+if [ $DEVIDE == 'JD' ]
+then
+    ALL_PATH="/Users/guozhenhua7/software/soft"
+    env_path="/Users/guozhenhua7/software/tool"
+else
+fi
 
 source $ALL_PATH/path.sh
 
-## 快捷脚本
 
-env_path="/Users/hua/software/tool"
 
 ##docker 相关
 source $env_path/script/docker.sh
