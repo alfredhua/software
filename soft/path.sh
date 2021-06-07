@@ -22,17 +22,17 @@ export MAVEN=$MAVEN_HOME/bin
 export PATH=$MAVEN:$PATH
 
 ## SPARK
-export SPARK_HOME=/Users/guozhenhua7/software/soft/spark
+export SPARK_HOME=$ALL_PATH/spark
 export PATH=$SPARK_HOME/bin:$PATH
 
 
 ## hive
-export HIVE_HOME=/Users/guozhenhua7/software/soft/hive
+export HIVE_HOME=$ALL_PATH/hive
 export PATH=$HIVE_HOME/bin:$PATH
 
 
 ## hadoop
-export HADOOP_HOME=/Users/guozhenhua7/software/soft/hadoop
+export HADOOP_HOME=$ALL_PATH/hadoop
 export PATH=$HADOOP_HOME/bin:$PATH
 
 #### node 
