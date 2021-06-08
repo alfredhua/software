@@ -1,6 +1,6 @@
 version: "3"
 services:
-  master:
+  spark-master:
     image: singularities/spark
     command: start-spark master
     container_name: spark-master
@@ -10,7 +10,7 @@ services:
       - "7070:7070"
       - "8080:8080"
       - "50070:50070"
-  worker:
+  spark-worker:
     image: singularities/spark
     container_name: spark-worker
     command: start-spark worker master
@@ -18,4 +18,4 @@ services:
       SPARK_WORKER_CORES: 1
       SPARK_WORKER_MEMORY: 2g
     links:
-      - master
+      - spark-master

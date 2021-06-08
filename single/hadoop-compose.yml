@@ -47,23 +47,97 @@ services:
       - ./hadoop.env
   
   historyserver:
-    image: bde2020/hadoop-historyserver:2.0.0-hadoop3.2.1-java8
+    image: bde2020/hadoop-historyserver
     container_name: historyserver
-    restart: always
+    links:
+      - "namenode:namenode"
+      - "datanode:datanode"
+      - "resourcemanager:resourcemanager"
+    depends_on:
+      - namenode
+      - datanode
+      - resourcemanager
     environment:
       SERVICE_PRECONDITION: "namenode:9000 namenode:9870 datanode:9864 resourcemanager:8088"
-    volumes:
-      - historyserver:/hadoop/yarn/timeline
     env_file:
       - ./hadoop.env
+      
+  hive-metastore-postgresql:
+    image: bde2020/hive-metastore-postgresql:2.3.0
+    container_name: hive-metastore-postgresql
+    ports:
+      - "5432:5432"
+      
+  hive-metastore:
+    image: bde2020/hive:2.3.2-postgresql-metastore
+    container_name: hive-metastore
+    env_file:
+      - ./hive.env
+    command: /opt/hive/bin/hive --service metastore
+    links:
+      - "namenode:namenode"
+      - "datanode:datanode"
+      - "hive-metastore-postgresql:hive-metastore-postgresql"
+    depends_on:
+      - namenode
+      - datanode
+      - hive-metastore-postgresql
+    environment:
+      SERVICE_PRECONDITION: "namenode:9870 datanode:9864 hive-metastore-postgresql:5432"
+    ports:
+      - "9083:9083"
+  
+  hive-server:
+    image: bde2020/hive:2.3.2-postgresql-metastore
+    container_name: hive-server
+    env_file:
+      - ./hive.env
+    links:
+      - "hive-metastore:hive-metastore"
+      - "hive-metastore-postgresql:hive-metastore-postgresql"
+    depends_on:
+      - hive-metastore
+      - hive-metastore-postgresql
+    environment:
+      SERVICE_PRECONDITION: "hive-metastore:9083 hive-metastore-postgresql:5432"
+    ports:
+      - "10000:10000"
 
+  hive-metastore:
+    image: bde2020/hive:2.1.0-postgresql-metastore
+    container_name: hive-metastore
+    command: /opt/hive/bin/hive --service metastore
+    ports:
+      - 9083:9083
+
+  spark-master:
+    image: singularities/spark
+    command: start-spark master
+    container_name: spark-master
+    hostname: master
+    ports:
+      - "6066:6066"
+      - "7070:7070"
+      - "8080:8080"
+      - "50070:50070"
+  spark-worker:
+    image: singularities/spark
+    container_name: spark-worker
+    command: start-spark worker master
+    environment:
+      SPARK_WORKER_CORES: 1
+      SPARK_WORKER_MEMORY: 2g
+    links:
+      - spark-master
 volumes:
   namenode:
     driver: local
   datanode:
     driver: local
   historyserver:
-   driver: local
+    driver: local
+
+
 networks:
   net:
     external: false
