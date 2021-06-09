@@ -36,7 +36,9 @@ services:
       SERVICE_PRECONDITION: "namenode:9000 namenode:9870 datanode:9864"
     env_file:
       - ./hadoop.env
-
+    ports:
+      - "8088:8088"
+      
   nodemanager1:
     image: bde2020/hadoop-nodemanager:2.0.0-hadoop3.2.1-java8
     container_name: nodemanager
@@ -102,13 +104,6 @@ services:
       SERVICE_PRECONDITION: "hive-metastore:9083 hive-metastore-postgresql:5432"
     ports:
       - "10000:10000"
-
-  hive-metastore:
-    image: bde2020/hive:2.1.0-postgresql-metastore
-    container_name: hive-metastore
-    command: /opt/hive/bin/hive --service metastore
-    ports:
-      - 9083:9083
 
   spark-master:
     image: singularities/spark
