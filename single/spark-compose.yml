@@ -10,6 +10,8 @@ services:
       - "7070:7070"
       - "8080:8080"
       - "50070:50070"
+    networks:
+      - net     
   spark-worker:
     image: singularities/spark
     container_name: spark-worker
@@ -19,3 +21,10 @@ services:
       SPARK_WORKER_MEMORY: 2g
     links:
       - spark-master
+    networks:
+      - net
+
+    
+networks:
+  net:
+    external: false

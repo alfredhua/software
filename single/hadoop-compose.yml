@@ -2,9 +2,9 @@ version: "3"
 
 services:
   namenode:
-    image: bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8
+    image: bde2020/hadoop-namenode
     container_name: namenode
-    restart: always
+    # restart: always
     ports:
       - 9870:9870
       - 9000:9000
@@ -14,11 +14,13 @@ services:
       - CLUSTER_NAME=test
     env_file:
       - ./hadoop.env
+    networks:
+      - net
 
   datanode:
-    image: bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8
+    image: bde2020/hadoop-datanode
     container_name: datanode
-    restart: always
+    # restart: always
     depends_on:
       - namenode
     volumes:
@@ -27,9 +29,13 @@ services:
       SERVICE_PRECONDITION: "namenode:9870"
     env_file:
       - ./hadoop.env
-  
+    ports:
+      - "9864:9864"
+    networks:
+      - net
+
   resourcemanager:
-    image: bde2020/hadoop-resourcemanager:2.0.0-hadoop3.2.1-java8
+    image: bde2020/hadoop-resourcemanager
     container_name: resourcemanager
     restart: always
     environment:
@@ -38,92 +44,79 @@ services:
       - ./hadoop.env
     ports:
       - "8088:8088"
+    networks:
+      - net
       
-  nodemanager1:
-    image: bde2020/hadoop-nodemanager:2.0.0-hadoop3.2.1-java8
+  nodemanager:
+    image: bde2020/hadoop-nodemanager
     container_name: nodemanager
-    restart: always
+    # restart: always
     environment:
       SERVICE_PRECONDITION: "namenode:9000 namenode:9870 datanode:9864 resourcemanager:8088"
     env_file:
       - ./hadoop.env
-  
-  historyserver:
-    image: bde2020/hadoop-historyserver
-    container_name: historyserver
-    links:
-      - "namenode:namenode"
-      - "datanode:datanode"
-      - "resourcemanager:resourcemanager"
-    depends_on:
-      - namenode
-      - datanode
-      - resourcemanager
-    environment:
-      SERVICE_PRECONDITION: "namenode:9000 namenode:9870 datanode:9864 resourcemanager:8088"
-    env_file:
-      - ./hadoop.env
-      
-  hive-metastore-postgresql:
-    image: bde2020/hive-metastore-postgresql:2.3.0
-    container_name: hive-metastore-postgresql
-    ports:
-      - "5432:5432"
-      
-  hive-metastore:
-    image: bde2020/hive:2.3.2-postgresql-metastore
-    container_name: hive-metastore
-    env_file:
-      - ./hive.env
-    command: /opt/hive/bin/hive --service metastore
-    links:
-      - "namenode:namenode"
-      - "datanode:datanode"
-      - "hive-metastore-postgresql:hive-metastore-postgresql"
-    depends_on:
-      - namenode
-      - datanode
-      - hive-metastore-postgresql
-    environment:
-      SERVICE_PRECONDITION: "namenode:9870 datanode:9864 hive-metastore-postgresql:5432"
-    ports:
-      - "9083:9083"
-  
-  hive-server:
-    image: bde2020/hive:2.3.2-postgresql-metastore
-    container_name: hive-server
-    env_file:
-      - ./hive.env
-    links:
-      - "hive-metastore:hive-metastore"
-      - "hive-metastore-postgresql:hive-metastore-postgresql"
-    depends_on:
-      - hive-metastore
-      - hive-metastore-postgresql
-    environment:
-      SERVICE_PRECONDITION: "hive-metastore:9083 hive-metastore-postgresql:5432"
-    ports:
-      - "10000:10000"
+    networks:
+      - net
 
-  spark-master:
-    image: singularities/spark
-    command: start-spark master
-    container_name: spark-master
-    hostname: master
-    ports:
-      - "6066:6066"
-      - "7070:7070"
-      - "8080:8080"
-      - "50070:50070"
-  spark-worker:
-    image: singularities/spark
-    container_name: spark-worker
-    command: start-spark worker master
-    environment:
-      SPARK_WORKER_CORES: 1
-      SPARK_WORKER_MEMORY: 2g
-    links:
-      - spark-master
+  # historyserver:
+  #   image: bde2020/hadoop-historyserver
+  #   container_name: historyserver
+  #   links:
+  #     - "namenode:namenode"
+  #     - "datanode:datanode"
+  #     - "resourcemanager:resourcemanager"
+  #   depends_on:
+  #     - namenode
+  #     - datanode
+  #     - resourcemanager
+  #   environment:
+  #     SERVICE_PRECONDITION: "namenode:9000 namenode:9870 datanode:9864 resourcemanager:8088"
+  #   env_file:
+  #     - ./hadoop.env
+      
+  # hive-metastore-postgresql:
+  #   image: bde2020/hive-metastore-postgresql:2.3.0
+  #   container_name: hive-metastore-postgresql
+  #   ports:
+  #     - "5432:5432"
+      
+  # hive-metastore:
+  #   image: bde2020/hive:2.3.2-postgresql-metastore
+  #   container_name: hive-metastore
+  #   env_file:
+  #     - ./hadoop.env
+  #   command: /opt/hive/bin/hive --service metastore
+  #   links:
+  #     - "namenode:namenode"
+  #     - "datanode:datanode"
+  #     - "hive-metastore-postgresql:hive-metastore-postgresql"
+  #   depends_on:
+  #     - namenode
+  #     - datanode
+  #     - hive-metastore-postgresql
+  #   environment:
+  #     SERVICE_PRECONDITION: "namenode:9870 datanode:9864 hive-metastore-postgresql:5432"
+  #   ports:
+  #     - "9083:9083"
+  
+  # hive-server:
+  #   image: bde2020/hive:2.3.2-postgresql-metastore
+  #   container_name: hive-server
+  #   env_file:
+  #     - ./hadoop.env
+  #   links:
+  #     - "hive-metastore:hive-metastore"
+  #     - "hive-metastore-postgresql:hive-metastore-postgresql"
+  #   depends_on:
+  #     - hive-metastore
+  #     - hive-metastore-postgresql
+  #   environment:
+  #     SERVICE_PRECONDITION: "hive-metastore:9083 hive-metastore-postgresql:5432"
+  #   ports:
+  #     - "10000:10000"
+
+
+
 volumes:
   namenode:
     driver: local
@@ -131,7 +124,8 @@ volumes:
     driver: local
   historyserver:
     driver: local
-
+  hbase_data:
+    driver: local
 
 networks:
   net:
