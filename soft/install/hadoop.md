@@ -2,15 +2,13 @@
 ## core-site.xml
 
 ```xml
-  <property>
-    <name>fs.default.name</name>
-    <value>hdfs://127.0.0.1:8020</value>
-  </property>
+   <property>
+      <name>fs.default.name</name>
+      <value>hdfs://127.0.0.1:8020</value>
+    </property>
 
-  <property>
-     <name>hadoop.tmp.dir</name>
-     <value>file:/Users/guozhenhua7/workspace/hadoop</value>
-  </property>
+
+
 ```
 
 
@@ -21,25 +19,27 @@
        <name>dfs.replication</name>
        <value>1</value>
  </property>
+
+     ## 虚拟机中需要增加
+    <property>
+          <name>dfs.namenode.name.dir</name>
+          <value>/opt/hadoop/namenode</value>
+    </property>
+    <property>
+          <name>dfs.datanode.data.dir</name>
+          <value>/opt/hadoop/datanode</value>
+    </property>
 ```
-
-## 格式化
-
-hdfs namenode -format
 
 
 ## mapred-site.xml
 
 ```xml
-  <property> 
+   <property> 
       <name>mapreduce.framework.name</name> 
       <value>yarn</value> 
    </property>
 
-   <property>
-    <name>mapreduce.application.classpath</name> 
-    <value>$HADOOP_MAPRED_HOME/share/hadoop/mapreduce/*:$HADOOP_MAPRED_HOME/share/hadoop/mapreduce/lib/*</value>
-  </property>
 
 ```
 
@@ -51,12 +51,13 @@ hdfs namenode -format
         <name>yarn.nodemanager.aux-services</name>
         <value>mapreduce_shuffle</value>
    </property>
-   <property>
-        <name>yarn.resourcemanager.hostname</name>
-        <value>zy1</value>
-   </property>
-
 ```
+
+
+## 格式化
+
+hdfs namenode -format
+
 
 ## start-dfs.sh 
 
