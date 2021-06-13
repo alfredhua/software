@@ -47,7 +47,7 @@ export PATH=$PATH:$HBASE_HOME/bin/
 
 ## JAVA
 
-export JAVA_HOME=$soft_path/JAVA
+export JAVA_HOME=$soft_path/java
 export PATH=$PATH:$JAVA_HOME/bin/
 
 #### node 
