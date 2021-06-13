@@ -45,6 +45,10 @@ export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin/
 export HBASE_HOME=$soft_path/hbase
 export PATH=$PATH:$HBASE_HOME/bin/
 
+## JAVA
+
+export JAVA_HOME=$soft_path/JAVA
+export PATH=$PATH:$JAVA_HOME/bin/
 
 #### node 
 export NVM_DIR="$HOME/.nvm"
