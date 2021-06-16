@@ -1,0 +1,40 @@
+version: "3"
+
+services:
+  hadoop02:
+    image: guozhenhua/hadoop:5
+    container_name: hadoop02
+    privileged: true
+    ports:
+      - 9870:9870
+    networks:
+      net1:
+        ipv4_address: 172.18.0.12
+
+  hadoop03:
+    image: guozhenhua/hadoop:5
+    container_name: hadoop03
+    privileged: true
+    ports:
+      - 8088:8088
+    networks:
+      net1:
+        ipv4_address: 172.18.0.13
+      
+  hadoop04:
+    image: guozhenhua/hadoop:5
+    container_name: hadoop04
+    privileged: true
+    ports:
+      - 9868:9868
+    networks:
+      net1:
+        ipv4_address: 172.18.0.14
+
+networks:
+  net1:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.18.0.0/24
+          gateway: 172.18.0.1
