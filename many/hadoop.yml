@@ -10,6 +10,14 @@ services:
     networks:
       net1:
         ipv4_address: 172.18.0.12
+    extra_hosts:
+      - "hadoop03:172.18.0.13"
+      - "hadoop02:172.18.0.12"
+      - "hadoop04:172.18.0.14"
+    # user: hadoop
+    volumes:
+      - hadoop02:/home/hadoop/data
+    # command: hdfs namenode -format &&  start-dfs.sh
 
   hadoop03:
     image: guozhenhua/hadoop:5
@@ -20,7 +28,15 @@ services:
     networks:
       net1:
         ipv4_address: 172.18.0.13
-      
+    extra_hosts:
+      - "hadoop03:172.18.0.13"
+      - "hadoop02:172.18.0.12"
+      - "hadoop04:172.18.0.14" 
+    volumes:
+      - hadoop03:/home/hadoop/data
+    # user: hadoop
+    # command: start-yarn.sh  
+
   hadoop04:
     image: guozhenhua/hadoop:5
     container_name: hadoop04
@@ -30,6 +46,13 @@ services:
     networks:
       net1:
         ipv4_address: 172.18.0.14
+    extra_hosts:
+      - "hadoop03:172.18.0.13"
+      - "hadoop02:172.18.0.12"
+      - "hadoop04:172.18.0.14"
+    volumes:
+      - hadoop04:/home/hadoop/data
+    # user: hadoop
 
 networks:
   net1:
@@ -38,3 +61,11 @@ networks:
       config:
         - subnet: 172.18.0.0/24
           gateway: 172.18.0.1
+  
+volumes:
+  hadoop02:
+    driver: local
+  hadoop03:
+    driver: local
+  hadoop04:
+    driver: local
