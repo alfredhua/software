@@ -7,6 +7,9 @@ services:
     privileged: true
     ports:
       - 9870:9870
+      - 9864:9864
+      - 8032:8032
+      - 19888:19888
     networks:
       net1:
         ipv4_address: 172.18.0.12

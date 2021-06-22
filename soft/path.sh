@@ -50,6 +50,12 @@ export PATH=$PATH:$HBASE_HOME/bin/
 export JAVA_HOME=$soft_path/java
 export PATH=$PATH:$JAVA_HOME/bin/
 
+
+## scala
+export SCALA_HOME=$soft_path/scala
+export PATH=$PATH:$SCALA_HOME/bin/
+
+
 #### node 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
