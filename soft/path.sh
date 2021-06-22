@@ -26,11 +26,9 @@ export PATH=$MAVEN:$PATH
 export SPARK_HOME=$soft_path/spark
 export PATH=$SPARK_HOME/bin:$PATH
 
-
 ## hive
 export HIVE_HOME=$soft_path/hive
 export PATH=$HIVE_HOME/bin:$PATH
-
 
 ## hadoop
 export HADOOP_HOME=$soft_path/hadoop
@@ -41,15 +39,19 @@ export YARN_HOME=$HADOOP_HOME
 export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native 
 export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin/
 
-
+## hbase
 export HBASE_HOME=$soft_path/hbase
 export PATH=$PATH:$HBASE_HOME/bin/
 
 ## JAVA
 
-export JAVA_HOME=$soft_path/java
-export PATH=$PATH:$JAVA_HOME/bin/
-
+name=`uname`
+if [ $name != 'Darwin' ]
+then
+    export JAVA_HOME=$soft_path/java
+    export PATH=$PATH:$JAVA_HOME/bin/
+else
+fi
 
 ## scala
 export SCALA_HOME=$soft_path/scala
