@@ -1,0 +1,57 @@
+version: "3"
+
+services:
+  centos01:
+    image: guozhenhua/centos:1.1
+    container_name: centos01
+    privileged: true
+    networks:
+      net1:
+        ipv4_address: 172.18.0.21
+    extra_hosts:
+      - "centos01:172.18.0.21"
+      - "centos02:172.18.0.22"
+      - "centos03:172.18.0.23"
+    tty: true
+
+  centos02:
+    image: guozhenhua/centos:1.1
+    container_name: centos02
+    privileged: true
+    networks:
+      net1:
+        ipv4_address: 172.18.0.22
+    extra_hosts:
+      - "centos01:172.18.0.21"
+      - "centos02:172.18.0.22"
+      - "centos03:172.18.0.23"
+    tty: true
+
+  centos03:
+    image: guozhenhua/centos:1.1
+    container_name: centos03
+    privileged: true
+    networks:
+      net1:
+        ipv4_address: 172.18.0.23
+    extra_hosts:
+      - "centos01:172.18.0.21"
+      - "centos02:172.18.0.22"
+      - "centos03:172.18.0.23"
+    tty: true
+
+networks:
+  net1:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.18.0.0/24
+          gateway: 172.18.0.1
+  
+volumes:
+  centos01:
+    driver: local
+  centos02:
+    driver: local
+  centos03:
+    driver: local
