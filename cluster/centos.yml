@@ -2,7 +2,7 @@ version: "3"
 
 services:
   centos01:
-    image: guozhenhua/centos:1.1
+    image: guozhenhua/centos:1.3
     container_name: centos01
     privileged: true
     networks:
@@ -15,7 +15,7 @@ services:
     tty: true
 
   centos02:
-    image: guozhenhua/centos:1.1
+    image: guozhenhua/centos:1.3
     container_name: centos02
     privileged: true
     networks:
@@ -28,8 +28,8 @@ services:
     tty: true
 
   centos03:
-    image: guozhenhua/centos:1.1
-    container_name: centos03
+    image: guozhenhua/centos:1.3
+    container_name: centos03 
     privileged: true
     networks:
       net1:
