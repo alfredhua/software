@@ -17,10 +17,10 @@ services:
       - "hadoop03:172.18.0.13"
       - "hadoop02:172.18.0.12"
       - "hadoop04:172.18.0.14"
-    # user: hadoop
     volumes:
       - hadoop02:/home/hadoop/data
-    # command: hdfs namenode -format &&  start-dfs.sh
+    depends_on:
+      - hadoop04 
 
   hadoop03:
     image: guozhenhua/hadoop:5
@@ -37,8 +37,8 @@ services:
       - "hadoop04:172.18.0.14" 
     volumes:
       - hadoop03:/home/hadoop/data
-    # user: hadoop
-    # command: start-yarn.sh  
+    depends_on:
+      - hadoop02
 
   hadoop04:
     image: guozhenhua/hadoop:5
@@ -55,7 +55,6 @@ services:
       - "hadoop04:172.18.0.14"
     volumes:
       - hadoop04:/home/hadoop/data
-    # user: hadoop
 
 networks:
   net1:
