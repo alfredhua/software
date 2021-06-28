@@ -2,10 +2,10 @@
 
 
 
-alias nrstart="npm run start"
+alias nrs="npm run start"
 alias nrdev="npm run dev"
-alias ninstall="npm install"
-alias ninstallg="npm_install_g"
+alias ni="npm install"
+alias nig="npm_install_g"
 
 
 function npm_install_g(){
