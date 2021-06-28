@@ -12,7 +12,6 @@ source $SOFTWARE_PATH/tool/script/git.sh
 source $SOFTWARE_PATH/tool/script/centos.sh
 ## 项目相关
 source $SOFTWARE_PATH/tool/project/manage.sh
-source $SOFTWARE_PATH/tool/project/zrcaifu.sh
 
 ## 服务器相关
 source $SOFTWARE_PATH/tool/script/ssh.sh
