@@ -58,6 +58,11 @@ export SCALA_HOME=$soft_path/scala
 export PATH=$PATH:$SCALA_HOME/bin/
 
 
+## flink
+export FLINK_HOME=$soft_path/flink
+export PATH=$PATH:$FLINK_HOME/bin/
+
+
 #### node 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
