@@ -29,6 +29,12 @@ let NERDTreeDirArrows = 1
 nnoremap <F3> :NERDTreeToggle<CR> " 开启/关闭nerdtree快捷键
 
 
+"coc
+
+noremap <leader>f :Format<CR>
+
+
+
 " 插件管理
 call plug#begin('~/.vim/plugged')
 
