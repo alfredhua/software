@@ -1,3 +1,10 @@
+" 自定义快捷键
+map <C-c> <ESC>
+map <C-s> <:w
+
+
+
+“ nerdtree
 " autocmd vimenter * NERDTree  "自动开启Nerdtree
 let g:NERDTreeWinSize = 25 "设定 NERDTree 视窗大小
 let NERDTreeShowBookmarks=1  " 开启Nerdtree时自动显示Bookmarks
@@ -5,7 +12,7 @@ let NERDTreeShowBookmarks=1  " 开启Nerdtree时自动显示Bookmarks
 " autocmd vimenter * if !argc()|NERDTree|endif
 "当NERDTree为剩下的唯一窗口时自动关闭
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-" 设置树的显示图标
+" 设置树的显示图标aa
 let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
 let NERDTreeIgnore = ['\.pyc$']  " 过滤所有.pyc文件不显示
@@ -17,6 +24,7 @@ let NERDTreeDirArrows = 1
 nnoremap <F3> :NERDTreeToggle<CR> " 开启/关闭nerdtree快捷键
 
 
+" 插件管理
 call plug#begin('~/.vim/plugged')
 
  Plug 'preservim/nerdtree'
