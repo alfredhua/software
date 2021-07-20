@@ -1,7 +1,6 @@
 " 自定义快捷键
 map <C-c> <ESC>
-map <C-s> <:w
-
+noremap <C-s>:w<CR>
 
 
 “ nerdtree
