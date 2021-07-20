@@ -9,7 +9,7 @@ nnoremap < <<
 nnoremap > >>
 
 
-“ nerdtree
+" nerdtree
 " autocmd vimenter * NERDTree  "自动开启Nerdtree
 let g:NERDTreeWinSize = 25 "设定 NERDTree 视窗大小
 let NERDTreeShowBookmarks=1  " 开启Nerdtree时自动显示Bookmarks
