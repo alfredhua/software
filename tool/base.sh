@@ -15,3 +15,7 @@ source $SOFTWARE_PATH/tool/project/manage.sh
 
 ## 服务器相关
 source $SOFTWARE_PATH/tool/script/ssh.sh
+
+
+alias vi="nvim"
+alias vim="nvim"
