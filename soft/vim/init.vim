@@ -1,9 +1,9 @@
 " 自定义快捷键
-inoremap jj <ESC>
-
+map <C-c> <ESC>
 noremap <C-s>:w<CR>
 nnoremap Y y$
 vnoremap Y "+y
+nnoremap P "+p
 
 " Indentation
 nnoremap < <<
@@ -44,4 +44,5 @@ call plug#begin('~/.vim/plugged')
  Plug 'neoclide/coc.nvim', {'branch': 'release'}
  Plug 'vim-airline/vim-airline'
  Plug 'suan/vim-instant-markdown'
+
 call plug#end()
