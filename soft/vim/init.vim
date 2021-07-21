@@ -42,5 +42,5 @@ call plug#begin('~/.vim/plugged')
  Plug 'Xuyuanp/nerdtree-git-plugin'
  Plug 'neoclide/coc.nvim', {'branch': 'release'}
  Plug 'vim-airline/vim-airline'
-
+ Plug 'suan/vim-instant-markdown'
 call plug#end()
