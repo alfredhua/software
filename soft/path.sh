@@ -53,6 +53,11 @@ then
 else
 fi
 
+## vim
+
+export VIM_PATH_HOME=$soft_path/vim/nvim-osx64
+export PATH=$PATH:$VIM_PATH_HOME/bin
+
 ## scala
 export SCALA_HOME=$soft_path/scala
 export PATH=$PATH:$SCALA_HOME/bin/
