@@ -16,6 +16,12 @@ alias glog="git log"
 alias gadd="git add"
 alias gclone="git clone"
 alias gshow="git show"
+alias gporigin="push_origin $1"
+
+function push_origin(){
+   git push --set-upstream origin $1    
+}
+
 
 function push(){
     git add .
