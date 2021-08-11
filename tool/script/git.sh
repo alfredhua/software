@@ -30,5 +30,5 @@ function push(){
 }
 
 ## mvn
-alias cci="mvn clean && mvn compile && mvn install"
-alias ccid="mvn clean && mvn compile && mvn install && mvn deploy"
+alias mcci="mvn clean && mvn compile && mvn install"
+alias mccid="mvn clean && mvn compile && mvn install && mvn deploy"
