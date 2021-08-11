@@ -1,6 +1,6 @@
 #!/bin/sh
 
-
+## git
 alias gstatus="git status"
 alias gpull="git pull"
 alias gpush="push $1"
@@ -22,3 +22,7 @@ function push(){
     git commit -m $1
     git push
 }
+
+## mvn
+alias cci="mvn clean && mvn compile && mvn install"
+alias ccid="mvn clean && mvn compile && mvn install && mvn deploy"
