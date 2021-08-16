@@ -54,7 +54,6 @@ else
 fi
 
 ## vim
-
 export VIM_PATH_HOME=$soft_path/vim/nvim
 export PATH=$PATH:$VIM_PATH_HOME/bin
 
