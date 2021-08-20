@@ -362,11 +362,12 @@ end
 ---@param bufnr number
 ---@param client_id number|nil If nil, then return all of the diagnostics.
 ---                            Else, return just the diagnostics associated with the client_id.
-function M.get(bufnr, client_id)
+---@param predicate function|nil Optional function for filtering diagnostics
+function M.get(bufnr, client_id, predicate)
   if client_id == nil then
     local all_diagnostics = {}
     for iter_client_id, _ in pairs(diagnostic_cache[bufnr]) do
-      local iter_diagnostics = M.get(bufnr, iter_client_id)
+      local iter_diagnostics = M.get(bufnr, iter_client_id, predicate)
 
       for _, diagnostic in ipairs(iter_diagnostics) do
         table.insert(all_diagnostics, diagnostic)
@@ -376,19 +377,26 @@ function M.get(bufnr, client_id)
     return all_diagnostics
   end
 
-  return diagnostic_cache[bufnr][client_id] or {}
+  predicate = predicate or function(_) return true end
+  local client_diagnostics = {}
+  for _, diagnostic in ipairs(diagnostic_cache[bufnr][client_id] or {}) do
+    if predicate(diagnostic) then
+      table.insert(client_diagnostics, diagnostic)
+    end
+  end
+  return client_diagnostics
 end
 
 --- Get the diagnostics by line
 ---
----@param bufnr number The buffer number
----@param line_nr number The line number
+---@param bufnr number|nil The buffer number
+---@param line_nr number|nil The line number
 ---@param opts table|nil Configuration keys
 ---         - severity: (DiagnosticSeverity, default nil)
 ---             - Only return diagnostics with this severity. Overrides severity_limit
 ---         - severity_limit: (DiagnosticSeverity, default nil)
 ---             - Limit severity of diagnostics found. E.g. "Warning" means { "Error", "Warning" } will be valid.
----@param client_id number the client id
+---@param client_id|nil number the client id
 ---@return table Table with map of line number to list of diagnostics.
 --               Structured: { [1] = {...}, [5] = {.... } }
 function M.get_line_diagnostics(bufnr, line_nr, opts, client_id)
@@ -464,63 +472,64 @@ end
 -- }}}
 -- Diagnostic Movements {{{
 
---- Helper function to iterate through all of the diagnostic lines
----@return table list of diagnostics
-local _iter_diagnostic_lines = function(start, finish, step, bufnr, opts, client_id)
-  if bufnr == nil then
-    bufnr = vim.api.nvim_get_current_buf()
-  end
-
+--- Helper function to find the next diagnostic relative to a position
+---@return table the next diagnostic if found
+local _next_diagnostic = function(position, search_forward, bufnr, opts, client_id)
+  position[1] = position[1] - 1
+  bufnr = bufnr or vim.api.nvim_get_current_buf()
   local wrap = if_nil(opts.wrap, true)
-
-  local search = function(search_start, search_finish, search_step)
-    for line_nr = search_start, search_finish, search_step do
-      local line_diagnostics = M.get_line_diagnostics(bufnr, line_nr, opts, client_id)
-      if line_diagnostics and not vim.tbl_isempty(line_diagnostics) then
-        return line_diagnostics
+  local line_count = vim.api.nvim_buf_line_count(bufnr)
+  for i = 0, line_count do
+    local offset = i * (search_forward and 1 or -1)
+    local line_nr = position[1] + offset
+    if line_nr < 0 or line_nr >= line_count then
+      if not wrap then
+        return
+      end
+      line_nr = (line_nr + line_count) % line_count
+    end
+    local line_diagnostics = M.get_line_diagnostics(bufnr, line_nr, opts, client_id)
+    if line_diagnostics and not vim.tbl_isempty(line_diagnostics) then
+      local sort_diagnostics, is_next
+      if search_forward then
+        sort_diagnostics = function(a, b) return a.range.start.character < b.range.start.character end
+        is_next = function(diagnostic) return diagnostic.range.start.character > position[2] end
+      else
+        sort_diagnostics = function(a, b) return a.range.start.character > b.range.start.character end
+        is_next = function(diagnostic) return diagnostic.range.start.character < position[2] end
+      end
+      table.sort(line_diagnostics, sort_diagnostics)
+      if i == 0 then
+        for _, v in pairs(line_diagnostics) do
+          if is_next(v) then
+            return v
+          end
+        end
+      else
+        return line_diagnostics[1]
       end
     end
   end
-
-  local result = search(start, finish, step)
-
-  if wrap then
-    local wrap_start, wrap_finish
-    if step == 1 then
-      wrap_start, wrap_finish = 1, start
-    else
-      wrap_start, wrap_finish = vim.api.nvim_buf_line_count(bufnr), start
-    end
-
-    if not result then
-      result = search(wrap_start, wrap_finish, step)
-    end
-  end
-
-  return result
 end
 
 --@private
---- Helper function to ierate through diagnostic lines and return a position
+--- Helper function to return a position from a diagnostic
 ---
 ---@return table {row, col}
-local function _iter_diagnostic_lines_pos(opts, line_diagnostics)
+local function _diagnostic_pos(opts, diagnostic)
   opts = opts or {}
 
   local win_id = opts.win_id or vim.api.nvim_get_current_win()
   local bufnr = vim.api.nvim_win_get_buf(win_id)
 
-  if line_diagnostics == nil or vim.tbl_isempty(line_diagnostics) then
-    return false
-  end
+  if not diagnostic then return false end
 
-  local iter_diagnostic = line_diagnostics[1]
-  return to_position(iter_diagnostic.range.start, bufnr)
+  return to_position(diagnostic.range.start, bufnr)
 end
 
 --@private
 -- Move to the diagnostic position
-local function _iter_diagnostic_move_pos(name, opts, pos)
+local function _diagnostic_move_pos(name, opts, pos)
   opts = opts or {}
 
   local enable_popup = if_nil(opts.enable_popup, true)
@@ -536,7 +545,7 @@ local function _iter_diagnostic_move_pos(name, opts, pos)
   if enable_popup then
     -- This is a bit weird... I'm surprised that we need to wait til the next tick to do this.
     vim.schedule(function()
-      M.show_line_diagnostics(opts.popup_opts, vim.api.nvim_win_get_buf(win_id))
+      M.show_position_diagnostics(opts.popup_opts, vim.api.nvim_win_get_buf(win_id))
     end)
   end
 end
@@ -552,14 +561,14 @@ function M.get_prev(opts)
   local bufnr = vim.api.nvim_win_get_buf(win_id)
   local cursor_position = opts.cursor_position or vim.api.nvim_win_get_cursor(win_id)
 
-  return _iter_diagnostic_lines(cursor_position[1] - 2, 0, -1, bufnr, opts, opts.client_id)
+  return _next_diagnostic(cursor_position, false, bufnr, opts, opts.client_id)
 end
 
 --- Return the pos, {row, col}, for the prev diagnostic in the current buffer.
 ---@param opts table See |vim.lsp.diagnostic.goto_next()|
 ---@return table Previous diagnostic position
 function M.get_prev_pos(opts)
-  return _iter_diagnostic_lines_pos(
+  return _diagnostic_pos(
     opts,
     M.get_prev(opts)
   )
@@ -568,7 +577,7 @@ end
 --- Move to the previous diagnostic
 ---@param opts table See |vim.lsp.diagnostic.goto_next()|
 function M.goto_prev(opts)
-  return _iter_diagnostic_move_pos(
+  return _diagnostic_move_pos(
     "DiagnosticPrevious",
     opts,
     M.get_prev_pos(opts)
@@ -585,14 +594,14 @@ function M.get_next(opts)
   local bufnr = vim.api.nvim_win_get_buf(win_id)
   local cursor_position = opts.cursor_position or vim.api.nvim_win_get_cursor(win_id)
 
-  return _iter_diagnostic_lines(cursor_position[1], vim.api.nvim_buf_line_count(bufnr), 1, bufnr, opts, opts.client_id)
+  return _next_diagnostic(cursor_position, true, bufnr, opts, opts.client_id)
 end
 
 --- Return the pos, {row, col}, for the next diagnostic in the current buffer.
 ---@param opts table See |vim.lsp.diagnostic.goto_next()|
 ---@return table Next diagnostic position
 function M.get_next_pos(opts)
-  return _iter_diagnostic_lines_pos(
+  return _diagnostic_pos(
     opts,
     M.get_next(opts)
   )
@@ -617,7 +626,7 @@ end
 ---         - {win_id}: (number, default 0)
 ---             - Window ID
 function M.goto_next(opts)
-  return _iter_diagnostic_move_pos(
+  return _diagnostic_move_pos(
     "DiagnosticNext",
     opts,
     M.get_next_pos(opts)
@@ -766,17 +775,20 @@ function M.set_virtual_text(diagnostics, bufnr, client_id, diagnostic_ns, opts)
     local virt_texts = M.get_virtual_text_chunks_for_line(bufnr, line, line_diagnostics, opts)
 
     if virt_texts then
-      api.nvim_buf_set_virtual_text(bufnr, diagnostic_ns, line, virt_texts, {})
+      api.nvim_buf_set_extmark(bufnr, diagnostic_ns, line, 0, {
+        virt_text = virt_texts,
+      })
     end
   end
 end
 
---- Default function to get text chunks to display using `nvim_buf_set_virtual_text`.
+--- Default function to get text chunks to display using |nvim_buf_set_extmark()|.
 ---@param bufnr number The buffer to display the virtual text in
 ---@param line number The line number to display the virtual text on
 ---@param line_diags Diagnostic[] The diagnostics associated with the line
 ---@param opts table See {opts} from |vim.lsp.diagnostic.set_virtual_text()|
----@return table chunks, as defined by |nvim_buf_set_virtual_text()|
+---@return an array of [text, hl_group] arrays. This can be passed directly to
+---        the {virt_text} option of |nvim_buf_set_extmark()|.
 function M.get_virtual_text_chunks_for_line(bufnr, line, line_diags, opts)
   assert(bufnr or line)
 
@@ -1168,10 +1180,44 @@ function M.display(diagnostics, bufnr, client_id, config)
   save_extmarks(bufnr, client_id)
 end
 
+--- Redraw diagnostics for the given buffer and client
+---
+--- This calls the "textDocument/publishDiagnostics" handler manually using
+--- the cached diagnostics already received from the server. This can be useful
+--- for redrawing diagnostics after making changes in diagnostics
+--- configuration. |lsp-handler-configuration|
+---
+--- @param bufnr (optional, number): Buffer handle, defaults to current
+--- @param client_id (optional, number): Redraw diagnostics for the given
+---        client. The default is to redraw diagnostics for all attached
+---        clients.
+function M.redraw(bufnr, client_id)
+  bufnr = get_bufnr(bufnr)
+  if not client_id then
+    return vim.lsp.for_each_buffer_client(bufnr, function(client)
+      M.redraw(bufnr, client.id)
+    end)
+  end
+
+  -- We need to invoke the publishDiagnostics handler directly instead of just
+  -- calling M.display so that we can preserve any custom configuration options
+  -- the user may have set with vim.lsp.with.
+  vim.lsp.handlers["textDocument/publishDiagnostics"](
+    nil,
+    "textDocument/publishDiagnostics",
+    {
+      uri = vim.uri_from_bufnr(bufnr),
+      diagnostics = M.get(bufnr, client_id),
+    },
+    client_id,
+    bufnr
+  )
+end
+
 -- }}}
 -- Diagnostic User Functions {{{
 
---- Open a floating window with the diagnostics from {line_nr}
+--- Open a floating window with the provided diagnostics
 ---
 --- The floating window can be customized with the following highlight groups:
 --- <pre>
@@ -1181,32 +1227,21 @@ end
 --- LspDiagnosticsFloatingHint
 --- </pre>
 ---@param opts table Configuration table
----     - show_header (boolean, default true): Show "Diagnostics:" header.
----     - Plus all the opts for |vim.lsp.diagnostic.get_line_diagnostics()|
----          and |vim.lsp.util.open_floating_preview()| can be used here.
----@param bufnr number The buffer number
----@param line_nr number The line number
----@param client_id number|nil the client id
+---     - show_header (boolean, default true): Show "Diagnostics:" header
+---     - all opts for |vim.lsp.util.open_floating_preview()| can be used here
+---@param diagnostics table: The diagnostics to display
 ---@return table {popup_bufnr, win_id}
-function M.show_line_diagnostics(opts, bufnr, line_nr, client_id)
-  opts = opts or {}
-
-  local show_header = if_nil(opts.show_header, true)
-
-  bufnr = bufnr or 0
-  line_nr = line_nr or (vim.api.nvim_win_get_cursor(0)[1] - 1)
-
+local function show_diagnostics(opts, diagnostics)
+  if vim.tbl_isempty(diagnostics) then return end
   local lines = {}
   local highlights = {}
+  local show_header = if_nil(opts.show_header, true)
   if show_header then
     table.insert(lines, "Diagnostics:")
     table.insert(highlights, {0, "Bold"})
   end
 
-  local line_diagnostics = M.get_line_diagnostics(bufnr, line_nr, opts, client_id)
-  if vim.tbl_isempty(line_diagnostics) then return end
-
-  for i, diagnostic in ipairs(line_diagnostics) do
+  for i, diagnostic in ipairs(diagnostics) do
     local prefix = string.format("%d. ", i)
     local hiname = M._get_floating_severity_highlight_name(diagnostic.severity)
     assert(hiname, 'unknown severity: ' .. tostring(diagnostic.severity))
@@ -1220,7 +1255,6 @@ function M.show_line_diagnostics(opts, bufnr, line_nr, client_id)
     end
   end
 
-  opts.focus_id = "line_diagnostics"
   local popup_bufnr, winnr = util.open_floating_preview(lines, 'plaintext', opts)
   for i, hi in ipairs(highlights) do
     local prefixlen, hiname = unpack(hi)
@@ -1231,6 +1265,57 @@ function M.show_line_diagnostics(opts, bufnr, line_nr, client_id)
   return popup_bufnr, winnr
 end
 
+--- Open a floating window with the diagnostics from {position}
+
+---@param opts table|nil Configuration keys
+---         - severity: (DiagnosticSeverity, default nil)
+---             - Only return diagnostics with this severity. Overrides severity_limit
+---         - severity_limit: (DiagnosticSeverity, default nil)
+---             - Limit severity of diagnostics found. E.g. "Warning" means { "Error", "Warning" } will be valid.
+---         - all opts for |show_diagnostics()| can be used here
+---@param buf_nr number|nil The buffer number
+---@param position table|nil The (0,0)-indexed position
+---@return table {popup_bufnr, win_id}
+function M.show_position_diagnostics(opts, buf_nr, position)
+  opts = opts or {}
+  opts.focus_id = "position_diagnostics"
+  buf_nr = buf_nr or vim.api.nvim_get_current_buf()
+  if not position then
+    local curr_position = vim.api.nvim_win_get_cursor(0)
+    curr_position[1] = curr_position[1] - 1
+    position = curr_position
+  end
+  local match_position_predicate = function(diag)
+    return position[1] == diag.range['start'].line and
+    position[2] >= diag.range['start'].character and
+    (position[2] <= diag.range['end'].character or position[1] < diag.range['end'].line)
+  end
+  local position_diagnostics = M.get(buf_nr, nil, match_position_predicate)
+  if opts.severity then
+    position_diagnostics = filter_to_severity_limit(opts.severity, position_diagnostics)
+  elseif opts.severity_limit then
+    position_diagnostics = filter_by_severity_limit(opts.severity_limit, position_diagnostics)
+  end
+  table.sort(position_diagnostics, function(a, b) return a.severity < b.severity end)
+  return show_diagnostics(opts, position_diagnostics)
+end
+
+--- Open a floating window with the diagnostics from {line_nr}
+
+---@param opts table Configuration table
+---     - all opts for |vim.lsp.diagnostic.get_line_diagnostics()| and
+---          |show_diagnostics()| can be used here
+---@param buf_nr number|nil The buffer number
+---@param line_nr number|nil The line number
+---@param client_id number|nil the client id
+---@return table {popup_bufnr, win_id}
+function M.show_line_diagnostics(opts, buf_nr, line_nr, client_id)
+  opts = opts or {}
+  opts.focus_id = "line_diagnostics"
+  line_nr = line_nr or (vim.api.nvim_win_get_cursor(0)[1] - 1)
+  local line_diagnostics = M.get_line_diagnostics(buf_nr, line_nr, opts, client_id)
+  return show_diagnostics(opts, line_diagnostics)
+end
 
 --- Clear diagnotics and diagnostic cache
 ---
@@ -1249,10 +1334,10 @@ function M.reset(client_id, buffer_client_map)
   end)
 end
 
---- Sets the location list
+--- Gets diagnostics, converts them to quickfix/location list items, and applies the item_handler callback to the items.
+---@param item_handler function Callback to apply to the diagnostic items
+---@param command string|nil Command to execute after applying the item_handler
 ---@param opts table|nil Configuration table. Keys:
----         - {open_loclist}: (boolean, default true)
----             - Open loclist after set
 ---         - {client_id}: (number)
 ---             - If nil, will consider all clients attached to buffer.
 ---         - {severity}: (DiagnosticSeverity)
@@ -1261,9 +1346,8 @@ end
 ---             - Limit severity of diagnostics found. E.g. "Warning" means { "Error", "Warning" } will be valid.
 ---         - {workspace}: (boolean, default false)
 ---             - Set the list with workspace diagnostics
-function M.set_loclist(opts)
+local function apply_to_diagnostic_items(item_handler, command, opts)
   opts = opts or {}
-  local open_loclist = if_nil(opts.open_loclist, true)
   local current_bufnr = api.nvim_get_current_buf()
   local diags = opts.workspace and M.get_all(opts.client_id) or {
     [current_bufnr] = M.get(current_bufnr, opts.client_id)
@@ -1280,11 +1364,49 @@ function M.set_loclist(opts)
     return true
   end
   local items = util.diagnostics_to_items(diags, predicate)
-  local win_id = vim.api.nvim_get_current_win()
-  util.set_loclist(items, win_id)
-  if open_loclist then
-    vim.cmd [[lopen]]
+  item_handler(items)
+  if command then
+    vim.cmd(command)
   end
+end
+
+--- Sets the quickfix list
+---@param opts table|nil Configuration table. Keys:
+---         - {open}: (boolean, default true)
+---             - Open quickfix list after set
+---         - {client_id}: (number)
+---             - If nil, will consider all clients attached to buffer.
+---         - {severity}: (DiagnosticSeverity)
+---             - Exclusive severity to consider. Overrides {severity_limit}
+---         - {severity_limit}: (DiagnosticSeverity)
+---             - Limit severity of diagnostics found. E.g. "Warning" means { "Error", "Warning" } will be valid.
+---         - {workspace}: (boolean, default true)
+---             - Set the list with workspace diagnostics
+function M.set_qflist(opts)
+  opts = opts or {}
+  opts.workspace = if_nil(opts.workspace, true)
+  local open_qflist = if_nil(opts.open, true)
+  local command = open_qflist and [[copen]] or nil
+  apply_to_diagnostic_items(util.set_qflist, command, opts)
+end
+
+--- Sets the location list
+---@param opts table|nil Configuration table. Keys:
+---         - {open}: (boolean, default true)
+---             - Open loclist after set
+---         - {client_id}: (number)
+---             - If nil, will consider all clients attached to buffer.
+---         - {severity}: (DiagnosticSeverity)
+---             - Exclusive severity to consider. Overrides {severity_limit}
+---         - {severity_limit}: (DiagnosticSeverity)
+---             - Limit severity of diagnostics found. E.g. "Warning" means { "Error", "Warning" } will be valid.
+---         - {workspace}: (boolean, default false)
+---             - Set the list with workspace diagnostics
+function M.set_loclist(opts)
+  opts = opts or {}
+  local open_loclist = if_nil(opts.open, true)
+  local command = open_loclist and [[lopen]] or nil
+  apply_to_diagnostic_items(util.set_loclist, command, opts)
 end
 
 --- Disable diagnostics for the given buffer and client
@@ -1324,18 +1446,7 @@ function M.enable(bufnr, client_id)
 
   diagnostic_disabled[bufnr][client_id] = nil
 
-  -- We need to invoke the publishDiagnostics handler directly instead of just
-  -- calling M.display so that we can preserve any custom configuration options
-  -- the user may have set with vim.lsp.with.
-  vim.lsp.handlers["textDocument/publishDiagnostics"](
-    nil,
-    "textDocument/publishDiagnostics",
-    {
-      diagnostics = M.get(bufnr, client_id),
-      uri = vim.uri_from_bufnr(bufnr),
-    },
-    client_id
-  )
+  M.redraw(bufnr, client_id)
 end
 -- }}}
 

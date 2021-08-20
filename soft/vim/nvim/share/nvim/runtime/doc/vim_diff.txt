@@ -41,9 +41,11 @@ the differences.
 - 'fillchars' defaults (in effect) to "vert:│,fold:·,sep:│"
 - 'formatoptions' defaults to "tcqj"
 - 'fsync' is disabled
+- 'hidden' is enabled
 - 'history' defaults to 10000 (the maximum)
 - 'hlsearch' is enabled
 - 'incsearch' is enabled
+- 'joinspaces' is disabled
 - 'langnoremap' is enabled
 - 'langremap' is disabled
 - 'laststatus' defaults to 2 (statusline is always shown)
@@ -56,12 +58,13 @@ the differences.
 - 'sidescroll' defaults to 1
 - 'smarttab' is enabled
 - 'startofline' is disabled
+- 'switchbuf' defaults to "uselast"
 - 'tabpagemax' defaults to 50
 - 'tags' defaults to "./tags;,tags"
 - 'ttimeoutlen' defaults to 50
 - 'ttyfast' is always set
-- 'viewoptions' includes "unix,slash"
 - 'undodir' defaults to ~/.local/share/nvim/undo (|xdg|), auto-created
+- 'viewoptions' includes "unix,slash", excludes "options"
 - 'viminfo' includes "!"
 - 'wildmenu' is enabled
 - 'wildoptions' defaults to "pum,tagfile"
@@ -71,6 +74,14 @@ the differences.
     :let loaded_matchit = 1
 
 - |g:vimsyn_embed| defaults to "l" to enable Lua highlighting
+
+
+Default Mappings:					*default-mappings*
+
+nnoremap Y y$
+nnoremap <C-L> <Cmd>nohlsearch<Bar>diffupdate<CR><C-L>
+inoremap <C-U> <C-G>u<C-U>
+inoremap <C-W> <C-G>u<C-W>
 
 ==============================================================================
 3. New Features						       *nvim-features*
@@ -150,6 +161,7 @@ Commands:
   |:drop| is always available
   |:Man| is available by default, with many improvements such as completion
   |:sign-define| accepts a `numhl` argument, to highlight the line number
+  |:match| can be invoked before highlight group is defined
 
 Events:
   |Signal|
@@ -167,6 +179,7 @@ Functions:
   |msgpackdump()|, |msgpackparse()| provide msgpack de/serialization
   |stdpath()|
   |system()|, |systemlist()| can run {cmd} directly (without 'shell')
+  |matchadd()| can be called before highlight group is defined
 
 Highlight groups:
   |highlight-blend| controls blend level for a highlight group
@@ -358,6 +371,14 @@ Startup:
     - works by default: "-" file is optional
     - works in more cases: |-Es|, file args
 
+Syntax highlighting:
+  syncolor.vim has been removed. Nvim now sets up default highlighting groups
+  automatically for both light and dark backgrounds, regardless of whether or
+  not syntax highlighting is enabled. This means that |:syntax-on| and
+  |:syntax-enable| are now identical. Users who previously used an
+  after/syntax/syncolor.vim file should transition that file into a
+  colorscheme. |:colorscheme|
+
 TUI:
 			*:set-termcap*
   Start Nvim with 'verbose' level 3 to show terminal capabilities: >
@@ -473,6 +494,7 @@ Options:
   'maxmem' Nvim delegates memory-management to the OS.
   'maxmemtot' Nvim delegates memory-management to the OS.
   'maxcombine' (6 is always used)
+  *'prompt'* *'noprompt'*
   *'restorescreen'* *'rs'* *'norestorescreen'* *'nors'*
   'shelltype'
   *'shortname'* *'sn'* *'noshortname'* *'nosn'*

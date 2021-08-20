@@ -1038,7 +1038,12 @@ A jump table for the options with a short description can be found at |Q_op|.
 			    continuation (positive).
 		sbr	    Display the 'showbreak' value before applying the
 			    additional indent.
-	The default value for min is 20 and shift is 0.
+		list:{n}    Adds an additional indent for lines that match a
+			    numbered or bulleted list (using the
+			    'formatlistpat' setting).
+		list:-1	    Uses the length of a match with 'formatlistpat'
+			    for indentation.
+	The default value for min is 20, shift and list is 0.
 
 						*'browsedir'* *'bsdir'*
 'browsedir' 'bsdir'	string	(default: "last")
@@ -1802,11 +1807,28 @@ A jump table for the options with a short description can be found at |Q_op|.
 			*'cursorline'* *'cul'* *'nocursorline'* *'nocul'*
 'cursorline' 'cul'	boolean	(default off)
 			local to window
-	Highlight the screen line of the cursor with CursorLine
-	|hl-CursorLine|.  Useful to easily spot the cursor.  Will make screen
-	redrawing slower.
+	Highlight the text line of the cursor with CursorLine |hl-CursorLine|.
+	Useful to easily spot the cursor.  Will make screen redrawing slower.
 	When Visual mode is active the highlighting isn't used to make it
 	easier to see the selected text.
+
+
+						*'cursorlineopt'* *'culopt'*
+'cursorlineopt' 'culopt' string (default: "number,line")
+			local to window
+	Comma separated list of settings for how 'cursorline' is displayed.
+	Valid values:
+	"line"		Highlight the text line of the cursor with
+			CursorLine |hl-CursorLine|.
+	"screenline"	Highlight only the screen line of the cursor with
+			CursorLine |hl-CursorLine|.
+	"number"	Highlight the line number of the cursor with
+			CursorLineNr |hl-CursorLineNr|.
+
+	Special value:
+	"both"		Alias for the values "line,number".
+
+	"line" and "screenline" cannot be used together.
 
 
 						*'debug'*
@@ -3056,7 +3078,7 @@ A jump table for the options with a short description can be found at |Q_op|.
 	See |help-translated|.
 
 				     *'hidden'* *'hid'* *'nohidden'* *'nohid'*
-'hidden' 'hid'		boolean	(default off)
+'hidden' 'hid'		boolean	(default on)
 			global
 	When off a buffer is unloaded when it is |abandon|ed.  When on a
 	buffer becomes hidden when it is |abandon|ed.  If the buffer is still
@@ -3191,7 +3213,7 @@ A jump table for the options with a short description can be found at |Q_op|.
 	option to a valid keymap name.
 
 						*'inccommand'* *'icm'*
-'inccommand' 'icm'	string	(default "")
+'inccommand' 'icm'	string	(default "nosplit")
 			global
 
 	"nosplit": Shows the effects of a command incrementally, as you type.
@@ -3476,7 +3498,7 @@ A jump table for the options with a short description can be found at |Q_op|.
 			|jumplist-stack|
 
 			*'joinspaces'* *'js'* *'nojoinspaces'* *'nojs'*
-'joinspaces' 'js'	boolean	(default on)
+'joinspaces' 'js'	boolean	(default off)
 			global
 	Insert two spaces after a '.', '?' and '!' with a join command.
 	Otherwise only one space is inserted.
@@ -4538,11 +4560,6 @@ A jump table for the options with a short description can be found at |Q_op|.
 			global
 	List of items that control the format of the output of |:hardcopy|.
 	See |popt-option|.
-
-						*'prompt'* *'noprompt'*
-'prompt'		boolean	(default on)
-			global
-	When on a ":" prompt is used in Ex mode.
 
 						*'pumblend'* *'pb'*
 'pumblend' 'pb'		number	(default 0)
@@ -6099,7 +6116,7 @@ A jump table for the options with a short description can be found at |Q_op|.
 	specify special kinds of buffers.   See |special-buffers|.
 
 						*'switchbuf'* *'swb'*
-'switchbuf' 'swb'	string	(default "")
+'switchbuf' 'swb'	string	(default "uselast")
 			global
 	This option controls the behavior when switching between buffers.
 	Possible values (comma separated list):
@@ -6683,7 +6700,7 @@ A jump table for the options with a short description can be found at |Q_op|.
 	security reasons.
 
 						*'viewoptions'* *'vop'*
-'viewoptions' 'vop'	string	(default: "folds,options,cursor,curdir")
+'viewoptions' 'vop'	string	(default: "folds,cursor,curdir")
 			global
 	Changes the effect of the |:mkview| command.  It is a comma separated
 	list of words.  Each word enables saving and restoring something:

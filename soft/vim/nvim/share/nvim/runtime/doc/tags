@@ -167,9 +167,11 @@ $XDG_DATA_HOME	starting.txt	/*$XDG_DATA_HOME*
 'csto'	options.txt	/*'csto'*
 'cuc'	options.txt	/*'cuc'*
 'cul'	options.txt	/*'cul'*
+'culopt'	options.txt	/*'culopt'*
 'cursorbind'	options.txt	/*'cursorbind'*
 'cursorcolumn'	options.txt	/*'cursorcolumn'*
 'cursorline'	options.txt	/*'cursorline'*
+'cursorlineopt'	options.txt	/*'cursorlineopt'*
 'cwh'	options.txt	/*'cwh'*
 'debug'	options.txt	/*'debug'*
 'deco'	options.txt	/*'deco'*
@@ -572,7 +574,7 @@ $XDG_DATA_HOME	starting.txt	/*$XDG_DATA_HOME*
 'nopi'	options.txt	/*'nopi'*
 'nopreserveindent'	options.txt	/*'nopreserveindent'*
 'nopreviewwindow'	options.txt	/*'nopreviewwindow'*
-'noprompt'	options.txt	/*'noprompt'*
+'noprompt'	vim_diff.txt	/*'noprompt'*
 'nopvw'	options.txt	/*'nopvw'*
 'noreadonly'	options.txt	/*'noreadonly'*
 'norelativenumber'	options.txt	/*'norelativenumber'*
@@ -707,7 +709,7 @@ $XDG_DATA_HOME	starting.txt	/*$XDG_DATA_HOME*
 'printmbcharset'	options.txt	/*'printmbcharset'*
 'printmbfont'	options.txt	/*'printmbfont'*
 'printoptions'	options.txt	/*'printoptions'*
-'prompt'	options.txt	/*'prompt'*
+'prompt'	vim_diff.txt	/*'prompt'*
 'pt'	options.txt	/*'pt'*
 'pumblend'	options.txt	/*'pumblend'*
 'pumheight'	options.txt	/*'pumheight'*
@@ -3113,6 +3115,7 @@ CTRL-H	motion.txt	/*CTRL-H*
 CTRL-I	motion.txt	/*CTRL-I*
 CTRL-J	motion.txt	/*CTRL-J*
 CTRL-L	various.txt	/*CTRL-L*
+CTRL-L-default	various.txt	/*CTRL-L-default*
 CTRL-M	motion.txt	/*CTRL-M*
 CTRL-N	motion.txt	/*CTRL-N*
 CTRL-O	motion.txt	/*CTRL-O*
@@ -3799,7 +3802,6 @@ E675	print.txt	/*E675*
 E676	options.txt	/*E676*
 E677	eval.txt	/*E677*
 E678	pattern.txt	/*E678*
-E679	syntax.txt	/*E679*
 E68	pattern.txt	/*E68*
 E680	autocmd.txt	/*E680*
 E681	quickfix.txt	/*E681*
@@ -4349,6 +4351,7 @@ X2Mouse	term.txt	/*X2Mouse*
 X2Release	term.txt	/*X2Release*
 XIM	mbyte.txt	/*XIM*
 Y	change.txt	/*Y*
+Y-default	change.txt	/*Y-default*
 ZQ	editing.txt	/*ZQ*
 ZZ	editing.txt	/*ZZ*
 [	index.txt	/*[*
@@ -5108,6 +5111,7 @@ debug.txt	debug.txt	/*debug.txt*
 debugbreak()	eval.txt	/*debugbreak()*
 decada_members	ft_ada.txt	/*decada_members*
 deepcopy()	eval.txt	/*deepcopy()*
+default-mappings	vim_diff.txt	/*default-mappings*
 definition-search	tagsrch.txt	/*definition-search*
 definitions	intro.txt	/*definitions*
 delete()	eval.txt	/*delete()*
@@ -5972,6 +5976,7 @@ getchangelist()	eval.txt	/*getchangelist()*
 getchar()	eval.txt	/*getchar()*
 getcharmod()	eval.txt	/*getcharmod()*
 getcharsearch()	eval.txt	/*getcharsearch()*
+getcharstr()	eval.txt	/*getcharstr()*
 getcmdline()	eval.txt	/*getcmdline()*
 getcmdpos()	eval.txt	/*getcmdpos()*
 getcmdtype()	eval.txt	/*getcmdtype()*
@@ -6390,9 +6395,11 @@ i_CTRL-R_CTRL-P	insert.txt	/*i_CTRL-R_CTRL-P*
 i_CTRL-R_CTRL-R	insert.txt	/*i_CTRL-R_CTRL-R*
 i_CTRL-T	insert.txt	/*i_CTRL-T*
 i_CTRL-U	insert.txt	/*i_CTRL-U*
+i_CTRL-U-default	insert.txt	/*i_CTRL-U-default*
 i_CTRL-V	insert.txt	/*i_CTRL-V*
 i_CTRL-V_digit	insert.txt	/*i_CTRL-V_digit*
 i_CTRL-W	insert.txt	/*i_CTRL-W*
+i_CTRL-W-default	insert.txt	/*i_CTRL-W-default*
 i_CTRL-X	insert.txt	/*i_CTRL-X*
 i_CTRL-X_CTRL-D	insert.txt	/*i_CTRL-X_CTRL-D*
 i_CTRL-X_CTRL-E	insert.txt	/*i_CTRL-X_CTRL-E*
@@ -6627,6 +6634,7 @@ list-index	eval.txt	/*list-index*
 list-modification	eval.txt	/*list-modification*
 list-repeat	windows.txt	/*list-repeat*
 list2str()	eval.txt	/*list2str()*
+list_directives()	treesitter.txt	/*list_directives()*
 list_parsers()	treesitter.txt	/*list_parsers()*
 list_predicates()	treesitter.txt	/*list_predicates()*
 lite.vim	syntax.txt	/*lite.vim*
@@ -6701,6 +6709,7 @@ lua-treesitter	treesitter.txt	/*lua-treesitter*
 lua-treesitter-core	treesitter.txt	/*lua-treesitter-core*
 lua-treesitter-directives	treesitter.txt	/*lua-treesitter-directives*
 lua-treesitter-highlight	treesitter.txt	/*lua-treesitter-highlight*
+lua-treesitter-highlight-priority	treesitter.txt	/*lua-treesitter-highlight-priority*
 lua-treesitter-node	treesitter.txt	/*lua-treesitter-node*
 lua-treesitter-not-predicate	treesitter.txt	/*lua-treesitter-not-predicate*
 lua-treesitter-parser	treesitter.txt	/*lua-treesitter-parser*
@@ -7200,7 +7209,6 @@ nvim_buf_set_name()	api.txt	/*nvim_buf_set_name()*
 nvim_buf_set_option()	api.txt	/*nvim_buf_set_option()*
 nvim_buf_set_text()	api.txt	/*nvim_buf_set_text()*
 nvim_buf_set_var()	api.txt	/*nvim_buf_set_var()*
-nvim_buf_set_virtual_text()	api.txt	/*nvim_buf_set_virtual_text()*
 nvim_call_atomic()	api.txt	/*nvim_call_atomic()*
 nvim_call_dict_function()	api.txt	/*nvim_call_dict_function()*
 nvim_call_function()	api.txt	/*nvim_call_function()*
@@ -8118,7 +8126,6 @@ synID()	eval.txt	/*synID()*
 synIDattr()	eval.txt	/*synIDattr()*
 synIDtrans()	eval.txt	/*synIDtrans()*
 syncbind	scroll.txt	/*syncbind*
-syncolor	syntax.txt	/*syncolor*
 synconcealed()	eval.txt	/*synconcealed()*
 synload-1	syntax.txt	/*synload-1*
 synload-2	syntax.txt	/*synload-2*
@@ -8135,7 +8142,6 @@ syntax-loading	syntax.txt	/*syntax-loading*
 syntax-printing	usr_06.txt	/*syntax-printing*
 syntax-tex	syntax.txt	/*syntax-tex*
 syntax.txt	syntax.txt	/*syntax.txt*
-syntax_cmd	syntax.txt	/*syntax_cmd*
 sysinit.vim	starting.txt	/*sysinit.vim*
 system()	eval.txt	/*system()*
 system-functions	usr_41.txt	/*system-functions*
@@ -8761,6 +8767,7 @@ vim.lsp.codelens.on_codelens()	lsp.txt	/*vim.lsp.codelens.on_codelens()*
 vim.lsp.codelens.refresh()	lsp.txt	/*vim.lsp.codelens.refresh()*
 vim.lsp.codelens.run()	lsp.txt	/*vim.lsp.codelens.run()*
 vim.lsp.codelens.save()	lsp.txt	/*vim.lsp.codelens.save()*
+vim.lsp.diagnostic.apply_to_diagnostic_items()	lsp.txt	/*vim.lsp.diagnostic.apply_to_diagnostic_items()*
 vim.lsp.diagnostic.clear()	lsp.txt	/*vim.lsp.diagnostic.clear()*
 vim.lsp.diagnostic.disable()	lsp.txt	/*vim.lsp.diagnostic.disable()*
 vim.lsp.diagnostic.enable()	lsp.txt	/*vim.lsp.diagnostic.enable()*
@@ -8776,15 +8783,19 @@ vim.lsp.diagnostic.get_virtual_text_chunks_for_line()	lsp.txt	/*vim.lsp.diagnost
 vim.lsp.diagnostic.goto_next()	lsp.txt	/*vim.lsp.diagnostic.goto_next()*
 vim.lsp.diagnostic.goto_prev()	lsp.txt	/*vim.lsp.diagnostic.goto_prev()*
 vim.lsp.diagnostic.on_publish_diagnostics()	lsp.txt	/*vim.lsp.diagnostic.on_publish_diagnostics()*
+vim.lsp.diagnostic.redraw()	lsp.txt	/*vim.lsp.diagnostic.redraw()*
 vim.lsp.diagnostic.reset()	lsp.txt	/*vim.lsp.diagnostic.reset()*
 vim.lsp.diagnostic.restore_extmarks()	lsp.txt	/*vim.lsp.diagnostic.restore_extmarks()*
 vim.lsp.diagnostic.save()	lsp.txt	/*vim.lsp.diagnostic.save()*
 vim.lsp.diagnostic.save_extmarks()	lsp.txt	/*vim.lsp.diagnostic.save_extmarks()*
 vim.lsp.diagnostic.set_loclist()	lsp.txt	/*vim.lsp.diagnostic.set_loclist()*
+vim.lsp.diagnostic.set_qflist()	lsp.txt	/*vim.lsp.diagnostic.set_qflist()*
 vim.lsp.diagnostic.set_signs()	lsp.txt	/*vim.lsp.diagnostic.set_signs()*
 vim.lsp.diagnostic.set_underline()	lsp.txt	/*vim.lsp.diagnostic.set_underline()*
 vim.lsp.diagnostic.set_virtual_text()	lsp.txt	/*vim.lsp.diagnostic.set_virtual_text()*
+vim.lsp.diagnostic.show_diagnostics()	lsp.txt	/*vim.lsp.diagnostic.show_diagnostics()*
 vim.lsp.diagnostic.show_line_diagnostics()	lsp.txt	/*vim.lsp.diagnostic.show_line_diagnostics()*
+vim.lsp.diagnostic.show_position_diagnostics()	lsp.txt	/*vim.lsp.diagnostic.show_position_diagnostics()*
 vim.lsp.flush()	lsp.txt	/*vim.lsp.flush()*
 vim.lsp.get_active_clients()	lsp.txt	/*vim.lsp.get_active_clients()*
 vim.lsp.get_buffers_by_client_id()	lsp.txt	/*vim.lsp.get_buffers_by_client_id()*
@@ -8793,7 +8804,6 @@ vim.lsp.get_log_path()	lsp.txt	/*vim.lsp.get_log_path()*
 vim.lsp.handlers	lsp.txt	/*vim.lsp.handlers*
 vim.lsp.handlers.hover()	lsp.txt	/*vim.lsp.handlers.hover()*
 vim.lsp.handlers.signature_help()	lsp.txt	/*vim.lsp.handlers.signature_help()*
-vim.lsp.init()	lsp.txt	/*vim.lsp.init()*
 vim.lsp.log.get_filename()	lsp.txt	/*vim.lsp.log.get_filename()*
 vim.lsp.log.set_level()	lsp.txt	/*vim.lsp.log.set_level()*
 vim.lsp.log.should_log()	lsp.txt	/*vim.lsp.log.should_log()*
@@ -8893,6 +8903,10 @@ vim.tbl_keys()	lua.txt	/*vim.tbl_keys()*
 vim.tbl_map()	lua.txt	/*vim.tbl_map()*
 vim.tbl_values()	lua.txt	/*vim.tbl_values()*
 vim.treesitter.language_version	treesitter.txt	/*vim.treesitter.language_version*
+vim.treesitter.query.add_directive()	treesitter.txt	/*vim.treesitter.query.add_directive()*
+vim.treesitter.query.add_predicate()	treesitter.txt	/*vim.treesitter.query.add_predicate()*
+vim.treesitter.query.list_directives()	treesitter.txt	/*vim.treesitter.query.list_directives()*
+vim.treesitter.query.list_predicates()	treesitter.txt	/*vim.treesitter.query.list_predicates()*
 vim.trim()	lua.txt	/*vim.trim()*
 vim.type_idx	lua.txt	/*vim.type_idx*
 vim.types	lua.txt	/*vim.types*

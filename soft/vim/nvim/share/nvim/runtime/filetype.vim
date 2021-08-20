@@ -870,6 +870,9 @@ au BufNewFile,BufRead *.ipynb				setf json
 " JSONC
 au BufNewFile,BufRead *.jsonc			setf jsonc
 
+" Julia
+au BufNewFile,BufRead *.jl			setf julia
+
 " Kixtart
 au BufNewFile,BufRead *.kix			setf kix
 
@@ -1518,6 +1521,9 @@ au BufNewFile,BufRead *.sbt			setf sbt
 
 " Scilab
 au BufNewFile,BufRead *.sci,*.sce		setf scilab
+
+" scdoc
+au BufNewFile,BufRead *.scd			setf scdoc
 
 " SCSS
 au BufNewFile,BufRead *.scss			setf scss

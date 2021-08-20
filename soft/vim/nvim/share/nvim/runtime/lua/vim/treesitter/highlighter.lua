@@ -22,8 +22,6 @@ local _link_default_highlight_once = function(from, to)
   return from
 end
 
--- These are conventions defined by nvim-treesitter, though it
--- needs to be user extensible also.
 TSHighlighter.hl_map = {
     ["error"] = "Error",
 
@@ -87,8 +85,10 @@ function TSHighlighterQuery.new(lang, query_string)
         hl = _link_default_highlight_once(lang .. hl, hl)
       end
 
-      rawset(table, capture, hl)
-      return hl
+      local id = a.nvim_get_hl_id_by_name(hl)
+
+      rawset(table, capture, id)
+      return id
     end
   })
 
@@ -116,7 +116,7 @@ function TSHighlighterQuery:_get_hl_from_capture(capture)
     -- From "Normal.left" only keep "Normal"
     return vim.split(name, '.', true)[1], true
   else
-    return TSHighlighter.hl_map[name] or name, false
+    return TSHighlighter.hl_map[name] or 0, false
   end
 end
 
@@ -248,7 +248,7 @@ local function on_line_impl(self, buf, line)
     end
 
     while line >= state.next_row do
-      local capture, node = state.iter()
+      local capture, node, metadata = state.iter()
 
       if capture == nil then break end
 
@@ -260,7 +260,7 @@ local function on_line_impl(self, buf, line)
                                { end_line = end_row, end_col = end_col,
                                  hl_group = hl,
                                  ephemeral = true,
-                                 priority = 100 -- Low but leaves room below
+                                 priority = tonumber(metadata.priority) or 100 -- Low but leaves room below
                                 })
       end
       if start_row > line then
