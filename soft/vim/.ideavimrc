@@ -10,4 +10,4 @@ nnoremap < <<
 nnoremap > >>
 
 
-set suround
+set surround
