@@ -8,3 +8,6 @@ vnoremap P "+p
 " Indentation
 nnoremap < <<
 nnoremap > >>
+
+
+set surround

@@ -1,3 +1,7 @@
+" 快捷键
+
+set number
+
 " 自定义快捷键
 map <C-c> <ESC>
 noremap <C-s>:w<CR>
@@ -31,18 +35,16 @@ nnoremap <F3> :NERDTreeToggle<CR> " 开启/关闭nerdtree快捷键
 
 
 "coc
-
 noremap <leader>f :Format<CR>
-
 
 
 " 插件管理
 call plug#begin('~/.vim/plugged')
-
  Plug 'preservim/nerdtree'
  Plug 'Xuyuanp/nerdtree-git-plugin'
- Plug 'neoclide/coc.nvim', {'branch': 'release'}
- Plug 'vim-airline/vim-airline'
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'vim-airline/vim-airline'
+ Plug 'tpope/vim-surround'
  Plug 'suan/vim-instant-markdown'
-
 call plug#end()
+
