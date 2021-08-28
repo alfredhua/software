@@ -17,5 +17,5 @@ source $SOFTWARE_PATH/tool/project/manage.sh
 source $SOFTWARE_PATH/tool/script/ssh.sh
 
 
-#alias vi="nvim"
-#alias vim="nvim"
+alias vi="nvim"
+alias vim="nvim"
