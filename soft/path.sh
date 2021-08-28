@@ -51,6 +51,7 @@ then
     export JAVA_HOME=$soft_path/java
     export PATH=$PATH:$JAVA_HOME/bin/
 else
+   echo ""	
 fi
 
 ## vim
