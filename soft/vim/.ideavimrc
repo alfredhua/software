@@ -5,9 +5,11 @@ nnoremap Y y$
 vnoremap Y "+y
 vnoremap P "+p
 
+
 " Indentation
 nnoremap < <<
 nnoremap > >>
-
+nnoremap <C-S-p> :tabp<CR>
+nnoremap <C-S-n> :tabn<CR>
 
 set surround
