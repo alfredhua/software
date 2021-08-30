@@ -67,7 +67,6 @@ export PATH=$PATH:$SCALA_HOME/bin/
 export FLINK_HOME=$soft_path/flink
 export PATH=$PATH:$FLINK_HOME/bin/
 
-
 #### node 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
