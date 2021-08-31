@@ -20,6 +20,8 @@ source $SOFTWARE_PATH/tool/script/ssh.sh
 alias vi="nvim"
 alias vim="nvim"
 
+
+alias python="python3"
 alias py="python3"
 alias pip="pip3"
 
