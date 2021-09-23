@@ -1,17 +1,13 @@
-" 快捷键
-
 set number
 
 " 自定义快捷键
-map <C-c> <ESC>
-noremap <C-s>:w<CR>
-nnoremap Y y$
-vnoremap Y "+y
-nnoremap P "+p
-
-" Indentation
+map <C-c> <ESC>  
+nnoremap <C-s> :w<CR>
+nnoremap Y y$ "
 nnoremap < <<
 nnoremap > >>
+nnoremap P "+p
+vnoremap Y "+y
 
 
 " nerdtree
@@ -22,7 +18,7 @@ let NERDTreeShowBookmarks=1  " 开启Nerdtree时自动显示Bookmarks
 " autocmd vimenter * if !argc()|NERDTree|endif
 "当NERDTree为剩下的唯一窗口时自动关闭
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-" 设置树的显示图标aa
+" 设置树的显示图标
 let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
 let NERDTreeIgnore = ['\.pyc$']  " 过滤所有.pyc文件不显示
@@ -39,12 +35,12 @@ noremap <leader>f :Format<CR>
 
 
 " 插件管理
-" call plug#begin('~/.vim/plugged')
-" Plug 'preservim/nerdtree'
-" Plug 'Xuyuanp/nerdtree-git-plugin'
+call plug#begin('~/.vim/plugged')
+ Plug 'preservim/nerdtree'
+ Plug 'Xuyuanp/nerdtree-git-plugin'
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'vim-airline/vim-airline'
-" Plug 'tpope/vim-surround'
-" Plug 'suan/vim-instant-markdown'
-" call plug#end()
+ Plug 'tpope/vim-surround'
+ Plug 'suan/vim-instant-markdown'
+call plug#end()
 
