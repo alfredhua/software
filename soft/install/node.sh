@@ -12,5 +12,4 @@ nvm install v12.8.0
 nvm use v12.8.0
 nvm alias default v12.8.0
 
-
 echo ' end node '
