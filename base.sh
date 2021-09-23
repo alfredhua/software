@@ -29,7 +29,6 @@ function push_origin(){
    git push --set-upstream origin $1    
 }
 
-
 function push(){
     git add .
     git commit -m $1
