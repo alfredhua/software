@@ -39,12 +39,12 @@ noremap <leader>f :Format<CR>
 
 
 " 插件管理
-call plug#begin('~/.vim/plugged')
- Plug 'preservim/nerdtree'
- Plug 'Xuyuanp/nerdtree-git-plugin'
+" call plug#begin('~/.vim/plugged')
+" Plug 'preservim/nerdtree'
+" Plug 'Xuyuanp/nerdtree-git-plugin'
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'vim-airline/vim-airline'
- Plug 'tpope/vim-surround'
- Plug 'suan/vim-instant-markdown'
-call plug#end()
+" Plug 'tpope/vim-surround'
+" Plug 'suan/vim-instant-markdown'
+" call plug#end()
 

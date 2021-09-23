@@ -54,8 +54,8 @@ else
 fi
 
 ## vim
-export VIM_PATH_HOME=$soft_path/vim/nvim
-export PATH=$PATH:$VIM_PATH_HOME/bin
+export VIM=$soft_path/vim/nvim/share/nvim
+export PATH=$PATH:$VIM:$soft_path/vim/nvim/bin
 
 ## scala
 export SCALA_HOME=$soft_path/scala
