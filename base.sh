@@ -25,10 +25,13 @@ alias glog="git log"
 alias gadd="git add"
 alias gclone="git clone"
 alias gshow="git show"
-alias gporigin="git push --set-upstream origin $1"
+alias gporigin="git_push_origin"
 
 function git_push(){
     git add . && git commit -m $1 && git push
+}
+function git_push_origin(){
+    git push --set-upstream origin $1
 }
 
 ## CENTOS
@@ -45,10 +48,19 @@ alias ssh105y="ssh -oPort=6000 root@39.98.143.124"
 alias ssh107="ssh root@192.168.0.107"
 
 ## DOCKER
-alias denter="docker exec -it $1 bash"
-alias dstart="docker-compose -f $1 up -d"
-alias dstop="docker-compose -f $1 down"
+alias denter="docker_enter"
+alias dstart="docker_compose_start"
+alias dstop="docker_compose_stop"
 
+function docker_enter(){
+    docker exec -it $1 bash
+}
+function docker_compose_start(){
+    docker-compose -f $1 up -d
+}
+function docker_compose_stop(){
+    docker-compose -f $1 down
+}
 ## NODE 
 
 alias nrs="npm run start"
