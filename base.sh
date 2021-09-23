@@ -66,6 +66,10 @@ function compose_stop(){
 }
 
 ## NODE 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 alias nrs="npm run start"
 alias nrdev="npm run dev"
 alias ni="npm install"
@@ -76,6 +80,8 @@ function npm_install_g(){
 }
 
 ## VIM
+#  ln -s ~/software/soft/vim/nvim/config/init.vim ~/.config/nvim/.init.vim 
+#  ln -s ~/software/soft/vim/ideavimrc  ~/.ideavimrc
 alias vi="nvim"
 alias vim="nvim"
 
