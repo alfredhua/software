@@ -1,5 +1,7 @@
 #!/bin/sh
 
+source $SOFTWARE_PATH/soft/path.sh
+
 ## MAVEN
 alias mc="mvn clean "
 alias mcc="mvn clean && mvn compile"
