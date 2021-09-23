@@ -81,7 +81,7 @@ function npm_install_g(){
 }
 
 ## VIM
-#  ln -s ~/software/soft/vim/nvim/config/init.vim ~/.config/nvim/.init.vim 
+#  ln -s ~/software/soft/vim/nvim/config/init.vim ~/.config/nvim/init.vim 
 #  ln -s ~/software/soft/vim/ideavimrc  ~/.ideavimrc
 alias vi="nvim"
 alias vim="nvim"
