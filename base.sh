@@ -91,21 +91,25 @@ alias python="python3"
 alias py="python3"
 alias pip="pip3"
 
+
+
 ## 项目管理相关
-MANAGE_HOME="~/workspace/self/project"
+MANAGE_HOME="$HOME/workspace/self/project"
 alias jm="cd $MANAGE_HOME"
 alias msiterun="cd $MANAGE_HOME/server && ./gradlew :web:web-site:bootRun "
 alias madminrun="cd $MANAGE_HOME/server && ./gradlew :web:web-admin:bootRun "
 
-KEEPER_HOME="~/workspace/jd/keeper"
-alias keeper="cd $KEEPER_HOME"
-alias pk="cd $KEEPER_HOME/pinkong "
-alias keeper="cd $KEEPER_HOME/pop-keeper"
+KEEPER_HOME="$HOME/workspace/jd/keeper"
+alias jhg="cd $KEEPER_HOME"
+alias jpk="cd $KEEPER_HOME/pinkong "
+alias jkeeper="cd $KEEPER_HOME/pop-keeper"
 
-PUNISH_HOME="~/workspace/jd/punish"
-alias punish=" $PUNISH_HOME"
-alias rule="$PUNISH_HOME/pop-rule-decision"
-alias legal="$PUNISH_HOME/pop-legal-center "
-alias exe="$PUNISH_HOME/pop-execution"
-alias man="$PUNISH_HOME/pop-legal-man"
-alias shop="$PUNISH_HOME/pop-legal-shop"
+PUNISH_HOME="$HOME/workspace/jd/punish"
+alias jjc="$PUNISH_HOME"
+alias jrule="$PUNISH_HOME/pop-rule-decision"
+alias jlegal="$PUNISH_HOME/pop-legal-center "
+alias jexe="$PUNISH_HOME/pop-execution"
+alias jman="$PUNISH_HOME/pop-legal-man"
+alias jshop="$PUNISH_HOME/pop-legal-shop"
+
+alias jnote="$HOME/workspace/jd/note"
