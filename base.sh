@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source $SOFTWARE_PATH/soft/path.sh
+source $HOME/software/soft/path.sh
 
 ## MAVEN
 alias mc="mvn clean "
@@ -12,7 +12,7 @@ alias md="mvn dependency:tree"
 ## GIT
 alias gstatus="git status"
 alias gpull="git pull"
-alias gpush="push $1"
+alias gpush="git_push" 
 alias gdiff="git diff"
 alias gcheckout="git checkout"
 alias gmerge="git merge"
@@ -25,16 +25,13 @@ alias glog="git log"
 alias gadd="git add"
 alias gclone="git clone"
 alias gshow="git show"
-alias gporigin="push_origin $1"
+alias gporigin="git_push_origin"
 
-function push_origin(){
-   git push --set-upstream origin $1    
+function git_push(){
+    git add . && git commit -m $1 && git push
 }
-
-function push(){
-    git add .
-    git commit -m $1
-    git push
+function git_push_origin(){
+    git push --set-upstream origin $1
 }
 
 ## CENTOS
@@ -44,32 +41,27 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+
 alias sshali="ssh root@39.98.143.124"
 alias ssh105="ssh root@192.168.0.105"
 alias ssh105y="ssh -oPort=6000 root@39.98.143.124"
 alias ssh107="ssh root@192.168.0.107"
 
 ## DOCKER
-alias denter="enter"
-alias compstart="compose_start"
-alias comstop="compose_stop"
+alias denter="docker_enter"
+alias dstart="docker_compose_start"
+alias dstop="docker_compose_stop"
 
-function enter(){
+function docker_enter(){
     docker exec -it $1 bash
 }
-
-function compose_start(){
-   docker-compose -f $1 up -d
+function docker_compose_start(){
+    docker-compose -f $1 up -d
 }
-
-function compose_stop(){
-   docker-compose -f $1 down
+function docker_compose_stop(){
+    docker-compose -f $1 down
 }
-
 ## NODE 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 alias nrs="npm run start"
 alias nrdev="npm run dev"
@@ -81,7 +73,7 @@ function npm_install_g(){
 }
 
 ## VIM
-#  ln -s ~/software/soft/vim/nvim/config/init.vim ~/.config/nvim/.init.vim 
+#  ln -s ~/software/soft/vim/nvim/config/init.vim ~/.config/nvim/init.vim 
 #  ln -s ~/software/soft/vim/ideavimrc  ~/.ideavimrc
 alias vi="nvim"
 alias vim="nvim"
@@ -94,6 +86,7 @@ alias pip="pip3"
 
 
 ## 项目管理相关
+
 MANAGE_HOME="$HOME/workspace/self/project"
 alias jm="cd $MANAGE_HOME"
 alias msiterun="cd $MANAGE_HOME/server && ./gradlew :web:web-site:bootRun "
