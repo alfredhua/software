@@ -18,6 +18,10 @@ nnoremap > >>
 nnoremap P "+p
 vnoremap Y "+y
 
+nmap <C-o> :Files<CR>
+nmap <C-e> :Buffers<CR>
+
+
 
 " nerdtree
 " autocmd vimenter * NERDTree  "自动开启Nerdtree
@@ -41,9 +45,11 @@ noremap <leader>f :Format<CR>
 
 " 插件管理
 call plug#begin('~/.vim/plugged')
- Plug 'preservim/nerdtree'   " 树形目录
- Plug 'Xuyuanp/nerdtree-git-plugin'  " git 显示 
- Plug 'tpope/vim-surround'        " vim 环绕输入
- " Plug 'suan/vim-instant-markdown' " markdown预览
- " Plug 'flazz/vim-colorschemes' "vim 主题
+	Plug 'preservim/nerdtree'   " 树形目录
+	Plug 'Xuyuanp/nerdtree-git-plugin'  " git 显示 
+	Plug 'tpope/vim-surround'        " vim 环绕输入
+	" Plug 'suan/vim-instant-markdown' " markdown预览
+	" Plug 'flazz/vim-colorschemes' "vim 主题
+	Plug '/usr/local/opt/fzf'
+	Plug 'junegunn/fzf.vim'
 call plug#end()

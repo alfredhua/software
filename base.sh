@@ -1,7 +1,7 @@
 #!/bin/sh
 
 source $HOME/software/soft/path.sh
-source $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
+source $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 ## MAVEN
 alias mc="mvn clean "
@@ -83,7 +83,6 @@ function npm_install_g(){
 }
 
 ## VIM
-c
 alias vi="nvim"
 alias vim="nvim"
 
