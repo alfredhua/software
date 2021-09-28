@@ -34,7 +34,7 @@ function git_push_origin(){
     git push --set-upstream origin $1
 }
 
-## CENTOS
+## linux
 alias c='clear'
 alias j='cd'
 alias ..='cd ..'
@@ -84,7 +84,6 @@ alias py="python3"
 alias pip="pip3"
 
 
-
 ## 项目管理相关
 
 MANAGE_HOME="$HOME/workspace/self/project"
@@ -99,10 +98,18 @@ alias jkeeper="cd $KEEPER_HOME/pop-keeper"
 
 PUNISH_HOME="$HOME/workspace/jd/punish"
 alias jjc="$PUNISH_HOME"
+
 alias jrule="$PUNISH_HOME/pop-rule-decision"
 alias jlegal="$PUNISH_HOME/pop-legal-center "
 alias jexe="$PUNISH_HOME/pop-execution"
 alias jman="$PUNISH_HOME/pop-legal-man"
 alias jshop="$PUNISH_HOME/pop-legal-shop"
+
+
+alias irule="idea $PUNISH_HOME/pop-rule-decision"
+alias ilegal="idea $PUNISH_HOME/pop-legal-center "
+alias iexe="idea $PUNISH_HOME/pop-execution"
+alias iman="idea $PUNISH_HOME/pop-legal-man"
+alias ishop="idea $PUNISH_HOME/pop-legal-shop"
 
 alias jnote="$HOME/workspace/jd/note"
