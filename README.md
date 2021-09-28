@@ -12,3 +12,5 @@ source $HOME/software/base.sh
 
 ### 软件安装
   - brew install fzf
+  - brew install ack
+  - vim 下安装所有插件： PlugInstall 
