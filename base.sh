@@ -1,6 +1,7 @@
 #!/bin/sh
 
 source $HOME/software/soft/path.sh
+source $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 ## MAVEN
 alias mc="mvn clean "
@@ -15,6 +16,7 @@ alias gpull="git pull"
 alias gpush="git_push" 
 alias gdiff="git diff"
 alias gcheckout="git checkout"
+alias gcsearch="git_checkout_search"
 alias gmerge="git merge"
 alias grebase="git rebase"
 alias gstash="git stash"
@@ -26,6 +28,10 @@ alias gadd="git add"
 alias gclone="git clone"
 alias gshow="git show"
 alias gporigin="git_push_origin"
+
+function git_checkout_search(){
+    git checkout $(git branch -r | fzf)
+}
 
 function git_push(){
     git add . && git commit -m $1 && git push
@@ -41,6 +47,10 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+alias jsearch="cd_search_path"
+function cd_search_path(){
+    cd $(find * -type d | fzf)
+}
 
 alias sshali="ssh root@39.98.143.124"
 alias ssh105="ssh root@192.168.0.105"
@@ -73,8 +83,7 @@ function npm_install_g(){
 }
 
 ## VIM
-#  ln -s ~/software/soft/vim/nvim/config/init.vim ~/.config/nvim/init.vim 
-#  ln -s ~/software/soft/vim/ideavimrc  ~/.ideavimrc
+c
 alias vi="nvim"
 alias vim="nvim"
 
