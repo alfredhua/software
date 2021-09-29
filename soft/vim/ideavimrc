@@ -13,3 +13,7 @@ nnoremap <C-S-p> :tabp<CR>
 nnoremap <C-S-n> :tabn<CR>
 
 set surround
+
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
