@@ -1,5 +1,4 @@
 #!/bin/sh
-
 source $HOME/software/soft/path.sh
 source $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
@@ -61,6 +60,7 @@ alias ssh107="ssh root@192.168.0.107"
 alias denter="docker_enter"
 alias dstart="docker_compose_start"
 alias dstop="docker_compose_stop"
+alias dps="docker ps -a"
 
 function docker_enter(){
     docker exec -it $1 bash
@@ -99,7 +99,9 @@ WORK_SPACE="$HOME/workspace"
 alias jm="cd $WORK_SPACE/self/project"
 alias msiterun="cd $WORK_SPACE/self/project/server && ./gradlew :web:web-site:bootRun "
 alias madminrun="cd $WORK_SPACE/self/project/server && ./gradlew :web:web-admin:bootRun "
+alias iserver="cd $WORK_SPACE/self/project/server && idea ."
 
+### jd
 alias jhg="cd $WORK_SPACE/jd/keeper"
 alias jpk="cd $WORK_SPACE/jd/keeper/pinkong "
 alias jkeeper="cd $WORK_SPACE/jd/keeper/pop-keeper"
