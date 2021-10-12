@@ -73,11 +73,16 @@ function docker_compose_stop(){
 }
 ## NODE 
 
-alias nrs="npm run start"
-alias nrdev="npm run dev"
-alias ni="npm install"
-alias nig="npm_install_g"
+alias nprs="npm run start"
+alias npdev="npm run dev"
+alias nps="npm run server"
+alias npi="npm install"
+alias npig="npm_install_g"
 
+alias nvu8="nvm use v8"
+alias nvu12="nvm use v12"
+alias nvd12="nvm alias default v12"
+alias nvd8="nvm alias default v8"
 function npm_install_g(){
     npm install $1 -g
 }
