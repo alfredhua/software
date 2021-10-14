@@ -102,9 +102,12 @@ alias pip="pip3"
 WORK_SPACE="$HOME/workspace"
 
 alias jm="cd $WORK_SPACE/self/project"
-alias msiterun="cd $WORK_SPACE/self/project/server && ./gradlew :web:web-site:bootRun "
-alias madminrun="cd $WORK_SPACE/self/project/server && ./gradlew :web:web-admin:bootRun "
+alias runsite="cd $WORK_SPACE/self/project/server && ./gradlew :web:web-site:bootRun "
+alias runadmin="cd $WORK_SPACE/self/project/server && ./gradlew :web:web-admin:bootRun "
 alias iserver="cd $WORK_SPACE/self/project/server && idea ."
+
+alias jblog="cd $WORK_SPACE/self/blog"
+alias jsoftware="cd $HOME/software"
 
 ### jd
 alias jhg="cd $WORK_SPACE/jd/keeper"
