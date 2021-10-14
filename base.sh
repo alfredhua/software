@@ -40,6 +40,7 @@ function git_push_origin(){
 }
 
 ## linux
+alias lsh='ls -alh'
 alias c='clear'
 alias j='cd'
 alias ..='cd ..'
