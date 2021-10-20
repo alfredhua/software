@@ -6,8 +6,8 @@ source $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.
 
 
 ## vim
-export VIM=$SOFT_WARE_PATH/vim/nvim/share/nvim
-export PATH=$PATH:$VIM:$SOFT_WARE_PATH/vim/nvim/bin
+# export VIM=$SOFT_WARE_PATH/vim/nvim/share/nvim
+# export PATH=$PATH:$VIM:$SOFT_WARE_PATH/vim/nvim/bin
 
 #### node 
 export NVM_DIR="$HOME/.nvm"

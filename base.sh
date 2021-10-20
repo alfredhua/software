@@ -40,6 +40,7 @@ function git_push_origin(){
 }
 
 ## linux
+alias vihost="sudo vim /etc/hosts"
 alias lsh='ls -alh'
 alias c='clear'
 alias j='cd'
