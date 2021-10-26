@@ -54,14 +54,6 @@ export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin/
 export HBASE_HOME=$SOFT_WARE_PATH/hbase
 export PATH=$PATH:$HBASE_HOME/bin/
 
-## JAVA
-name=`uname`
-if [ $name != 'Darwin' ]
-then
-    export JAVA_HOME=$SOFT_WARE_PATH/java
-    export PATH=$PATH:$JAVA_HOME/bin/
-else
-fi
 
 ## scala
 export SCALA_HOME=$SOFT_WARE_PATH/scala

@@ -6,7 +6,6 @@ set backspace=indent,eol,start
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-
 set cursorline
 
 " 自定义快捷键
@@ -20,7 +19,6 @@ vnoremap Y "+y
 
 nmap <C-o> :Files<CR>
 nmap <C-e> :Buffers<CR>
-
 
 
 " nerdtree
