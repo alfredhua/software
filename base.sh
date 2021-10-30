@@ -64,7 +64,6 @@ alias denter="docker_enter"
 alias dstart="docker_compose_start"
 alias dstop="docker_compose_stop"
 alias dps="docker ps -a"
-
 function docker_enter(){
     docker exec -it $1 bash
 }
@@ -75,17 +74,15 @@ function docker_compose_stop(){
     docker-compose -f $1 down
 }
 ## NODE 
-
+alias nvu8="nvm use v8"
+alias nvu12="nvm use v12"
+alias nvd12="nvm alias default v12"
+alias nvd8="nvm alias default v8"
 alias nprs="npm run start"
 alias npdev="npm run dev"
 alias nps="npm run server"
 alias npi="npm install"
 alias npig="npm_install_g"
-
-alias nvu8="nvm use v8"
-alias nvu12="nvm use v12"
-alias nvd12="nvm alias default v12"
-alias nvd8="nvm alias default v8"
 function npm_install_g(){
     npm install $1 -g
 }
@@ -99,9 +96,7 @@ alias python="python3"
 alias py="python3"
 alias pip="pip3"
 
-
 ## 项目管理相关
-
 WORK_SPACE="$HOME/workspace"
 
 alias jm="cd $WORK_SPACE/self/project"
