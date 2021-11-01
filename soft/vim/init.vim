@@ -53,4 +53,4 @@ call plug#begin('~/.vim/plugged')
 	Plug 'mileszs/ack.vim'
 call plug#end()
 
-colorscheme dusk
+colorscheme murphy
