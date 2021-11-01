@@ -44,6 +44,7 @@ function git_push_origin(){
 alias vihost="sudo vim /etc/hosts"
 alias lsh='ls -alh'
 alias c='clear'
+alias x='exit'
 alias j='cd'
 alias ..='cd ..'
 alias ...='cd ../..'
