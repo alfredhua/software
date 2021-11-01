@@ -1,5 +1,5 @@
-set number
 syntax on
+set number
 set hlsearch
 set nocompatible
 set backspace=indent,eol,start
