@@ -17,7 +17,7 @@ nnoremap > >>
 nnoremap P "+p
 vnoremap Y "+y
 
-## 文件搜索
+" 文件搜索
 nmap <C-o> :Files<CR>
 nmap <C-e> :Buffers<CR>
 
