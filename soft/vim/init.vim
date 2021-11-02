@@ -17,6 +17,7 @@ nnoremap > >>
 nnoremap P "+p
 vnoremap Y "+y
 
+## 文件搜索
 nmap <C-o> :Files<CR>
 nmap <C-e> :Buffers<CR>
 
@@ -35,11 +36,6 @@ let g:NERDTreeShowLineNumbers=0 " 是否显示行号
 let g:NERDTreeHidden=0     "不显示隐藏文件
 let NERDTreeDirArrows = 1
 nnoremap <F3> :NERDTreeToggle<CR> " 开启/关闭nerdtree快捷键
-
-
-"coc
-noremap <leader>f :Format<CR>
-
 
 " 插件管理
 call plug#begin('~/.vim/plugged')
