@@ -45,6 +45,10 @@ let g:airline_theme='google_dark'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 
+" vim-instany-markdown
+
+let g:instant_markdown_autostart = 0
+nnoremap <F5> :InstantMarkdownPreview<CR>
 
 " 插件管理
 call plug#begin('~/.vim/plugged')
@@ -59,6 +63,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'vim-airline/vim-airline'  " 行样式
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'jiangmiao/auto-pairs'  " 括号自动匹配
+	Plug 'mattn/emmet-vim' " html 支持
 call plug#end()
 
 " 主题
