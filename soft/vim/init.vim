@@ -7,6 +7,7 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set cursorline
+set ruler
 
 " 自定义快捷键
 map <C-c> <ESC>  
@@ -16,11 +17,13 @@ nnoremap < <<
 nnoremap > >>
 nnoremap P "+p
 vnoremap Y "+y
+"设置切换Buffer快捷键"
+nnoremap <C-N> :bn<CR>
+nnoremap <C-P> :bp<CR>
 
-" 文件搜索
+" fzf 文件搜索
 nmap <C-o> :Files<CR>
 nmap <C-e> :Buffers<CR>
-
 
 " nerdtree
 " autocmd vimenter * NERDTree  "自动开启Nerdtree
@@ -37,6 +40,12 @@ let g:NERDTreeHidden=0     "不显示隐藏文件
 let NERDTreeDirArrows = 1
 nnoremap <F3> :NERDTreeToggle<CR> " 开启/关闭nerdtree快捷键
 
+"ariline
+let g:airline_theme='google_dark'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+
+
 " 插件管理
 call plug#begin('~/.vim/plugged')
 	Plug 'preservim/nerdtree'   " 树形目录
@@ -44,9 +53,13 @@ call plug#begin('~/.vim/plugged')
 	Plug 'tpope/vim-surround'        " vim 环绕输入
     Plug 'suan/vim-instant-markdown' " markdown预览
 	Plug 'flazz/vim-colorschemes' "vim 主题
-	Plug '/usr/local/opt/fzf'
-	Plug 'junegunn/fzf.vim'
-	Plug 'mileszs/ack.vim'
+	Plug '/usr/local/opt/fzf'     " 文件搜索
+	Plug 'junegunn/fzf.vim'     
+	Plug 'mileszs/ack.vim'      " 文件内容搜索
+	Plug 'vim-airline/vim-airline'  " 行样式
+	Plug 'vim-airline/vim-airline-themes'
+	Plug 'jiangmiao/auto-pairs'  " 括号自动匹配
 call plug#end()
 
+" 主题
 colorscheme gruvbox
