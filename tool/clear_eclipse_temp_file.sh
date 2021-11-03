@@ -20,7 +20,7 @@ function delete_dir(){
 		then
 			delete_file $1/$next 
 		else
-			echo $1/$next 'is ignore--------'
+			echo $1/$next 'is ignore'
 		fi
 	done
 }
@@ -33,7 +33,7 @@ do
 	then
 		delete_dir $server_path/$one_file
 	else
-		echo $one_file 'is ignore--------'
+		echo $one_file 'is ignore'
 	fi
 done
 
