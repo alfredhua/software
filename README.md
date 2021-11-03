@@ -13,8 +13,10 @@
   -  ln -s ~/software/soft/vim/init.vim   ~/.config/nvim/init.vim
   -  ln -s ~/software/soft/vim/ideavimrc  ~/.ideavimr
   -  vim 下安装所有插件： PlugInstall 
+
 ### brew
   - /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 ### ZSH
-  -  cd $HOME/.oh-my-zsh/plugins && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+  - sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  - cd $HOME/.oh-my-zsh/plugins && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
