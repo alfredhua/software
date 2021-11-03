@@ -9,7 +9,6 @@ dic=(
 [hadoop]="gz,hadoop-3.2.2.tar.gz,hadoop-3.2.2,https://ftp.jaist.ac.jp/pub/apache/hadoop/common/hadoop-3.2.2/hadoop-3.2.2.tar.gz"
 [jad]="zip,jad158g.mac.intel.zip,,https://varaneckas.com/jad/jad158g.mac.intel.zip"
 [scala]="tgz,scala-2.11.1.tgz,scala-2.11.1,https://downloads.lightbend.com/scala/2.11.1/scala-2.11.1.tgz"
-
 )
 function install(){
 	echo ' begin install ' $1 

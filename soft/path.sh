@@ -4,11 +4,6 @@ SOFT_WARE_PATH=$HOME/software/soft
 
 source $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-
-## vim
-# export VIM=$SOFT_WARE_PATH/vim/nvim/share/nvim
-# export PATH=$PATH:$VIM:$SOFT_WARE_PATH/vim/nvim/bin
-
 #### node 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
