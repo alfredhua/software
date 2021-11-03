@@ -4,7 +4,7 @@ source $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.
 
 # Shell
 
-alias clear_dir='$HOME/software/tool/clear_dir.sh'
+alias clear_eclipse_temp_file='$HOME/software/tool/clear_eclipse_temp_file.sh'
 
 ## MAVEN
 alias mc="mvn clean "
