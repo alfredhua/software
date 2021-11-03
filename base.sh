@@ -104,7 +104,6 @@ alias pip="pip3"
 ## 项目管理相关
 WORK_SPACE="$HOME/workspace"
 
-alias jm="cd $WORK_SPACE/self/project"
 alias runsite="cd $WORK_SPACE/self/project/server && ./gradlew :web:web-site:bootRun "
 alias runadmin="cd $WORK_SPACE/self/project/server && ./gradlew :web:web-admin:bootRun "
 alias iserver="cd $WORK_SPACE/self/project/server && idea ."
@@ -112,6 +111,8 @@ alias itest="cd $WORK_SPACE/self/test && idea ."
 
 alias jblog="cd $WORK_SPACE/self/blog"
 alias jsoft="cd $HOME/software"
+alias jtest="cd $WORK_SPACE/self/test"
+alias jpro="cd $WORK_SPACE/self/project"
 
 ### jd
 alias jhg="cd $WORK_SPACE/jd/keeper"
