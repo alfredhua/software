@@ -1,4 +1,3 @@
-
 #!/bin/sh
 
 down_load_path=$HOME/software/soft
