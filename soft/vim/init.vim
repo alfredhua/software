@@ -64,6 +64,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'jiangmiao/auto-pairs'  " 括号自动匹配
 	Plug 'mattn/emmet-vim' " html 支持
+	Plug 'neovim/nvim-lspconfig'
 call plug#end()
 
 " 主题

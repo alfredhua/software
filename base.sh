@@ -2,6 +2,10 @@
 source $HOME/software/soft/path.sh
 source $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# Shell
+
+alias clear_dir='$HOME/software/tool/clear_dir.sh'
+
 ## MAVEN
 alias mc="mvn clean "
 alias mcc="mvn clean && mvn compile"
@@ -107,7 +111,7 @@ alias iserver="cd $WORK_SPACE/self/project/server && idea ."
 alias itest="cd $WORK_SPACE/self/test && idea ."
 
 alias jblog="cd $WORK_SPACE/self/blog"
-alias jsoftware="cd $HOME/software"
+alias jsoft="cd $HOME/software"
 
 ### jd
 alias jhg="cd $WORK_SPACE/jd/keeper"
