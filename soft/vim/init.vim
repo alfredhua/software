@@ -69,3 +69,10 @@ call plug#end()
 
 " 主题
 colorscheme gruvbox
+" LSP配置
+lua << EOF
+require'lspconfig'.html.setup{}
+require'lspconfig'.vuels.setup{}
+
+EOF
+
