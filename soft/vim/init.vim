@@ -32,8 +32,8 @@ let NERDTreeShowBookmarks=1  " 开启Nerdtree时自动显示Bookmarks
 " autocmd vimenter * if !argc()|NERDTree|endif "打开vim时如果没有文件自动打开NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif "当NERDTree为剩下的唯一窗口时自动关闭
 " 设置树的显示图标
-let g:NERDTreeDirArrowExpandable = '+'
-let g:NERDTreeDirArrowCollapsible = '-'
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
 let NERDTreeIgnore = ['\.pyc$']  " 过滤所有.pyc文件不显示
 let g:NERDTreeShowLineNumbers=0 " 是否显示行号
 let g:NERDTreeHidden=0     "不显示隐藏文件
@@ -53,6 +53,7 @@ nnoremap <F5> :InstantMarkdownPreview<CR>
 " 插件管理
 call plug#begin('~/.vim/plugged')
 	Plug 'preservim/nerdtree'   " 树形目录
+
 	Plug 'Xuyuanp/nerdtree-git-plugin'  " git 显示 
 	Plug 'tpope/vim-surround'        " vim 环绕输入
     Plug 'suan/vim-instant-markdown' " markdown预览
@@ -65,14 +66,22 @@ call plug#begin('~/.vim/plugged')
 	Plug 'jiangmiao/auto-pairs'  " 括号自动匹配
 	Plug 'mattn/emmet-vim' " html 支持
 	Plug 'neovim/nvim-lspconfig'
+	Plug 'kabouzeid/nvim-lspinstall'
+
+
 call plug#end()
 
 " 主题
 colorscheme gruvbox
+
+set termguicolors
+
 " LSP配置
 lua << EOF
-require'lspconfig'.html.setup{}
-require'lspconfig'.vuels.setup{}
-
+require'lspinstall'.setup() -- important
+local servers = require'lspinstall'.installed_servers()
+for _, server in pairs(servers) do
+  require'lspconfig'[server].setup{}
+end
 EOF
 
