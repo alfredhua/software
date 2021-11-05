@@ -9,6 +9,7 @@ function delete_file(){
 	rm -rf $1/.project
 	rm -rf $1/.settings
 	rm -rf $1/bin
+	rm -rf $1/.factorypath
 }
 
 function delete_dir(){

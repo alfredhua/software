@@ -53,7 +53,6 @@ nnoremap <F5> :InstantMarkdownPreview<CR>
 " 插件管理
 call plug#begin('~/.vim/plugged')
 	Plug 'preservim/nerdtree'   " 树形目录
-
 	Plug 'Xuyuanp/nerdtree-git-plugin'  " git 显示 
 	Plug 'tpope/vim-surround'        " vim 环绕输入
     Plug 'suan/vim-instant-markdown' " markdown预览
@@ -64,11 +63,10 @@ call plug#begin('~/.vim/plugged')
 	Plug 'vim-airline/vim-airline'  " 行样式
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'jiangmiao/auto-pairs'  " 括号自动匹配
-	Plug 'mattn/emmet-vim' " html 支持
-	Plug 'neovim/nvim-lspconfig'
-	Plug 'kabouzeid/nvim-lspinstall'
+	Plug 'mattn/emmet-vim' " html vue高亮 支持
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-
+	
 call plug#end()
 
 " 主题
@@ -78,10 +76,5 @@ set termguicolors
 
 " LSP配置
 lua << EOF
-require'lspinstall'.setup() -- important
-local servers = require'lspinstall'.installed_servers()
-for _, server in pairs(servers) do
-  require'lspconfig'[server].setup{}
-end
 EOF
 
