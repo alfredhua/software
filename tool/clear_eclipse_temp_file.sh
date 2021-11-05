@@ -28,6 +28,8 @@ function delete_dir(){
 
 
 #cd $server_path
+
+delete_dir $server_path
 for one_file in `ls`
 do
 	if [ -d $server_path/$one_file ]
