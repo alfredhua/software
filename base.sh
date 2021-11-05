@@ -4,8 +4,8 @@ source $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.
 
 # Shell
 
-alias sh_clear_eclipse='$HOME/software/tool/clear_eclipse_temp_file.sh'
-alias sh_install='$HOME/software/tool/install.sh'
+alias shClearEclipse='$HOME/software/tool/clear_eclipse_temp_file.sh'
+alias shInstall='$HOME/software/tool/install.sh'
 
 ## MAVEN
 alias mc="mvn clean "
@@ -15,7 +15,7 @@ alias mccid="mvn clean && mvn compile && mvn install && mvn deploy"
 alias md="mvn dependency:tree"
 
 ## GRADLE
-alias grd_cbjp="./gradlew clean && ./gradlew build && ./gradlew jar && ./gradlew publishToMavenLocal"
+alias gradleInstall="./gradlew clean && ./gradlew build && ./gradlew jar && ./gradlew publishToMavenLocal"
 
 ## GIT
 alias gstatus="git status"
