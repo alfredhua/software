@@ -14,6 +14,9 @@ alias mcci="mvn clean && mvn compile && mvn install"
 alias mccid="mvn clean && mvn compile && mvn install && mvn deploy"
 alias md="mvn dependency:tree"
 
+## GRADLE
+alias grd_cbjp="./gradlew clean && ./gradlew build && ./gradlew jar && ./gradlew publishToMavenLocal"
+
 ## GIT
 alias gstatus="git status"
 alias gpull="git pull"
@@ -114,6 +117,7 @@ alias jblog="cd $WORK_SPACE/self/blog"
 alias jsoft="cd $HOME/software"
 alias jtest="cd $WORK_SPACE/self/test"
 alias jpro="cd $WORK_SPACE/self/project"
+alias jself="cd $WORK_SPACE/self"
 
 ### jd
 alias jhg="cd $WORK_SPACE/jd/keeper"
