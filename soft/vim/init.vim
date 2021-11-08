@@ -86,7 +86,7 @@ call plug#end()
 " 主题
 colorscheme gruvbox
 
-set termguicolors
+"set termguicolors
 
 " LSP配置
 lua << EOF
