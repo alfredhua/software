@@ -14,6 +14,8 @@ brew install neovim
 brew install zsh-syntax-highlighting
 brew install fzf
 brew install ack
+## 函数 
+brew install ctags-exuberant
 
 ## vim
 ln -s ~/software/soft/vim/init.vim   ~/.config/nvim/init.vim

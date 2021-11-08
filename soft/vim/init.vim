@@ -40,7 +40,7 @@ let NERDTreeIgnore = ['\.pyc$']  " 过滤所有.pyc文件不显示
 let g:NERDTreeShowLineNumbers=0 " 是否显示行号
 let g:NERDTreeHidden=0     "不显示隐藏文件
 let NERDTreeDirArrows = 1
-nnoremap <F3> :NERDTreeToggle<CR> " 开启/关闭nerdtree快捷键
+nnoremap tree :NERDTreeToggle<CR> " 开启/关闭nerdtree快捷键
 
 "ariline
 let g:airline_theme='google_dark'
@@ -50,13 +50,19 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 " vim-instany-markdown
 
 let g:instant_markdown_autostart = 0
-nnoremap <F5> :InstantMarkdownPreview<CR>
+nnoremap mp :InstantMarkdownPreview<CR>
 
 " 注释
 nmap <C-_>   <Plug>NERDCommenterToggle
 vmap <C-_>   <Plug>NERDCommenterToggle<CR>gv
 
-" 插件管理
+" 成员函数,变量列表
+nmap tb :TagbarToggle<CR>
+let g:tagbar_width=30
+let g:tagbar_right=1
+let g:tagbar_autoclose=1
+
+"插件管理
 call plug#begin('~/.vim/plugged')
 	Plug 'preservim/nerdtree'   " 树形目录
 	Plug 'Xuyuanp/nerdtree-git-plugin'  " git 显示 
@@ -72,7 +78,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'mattn/emmet-vim' " html vue高亮 支持
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'preservim/nerdcommenter' " 注释插件 
-
+	Plug 'majutsushi/tagbar'
 call plug#end()
 
 " 主题
