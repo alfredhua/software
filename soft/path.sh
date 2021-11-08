@@ -58,3 +58,8 @@ export PATH=$PATH:$SCALA_HOME/bin/
 ## flink
 export FLINK_HOME=$SOFT_WARE_PATH/flink
 export PATH=$PATH:$FLINK_HOME/bin/
+
+
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_311.jdk/Contents/Home
+export PATH=$PATH:$JAVA_HOME/bin/
+export CLASS_PATH=.:$JAVA_HOME/bin:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
