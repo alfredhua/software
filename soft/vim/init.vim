@@ -68,17 +68,19 @@ call plug#begin('~/.vim/plugged')
 	Plug 'Xuyuanp/nerdtree-git-plugin'  " git 显示 
 	Plug 'tpope/vim-surround'        " vim 环绕输入
     Plug 'suan/vim-instant-markdown' " markdown预览
-	Plug 'flazz/vim-colorschemes' "vim 主题
 	Plug '/usr/local/opt/fzf'     " 文件搜索
 	Plug 'junegunn/fzf.vim'     
 	Plug 'mileszs/ack.vim'      " 文件内容搜索
-	Plug 'vim-airline/vim-airline'  " 行样式
-	Plug 'vim-airline/vim-airline-themes'
 	Plug 'jiangmiao/auto-pairs'  " 括号自动匹配
 	Plug 'mattn/emmet-vim' " html vue高亮 支持
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'preservim/nerdcommenter' " 注释插件 
 	Plug 'majutsushi/tagbar'
+
+	Plug 'vim-airline/vim-airline'  " 行样式
+	Plug 'vim-airline/vim-airline-themes'
+	Plug 'flazz/vim-colorschemes' "vim 主题
+
 call plug#end()
 
 " 主题
