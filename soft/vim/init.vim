@@ -68,6 +68,8 @@ call plug#begin('~/.vim/plugged')
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'preservim/nerdcommenter' " 注释插件 
 	Plug 'majutsushi/tagbar'
+	Plug 'SirVer/ultisnips'
+	Plug 'honza/vim-snippets'
 
 	Plug 'vim-airline/vim-airline'  " 行样式
 	Plug 'vim-airline/vim-airline-themes'
