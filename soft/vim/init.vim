@@ -8,6 +8,8 @@ set softtabstop=4
 set shiftwidth=4
 set cursorline
 set ruler
+set relativenumber
+set encoding=UTF-8
 
 " 自定义快捷键
 map <C-c> <ESC>  
@@ -50,6 +52,10 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:instant_markdown_autostart = 0
 nnoremap <F5> :InstantMarkdownPreview<CR>
 
+" 注释
+nmap <C-_>   <Plug>NERDCommenterToggle
+vmap <C-_>   <Plug>NERDCommenterToggle<CR>gv
+
 " 插件管理
 call plug#begin('~/.vim/plugged')
 	Plug 'preservim/nerdtree'   " 树形目录
@@ -65,8 +71,8 @@ call plug#begin('~/.vim/plugged')
 	Plug 'jiangmiao/auto-pairs'  " 括号自动匹配
 	Plug 'mattn/emmet-vim' " html vue高亮 支持
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	Plug 'preservim/nerdcommenter' " 注释插件 
 
-	
 call plug#end()
 
 " 主题
