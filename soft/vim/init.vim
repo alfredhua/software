@@ -41,10 +41,6 @@ let g:NERDTreeHidden=0     "不显示隐藏文件
 let NERDTreeDirArrows = 1
 nnoremap tt :NERDTreeToggle<CR> " 开启/关闭nerdtree快捷键
 
-"ariline
-let g:airline_theme='google_dark'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#buffer_nr_show = 1
 
 " vim-instany-markdown
 let g:instant_markdown_autostart = 0
@@ -77,12 +73,27 @@ call plug#begin('~/.vim/plugged')
 
 	Plug 'vim-airline/vim-airline'  " 行样式
 	Plug 'vim-airline/vim-airline-themes'
-	Plug 'flazz/vim-colorschemes' "vim 主题
+	"Plug 'flazz/vim-colorschemes' "vim 主题
+	Plug 'mhartington/oceanic-next'
 
 call plug#end()
 
+"ariline
+let g:airline_theme='google_dark'
+let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+
+" oceanic
+syntax enable
+set t_Co=256
+if (has("termguicolors"))
+	set termguicolors
+endif
+colorscheme OceanicNext
+
 " 主题
-colorscheme gruvbox
+"colorscheme gruvbox
 
 "set termguicolors
 
