@@ -19,7 +19,6 @@ nnoremap < <<
 nnoremap > >>
 nnoremap P "+p
 vnoremap Y "+y
-"设置切换Buffer快捷键"
 nnoremap <C-N> :bn<CR>
 nnoremap <C-P> :bp<CR>
 
@@ -41,14 +40,13 @@ let g:NERDTreeHidden=0     "不显示隐藏文件
 let NERDTreeDirArrows = 1
 nnoremap tt :NERDTreeToggle<CR> " 开启/关闭nerdtree快捷键
 
-
 " vim-instany-markdown
 let g:instant_markdown_autostart = 0
 nnoremap mp :InstantMarkdownPreview<CR>
 
 " 注释
-nmap <C-_>  <Plug>NERDCommenterToggle
-vmap <C-_>  <Plug>NERDCommenterToggle<CR>gv
+nmap <C-_> <Plug>NERDCommenterToggle
+vmap <C-_> <Plug>NERDCommenterToggle<CR>gv
 
 " 成员函数,变量列表
 nmap tb :TagbarToggle<CR>
@@ -75,13 +73,12 @@ call plug#begin('~/.vim/plugged')
 	Plug 'vim-airline/vim-airline-themes'
 	"Plug 'flazz/vim-colorschemes' "vim 主题
 	Plug 'mhartington/oceanic-next'
-
 call plug#end()
 
 "ariline
 let g:airline_theme='google_dark'
 let g:airline#extensions#tabline#enabled = 1
-"let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 " oceanic
@@ -93,10 +90,6 @@ endif
 colorscheme OceanicNext
 
 " 主题
-"colorscheme gruvbox
-
-"set termguicolors
-
 " LSP配置
 lua << EOF
 EOF
