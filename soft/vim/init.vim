@@ -28,7 +28,6 @@ nmap <C-o> :Files<CR>
 nmap <C-e> :Buffers<CR>
 
 " nerdtree
-" autocmd vimenter * NERDTree  "自动开启Nerdtree
 let g:NERDTreeWinSize = 25 "设定 NERDTree 视窗大小
 let NERDTreeShowBookmarks=1  " 开启Nerdtree时自动显示Bookmarks
 " autocmd vimenter * if !argc()|NERDTree|endif "打开vim时如果没有文件自动打开NERDTree
@@ -40,7 +39,7 @@ let NERDTreeIgnore = ['\.pyc$']  " 过滤所有.pyc文件不显示
 let g:NERDTreeShowLineNumbers=0 " 是否显示行号
 let g:NERDTreeHidden=0     "不显示隐藏文件
 let NERDTreeDirArrows = 1
-nnoremap tree :NERDTreeToggle<CR> " 开启/关闭nerdtree快捷键
+nnoremap tt :NERDTreeToggle<CR> " 开启/关闭nerdtree快捷键
 
 "ariline
 let g:airline_theme='google_dark'
@@ -48,13 +47,12 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 
 " vim-instany-markdown
-
 let g:instant_markdown_autostart = 0
 nnoremap mp :InstantMarkdownPreview<CR>
 
 " 注释
-nmap <C-_>   <Plug>NERDCommenterToggle
-vmap <C-_>   <Plug>NERDCommenterToggle<CR>gv
+nmap <C-_>  <Plug>NERDCommenterToggle
+vmap <C-_>  <Plug>NERDCommenterToggle<CR>gv
 
 " 成员函数,变量列表
 nmap tb :TagbarToggle<CR>
