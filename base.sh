@@ -3,7 +3,6 @@ source $HOME/software/soft/path.sh
 source $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Shell
-
 alias shClearEclipse='$HOME/software/tool/clear_eclipse_temp_file.sh'
 alias shInstall='$HOME/software/tool/install.sh'
 
@@ -12,7 +11,7 @@ alias mc="mvn clean "
 alias mcc="mvn clean && mvn compile"
 alias mcci="mvn clean && mvn compile && mvn install"
 alias mccid="mvn clean && mvn compile && mvn install && mvn deploy"
-alias md="mvn dependency:tree"
+alias mdt="mvn dependency:tree"
 
 ## GRADLE
 alias gradleInstall="./gradlew clean && ./gradlew build && ./gradlew jar && ./gradlew publishToMavenLocal"
