@@ -1,16 +1,29 @@
 " 自定义快捷键
-inoremap jj <ESC>
-noremap <C-s>:w<CR>
-nnoremap Y y$
-vnoremap Y "+y
-vnoremap P "+p
-
-
 " Indentation
 nnoremap < <<
 nnoremap > >>
 nnoremap <C-S-p> :tabp<CR>
 nnoremap <C-S-n> :tabn<CR>
+inoremap jj <ESC>
+map <C-c> <ESC>  
+nnoremap <C-s> :w<CR>
+nnoremap Y y$ "
+nnoremap < <<
+nnoremap > >>
+nnoremap P "+p
+vnoremap Y "+y
+nnoremap <C-N> :bn<CR>
+nnoremap <C-P> :bp<CR>
+noremap Q :q<CR>
+noremap S :w<CR>
+noremap <silent> M J
+noremap <silent> K 5k
+noremap <silent> L 5l
+noremap <silent> H 5h
+noremap <silent> J 5j
+noremap <silent> N 0
+inoremap <C-a> <ESC>A
+
 
 set surround
 set relativenumber
