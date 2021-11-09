@@ -17,6 +17,7 @@ alias gadd="git add"
 alias gclone="git clone"
 alias gshow="git show"
 alias gporigin="git_push_origin"
+alias geignore="echo_ignore"
 
 function git_checkout_search(){
     git checkout $(git branch -r | fzf)
@@ -31,5 +32,8 @@ function git_push_origin(){
 
 
 function echo_ignore(){
-	echo ".cla"
+	echo ".classpath" >> .gitignore
+	echo ".factorypath" >> .gitignore
+	echo ".project" >> .gitignore
+	echo ".settings/" >> .gitignore
 }
