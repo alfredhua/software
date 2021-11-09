@@ -104,10 +104,6 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 nmap s <plug>(SubversiveSubstitute)
 nmap ss <plug>(SubversiveSubstituteLine)
 
-" Snippets
-source "${HOME}/software/soft/vim/snippets/md-snippets.vim"
-autocmd BufRead,BufNewFile *.md setlocal spell
-
 " align
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
