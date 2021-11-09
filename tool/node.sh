@@ -9,6 +9,7 @@ alias npdev="npm run dev"
 alias nps="npm run server"
 alias npi="npm install"
 alias npig="npm_install_g"
+
 function npm_install_g(){
     npm install $1 -g
 }

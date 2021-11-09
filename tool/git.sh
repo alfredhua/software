@@ -1,3 +1,5 @@
+#!/bin/sh
+
 ## GIT
 alias gstatus="git status"
 alias gpull="git pull"
