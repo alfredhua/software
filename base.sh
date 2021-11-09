@@ -1,11 +1,11 @@
 #!/bin/sh
 source $HOME/software/soft/path.sh
 source $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $HOME/tool/git.sh
-source $HOME/tool/maven.sh
-source $HOME/tool/linux.sh
-source $HOME/tool/docker.sh
-source $HOME/tool/vim.sh
+source $HOME/software/tool/git.sh
+source $HOME/software/tool/maven.sh
+source $HOME/software/tool/linux.sh
+source $HOME/software/tool/docker.sh
+source $HOME/software/tool/vim.sh
 
 # Shell
 alias shClearEclipse='$HOME/software/tool/clear_eclipse_temp_file.sh'
