@@ -27,7 +27,7 @@ alias jself="cd $WORK_SPACE/self"
 
 ### jd
 alias jhg="cd $WORK_SPACE/jd/keeper"
-alias jpk="cd $WORK_SPACE/jd/keeper/pinkong "
+alias jpk="cd $WORK_SPACE/jd/keeper/pinkong"
 alias jkeeper="cd $WORK_SPACE/jd/keeper/pop-keeper"
 
 alias jjc="$WORK_SPACE/jd/punish"

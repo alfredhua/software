@@ -21,6 +21,17 @@ nnoremap P "+p
 vnoremap Y "+y
 nnoremap <C-N> :bn<CR>
 nnoremap <C-P> :bp<CR>
+noremap Q :q<CR>
+noremap S :w<CR>
+noremap <Space>ei :e $HOME/software/soft/vim/init.vim<CR>
+noremap <silent> M J
+noremap <silent> K 5k
+noremap <silent> L 5l
+noremap <silent> H 5h
+noremap <silent> J 5j
+noremap <silent> N 0
+inoremap <C-a> <ESC>A
+
 
 " fzf 文件搜索
 nmap <C-o> :Files<CR>
@@ -73,8 +84,8 @@ call plug#begin('~/.vim/plugged')
 
 	Plug 'vim-airline/vim-airline'  " 行样式
 	Plug 'vim-airline/vim-airline-themes'
-	"Plug 'flazz/vim-colorschemes' "vim 主题
 	Plug 'mhartington/oceanic-next'
+
 call plug#end()
 
 "ariline
