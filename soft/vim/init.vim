@@ -85,7 +85,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'Chiel92/vim-autoformat'
 	Plug 'svermeulen/vim-subversive'
 	Plug 'junegunn/vim-easy-align'
-	Plug 'lambdalisue/suda.vim'
+	Plug 'lambdalisue/suda.vim'  " 可读文件编辑
 
 	Plug 'vim-airline/vim-airline'  " 行样式
 	Plug 'vim-airline/vim-airline-themes'
