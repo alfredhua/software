@@ -2,6 +2,7 @@
 source $HOME/software/soft/path.sh
 source $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+
 # Shell
 alias shClearEclipse='$HOME/software/tool/clear_eclipse_temp_file.sh'
 alias shInstall='$HOME/software/tool/install.sh'
@@ -48,7 +49,6 @@ function git_push_origin(){
 }
 
 ## linux
-alias vihost="sudo vim /etc/hosts"
 alias lsh='ls -alh'
 alias c='clear'
 alias x='exit'
@@ -98,6 +98,9 @@ function npm_install_g(){
 ## VIM
 alias vi="nvim"
 alias vim="nvim"
+alias vihost="sudo vim /etc/hosts"
+alias viInit="vim $HOME/software/soft/vim/init.vim"
+alias viIdea="vim $HOME/software/soft/vim/ideavimrc.vim"
 
 ## PYTHON
 alias python="python3"
