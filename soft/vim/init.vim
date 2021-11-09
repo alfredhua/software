@@ -79,20 +79,42 @@ call plug#begin('~/.vim/plugged')
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'preservim/nerdcommenter' " 注释插件 
 	Plug 'majutsushi/tagbar'
+	" 代码
 	Plug 'SirVer/ultisnips'
 	Plug 'honza/vim-snippets'
+	Plug 'Chiel92/vim-autoformat'
+	Plug 'svermeulen/vim-subversive'
+	Plug 'junegunn/vim-easy-align'
+	Plug 'lambdalisue/suda.vim'
 
 	Plug 'vim-airline/vim-airline'  " 行样式
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'mhartington/oceanic-next'
 
+
 call plug#end()
 
-"ariline
+" ariline
 let g:airline_theme='google_dark'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
+
+"  vim-subversive
+nmap s <plug>(SubversiveSubstitute)
+nmap ss <plug>(SubversiveSubstituteLine)
+
+" Snippets
+source "${HOME}/software/soft/vim/snippets/md-snippets.vim"
+autocmd BufRead,BufNewFile *.md setlocal spell
+
+" align
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
+
+" suda.vim
+cnoreabbrev sudowrite w suda://%
+cnoreabbrev sw w suda://%
 
 " oceanic
 syntax enable
