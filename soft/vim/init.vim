@@ -87,12 +87,14 @@ call plug#begin('~/.vim/plugged')
 	Plug 'junegunn/vim-easy-align'
 	Plug 'lambdalisue/suda.vim'  " 可读文件编辑
 
-	Plug 'vim-airline/vim-airline'  " 行样式
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'mhartington/oceanic-next'
 
 
 call plug#end()
+
+let g:vimspector_enable_mappings = 'HUMAN'
+"let g:vimspector_base_dir=expand( '$HOME/software/soft/vim/spector/vimspector-config' )
 
 " ariline
 let g:airline_theme='google_dark'
