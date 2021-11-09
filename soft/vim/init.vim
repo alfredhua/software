@@ -102,6 +102,11 @@ if (has("termguicolors"))
 endif
 colorscheme OceanicNext
 
+
+" vue
+let g:LanguageClient_serverCommands = {
+    \ 'vue': ['vls']
+    \ }
 " 主题
 " LSP配置
 lua << EOF
