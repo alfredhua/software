@@ -24,7 +24,7 @@ alias jsoft="cd $HOME/software"
 alias jtest="cd $WORK_SPACE/self/test"
 alias jpro="cd $WORK_SPACE/self/project"
 alias jself="cd $WORK_SPACE/self"
-aliae jopen="cd $WORK_SPACE/open"
+alias jopen="cd $WORK_SPACE/open"
 
 ### jd
 alias jhg="cd $WORK_SPACE/jd/keeper"
