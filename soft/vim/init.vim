@@ -45,8 +45,8 @@ nnoremap < <<
 nnoremap > >>
 nnoremap P "+p
 vnoremap Y "+y
-nnoremap <C-N> :bn<CR>
-nnoremap <C-P> :bp<CR>
+nnoremap <C-j> :bn<CR>
+nnoremap <C-k> :bp<CR>
 noremap Q :q<CR>
 noremap S :w<CR>
 noremap <Space>ei :e $HOME/software/soft/vim/init.vim<CR>
@@ -58,6 +58,38 @@ noremap <silent> J 5j
 noremap <silent> N 0
 inoremap <C-a> <ESC>A
 
+"插件管理
+call plug#begin('~/.vim/plugged')
+	Plug 'preservim/nerdtree'   " 树形目录
+	Plug 'Xuyuanp/nerdtree-git-plugin'  " git 显示 
+	Plug 'tpope/vim-surround'        " vim 环绕输入
+	Plug 'suan/vim-instant-markdown' " markdown预览
+	Plug '/usr/local/opt/fzf'     " 文件搜索
+	Plug 'junegunn/fzf.vim'     
+	Plug 'mileszs/ack.vim'      " 文件内容搜索
+	Plug 'jiangmiao/auto-pairs'  " 括号自动匹配
+	"Plug 'mattn/emmet-vim' " html vue高亮 支持
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	Plug 'preservim/nerdcommenter' " 注释插件 
+	Plug 'majutsushi/tagbar'
+	" 代码
+	
+	Plug 'alvan/vim-closetag'
+	Plug 'SirVer/ultisnips'
+	Plug 'honza/vim-snippets'
+	Plug 'Chiel92/vim-autoformat'
+	Plug 'svermeulen/vim-subversive'
+	Plug 'junegunn/vim-easy-align'
+	Plug 'lambdalisue/suda.vim'  " 可读文件编辑
+
+	Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+	Plug 'vim-airline/vim-airline-themes'
+	Plug 'mhartington/oceanic-next'
+
+call plug#end()
+
+" closetag
+let g:closetag_filetypes = 'html,xhtml,phtml,vue,jsx'
 
 " fzf 文件搜索
 nmap <C-o> :Files<CR>
@@ -91,34 +123,7 @@ let g:tagbar_width=30
 let g:tagbar_right=1
 let g:tagbar_autoclose=1
 
-"插件管理
-call plug#begin('~/.vim/plugged')
-	Plug 'preservim/nerdtree'   " 树形目录
-	Plug 'Xuyuanp/nerdtree-git-plugin'  " git 显示 
-	Plug 'tpope/vim-surround'        " vim 环绕输入
-	Plug 'suan/vim-instant-markdown' " markdown预览
-	Plug '/usr/local/opt/fzf'     " 文件搜索
-	Plug 'junegunn/fzf.vim'     
-	Plug 'mileszs/ack.vim'      " 文件内容搜索
-	Plug 'jiangmiao/auto-pairs'  " 括号自动匹配
-	"Plug 'mattn/emmet-vim' " html vue高亮 支持
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}
-	Plug 'preservim/nerdcommenter' " 注释插件 
-	Plug 'majutsushi/tagbar'
-	" 代码
-	Plug 'SirVer/ultisnips'
-	Plug 'honza/vim-snippets'
-	Plug 'Chiel92/vim-autoformat'
-	Plug 'svermeulen/vim-subversive'
-	Plug 'junegunn/vim-easy-align'
-	Plug 'lambdalisue/suda.vim'  " 可读文件编辑
-
-	Plug 'vim-airline/vim-airline-themes'
-	Plug 'mhartington/oceanic-next'
-
-
-call plug#end()
-
+" snippets
 let g:vimspector_enable_mappings = 'HUMAN'
 "let g:vimspector_base_dir=expand( '$HOME/software/soft/vim/spector/vimspector-config' )
 
@@ -153,8 +158,9 @@ colorscheme OceanicNext
 let g:LanguageClient_serverCommands = {
     \ 'vue': ['vls']
     \ }
-" 主题
-" LSP配置
+
+" 脚本
 lua << EOF
+
 EOF
 
