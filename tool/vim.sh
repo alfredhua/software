@@ -2,7 +2,7 @@
 
 alias vi="nvim"
 alias vim="nvim"
-alias vhost="vim /etc/hosts"
-alias vinit="vim $HOME/software/soft/vim/init.vim"
-alias videa="vim $HOME/software/soft/vim/ideavimrc"
+alias vihost="vim /etc/hosts"
+alias viinit="vim $HOME/software/soft/vim/init.vim"
+alias viidea="vim $HOME/software/soft/vim/ideavimrc"
 

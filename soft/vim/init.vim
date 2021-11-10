@@ -1,15 +1,41 @@
 syntax on
+set exrc
+set secure
 set number
-set hlsearch
-set nocompatible
-set backspace=indent,eol,start
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set cursorline
-set ruler
 set relativenumber
-set encoding=UTF-8
+set cursorline
+set hidden
+set noexpandtab
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set autoindent
+set list
+set listchars=tab:\|\ ,trail:▫
+set scrolloff=4
+set ttimeoutlen=0
+set notimeout
+set viewoptions=cursor,folds,slash,unix
+set wrap
+set tw=0
+set indentexpr=
+set foldmethod=indent
+set foldlevel=99
+set foldenable
+set formatoptions-=tc
+set splitright
+set splitbelow
+set noshowmode
+set showcmd
+set wildmenu
+set ignorecase
+set smartcase
+set shortmess+=c
+set inccommand=split
+set completeopt=longest,noinsert,menuone,noselect,preview
+set ttyfast "should make scrolling faster
+set lazyredraw "same as above
+set visualbell
 
 " 自定义快捷键
 map <C-c> <ESC>  
@@ -70,12 +96,12 @@ call plug#begin('~/.vim/plugged')
 	Plug 'preservim/nerdtree'   " 树形目录
 	Plug 'Xuyuanp/nerdtree-git-plugin'  " git 显示 
 	Plug 'tpope/vim-surround'        " vim 环绕输入
-    Plug 'suan/vim-instant-markdown' " markdown预览
+	Plug 'suan/vim-instant-markdown' " markdown预览
 	Plug '/usr/local/opt/fzf'     " 文件搜索
 	Plug 'junegunn/fzf.vim'     
 	Plug 'mileszs/ack.vim'      " 文件内容搜索
 	Plug 'jiangmiao/auto-pairs'  " 括号自动匹配
-	Plug 'mattn/emmet-vim' " html vue高亮 支持
+	"Plug 'mattn/emmet-vim' " html vue高亮 支持
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'preservim/nerdcommenter' " 注释插件 
 	Plug 'majutsushi/tagbar'
