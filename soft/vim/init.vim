@@ -57,6 +57,7 @@ noremap <silent> H 5h
 noremap <silent> J 5j
 noremap <silent> N 0
 inoremap <C-a> <ESC>A
+nnoremap jump :!ctags -R<CR>
 
 "插件管理
 call plug#begin('~/.vim/plugged')
