@@ -11,6 +11,7 @@ nnoremap Y y$ "
 nnoremap < <<
 nnoremap > >>
 nnoremap P "+p
+vmap P "+p
 vnoremap Y "+y
 nnoremap <C-N> :bn<CR>
 nnoremap <C-P> :bp<CR>

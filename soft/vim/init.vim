@@ -50,6 +50,7 @@ nnoremap <C-k> :bp<CR>
 noremap Q :q<CR>
 noremap S :w<CR>
 noremap <Space>ei :e $HOME/software/soft/vim/init.vim<CR>
+noremap <Space>bd :bd<CR>
 noremap <silent> M J
 noremap <silent> K 5k
 noremap <silent> L 5l
@@ -57,7 +58,7 @@ noremap <silent> H 5h
 noremap <silent> J 5j
 noremap <silent> N 0
 inoremap <C-a> <ESC>A
-nnoremap jump :!ctags -R<CR>
+nnoremap ct :!ctags -R<CR>
 
 "插件管理
 call plug#begin('~/.vim/plugged')
@@ -75,19 +76,22 @@ call plug#begin('~/.vim/plugged')
 	Plug 'majutsushi/tagbar'
 	" 代码
 	
-	Plug 'alvan/vim-closetag'
-	Plug 'SirVer/ultisnips'
-	Plug 'honza/vim-snippets'
+ "Plug 'alvan/vim-closetag'
+	"Plug 'SirVer/ultisnips'
+	"Plug 'honza/vim-snippets'
 	Plug 'Chiel92/vim-autoformat'
 	Plug 'svermeulen/vim-subversive'
 	Plug 'junegunn/vim-easy-align'
 	Plug 'lambdalisue/suda.vim'  " 可读文件编辑
 
-	Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'mhartington/oceanic-next'
 
 call plug#end()
+
+nmap ts <Plug>(coc-translator-p)
 
 " closetag
 let g:closetag_filetypes = 'html,xhtml,phtml,vue,jsx'
