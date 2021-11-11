@@ -61,7 +61,7 @@ nnoremap jump :!ctags -R<CR>
 
 "插件管理
 call plug#begin('~/.vim/plugged')
-	Plug 'preservim/nerdtree'   " 树形目录
+	Plug 'preservim/nerdtree', {'on':'NERDTreeToggle'}   " 树形目录
 	Plug 'Xuyuanp/nerdtree-git-plugin'  " git 显示 
 	Plug 'tpope/vim-surround'        " vim 环绕输入
 	Plug 'suan/vim-instant-markdown' " markdown预览
@@ -99,7 +99,7 @@ nmap <C-e> :Buffers<CR>
 " nerdtree
 let g:NERDTreeWinSize = 25 "设定 NERDTree 视窗大小
 let NERDTreeShowBookmarks=1  " 开启Nerdtree时自动显示Bookmarks
-" autocmd vimenter * if !argc()|NERDTree|endif "打开vim时如果没有文件自动打开NERDTree
+" autocmd vimenter * if !argc()|NERDTree|endif "开vim时如果没有文件自动打开NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif "当NERDTree为剩下的唯一窗口时自动关闭
 " 设置树的显示图标
 let g:NERDTreeDirArrowExpandable = '▸'
@@ -108,7 +108,7 @@ let NERDTreeIgnore = ['\.pyc$']  " 过滤所有.pyc文件不显示
 let g:NERDTreeShowLineNumbers=0 " 是否显示行号
 let g:NERDTreeHidden=0     "不显示隐藏文件
 let NERDTreeDirArrows = 1
-nnoremap tt :NERDTreeToggle<CR> " 开启/关闭nerdtree快捷键
+nnoremap tt :NERDTreeToggle<CR> " 开启/关闭nerdtree快捷
 
 " vim-instany-markdown
 let g:instant_markdown_autostart = 0
