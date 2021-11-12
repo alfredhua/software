@@ -20,6 +20,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'Chiel92/vim-autoformat'
 	Plug 'junegunn/vim-easy-align'
 	Plug 'lambdalisue/suda.vim'  " 可读文件编辑
+	Plug 'airblade/vim-gitgutter'
 
 	Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 	Plug 'vim-airline/vim-airline'
@@ -31,7 +32,23 @@ call plug#end()
 " closetag
 let g:closetag_filetypes = 'html,xhtml,phtml,vue,jsx'
 
-" 翻译
+" GitGutter
+let g:gitgutter_sign_allow_clobber = 0
+let g:gitgutter_map_keys = 0
+let g:gitgutter_override_sign_column_highlight = 0
+let g:gitgutter_preview_win_floating = 1
+let g:gitgutter_sign_added = '▎'
+let g:gitgutter_sign_modified = '░'
+let g:gitgutter_sign_removed = '▏'
+let g:gitgutter_sign_removed_first_line = '▔'
+let g:gitgutter_sign_modified_removed = '▒'
+" autocmd BufWritePost * GitGutter
+nnoremap <Space>gf :GitGutterFold<CR>
+nnoremap H :GitGutterPreviewHunk<CR>
+nnoremap <Space>g- :GitGutterPrevHunk<CR>
+nnoremap <Space>g= :GitGutterNextHunk<CR>
+
+"翻译
 nmap ts <Plug>(coc-translator-p)
 
 " fzf 文件搜索
