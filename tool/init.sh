@@ -14,9 +14,10 @@ brew install neovim
 brew install zsh-syntax-highlighting
 brew install fzf
 brew install ack
-## 函数 
+## 函数跳转
 brew install ctags-exuberant
-
+# 文件对比
+brew install diff-so-fancy
 ## vim
 ln -s ~/software/soft/vim/init.vim   ~/.config/nvim/init.vim
 ln -s ~/software/soft/vim/ideavimrc  ~/.ideavimr
