@@ -5,7 +5,9 @@ call plug#begin('~/.vim/plugged')
 	Plug 'tpope/vim-surround'        " vim 环绕输入
 	Plug 'suan/vim-instant-markdown' " markdown预览
 	Plug '/usr/local/opt/fzf'     " 文件搜索
-	Plug 'junegunn/fzf.vim'     
+	Plug 'junegunn/fzf.vim'
+	Plug 'brooth/far.vim'
+
 	Plug 'mileszs/ack.vim'      " 文件内容搜索
 	Plug 'jiangmiao/auto-pairs'  " 括号自动匹配
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -35,6 +37,11 @@ nmap ts <Plug>(coc-translator-p)
 " fzf 文件搜索
 nmap sf :Files<CR>
 nmap <C-e> :Buffers<CR>
+
+noremap <Space>f :F  **/*<left><left><left><left><left>
+let g:far#mapping = {
+		\ "replace_undo" : ["l"],
+		\ }
 
 " vim-instany-markdown
 let g:instant_markdown_autostart = 0

@@ -50,6 +50,7 @@ nnoremap <C-k> :bp<CR>
 noremap Q :q<CR>
 noremap S :w<CR>
 noremap <Space>ei :e $HOME/software/soft/vim/init.vim<CR>
+noremap <Space>ep :e $HOME/software/soft/vim/plugins/plugin.vim<CR>
 noremap <Space>bd :bd<CR>
 noremap <silent> M J
 noremap <silent> K 5k
@@ -58,7 +59,7 @@ noremap <silent> H 5h
 noremap <silent> J 5j
 noremap <silent> N 0
 inoremap <C-a> <ESC>A
-nnoremap ct :!ctags -R<CR>
+nnoremap <Space>ct :!ctags -R<CR>
 
 "插件
 source $HOME/software/soft/vim/plugins/plugin.vim
