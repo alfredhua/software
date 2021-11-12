@@ -13,6 +13,8 @@ call plug#begin('~/.vim/plugged')
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'preservim/nerdcommenter' " 注释插件 
 	Plug 'majutsushi/tagbar'
+	Plug 'mhinz/vim-startify'
+
 	" 代码
 	Plug 'alvan/vim-closetag'
 	Plug 'SirVer/ultisnips'
