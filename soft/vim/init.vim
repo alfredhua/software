@@ -37,12 +37,11 @@ set ttyfast "should make scrolling faster
 set lazyredraw "same as above
 set visualbell
 
-
 " 自定义快捷键
 map <C-c> <ESC>  
 nnoremap <C-s> :w<CR>
 nnoremap Y y$ "
-nnoremap < <<
+
 nnoremap > >>
 nnoremap P "+p
 vnoremap Y "+y
@@ -61,6 +60,6 @@ noremap <silent> N 0
 inoremap <C-a> <ESC>A
 nnoremap ct :!ctags -R<CR>
 
-" 插件
+"插件
 source $HOME/software/soft/vim/plugins/plugin.vim
 

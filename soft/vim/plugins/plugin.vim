@@ -11,13 +11,11 @@ call plug#begin('~/.vim/plugged')
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'preservim/nerdcommenter' " 注释插件 
 	Plug 'majutsushi/tagbar'
-
 	" 代码
 	Plug 'alvan/vim-closetag'
 	Plug 'SirVer/ultisnips'
 	Plug 'honza/vim-snippets'
 	Plug 'Chiel92/vim-autoformat'
-	Plug 'svermeulen/vim-subversive'
 	Plug 'junegunn/vim-easy-align'
 	Plug 'lambdalisue/suda.vim'  " 可读文件编辑
 
@@ -28,27 +26,15 @@ call plug#begin('~/.vim/plugged')
 
 call plug#end()
 
+" closetag
+let g:closetag_filetypes = 'html,xhtml,phtml,vue,jsx'
 
-
+" 翻译
 nmap ts <Plug>(coc-translator-p)
 
 " fzf 文件搜索
-nmap <C-o> :Files<CR>
+nmap sf :Files<CR>
 nmap <C-e> :Buffers<CR>
-
-" nerdtree
-let g:NERDTreeWinSize = 25 "设定 NERDTree 视窗大小
-let NERDTreeShowBookmarks=1  " 开启Nerdtree时自动显示Bookmarks
-" autocmd vimenter * if !argc()|NERDTree|endif "开vim时如果没有文件自动打开NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif "当NERDTree为剩下的唯一窗口时自动关闭
-" 设置树的显示图标
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
-let NERDTreeIgnore = ['\.pyc$']  " 过滤所有.pyc文件不显示
-let g:NERDTreeShowLineNumbers=0 " 是否显示行号
-let g:NERDTreeHidden=0     "不显示隐藏文件
-let NERDTreeDirArrows = 1
-nnoremap tt :NERDTreeToggle<CR> " 开启/关闭nerdtree快捷
 
 " vim-instany-markdown
 let g:instant_markdown_autostart = 0
@@ -66,25 +52,35 @@ let g:tagbar_autoclose=1
 
 " snippets
 let g:vimspector_enable_mappings = 'HUMAN'
-"let g:vimspector_base_dir=expand( '$HOME/software/soft/vim/spector/vimspector-config' )
+
+" align
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
+
+" vue
+let g:LanguageClient_serverCommands = {
+    \ 'vue': ['vls']
+    \ }
+
+" nerdtree
+let g:NERDTreeWinSize = 25 "设定 NERDTree 视窗大小
+let NERDTreeShowBookmarks=1  " 开启Nerdtree时自动显示Bookmarks
+" autocmd vimenter * if !argc()|NERDTree|endif "开vim时如果没有文件自动打开NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif "当NERDTree为剩下的唯一窗口时自动关闭
+" 设置树的显示图标
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+let NERDTreeIgnore = ['\.pyc$']  " 过滤所有.pyc文件不显示
+let g:NERDTreeShowLineNumbers=0 " 是否显示行号
+let g:NERDTreeHidden=0     "不显示隐藏文件
+let NERDTreeDirArrows = 1
+nnoremap tt :NERDTreeToggle<CR> " 开启/关闭nerdtree快捷
 
 " ariline
 let g:airline_theme='google_dark'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
-
-"  vim-subversive
-nmap s <plug>(SubversiveSubstitute)
-nmap ss <plug>(SubversiveSubstituteLine)
-
-" align
-xmap ga <Plug>(EasyAlign)
-nmap ga <Plug>(EasyAlign)
-
-" suda.vim
-cnoreabbrev sudowrite w suda://%
-cnoreabbrev sw w suda://%
 
 " oceanic
 syntax enable
@@ -94,11 +90,9 @@ if (has("termguicolors"))
 endif
 colorscheme OceanicNext
 
-
-" vue
-let g:LanguageClient_serverCommands = {
-    \ 'vue': ['vls']
-    \ }
+" suda.vim
+cnoreabbrev sudowrite w suda://%
+cnoreabbrev sw w suda://%
 
 " 脚本
 lua << EOF
