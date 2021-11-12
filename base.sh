@@ -6,6 +6,7 @@ source $HOME/software/tool/maven.sh
 source $HOME/software/tool/linux.sh
 source $HOME/software/tool/docker.sh
 source $HOME/software/tool/vim.sh
+source $HOME/software/tool/deploy.sh
 
 # Shell
 alias shClearEclipse='$HOME/software/tool/clear_eclipse_temp_file.sh'
