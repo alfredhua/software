@@ -39,9 +39,7 @@ nmap sf :Files<CR>
 nmap <C-e> :Buffers<CR>
 
 noremap <Space>f :F  **/*<left><left><left><left><left>
-let g:far#mapping = {
-		\ "replace_undo" : ["l"],
-		\ }
+let g:far#mapping = { "replace_undo" : ["l"] }
 
 " vim-instany-markdown
 let g:instant_markdown_autostart = 0
