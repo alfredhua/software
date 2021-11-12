@@ -41,6 +41,8 @@ nmap <C-e> :Buffers<CR>
 " far.vim
 let g:far#enable_undo=1
 noremap <Space>f :F  **/*<left><left><left><left><left>
+noremap <Space>r :Farr<CR>
+noremap <Space>do :Fardo<CR>
 let g:far#mapping = { "replace_undo" : ["l"] }
 
 " vim-instany-markdown
