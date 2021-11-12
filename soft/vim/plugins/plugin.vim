@@ -38,6 +38,8 @@ nmap ts <Plug>(coc-translator-p)
 nmap sf :Files<CR>
 nmap <C-e> :Buffers<CR>
 
+" far.vim
+let g:far#enable_undo=1
 noremap <Space>f :F  **/*<left><left><left><left><left>
 let g:far#mapping = { "replace_undo" : ["l"] }
 
