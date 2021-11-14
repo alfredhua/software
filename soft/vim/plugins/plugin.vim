@@ -32,89 +32,19 @@ call plug#begin('~/.vim/plugged')
 
 call plug#end()
 
-" closetag
-let g:closetag_filetypes = 'html,xhtml,phtml,vue,jsx'
 
-" GitGutter
-let g:gitgutter_sign_allow_clobber = 0
-let g:gitgutter_map_keys = 0
-let g:gitgutter_override_sign_column_highlight = 0
-let g:gitgutter_preview_win_floating = 1
-let g:gitgutter_sign_added = '▎'
-let g:gitgutter_sign_modified = '░'
-let g:gitgutter_sign_removed = '▏'
-let g:gitgutter_sign_removed_first_line = '▔'
-let g:gitgutter_sign_modified_removed = '▒'
-" autocmd BufWritePost * GitGutter
-nnoremap <Space>gf :GitGutterFold<CR>
-nnoremap H :GitGutterPreviewHunk<CR>
-nnoremap <Space>g- :GitGutterPrevHunk<CR>
-nnoremap <Space>g= :GitGutterNextHunk<CR>
+source $HOME/software/soft/vim/plugins/far.vim
+source $HOME/software/soft/vim/plugins/suda.vim
+source $HOME/software/soft/vim/plugins/theme.vim
+source $HOME/software/soft/vim/plugins/tagbar.vim
+source $HOME/software/soft/vim/plugins/closetag.vim
+source $HOME/software/soft/vim/plugins/markdown.vim
+source $HOME/software/soft/vim/plugins/nerdtree.vim
+source $HOME/software/soft/vim/plugins/snippets.vim
+source $HOME/software/soft/vim/plugins/commenter.vim
+source $HOME/software/soft/vim/plugins/gitgutter.vim
+source $HOME/software/soft/vim/plugins/coc.vim
 
-" far.vim
-let g:far#enable_undo=1
-let g:far#mapping = { "replace_undo" : ["l"] }
-
-" vim-instany-markdown
-let g:instant_markdown_autostart = 0
-
- "注释
-nmap <C-_> <Plug>NERDCommenterToggle
-vmap <C-_> <Plug>NERDCommenterToggle<CR>gv
-
-" 成员函数,变量列表
-let g:tagbar_width=30
-let g:tagbar_right=1
-let g:tagbar_autoclose=1
-
-" snippets
-let g:vimspector_enable_mappings = 'HUMAN'
-let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsSnippetDirectories=[$HOME.'/software/soft/vim/Ultisnips']
-
-
-" nerdtree
-let g:NERDTreeWinSize = 25 "设定 NERDTree 视窗大小
-let NERDTreeShowBookmarks=1  " 开启Nerdtree时自动显示Bookmarks
-" autocmd vimenter * if !argc()|NERDTree|endif "开vim时如果没有文件自动打开NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif "当NERDTree为剩下的唯一窗口时自动关闭
-" 设置树的显示图标
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
-let NERDTreeIgnore = ['\.pyc$']  " 过滤所有.pyc文件不显示
-let g:NERDTreeShowLineNumbers=0 " 是否显示行号
-let g:NERDTreeHidden=0     "不显示隐藏文件
-let NERDTreeDirArrows = 1
-
-" ariline
-let g:airline_theme='google_dark'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#buffer_nr_show = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail'
-
-" oceanic
-syntax enable
-set t_Co=256
-if (has("termguicolors"))
-	set termguicolors
-endif
-colorscheme OceanicNext
-
-" suda.vim
-cnoreabbrev sudowrite w suda://%
-cnoreabbrev sw w suda://%
-
-let g:coc_global_extensions = [
-	\ 'coc-css',
-	\ 'coc-eslint',
-	\ 'coc-html',
-	\ 'coc-json',
-	\ 'coc-pyright',
-	\ 'coc-syntax',
-	\ 'coc-tasks',
-	\ 'coc-translator',
-	\ 'coc-vetur',
-	\ 'coc-vimlsp']
 
 " 脚本
 lua << EOF
