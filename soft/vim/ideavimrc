@@ -27,9 +27,7 @@ inoremap <C-a> <ESC>A
 
 
 set surround
-set NERDTree
 set easymotion
-set multiple-cursors
 set commentary
 set ReplaceWithRegister
 set argtextobj
@@ -48,5 +46,22 @@ set ts=4
 
 set keep-english-in-normal[-and-restore-in-insert]
 
-source $HOME/software/soft/vim/init.vim
+
+set NERDTree
+nnoremap tt :NERDTreeToggle<CR> " 开启/关闭nerdtree快捷
+
+set multiple-cursors
+let g:multi_cursor_use_default_mapping=0
+let g:multi_cursor_start_word_key      = '<C-n>'
+let g:multi_cursor_select_all_word_key = '<A-n>'
+let g:multi_cursor_start_key           = 'g<C-n>'
+let g:multi_cursor_select_all_key      = 'g<A-n>'
+let g:multi_cursor_next_key            = '<C-n>'
+let g:multi_cursor_prev_key            = '<C-p>'
+let g:multi_cursor_skip_key            = '<C-x>'
+let g:multi_cursor_quit_key            = '<Esc>'
+
+map  <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+
 
