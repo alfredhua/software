@@ -14,6 +14,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'preservim/nerdcommenter' " 注释插件 
 	Plug 'majutsushi/tagbar'
 	Plug 'mhinz/vim-startify'
+	Plug 'gcmt/wildfire.vim'
 
 	" 代码
 	Plug 'alvan/vim-closetag'
@@ -68,6 +69,9 @@ let g:tagbar_autoclose=1
 
 " snippets
 let g:vimspector_enable_mappings = 'HUMAN'
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsSnippetDirectories=[$HOME.'/software/soft/vim/Ultisnips']
+
 
 
 " vue
