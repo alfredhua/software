@@ -50,30 +50,19 @@ nnoremap H :GitGutterPreviewHunk<CR>
 nnoremap <Space>g- :GitGutterPrevHunk<CR>
 nnoremap <Space>g= :GitGutterNextHunk<CR>
 
-"翻译
-nmap ts <Plug>(coc-translator-p)
-
-" fzf 文件搜索
-nmap sf :Files<CR>
-"nmap <C-e> :Buffers<CR>
-
 " far.vim
 let g:far#enable_undo=1
-noremap <Space>f :F  **/*<left><left><left><left><left>
-noremap <Space>r :Farr<CR>
-noremap <Space>do :Fardo<CR>
 let g:far#mapping = { "replace_undo" : ["l"] }
 
 " vim-instany-markdown
 let g:instant_markdown_autostart = 0
 nnoremap <Space>mp :InstantMarkdownPreview<CR>
 
-" 注释
+ "注释
 nmap <C-_> <Plug>NERDCommenterToggle
 vmap <C-_> <Plug>NERDCommenterToggle<CR>gv
 
 " 成员函数,变量列表
-nmap tb :TagbarToggle<CR>
 let g:tagbar_width=30
 let g:tagbar_right=1
 let g:tagbar_autoclose=1
@@ -81,9 +70,6 @@ let g:tagbar_autoclose=1
 " snippets
 let g:vimspector_enable_mappings = 'HUMAN'
 
-" align
-xmap ga <Plug>(EasyAlign)
-nmap ga <Plug>(EasyAlign)
 
 " vue
 let g:LanguageClient_serverCommands = {
@@ -102,7 +88,6 @@ let NERDTreeIgnore = ['\.pyc$']  " 过滤所有.pyc文件不显示
 let g:NERDTreeShowLineNumbers=0 " 是否显示行号
 let g:NERDTreeHidden=0     "不显示隐藏文件
 let NERDTreeDirArrows = 1
-nnoremap tt :NERDTreeToggle<CR> " 开启/关闭nerdtree快捷
 
 " ariline
 let g:airline_theme='google_dark'
