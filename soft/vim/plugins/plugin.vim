@@ -56,7 +56,6 @@ let g:far#mapping = { "replace_undo" : ["l"] }
 
 " vim-instany-markdown
 let g:instant_markdown_autostart = 0
-nnoremap <Space>mp :InstantMarkdownPreview<CR>
 
  "注释
 nmap <C-_> <Plug>NERDCommenterToggle

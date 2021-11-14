@@ -60,17 +60,17 @@ noremap <silent> J 5j
 noremap <silent> N 0
 
 " 打开文本 e
-noremap ei :e $HOME/software/soft/vim/init.vim<CR>
-noremap ep :e $HOME/software/soft/vim/plugins/plugin.vim<CR>
+noremap <Space>ei :e $HOME/software/soft/vim/init.vim<CR>
+noremap <Space>ep :e $HOME/software/soft/vim/plugins/plugin.vim<CR>
 
 " 缓冲区操作b
 noremap <Space>bd :bd<CR>
 
 " 命令行操作command
-nnoremap <Space>cct :!ctags -R<CR>
+nnoremap <Space>ct :!ctags -R<CR>
 
 " coc相关 co
-nmap <Space>cot <Plug>(coc-translator-p)
+nmap <Space>cp <Plug>(coc-translator-p)
 
 " 搜索相关 s
 nmap sf :Files<CR>
@@ -83,6 +83,8 @@ nnoremap tt :NERDTreeToggle<CR> " 开启/关闭nerdtree快捷
 nmap tb :TagbarToggle<CR>
 
 " 格式化相关 g
-xmap <Space>ga <Plug>(EasyAlign)
-map <Space>ga <Plug>(EasyAlign)
+xmap ga <Plug>(EasyAlign)
+map ga <Plug>(EasyAlign)
 
+" 文本操作,markdown相关
+nnoremap mp :InstantMarkdownPreview<CR>
