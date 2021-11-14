@@ -55,7 +55,7 @@ nmap ts <Plug>(coc-translator-p)
 
 " fzf 文件搜索
 nmap sf :Files<CR>
-nmap <C-e> :Buffers<CR>
+"nmap <C-e> :Buffers<CR>
 
 " far.vim
 let g:far#enable_undo=1
@@ -66,7 +66,7 @@ let g:far#mapping = { "replace_undo" : ["l"] }
 
 " vim-instany-markdown
 let g:instant_markdown_autostart = 0
-nnoremap mp :InstantMarkdownPreview<CR>
+nnoremap <Space>mp :InstantMarkdownPreview<CR>
 
 " 注释
 nmap <C-_> <Plug>NERDCommenterToggle
