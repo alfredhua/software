@@ -27,6 +27,19 @@ inoremap <C-a> <ESC>A
 
 
 set surround
+set NERDTree
+set easymotion
+set multiple-cursors
+set commentary
+set ReplaceWithRegister
+set argtextobj
+set exchange
+set textobj-entire
+set highlightedyank
+set vim-paragraph-motion
+set vim-paragraph-motion
+set matchit
+
 set relativenumber
 set tabstop=4
 set softtabstop=4
@@ -34,3 +47,6 @@ set shiftwidth=4
 set ts=4
 
 set keep-english-in-normal[-and-restore-in-insert]
+
+source $HOME/software/soft/vim/init.vim
+
