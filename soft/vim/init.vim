@@ -70,7 +70,13 @@ noremap <Space>bd :bd<CR>
 nnoremap <Space>ct :!ctags -R<CR>
 
 " coc相关 co
+nnoremap <silent> <space>y :<C-u>CocList -A --normal yank<cr>
 nmap <Space>cp <Plug>(coc-translator-p)
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gD :tab sp<CR><Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+let g:coc_snippet_next = '<c-e>'
+let g:coc_snippet_prev = '<c-n>'
 
 " 搜索相关 s
 nmap sf :Files<CR>
@@ -81,6 +87,8 @@ noremap sr :Farr<CR>
 " 窗口相关 t
 nnoremap tt :NERDTreeToggle<CR> " 开启/关闭nerdtree快捷
 nmap tb :TagbarToggle<CR>
+noremap tj :set splitbelow<CR>:split<CR>
+noremap tl :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
 
 " 格式化相关 g
 xmap ga <Plug>(EasyAlign)

@@ -73,12 +73,6 @@ let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetDirectories=[$HOME.'/software/soft/vim/Ultisnips']
 
 
-
-" vue
-let g:LanguageClient_serverCommands = {
-    \ 'vue': ['vls']
-    \ }
-
 " nerdtree
 let g:NERDTreeWinSize = 25 "设定 NERDTree 视窗大小
 let NERDTreeShowBookmarks=1  " 开启Nerdtree时自动显示Bookmarks
@@ -109,6 +103,18 @@ colorscheme OceanicNext
 " suda.vim
 cnoreabbrev sudowrite w suda://%
 cnoreabbrev sw w suda://%
+
+let g:coc_global_extensions = [
+	\ 'coc-css',
+	\ 'coc-eslint',
+	\ 'coc-html',
+	\ 'coc-json',
+	\ 'coc-pyright',
+	\ 'coc-syntax',
+	\ 'coc-tasks',
+	\ 'coc-translator',
+	\ 'coc-vetur',
+	\ 'coc-vimlsp']
 
 " 脚本
 lua << EOF
