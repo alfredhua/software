@@ -11,6 +11,7 @@ let g:coc_global_extensions = [
 	\ 'coc-vetur',
 	\ 'coc-vimlsp']
 
+nmap <Space>ct <Plug>(coc-translator-p)
 nnoremap <silent> <space>y :<C-u>CocList -A --normal yank<cr>
 nmap <Space>cp <Plug>(coc-translator-p)
 nmap <silent> gd <Plug>(coc-definition)

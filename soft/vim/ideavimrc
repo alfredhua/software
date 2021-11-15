@@ -23,6 +23,7 @@ noremap <silent> H 5h
 noremap <silent> J 5j
 noremap <silent> N 0
 inoremap <C-a> <ESC>A
+noremap <Space>ct <D-C-u>
 
 set cursorline
 set relativenumber
