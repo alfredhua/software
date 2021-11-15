@@ -5,7 +5,8 @@ nnoremap > >>
 nnoremap <C-k> :tabp<CR>
 nnoremap <C-j> :tabn<CR>
 inoremap jj <ESC>
-map <C-c> <ESC>  
+inoremap <C-;> <ESC>
+map <C-;> <ESC>
 nnoremap <C-s> :w<CR>
 nnoremap Y y$ "
 nnoremap < <<
