@@ -2,19 +2,17 @@
 " Indentation
 nnoremap < <<
 nnoremap > >>
-nnoremap <C-S-p> :tabp<CR>
-nnoremap <C-S-n> :tabn<CR>
+nnoremap <C-k> :tabp<CR>
+nnoremap <C-j> :tabn<CR>
 inoremap jj <ESC>
 map <C-c> <ESC>  
 nnoremap <C-s> :w<CR>
 nnoremap Y y$ "
 nnoremap < <<
 nnoremap > >>
-nnoremap P "+p
-vmap P "+p
-vnoremap Y "+y
-nnoremap <C-N> :bn<CR>
-nnoremap <C-P> :bp<CR>
+nnoremap P \"+p
+vmap P \"+p
+vnoremap Y \"+y
 noremap Q :q<CR>
 noremap S :w<CR>
 noremap <silent> M J
@@ -25,9 +23,18 @@ noremap <silent> J 5j
 noremap <silent> N 0
 inoremap <C-a> <ESC>A
 
+set cursorline
+set relativenumber
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set ts=4
+set foldmethod=indent
+set foldmethod=syntax
+
+
 
 set surround
-set easymotion
 set commentary
 set ReplaceWithRegister
 set argtextobj
@@ -38,30 +45,23 @@ set vim-paragraph-motion
 set vim-paragraph-motion
 set matchit
 
-set relativenumber
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set ts=4
 
-set keep-english-in-normal[-and-restore-in-insert]
+let mapleader="<Space>"
+set keep-english-in-normal-and-restore-in-insert
 
+set easymotion
+map <Leader> <Plug>(easymotion-prefix)
 
 set NERDTree
-nnoremap tt :NERDTreeToggle<CR> " 开启/关闭nerdtree快捷
+nnoremap tt :NERDTreeToggle<CR>
 
 set multiple-cursors
-let g:multi_cursor_use_default_mapping=0
-let g:multi_cursor_start_word_key      = '<C-n>'
-let g:multi_cursor_select_all_word_key = '<A-n>'
-let g:multi_cursor_start_key           = 'g<C-n>'
-let g:multi_cursor_select_all_key      = 'g<A-n>'
-let g:multi_cursor_next_key            = '<C-n>'
-let g:multi_cursor_prev_key            = '<C-p>'
-let g:multi_cursor_skip_key            = '<C-x>'
-let g:multi_cursor_quit_key            = '<Esc>'
-
-map  <Leader>f <Plug>(easymotion-bd-f)
-nmap <Leader>f <Plug>(easymotion-overwin-f)
-
+nmap <C-n> <Plug>NextWholeOccurrence
+xmap <C-n> <Plug>NextWholeOccurrence
+nmap <C-x> <Plug>SkipOccurrence
+xmap <C-x> <Plug>SkipOccurrence
+xmap <C-p> <Plug>RemoveOccurrence
+xmap <C-p> <Plug>RemoveOccurrence
+xmap <S-C-p> <Plug>AllWholeOccurrence
+xmap <S-C-p> <Plug>AllWholeOccurrence
 
