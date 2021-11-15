@@ -39,10 +39,10 @@ set commentary
 set ReplaceWithRegister
 set argtextobj
 set exchange
-set textobj-entire
 set highlightedyank
 set vim-paragraph-motion
-set vim-paragraph-motion
+set textobj-indent
+set textobj-entire
 set matchit
 
 
