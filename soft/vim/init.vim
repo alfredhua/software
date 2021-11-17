@@ -48,7 +48,6 @@ vnoremap Y "+y
 noremap Q :q<CR>
 noremap S :w<CR>
 inoremap <C-a> <ESC>A
-map <C-c> <ESC>
 nnoremap <C-s> :w<CR>
 nnoremap <C-j> :bn<CR>
 nnoremap <C-k> :bp<CR>
