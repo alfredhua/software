@@ -15,8 +15,10 @@ nmap <Space>ct <Plug>(coc-translator-p)
 nnoremap <silent> <space>y :<C-u>CocList -A --normal yank<cr>
 nmap <Space>cp <Plug>(coc-translator-p)
 nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gD :tab sp<CR><Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
-let g:coc_snippet_next = '<c-e>'
-let g:coc_snippet_prev = '<c-n>'
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+nmap <silent> gD :tab sp<CR><Plug>(coc-definition)
+let g:coc_snippet_next = '<C-e>'
+let g:coc_snippet_prev = '<C-n>'
 

@@ -12,14 +12,14 @@ call plug#begin('~/.vim/plugged')
 	Plug 'brooth/far.vim'   " 内容搜索
 
 	Plug 'jiangmiao/auto-pairs'  " 括号自动匹配
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'preservim/nerdcommenter' " 注释插件 
-	Plug 'majutsushi/tagbar'
-	Plug 'mhinz/vim-startify'
-	Plug 'gcmt/wildfire.vim'
+	Plug 'majutsushi/tagbar'   " 方法窗口
+	Plug 'mhinz/vim-startify'  "  打开展示最近历史记录
+	Plug 'gcmt/wildfire.vim'   " 自动选择括号内容
 
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	" 代码
-	Plug 'alvan/vim-closetag'
+	Plug 'alvan/vim-closetag' 
 	Plug 'SirVer/ultisnips'
 	Plug 'honza/vim-snippets'
 	Plug 'Chiel92/vim-autoformat'
@@ -44,5 +44,5 @@ source $HOME/software/soft/nvim/plugins/nerdtree.vim
 source $HOME/software/soft/nvim/plugins/snippets.vim
 source $HOME/software/soft/nvim/plugins/commenter.vim
 source $HOME/software/soft/nvim/plugins/gitgutter.vim
-source $HOME/software/soft/nvim/plugins/coc.vim
+"source $HOME/software/soft/nvim/plugins/coc.vim
 
