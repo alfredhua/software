@@ -14,6 +14,6 @@ return require('packer').startup(function()
   use {'wbthomason/packer.nvim', opt = true}
 
   use {'ryanoasis/vim-devicons', opt = true}
-  use { 'preservim/nerdtree', ope=true}
+  use {'preservim/nerdtree', ope=true}
 
 end)

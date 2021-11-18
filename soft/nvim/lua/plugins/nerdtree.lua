@@ -1,13 +1,16 @@
+local g = vim.g
+local map = vim.api.nvim_set_keymap
+local default_opts = { noremap = true, silent = true }
 
-let g:NERDTreeWinSize = 25 
-let NERDTreeShowBookmarks=1 
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif 
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
-let NERDTreeIgnore = ['\.pyc$']  
-let g:NERDTreeShowLineNumbers=0 
-let g:NERDTreeHidden=0 
-let NERDTreeDirArrows = 1
+g.NERDTreeWinSize = 25 
+g.NERDTreeDirArrowExpandable = '▸'
+g.NERDTreeDirArrowCollapsible = '▾'
+g.NERDTreeShowLineNumbers=0 
+g.NERDTreeHidden=0 
+--let NERDTreeDirArrows = 1
 
+-- autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif 
+-- let NERDTreeShowBookmarks=1 
+--
 
-nnoremap tt :NERDTreeToggle<CR> 
+map('n','tt',':NERDTreeToggle<CR>',default_opts) 
