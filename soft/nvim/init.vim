@@ -9,7 +9,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'suan/vim-instant-markdown' " markdown预览
 	Plug '/usr/local/opt/fzf'     " 文件搜索
 	Plug 'junegunn/fzf.vim'
-	Plug 'brooth/far.vim'
+	Plug 'brooth/far.vim'   " 内容搜索
 
 	Plug 'mileszs/ack.vim'      " 文件内容搜索
 	Plug 'jiangmiao/auto-pairs'  " 括号自动匹配
