@@ -38,7 +38,7 @@ set lazyredraw "same as above
 set visualbell
 
 "插件
-source $HOME/software/soft/vim/plugins/plugin.vim
+source $HOME/software/soft/nvim/plugins/plugin.vim
 
 " 自定义快捷键
 nnoremap Y y$ "
@@ -59,8 +59,8 @@ noremap <silent> J 5j
 noremap <silent> N 0
 
 " 打开文本 e
-noremap <Space>ei :e $HOME/software/soft/vim/init.vim<CR>
-noremap <Space>ep :e $HOME/software/soft/vim/plugins/plugin.vim<CR>
+noremap <Space>ei :e $HOME/software/soft/nvim/init.vim<CR>
+noremap <Space>ep :e $HOME/software/soft/nvim/plugins/plugin.vim<CR>
 
 " 缓冲区操作b
 noremap <Space>bd :bd<CR>

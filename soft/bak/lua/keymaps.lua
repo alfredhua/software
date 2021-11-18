@@ -21,3 +21,8 @@ map('n', 'L', '5l', default_opts)
 map('n', 'J', '5j', default_opts)
 map('n', 'N', '0', default_opts)
 
+
+
+map('n', 'sf', ':Files<CR>', default_opts)
+
+

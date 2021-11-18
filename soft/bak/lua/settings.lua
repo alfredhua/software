@@ -34,8 +34,15 @@ opt.history = 100         -- remember n lines in history
 opt.lazyredraw = true     -- faster scrolling
 opt.synmaxcol = 240       -- max column for syntax highlight
 
+
 -----------------------------------------------------------
 -- Colorscheme
 -----------------------------------------------------------
 -- opt.termguicolors = true      -- enable 24-bit RGB colors
 cmd [[colorscheme OceanicNext]]
+
+cmd[[cnoreabbrev sudowrite w suda:% ]]
+cmd[[cnoreabbrev sw w sudo:% ]]
+
+
+

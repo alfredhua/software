@@ -19,4 +19,8 @@ return require('packer').startup(function()
   -- theme
   use {'mhartington/oceanic-next', ope=true}
   use {'ryanoasis/vim-devicons', opt = true}
+
+  use {'junegunn/fzf.vim', opt = true}
+  use { 'lambdalisue/suda.vim',opt=true}  
+  
 end)

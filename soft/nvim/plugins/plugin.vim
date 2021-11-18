@@ -33,17 +33,17 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 
 
-source $HOME/software/soft/vim/plugins/far.vim
-source $HOME/software/soft/vim/plugins/suda.vim
-source $HOME/software/soft/vim/plugins/theme.vim
-source $HOME/software/soft/vim/plugins/tagbar.vim
-source $HOME/software/soft/vim/plugins/closetag.vim
-source $HOME/software/soft/vim/plugins/markdown.vim
-source $HOME/software/soft/vim/plugins/nerdtree.vim
-source $HOME/software/soft/vim/plugins/snippets.vim
-source $HOME/software/soft/vim/plugins/commenter.vim
-source $HOME/software/soft/vim/plugins/gitgutter.vim
-source $HOME/software/soft/vim/plugins/coc.vim
+source $HOME/software/soft/nvim/plugins/far.vim
+source $HOME/software/soft/nvim/plugins/suda.vim
+source $HOME/software/soft/nvim/plugins/theme.vim
+source $HOME/software/soft/nvim/plugins/tagbar.vim
+source $HOME/software/soft/nvim/plugins/closetag.vim
+source $HOME/software/soft/nvim/plugins/markdown.vim
+source $HOME/software/soft/nvim/plugins/nerdtree.vim
+source $HOME/software/soft/nvim/plugins/snippets.vim
+source $HOME/software/soft/nvim/plugins/commenter.vim
+source $HOME/software/soft/nvim/plugins/gitgutter.vim
+source $HOME/software/soft/nvim/plugins/coc.vim
 
 
 " 脚本
