@@ -11,7 +11,6 @@ call plug#begin('~/.vim/plugged')
 	Plug 'junegunn/fzf.vim'
 	Plug 'brooth/far.vim'   " 内容搜索
 
-	Plug 'mileszs/ack.vim'      " 文件内容搜索
 	Plug 'jiangmiao/auto-pairs'  " 括号自动匹配
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'preservim/nerdcommenter' " 注释插件 
