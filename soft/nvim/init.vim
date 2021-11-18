@@ -1,84 +1,49 @@
-syntax on
-set exrc
-set secure
-set number
-set relativenumber
-set cursorline
-set hidden
-set noexpandtab
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-set autoindent
-set list
-set listchars=tab:\|\ ,trail:▫
-set scrolloff=4
-set ttimeoutlen=0
-set notimeout
-set viewoptions=cursor,folds,slash,unix
-set wrap
-set tw=0
-set indentexpr=
-set foldmethod=indent
-set foldlevel=99
-set foldenable
-set formatoptions-=tc
-set splitright
-set splitbelow
-set noshowmode
-set showcmd
-set wildmenu
-set ignorecase
-set smartcase
-set shortmess+=c
-set inccommand=split
-set completeopt=longest,noinsert,menuone,noselect,preview
-set ttyfast "should make scrolling faster
-set lazyredraw "same as above
-set visualbell
+source $HOME/software/soft/nvim/setting/settings.vim
+source $HOME/software/soft/nvim/setting/keymaps.vim
 
-"插件
-source $HOME/software/soft/nvim/plugins/plugin.vim
+"插件管理
+call plug#begin('~/.vim/plugged')
+	Plug 'preservim/nerdtree', {'on':'NERDTreeToggle'}   " 树形目录
+	Plug 'Xuyuanp/nerdtree-git-plugin'  " git 显示 
+	Plug 'tpope/vim-surround'        " vim 环绕输入
+	Plug 'suan/vim-instant-markdown' " markdown预览
+	Plug '/usr/local/opt/fzf'     " 文件搜索
+	Plug 'junegunn/fzf.vim'
+	Plug 'brooth/far.vim'
 
-" 自定义快捷键
-nnoremap Y y$ "
-nnoremap > >>
-nnoremap P "+p
-vnoremap Y "+y
-noremap Q :q<CR>
-noremap S :w<CR>
-inoremap <C-a> <ESC>A
-nnoremap <C-s> :w<CR>
-nnoremap <C-j> :bn<CR>
-nnoremap <C-k> :bp<CR>
-noremap <silent> M J
-noremap <silent> K 5k
-noremap <silent> L 5l
-noremap <silent> H 5h
-noremap <silent> J 5j
-noremap <silent> N 0
+	Plug 'mileszs/ack.vim'      " 文件内容搜索
+	Plug 'jiangmiao/auto-pairs'  " 括号自动匹配
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+	Plug 'preservim/nerdcommenter' " 注释插件 
+	Plug 'majutsushi/tagbar'
+	Plug 'mhinz/vim-startify'
+	Plug 'gcmt/wildfire.vim'
 
-" 打开文本 e
-noremap <Space>ei :e $HOME/software/soft/nvim/init.vim<CR>
-noremap <Space>ep :e $HOME/software/soft/nvim/plugins/plugin.vim<CR>
+	" 代码
+	Plug 'alvan/vim-closetag'
+	Plug 'SirVer/ultisnips'
+	Plug 'honza/vim-snippets'
+	Plug 'Chiel92/vim-autoformat'
+	Plug 'junegunn/vim-easy-align'
+	Plug 'lambdalisue/suda.vim'  " 可读文件编辑
+	Plug 'airblade/vim-gitgutter'
 
-" 缓冲区操作b
-noremap <Space>bd :bd<CR>
+	Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+	Plug 'vim-airline/vim-airline'
+	Plug 'vim-airline/vim-airline-themes'
+	Plug 'mhartington/oceanic-next'
 
-" 命令行操作command
-nnoremap <Space>ct :!ctags -R<CR>
+call plug#end()
 
-" 搜索相关 s
-nmap sf :Files<CR>
-noremap sc:F  **/*<left><left><left><left><left>
-noremap sd :Fardo<CR>
-noremap sr :Farr<CR>
-
-" 窗口相关 t
-noremap tj :set splitbelow<CR>:split<CR>
-noremap tl :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
-
-" 格式化相关 g
-xmap ga <Plug>(EasyAlign)
-map ga <Plug>(EasyAlign)
+source $HOME/software/soft/nvim/plugins/far.vim
+source $HOME/software/soft/nvim/plugins/suda.vim
+source $HOME/software/soft/nvim/plugins/theme.vim
+source $HOME/software/soft/nvim/plugins/tagbar.vim
+source $HOME/software/soft/nvim/plugins/closetag.vim
+source $HOME/software/soft/nvim/plugins/markdown.vim
+source $HOME/software/soft/nvim/plugins/nerdtree.vim
+source $HOME/software/soft/nvim/plugins/snippets.vim
+source $HOME/software/soft/nvim/plugins/commenter.vim
+source $HOME/software/soft/nvim/plugins/gitgutter.vim
+source $HOME/software/soft/nvim/plugins/coc.vim
 
