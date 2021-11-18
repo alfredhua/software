@@ -27,6 +27,9 @@ call plug#begin('~/.vim/plugged')
 	Plug 'lambdalisue/suda.vim'  " 可读文件编辑
 	Plug 'airblade/vim-gitgutter'
 
+	Plug 'yuezk/vim-js'  " react 高亮
+	Plug 'maxmellon/vim-jsx-pretty'
+
 	Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
@@ -45,4 +48,8 @@ source $HOME/software/soft/nvim/plugins/snippets.vim
 source $HOME/software/soft/nvim/plugins/commenter.vim
 source $HOME/software/soft/nvim/plugins/gitgutter.vim
 source $HOME/software/soft/nvim/plugins/coc.vim
+
+
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
+
 

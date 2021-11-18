@@ -9,6 +9,7 @@ let g:coc_global_extensions = [
 	\ 'coc-tasks',
 	\ 'coc-translator',
 	\ 'coc-vetur',
+  \ 'coc-tsserver',
 	\ 'coc-vimlsp']
 
 nmap <Space>ct <Plug>(coc-translator-p)
