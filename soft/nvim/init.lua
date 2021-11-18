@@ -17,4 +17,5 @@ require('settings')
 require('keymaps')
 require('plugins/packer')
 require('plugins/nerdtree')
+require('plugins/tagbar')
 

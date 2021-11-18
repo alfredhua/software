@@ -13,7 +13,10 @@ return require('packer').startup(function()
   -- Packer can manage itself as an optional plugin
   use {'wbthomason/packer.nvim', opt = true}
 
-  use {'ryanoasis/vim-devicons', opt = true}
   use {'preservim/nerdtree', ope=true}
+  use {'majutsushi/tagbar', ope=true}
 
+  -- theme
+  use {'mhartington/oceanic-next', ope=true}
+  use {'ryanoasis/vim-devicons', opt = true}
 end)
