@@ -44,5 +44,5 @@ source $HOME/software/soft/nvim/plugins/nerdtree.vim
 source $HOME/software/soft/nvim/plugins/snippets.vim
 source $HOME/software/soft/nvim/plugins/commenter.vim
 source $HOME/software/soft/nvim/plugins/gitgutter.vim
-"source $HOME/software/soft/nvim/plugins/coc.vim
+source $HOME/software/soft/nvim/plugins/coc.vim
 
