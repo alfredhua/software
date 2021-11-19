@@ -16,16 +16,17 @@ noremap <silent> L 5l
 noremap <silent> H 5h
 noremap <silent> J 5j
 noremap <silent> N 0
+noremap <silent> N 0
 
 " 打开文本 e
-noremap <Space>ei :e $HOME/software/soft/nvim/init.vim<CR>
-noremap <Space>ep :e $HOME/software/soft/nvim/plugins/plugin.vim<CR>
+noremap <LEADER>ei :e $HOME/software/soft/nvim/init.vim<CR>
+noremap <LEADER>ep :e $HOME/software/soft/nvim/plugins/plugin.vim<CR>
 
 " 缓冲区操作b
-noremap <Space>bd :bd<CR>
+noremap <LEADER>bd :bd<CR>
 
 " 命令行操作command
-nnoremap <Space>ct :!ctags -R<CR>
+nnoremap <LEADER>ct :!ctags -R<CR>
 
 " 搜索相关 s
 nmap sf :Files<CR>
@@ -36,6 +37,9 @@ noremap sr :Farr<CR>
 " 窗口相关 t
 noremap tj :set splitbelow<CR>:split<CR>
 noremap tl :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
+noremap <LEADER>tm :TableModeToggle<CR>
+nnoremap tt :NERDTreeToggle<CR>
+nnoremap tb :TagbarToggle<CR>
 
 " 格式化相关 g
 xmap ga <Plug>(EasyAlign)

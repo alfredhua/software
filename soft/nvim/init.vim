@@ -1,36 +1,33 @@
-source $HOME/software/soft/nvim/setting/settings.vim
-source $HOME/software/soft/nvim/setting/keymaps.vim
-
-"插件管理
-call plug#begin('~/.vim/plugged')
-	Plug 'preservim/nerdtree', {'on':'NERDTreeToggle'}   " 树形目录
-	Plug 'Xuyuanp/nerdtree-git-plugin'  " git 显示 
-	Plug 'tpope/vim-surround'        " vim 环绕输入
-	Plug 'suan/vim-instant-markdown' " markdown预览
+source $HOME/software/soft/nvim/setting/settings
+	" 搜索
 	Plug '/usr/local/opt/fzf'     " 文件搜索
 	Plug 'junegunn/fzf.vim'
 	Plug 'brooth/far.vim'   " 内容搜索
 
-	Plug 'jiangmiao/auto-pairs'  " 括号自动匹配
+
 	Plug 'preservim/nerdcommenter' " 注释插件 
-	Plug 'majutsushi/tagbar'   " 方法窗口
-	Plug 'mhinz/vim-startify'  "  打开展示最近历史记录
-	Plug 'gcmt/wildfire.vim'   " 自动选择括号内容
+	Plug 'alvan/vim-closetag'  " 输入框匹配
+
+
 
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
-	" 代码
-	Plug 'alvan/vim-closetag' 
-	Plug 'SirVer/ultisnips'
-	Plug 'honza/vim-snippets'
-	Plug 'Chiel92/vim-autoformat'
-	Plug 'junegunn/vim-easy-align'
+	" 工具
+	"Plug 'SirVer/ultisnips'
+	Plug 'honza/vim-snippets'     "代码片段
+	Plug 'Chiel92/vim-autoformat'  " 格式化
+	Plug 'junegunn/vim-easy-align' " 符号对齐
 	Plug 'lambdalisue/suda.vim'  " 可读文件编辑
-	Plug 'airblade/vim-gitgutter'
+	Plug 'airblade/vim-gitgutter'   "文件git区别
 
+	" react
 	Plug 'yuezk/vim-js'  " react 高亮
 	Plug 'maxmellon/vim-jsx-pretty'
 
-	Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+	" markdown
+	Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+	Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle', 'for': ['text', 'markdown', 'vim-plug'] }
+	Plug 'mzlogin/vim-markdown-toc', { 'for': ['gitignore', 'markdown', 'vim-plug'] }
+	" 主题
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'mhartington/oceanic-next'
@@ -52,5 +49,4 @@ source $HOME/software/soft/nvim/plugins/coc.vim
 
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 autocmd BufNewFile,BufRead *.html,*.hml set filetype=md
-
 

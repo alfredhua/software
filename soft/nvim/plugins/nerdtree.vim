@@ -16,4 +16,3 @@ let NERDTreeDirArrows = 1
 
 
 
-nnoremap tt :NERDTreeToggle<CR> " 开启/关闭nerdtree快捷

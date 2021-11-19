@@ -6,4 +6,3 @@ let g:tagbar_autoclose=1
 
 
 
-nmap tb :TagbarToggle<CR>
