@@ -51,5 +51,6 @@ source $HOME/software/soft/nvim/plugins/coc.vim
 
 
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
+autocmd BufNewFile,BufRead *.html,*.hml set filetype=md
 
 
