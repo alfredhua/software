@@ -40,7 +40,5 @@ set visualbell
 let mapleader=" "
 
 
-
-
 " Auto change directory to current dir
 autocmd BufEnter * silent! lcd %:p:h

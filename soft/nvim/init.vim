@@ -13,16 +13,13 @@ call plug#begin('~/.vim/plugged')
 	Plug '/usr/local/opt/fzf'     " 文件搜索
 	Plug 'junegunn/fzf.vim'
 	Plug 'brooth/far.vim'   " 内容搜索
-
-
-	Plug 'preservim/nerdcommenter' " 注释插件 
+	Plug 'preservim/nerdcommenter' " 注释插件
 	Plug 'alvan/vim-closetag'  " 输入框匹配
 
-
-
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 	" 工具
-	"Plug 'SirVer/ultisnips'
+	Plug 'SirVer/ultisnips'
 	Plug 'honza/vim-snippets'     "代码片段
 	Plug 'Chiel92/vim-autoformat'  " 格式化
 	Plug 'junegunn/vim-easy-align' " 符号对齐
@@ -56,7 +53,5 @@ source $HOME/software/soft/nvim/plugins/commenter.vim
 source $HOME/software/soft/nvim/plugins/gitgutter.vim
 source $HOME/software/soft/nvim/plugins/coc.vim
 
-
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 autocmd BufNewFile,BufRead *.html,*.hml set filetype=md
-
