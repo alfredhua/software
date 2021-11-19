@@ -1,4 +1,13 @@
-source $HOME/software/soft/nvim/setting/settings
+source $HOME/software/soft/nvim/setting/settings.vim
+source $HOME/software/soft/nvim/setting/keymaps.vim
+
+"插件管理
+call plug#begin('~/.vim/plugged')
+
+   Plug 'preservim/nerdtree', {'on':'NERDTreeToggle'}   " 树形目录
+   Plug 'Xuyuanp/nerdtree-git-plugin'  " git 显示
+   Plug 'tpope/vim-surround'        " vim 环绕输入
+   Plug 'suan/vim-instant-markdown' " markdown预览
 	" 搜索
 	Plug '/usr/local/opt/fzf'     " 文件搜索
 	Plug 'junegunn/fzf.vim'
