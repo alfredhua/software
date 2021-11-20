@@ -37,7 +37,7 @@ noremap sr :Farr<CR>
 " 窗口相关 t
 noremap tj :set splitbelow<CR>:split<CR>
 noremap tl :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
-noremap <LEADER>tm :TableModeToggle<CR>
+noremap tm :TableModeToggle<CR>
 nnoremap tt :NERDTreeToggle<CR>
 nnoremap tb :TagbarToggle<CR>
 
