@@ -30,7 +30,7 @@ nnoremap <LEADER>ct :!ctags -R<CR>
 
 " 搜索相关 s
 noremap sf :Files<CR>
-noremap sc:F  **/*<left><left><left><left><left>
+noremap sc :F  **/*<left><left><left><left><left>
 noremap sd :Fardo<CR>
 noremap sr :Farr<CR>
 
