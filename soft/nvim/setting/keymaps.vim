@@ -4,6 +4,7 @@ nnoremap <silent> > >>
 nnoremap <silent> P "+p
 vnoremap <silent> Y "+y
 noremap Q :q<CR>
+noremap <C-q> :bd<CR>
 noremap S :w<CR>
 inoremap <C-a> <ESC>A
 nnoremap <silent> <C-s> :w<CR>
@@ -23,8 +24,6 @@ noremap <LEADER>es :e $HOME/software/soft/nvim/setting/settings.vim<CR>
 noremap <LEADER>ek :e $HOME/software/soft/nvim/setting/keymaps.vim<CR>
 noremap <LEADER>ep :e $HOME/software/soft/nvim/plugins/plugin.vim<CR>
 
-" 缓冲区操作b
-noremap <LEADER>bd :bd<CR>
 
 " 命令行操作command
 nnoremap <LEADER>ct :!ctags -R<CR>

@@ -1,10 +1,10 @@
 source $HOME/software/soft/nvim/setting/settings.vim
 source $HOME/software/soft/nvim/setting/keymaps.vim
-
 "插件管理
 call plug#begin('~/.vim/plugged')
 
 	Plug 'preservim/nerdtree', {'on':'NERDTreeToggle'}   " 树形目录
+	Plug 'preservim/tagbar' " 函数窗口预览
 	Plug 'Xuyuanp/nerdtree-git-plugin'  " git 显示
 	Plug 'tpope/vim-surround'        " vim 环绕输入
 	Plug 'suan/vim-instant-markdown' " markdown预览
@@ -16,6 +16,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'preservim/nerdcommenter' " 注释插件
 	Plug 'alvan/vim-closetag'  " 输入框匹配
 
+	Plug 'terryma/vim-multiple-cursors'
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 	" 工具
@@ -24,7 +25,6 @@ call plug#begin('~/.vim/plugged')
 	Plug 'Chiel92/vim-autoformat'  " 格式化
 	Plug 'junegunn/vim-easy-align' " 符号对齐
 	Plug 'lambdalisue/suda.vim'  " 可读文件编辑
-	Plug 'airblade/vim-gitgutter'   "文件git区别
 
 	" react
 	Plug 'yuezk/vim-js'  " react 高亮
