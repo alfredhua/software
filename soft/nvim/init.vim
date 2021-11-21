@@ -8,6 +8,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'Xuyuanp/nerdtree-git-plugin'  " git 显示
 	Plug 'tpope/vim-surround'        " vim 环绕输入
 	Plug 'suan/vim-instant-markdown' " markdown预览
+	Plug 'mhinz/vim-startify'
 
 	" 搜索
 	Plug '/usr/local/opt/fzf'     " 文件搜索
