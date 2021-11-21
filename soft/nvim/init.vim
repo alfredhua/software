@@ -9,6 +9,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'tpope/vim-surround'        " vim 环绕输入
 	Plug 'suan/vim-instant-markdown' " markdown预览
 	Plug 'mhinz/vim-startify'
+	Plug 'kevinhwang91/rnvimr'
 
 	" 搜索
 	Plug '/usr/local/opt/fzf'     " 文件搜索
@@ -53,6 +54,7 @@ source $HOME/software/soft/nvim/plugins/snippets.vim
 source $HOME/software/soft/nvim/plugins/commenter.vim
 source $HOME/software/soft/nvim/plugins/gitgutter.vim
 source $HOME/software/soft/nvim/plugins/coc.vim
+source $HOME/software/soft/nvim/plugins/rnvimr.vim
 
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 autocmd BufNewFile,BufRead *.html,*.hml set filetype=md
