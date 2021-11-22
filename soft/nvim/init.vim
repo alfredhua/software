@@ -9,8 +9,8 @@ call plug#begin('~/.vim/plugged')
 	Plug 'tpope/vim-fugitive'  " git 操作
 	Plug 'tpope/vim-surround'        " vim 环绕输入
 	Plug 'suan/vim-instant-markdown' " markdown预览
-	Plug 'mhinz/vim-startify'
-	Plug 'kevinhwang91/rnvimr'
+	Plug 'mhinz/vim-startify'   " 历史打开
+	Plug 'kevinhwang91/rnvimr'  " 文件浏览
 
 	" 搜索
 	Plug '/usr/local/opt/fzf'     " 文件搜索
