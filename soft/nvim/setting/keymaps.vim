@@ -48,6 +48,8 @@ nnoremap to :RnvimrToggle<CR><C-\><C-n>:RnvimrResize 0<CR>
 xmap ga <Plug>(EasyAlign)
 map ga <Plug>(EasyAlign)
 
+noremap <LEADER>gb :Git blame<CR>
+
 " help
 noremap <LEADER>hm :Maps<CR>
 noremap <LEADER>hh :tab help <right>
