@@ -6,7 +6,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'preservim/nerdtree', {'on':'NERDTreeToggle'}   " 树形目录
 	Plug 'preservim/tagbar' " 函数窗口预览
 	Plug 'Xuyuanp/nerdtree-git-plugin'  " git 显示
-	Plug 'tpope/vim-fugitive'  " git 显示
+	Plug 'tpope/vim-fugitive'  " git 操作
 	Plug 'tpope/vim-surround'        " vim 环绕输入
 	Plug 'suan/vim-instant-markdown' " markdown预览
 	Plug 'mhinz/vim-startify'
