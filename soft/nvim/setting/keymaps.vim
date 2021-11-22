@@ -16,7 +16,9 @@ noremap <silent> L 5l
 noremap <silent> H 5h
 noremap <silent> J 5j
 noremap <silent> N 0
-noremap <LEADER>r :source $HOME/software/soft/nvim/init.vim<CR>
+
+
+noremap <LEADER>ri :source $HOME/software/soft/nvim/init.vim<CR>
 
 " 打开文本 e
 noremap <LEADER>ei :e $HOME/software/soft/nvim/init.vim<CR>
@@ -24,21 +26,21 @@ noremap <LEADER>es :e $HOME/software/soft/nvim/setting/settings.vim<CR>
 noremap <LEADER>ek :e $HOME/software/soft/nvim/setting/keymaps.vim<CR>
 noremap <LEADER>ep :e $HOME/software/soft/nvim/plugins/plugin.vim<CR>
 
-
 " 命令行操作command
 nnoremap <LEADER>ct :!ctags -R<CR>
 
-" 搜索相关 s
+" 搜索,替换相关 s
 noremap sf :Files<CR>
 noremap sc :F  **/*<left><left><left><left><left>
 noremap sd :Fardo<CR>
 noremap sr :Farr<CR>
 
 " 窗口相关 t
-noremap tj :set splitbelow<CR>:split<CR>
-noremap tl :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
-noremap tm :TableModeToggle<CR>
+nnoremap tj :set splitbelow<CR>:split<CR>
+nnoremap tl :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
+nnoremap tm :TableModeToggle<CR>
 nnoremap tt :NERDTreeToggle<CR>
+nnoremap tr :NERDTreeRefreshRoot<CR>
 nnoremap tb :TagbarToggle<CR>
 nnoremap to :RnvimrToggle<CR><C-\><C-n>:RnvimrResize 0<CR>
 
@@ -46,3 +48,5 @@ nnoremap to :RnvimrToggle<CR><C-\><C-n>:RnvimrResize 0<CR>
 xmap ga <Plug>(EasyAlign)
 map ga <Plug>(EasyAlign)
 
+" help
+noremap <LEADER>hm :Maps<CR>
