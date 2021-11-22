@@ -11,6 +11,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'suan/vim-instant-markdown' " markdown预览
 	Plug 'mhinz/vim-startify'   " 历史打开
 	Plug 'kevinhwang91/rnvimr'  " 文件浏览
+	Plug 'Lokaltog/vim-easymotion'
 
 	" 搜索
 	Plug '/usr/local/opt/fzf'     " 文件搜索
@@ -59,3 +60,5 @@ source $HOME/software/soft/nvim/plugins/rnvimr.vim
 
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 autocmd BufNewFile,BufRead *.html,*.hml set filetype=md
+
+
