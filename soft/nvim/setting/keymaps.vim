@@ -50,3 +50,4 @@ map ga <Plug>(EasyAlign)
 
 " help
 noremap <LEADER>hm :Maps<CR>
+noremap <LEADER>hh :tab help <right>
