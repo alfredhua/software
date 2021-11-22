@@ -40,6 +40,7 @@ noremap tl :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
 noremap tm :TableModeToggle<CR>
 nnoremap tt :NERDTreeToggle<CR>
 nnoremap tb :TagbarToggle<CR>
+nnoremap to :RnvimrToggle<CR><C-\><C-n>:RnvimrResize 0<CR>
 
 " 格式化相关 g
 xmap ga <Plug>(EasyAlign)
