@@ -16,6 +16,7 @@ call plug#begin('~/.vim/plugged')
 	" 搜索
 	Plug '/usr/local/opt/fzf'     " 文件搜索
 	Plug 'junegunn/fzf.vim'
+
 	Plug 'brooth/far.vim'   " 内容搜索
 	Plug 'preservim/nerdcommenter' " 注释插件
 	Plug 'alvan/vim-closetag'  " 输入框匹配
