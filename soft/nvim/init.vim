@@ -61,4 +61,5 @@ source $HOME/software/soft/nvim/plugins/rnvimr.vim
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 autocmd BufNewFile,BufRead *.html,*.hml set filetype=md
 
+map <Leader> <Plug>(easymotion-prefix)
 
