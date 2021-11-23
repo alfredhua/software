@@ -11,9 +11,10 @@ call plug#begin('~/.vim/plugged')
 	Plug 'suan/vim-instant-markdown' " markdown预览
 	Plug 'mhinz/vim-startify'   " 历史打开
 	Plug 'kevinhwang91/rnvimr'  " 文件浏览
-	Plug 'Lokaltog/vim-easymotion'
-
-	" 搜索
+	Plug 'Lokaltog/vim-easymotion'   "快速定位\s
+	Plug 'tommcdo/vim-exchange'   "单词交换cxw
+	
+	"搜索
 	Plug '/usr/local/opt/fzf'     " 文件搜索
 	Plug 'junegunn/fzf.vim'
 
