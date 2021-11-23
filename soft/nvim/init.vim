@@ -20,6 +20,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'brooth/far.vim'   " 内容搜索
 	Plug 'preservim/nerdcommenter' " 注释插件
 	Plug 'alvan/vim-closetag'  " 输入框匹配
+	Plug 'jiangmiao/auto-pairs' " 自动匹配括号
 
 	Plug 'terryma/vim-multiple-cursors'
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
