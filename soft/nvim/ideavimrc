@@ -29,13 +29,10 @@ nnoremap <C-l> :action GotoLine<CR>
 
 nnoremap <Leader>pm :action ShowPopupMenu<CR>
 nnoremap <Leader>rf :action RenameFile<CR>
-
 nnoremap sf :action GotoClass<CR>
 nnoremap sc :action FindInPath<CR>
-
-nnoremap tb :action Structure<CR>
-
-
+nnoremap <C-w> :action FocusEditor<CR>
+nnoremap tb :action ActivateStructureToolWindow<CR>
 nnoremap gb :action GotoImplementation<CR>
 
 let mapleader =" "
