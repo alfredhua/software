@@ -23,39 +23,35 @@ noremap <silent> H 5h
 noremap <silent> J 5j
 noremap <silent> N 0
 inoremap <C-a> <ESC>A
+nnoremap <Leader>sc :nohisearch<CR>
+nnoremap <C-l> :action GotoLine<CR>
 
+
+nnoremap <Leader>pm :action ShowPopupMenu<CR>
+nnoremap <Leader>rf :action RenameFile<CR>
+
+nnoremap sf :action GotoClass<CR>
+nnoremap sc :action FindInPath<CR>
+
+nnoremap tb :action Structure<CR>
+
+
+nnoremap gb :action GotoImplementation<CR>
+
+let mapleader =" "
+nnoremap <SPACE> <Nop>
+
+" 设置
 set cursorline
 set relativenumber
 set tabstop=4
-set softtabstop=4
+set softtabstop=6
 set shiftwidth=4
 set ts=4
 set foldmethod=indent
-set foldmethod=syntax
+set foldmethod=synta
 
-
-
-set surround
-set commentary
-set ReplaceWithRegister
-set argtextobj
-set exchange
-set highlightedyank
-set vim-paragraph-motion
-set textobj-indent
-set textobj-entire
-set matchit
-
-
-let mapleader="<Space>"
-set keep-english-in-normal-and-restore-in-insert
-
-set easymotion
-map <Leader> <Plug>(easymotion-prefix)
-
-set NERDTree
-nnoremap tt :NERDTreeToggle<CR>
-
+" 插件
 set multiple-cursors
 nmap <C-n> <Plug>NextWholeOccurrence
 xmap <C-n> <Plug>NextWholeOccurrence
@@ -66,3 +62,16 @@ xmap <C-p> <Plug>RemoveOccurrence
 xmap <S-C-p> <Plug>AllWholeOccurrence
 xmap <S-C-p> <Plug>AllWholeOccurrence
 
+set nerdtree  " t
+nnoremap tt :NERDTreeToggle<CR>
+
+set easymotion  " <Space>
+map <Space> <Plug>(easymotion-prefix)
+
+set commentary  " gc
+
+set ReplaceWithRegister  " gr grr
+
+set argtextobj  " 参数 (d,c,v)aa/ia
+
+set exchange  " 更换，cx(iw,ap), cxx, X, cxc

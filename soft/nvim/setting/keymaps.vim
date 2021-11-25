@@ -31,7 +31,7 @@ nnoremap <LEADER>ct :!ctags -R<CR>
 
 " 搜索,替换相关 s
 noremap sf :Files<CR>
-noremap sc :F  **/*<left><left><left><left><left>
+noremap sc :Ack  ./*<left><left><left><left>
 noremap sd :Fardo<CR>
 noremap sr :Farr<CR>
 
@@ -53,3 +53,7 @@ noremap <LEADER>gb :Git blame<CR>
 " help
 noremap <LEADER>hm :Maps<CR>
 noremap <LEADER>hh :tab help <right>
+
+
+cnoreabbrev Ack Ack!
+
