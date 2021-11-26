@@ -38,6 +38,8 @@ nnoremap gb :action GotoImplementation<CR>
 let mapleader =" "
 nnoremap <SPACE> <Nop>
 
+set surround
+
 " 设置
 set cursorline
 set relativenumber
