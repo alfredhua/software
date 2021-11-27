@@ -1,69 +1,73 @@
-source $HOME/software/soft/nvim/setting/settings.vim
-source $HOME/software/soft/nvim/setting/keymaps.vim
-"插件管理
-call plug#begin('~/.vim/plugged')
+" vim公共设置
 
-	Plug 'preservim/nerdtree', {'on':'NERDTreeToggle'}   " 树形目录
-	Plug 'preservim/tagbar' " 函数窗口预览
-	Plug 'Xuyuanp/nerdtree-git-plugin'  " git 显示
-	Plug 'tpope/vim-fugitive'  " git 操作
-	Plug 'tpope/vim-surround'        " vim 环绕输入
-	Plug 'suan/vim-instant-markdown' " markdown预览
-	Plug 'mhinz/vim-startify'   " 历史打开
-	Plug 'kevinhwang91/rnvimr'  " 文件浏览
-	Plug 'Lokaltog/vim-easymotion'   "快速定位\s
-	Plug 'tommcdo/vim-exchange'   "单词交换cxw
-	
-	"搜索
-	Plug '/usr/local/opt/fzf'     " 文件搜索
-	Plug 'junegunn/fzf.vim'
+source ~/software/soft/nvim/setting/settings.vim
+source ~/software/soft/nvim/setting/keymaps.vim
 
-	Plug 'brooth/far.vim'   " 内容搜索
-	Plug 'preservim/nerdcommenter' " 注释插件
-	Plug 'alvan/vim-closetag'  " 输入框匹配
-	Plug 'jiangmiao/auto-pairs' " 自动匹配括号
-	Plug 'mileszs/ack.vim'
+if has('ide')
+	" idea 中设置
+	source ~/software/soft/nvim/idea/ideaMaps.vim
+else
+	"插件管理
+	call plug#begin('~/.vim/plugged')
 
-	Plug 'terryma/vim-multiple-cursors'
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+		Plug 'preservim/nerdtree', {'on':'NERDTreeToggle'}   " 树形目录
+		Plug 'preservim/tagbar' " 函数窗口预览
+		Plug 'Xuyuanp/nerdtree-git-plugin'  " git 显示
+		Plug 'tpope/vim-fugitive'  " git 操作
+		Plug 'tpope/vim-surround'        " vim 环绕输入
+		Plug 'suan/vim-instant-markdown' " markdown预览
+		Plug 'mhinz/vim-startify'   " 历史打开
+		Plug 'kevinhwang91/rnvimr'  " 文件浏览
+		Plug 'Lokaltog/vim-easymotion'   "快速定位\s
+		Plug 'tommcdo/vim-exchange'   "单词交换cxw
+		
+		"搜索
+		Plug '/usr/local/opt/fzf'     " 文件搜索
+		Plug 'junegunn/fzf.vim'
 
-	" 工具
-	Plug 'SirVer/ultisnips'
-	Plug 'honza/vim-snippets'     "代码片段
-	Plug 'Chiel92/vim-autoformat'  " 格式化
-	Plug 'junegunn/vim-easy-align' " 符号对齐
-	Plug 'lambdalisue/suda.vim'  " 可读文件编辑
+		Plug 'brooth/far.vim'   " 内容搜索
+		Plug 'preservim/nerdcommenter' " 注释插件
+		Plug 'alvan/vim-closetag'  " 输入框匹配
+		Plug 'jiangmiao/auto-pairs' " 自动匹配括号
+		Plug 'mileszs/ack.vim'
 
-	" react
-	Plug 'yuezk/vim-js'  " react 高亮
-	Plug 'maxmellon/vim-jsx-pretty'
+		Plug 'terryma/vim-multiple-cursors'
+		Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-	" markdown
-	Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
-	Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle', 'for': ['text', 'markdown', 'vim-plug'] }
-	Plug 'mzlogin/vim-markdown-toc', { 'for': ['gitignore', 'markdown', 'vim-plug'] }
-	" 主题
-	Plug 'vim-airline/vim-airline'
-	Plug 'vim-airline/vim-airline-themes'
-	Plug 'mhartington/oceanic-next'
+		" 工具
+		Plug 'SirVer/ultisnips'
+		Plug 'honza/vim-snippets'     "代码片段
+		Plug 'Chiel92/vim-autoformat'  " 格式化
+		Plug 'junegunn/vim-easy-align' " 符号对齐
+		Plug 'lambdalisue/suda.vim'  " 可读文件编辑
 
-call plug#end()
+		" react
+		Plug 'yuezk/vim-js'  " react 高亮
+		Plug 'maxmellon/vim-jsx-pretty'
 
-source $HOME/software/soft/nvim/plugins/far.vim
-source $HOME/software/soft/nvim/plugins/suda.vim
-source $HOME/software/soft/nvim/plugins/theme.vim
-source $HOME/software/soft/nvim/plugins/tagbar.vim
-source $HOME/software/soft/nvim/plugins/closetag.vim
-source $HOME/software/soft/nvim/plugins/markdown.vim
-source $HOME/software/soft/nvim/plugins/nerdtree.vim
-source $HOME/software/soft/nvim/plugins/snippets.vim
-source $HOME/software/soft/nvim/plugins/commenter.vim
-source $HOME/software/soft/nvim/plugins/gitgutter.vim
-source $HOME/software/soft/nvim/plugins/coc.vim
-source $HOME/software/soft/nvim/plugins/rnvimr.vim
+		" markdown
+		Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+		Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle', 'for': ['text', 'markdown', 'vim-plug'] }
+		Plug 'mzlogin/vim-markdown-toc', { 'for': ['gitignore', 'markdown', 'vim-plug'] }
+		" 主题
+		Plug 'vim-airline/vim-airline'
+		Plug 'vim-airline/vim-airline-themes'
+		Plug 'mhartington/oceanic-next'
 
-autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
-autocmd BufNewFile,BufRead *.html,*.hml set filetype=md
+	call plug#end()
 
-map <Leader> <Plug>(easymotion-prefix)
+	source ~/software/soft/nvim/vim/plugins/far.vim
+	source ~/software/soft/nvim/vim/plugins/suda.vim
+	source ~/software/soft/nvim/vim/plugins/theme.vim
+	source ~/software/soft/nvim/vim/plugins/tagbar.vim
+	source ~/software/soft/nvim/vim/plugins/closetag.vim
+	source ~/software/soft/nvim/vim/plugins/markdown.vim
+	source ~/software/soft/nvim/vim/plugins/nerdtree.vim
+	source ~/software/soft/nvim/vim/plugins/snippets.vim
+	source ~/software/soft/nvim/vim/plugins/commenter.vim
+	source ~/software/soft/nvim/vim/plugins/gitgutter.vim
+	source ~/software/soft/nvim/vim/plugins/coc.vim
+	source ~/software/soft/nvim/vim/plugins/rnvimr.vim
+	source ~/software/soft/nvim/vim/keymaps.vim
 
+endif

@@ -15,8 +15,8 @@
 
 ## VIM 相关
 
-- ln -s ~/software/soft/vim/init.vim   ~/.config/nvim/init.vim
-- ln -s ~/software/soft/vim/ideavimrc  ~/.ideavimr
+- ln -s ~/software/soft/nvim/init.vim   ~/.config/nvim/init.vim
+- ln -s ~/software/soft/nvim/init.vim  ~/.ideavimrc
 - vim 下安装所有插件： PlugInstall
 
 ## brew

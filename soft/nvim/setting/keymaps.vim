@@ -1,5 +1,6 @@
+let mapleader =" "
+nnoremap <SPACE> <Nop>
 
-" 自定义快捷键
 nnoremap <silent> > >>
 nnoremap <silent> P "+p
 vnoremap <silent> Y "+y
@@ -17,43 +18,12 @@ noremap <silent> H 5h
 noremap <silent> J 5j
 noremap <silent> N 0
 
-
+" =============== 更新 ==================
 noremap <LEADER>ri :source $HOME/software/soft/nvim/init.vim<CR>
 
-" 打开文本 e
-noremap <LEADER>ei :e $HOME/software/soft/nvim/init.vim<CR>
-noremap <LEADER>es :e $HOME/software/soft/nvim/setting/settings.vim<CR>
-noremap <LEADER>ek :e $HOME/software/soft/nvim/setting/keymaps.vim<CR>
-noremap <LEADER>ep :e $HOME/software/soft/nvim/plugins/plugin.vim<CR>
-
-" 命令行操作command
-nnoremap <LEADER>ct :!ctags -R<CR>
-
-" 搜索,替换相关 s
-noremap sf :Files<CR>
-noremap sc :Ack  ./*<left><left><left><left>
-noremap sd :Fardo<CR>
-noremap sr :Farr<CR>
-
-" 窗口相关 t
-nnoremap tj :set splitbelow<CR>:split<CR>
-nnoremap tl :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
-nnoremap tm :TableModeToggle<CR>
-nnoremap tt :NERDTreeToggle<CR>
-nnoremap tr :NERDTreeRefreshRoot<CR>
-nnoremap tb :TagbarToggle<CR>
-nnoremap to :RnvimrToggle<CR><C-\><C-n>:RnvimrResize 0<CR>
-
-" 格式化相关 g
-xmap ga <Plug>(EasyAlign)
-map ga <Plug>(EasyAlign)
-
-noremap <LEADER>gb :Git blame<CR>
-
-" help
-noremap <LEADER>hm :Maps<CR>
-noremap <LEADER>hh :tab help <right>
-
-
-cnoreabbrev Ack Ack!
+" =================打开文本 e========================
+noremap <LEADER>ein :e ~/software/soft/nvim/init.vim<CR>
+noremap <LEADER>es :e ~/software/soft/nvim/setting/settings.vim<CR>
+noremap <LEADER>ek :e ~/software/soft/nvim/setting/keymaps.vim<CR>
+noremap <LEADER>eid :e ~/software/soft/nvim/idea/ideaMaps.vim<CR>
 
