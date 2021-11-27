@@ -30,7 +30,7 @@ set showcmd
 set wildmenu
 set ignorecase
 set smartcase
-set guicursor+=a:blinkon0
+"set guicursor+=a:blinkon0
 set shortmess+=c
 set inccommand=split
 set completeopt=longest,noinsert,menuone,noselect,preview

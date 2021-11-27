@@ -33,7 +33,6 @@ nnoremap tc :action HideAllWindows<CR>
 " =============== 文件 ==================
 nnoremap <Leader>rf :action RenameFile<CR>
 nnoremap <Leader>nc :action NewClass<CR>
-nnoremap <Leader>rf :action RenameFile<CR>
 
 " =============== 代码，跳转 ==================
 nnoremap gi :action GotoImplementation<CR>

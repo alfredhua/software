@@ -1,5 +1,4 @@
 " vim公共设置
-
 source ~/software/soft/nvim/setting/settings.vim
 source ~/software/soft/nvim/setting/keymaps.vim
 
