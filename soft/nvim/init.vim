@@ -48,7 +48,8 @@ else
 		Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 		Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle', 'for': ['text', 'markdown', 'vim-plug'] }
 		Plug 'mzlogin/vim-markdown-toc', { 'for': ['gitignore', 'markdown', 'vim-plug'] }
-		" 主题
+		
+		" =============== 主题 ==================
 		Plug 'vim-airline/vim-airline'
 		Plug 'vim-airline/vim-airline-themes'
 		Plug 'mhartington/oceanic-next'
