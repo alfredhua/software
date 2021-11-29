@@ -1,12 +1,12 @@
-" vim公共设置
+" =============== vim公共设置 ==================
 source ~/software/soft/nvim/setting/settings.vim
 source ~/software/soft/nvim/setting/keymaps.vim
 
 if has('ide')
-	" idea 中设置
+	" =============== idea配置 ==================
 	source ~/software/soft/nvim/idea/ideaMaps.vim
 else
-	"插件管理
+	" =============== 插件管理 ==================
 	call plug#begin('~/.vim/plugged')
 
 		Plug 'preservim/nerdtree', {'on':'NERDTreeToggle'}   " 树形目录
@@ -20,7 +20,7 @@ else
 		Plug 'Lokaltog/vim-easymotion'   "快速定位\s
 		Plug 'tommcdo/vim-exchange'   "单词交换cxw
 		
-		"搜索
+		" =============== 搜索 ==================
 		Plug '/usr/local/opt/fzf'     " 文件搜索
 		Plug 'junegunn/fzf.vim'
 
@@ -33,7 +33,7 @@ else
 		Plug 'terryma/vim-multiple-cursors'
 		Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-		" 工具
+		" =============== 工具 ==================
 		Plug 'SirVer/ultisnips'
 		Plug 'honza/vim-snippets'     "代码片段
 		Plug 'Chiel92/vim-autoformat'  " 格式化
@@ -44,7 +44,7 @@ else
 		Plug 'yuezk/vim-js'  " react 高亮
 		Plug 'maxmellon/vim-jsx-pretty'
 
-		" markdown
+		" =============== markdown ==================
 		Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 		Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle', 'for': ['text', 'markdown', 'vim-plug'] }
 		Plug 'mzlogin/vim-markdown-toc', { 'for': ['gitignore', 'markdown', 'vim-plug'] }
