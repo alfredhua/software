@@ -39,7 +39,6 @@ else
 		Plug 'honza/vim-snippets'     "代码片段
 		Plug 'Chiel92/vim-autoformat'  " 格式化
 		Plug 'junegunn/vim-easy-align' " 符号对齐
-		Plug 'lambdalisue/suda.vim'  " 可读文件编辑
 
 		" react
 		Plug 'yuezk/vim-js'  " react 高亮
