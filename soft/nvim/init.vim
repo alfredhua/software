@@ -4,7 +4,7 @@ source ~/software/soft/nvim/setting/keymaps.vim
 
 if has('ide')
 	" =============== idea配置 ==================
-	source ~/software/soft/nvim/idea/ideaMaps.vim
+	source ~/Software/soft/nvim/idea/ideaMaps.vim
 else
 	" =============== 插件管理 ==================
 	call plug#begin('~/.vim/plugged')
@@ -18,7 +18,7 @@ else
 		Plug 'suan/vim-instant-markdown' " markdown预览
 		Plug 'mhinz/vim-startify'   " 历史打开
 		Plug 'kevinhwang91/rnvimr'  " 文件浏览
-		Plug 'Lokaltog/vim-easymotion'   "快速定位\s
+		Plug 'Lokaltog/vim-easymotion'   "快速定位
 		Plug 'tommcdo/vim-exchange'   "单词交换cxw
 		
 		" =============== 搜索 ==================
