@@ -1,15 +1,16 @@
-" vim公共设置
+" =============== vim公共设置 ==================
 source ~/software/soft/nvim/setting/settings.vim
 source ~/software/soft/nvim/setting/keymaps.vim
 
 if has('ide')
-	" idea 中设置
-	source ~/software/soft/nvim/idea/ideaMaps.vim
+	" =============== idea配置 ==================
+	source ~/Software/soft/nvim/idea/ideaMaps.vim
 else
-	"插件管理
+	" =============== 插件管理 ==================
 	call plug#begin('~/.vim/plugged')
 
 		Plug 'preservim/nerdtree', {'on':'NERDTreeToggle'}   " 树形目录
+
 		Plug 'preservim/tagbar' " 函数窗口预览
 		Plug 'Xuyuanp/nerdtree-git-plugin'  " git 显示
 		Plug 'tpope/vim-fugitive'  " git 操作
@@ -17,10 +18,10 @@ else
 		Plug 'suan/vim-instant-markdown' " markdown预览
 		Plug 'mhinz/vim-startify'   " 历史打开
 		Plug 'kevinhwang91/rnvimr'  " 文件浏览
-		Plug 'Lokaltog/vim-easymotion'   "快速定位\s
+		Plug 'Lokaltog/vim-easymotion'   "快速定位
 		Plug 'tommcdo/vim-exchange'   "单词交换cxw
 		
-		"搜索
+		" =============== 搜索 ==================
 		Plug '/usr/local/opt/fzf'     " 文件搜索
 		Plug 'junegunn/fzf.vim'
 
@@ -33,22 +34,22 @@ else
 		Plug 'terryma/vim-multiple-cursors'
 		Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-		" 工具
+		" =============== 工具 ==================
 		Plug 'SirVer/ultisnips'
 		Plug 'honza/vim-snippets'     "代码片段
 		Plug 'Chiel92/vim-autoformat'  " 格式化
 		Plug 'junegunn/vim-easy-align' " 符号对齐
-		Plug 'lambdalisue/suda.vim'  " 可读文件编辑
 
 		" react
 		Plug 'yuezk/vim-js'  " react 高亮
 		Plug 'maxmellon/vim-jsx-pretty'
 
-		" markdown
+		" =============== markdown ==================
 		Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 		Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle', 'for': ['text', 'markdown', 'vim-plug'] }
 		Plug 'mzlogin/vim-markdown-toc', { 'for': ['gitignore', 'markdown', 'vim-plug'] }
-		" 主题
+		
+		" =============== 主题 ==================
 		Plug 'vim-airline/vim-airline'
 		Plug 'vim-airline/vim-airline-themes'
 		Plug 'mhartington/oceanic-next'
@@ -57,7 +58,6 @@ else
 
 	source ~/software/soft/nvim/vim/plugins/far.vim
 	source ~/software/soft/nvim/vim/plugins/suda.vim
-	source ~/software/soft/nvim/vim/plugins/theme.vim
 	source ~/software/soft/nvim/vim/plugins/tagbar.vim
 	source ~/software/soft/nvim/vim/plugins/closetag.vim
 	source ~/software/soft/nvim/vim/plugins/markdown.vim
@@ -68,5 +68,5 @@ else
 	source ~/software/soft/nvim/vim/plugins/coc.vim
 	source ~/software/soft/nvim/vim/plugins/rnvimr.vim
 	source ~/software/soft/nvim/vim/keymaps.vim
-
+	source ~/software/soft/nvim/vim/plugins/theme.vim
 endif

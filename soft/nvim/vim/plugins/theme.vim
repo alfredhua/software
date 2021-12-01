@@ -10,5 +10,6 @@ set t_Co=256
 if (has("termguicolors"))
 	set termguicolors
 endif
+
 colorscheme OceanicNext
 

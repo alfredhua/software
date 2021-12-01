@@ -39,8 +39,8 @@ nnoremap gi :action GotoImplementation<CR>
 nnoremap gd :action GotoDeclaration<CR>
 nnoremap gb :action Back<CR>
 nnoremap <C-o> :action OptimizeImports<CR>
-nnoremap <Leader>cu :action Run<CR>
-nnoremap <Leader>cd :action Debug<CR>
-nnoremap <Leader>cs :action Stop<CR>
 nnoremap <Leader>sg :action Generate<CR>
 
+nnoremap <Leader>er :action Run<CR>
+nnoremap <Leader>ed :action Debug<CR>
+nnoremap <Leader>es :action Stop<CR>
