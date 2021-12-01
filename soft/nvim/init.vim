@@ -10,6 +10,7 @@ else
 	call plug#begin('~/.vim/plugged')
 
 		Plug 'preservim/nerdtree', {'on':'NERDTreeToggle'}   " 树形目录
+
 		Plug 'preservim/tagbar' " 函数窗口预览
 		Plug 'Xuyuanp/nerdtree-git-plugin'  " git 显示
 		Plug 'tpope/vim-fugitive'  " git 操作
@@ -58,7 +59,6 @@ else
 
 	source ~/software/soft/nvim/vim/plugins/far.vim
 	source ~/software/soft/nvim/vim/plugins/suda.vim
-	source ~/software/soft/nvim/vim/plugins/theme.vim
 	source ~/software/soft/nvim/vim/plugins/tagbar.vim
 	source ~/software/soft/nvim/vim/plugins/closetag.vim
 	source ~/software/soft/nvim/vim/plugins/markdown.vim
@@ -69,5 +69,5 @@ else
 	source ~/software/soft/nvim/vim/plugins/coc.vim
 	source ~/software/soft/nvim/vim/plugins/rnvimr.vim
 	source ~/software/soft/nvim/vim/keymaps.vim
-
+	source ~/software/soft/nvim/vim/plugins/theme.vim
 endif
