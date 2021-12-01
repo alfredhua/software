@@ -1,0 +1,78 @@
+2020-08-22 00:03:32,837+0000 INFO  [quartz-6-thread-12]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change WAITING -> RUNNING
+2020-08-22 00:03:32,847+0000 INFO  [quartz-6-thread-13]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Task log cleanup' [tasklog.cleanup] state change WAITING -> RUNNING
+2020-08-22 00:03:32,877+0000 INFO  [quartz-6-thread-13]  *SYSTEM org.sonatype.nexus.tasklog.TaskLogCleanup - Cleaning up log files in /nexus-data/log/tasks older than 30 days
+2020-08-22 00:03:32,886+0000 INFO  [quartz-6-thread-12]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change RUNNING -> WAITING (OK)
+2020-08-22 00:03:32,928+0000 INFO  [quartz-6-thread-13]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Task log cleanup' [tasklog.cleanup] state change RUNNING -> WAITING (OK)
+2020-08-22 00:42:58,607+0000 INFO  [quartz-6-thread-14]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change WAITING -> RUNNING
+2020-08-22 00:42:58,616+0000 INFO  [quartz-6-thread-14]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change RUNNING -> WAITING (OK)
+2020-08-22 00:50:00,030+0000 INFO  [quartz-6-thread-15]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change WAITING -> RUNNING
+2020-08-22 00:50:00,043+0000 INFO  [quartz-6-thread-15]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change RUNNING -> WAITING (OK)
+2020-08-22 01:06:19,362+0000 INFO  [quartz-6-thread-16]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change WAITING -> RUNNING
+2020-08-22 01:06:19,369+0000 INFO  [quartz-6-thread-17]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Cleanup service' [repository.cleanup] state change WAITING -> RUNNING
+2020-08-22 01:06:19,376+0000 INFO  [quartz-6-thread-16]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change RUNNING -> WAITING (OK)
+2020-08-22 01:06:19,396+0000 INFO  [quartz-6-thread-17]  *SYSTEM org.sonatype.nexus.cleanup.internal.task.CleanupTask - Task log: /nexus-data/log/tasks/repository.cleanup-20200822010619377.log
+2020-08-22 01:06:19,413+0000 INFO  [quartz-6-thread-17]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Cleanup service' [repository.cleanup] state change RUNNING -> WAITING (OK)
+2020-08-22 01:15:14,280+0000 INFO  [quartz-6-thread-18]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change WAITING -> RUNNING
+2020-08-22 01:15:14,290+0000 INFO  [quartz-6-thread-18]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change RUNNING -> WAITING (OK)
+2020-08-22 01:26:08,939+0000 INFO  [quartz-6-thread-19]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change WAITING -> RUNNING
+2020-08-22 01:26:08,952+0000 INFO  [quartz-6-thread-19]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change RUNNING -> WAITING (OK)
+2020-08-22 01:35:25,624+0000 INFO  [quartz-6-thread-20]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change WAITING -> RUNNING
+2020-08-22 01:35:25,636+0000 INFO  [quartz-6-thread-20]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change RUNNING -> WAITING (OK)
+2020-08-22 01:40:35,391+0000 INFO  [quartz-6-thread-20]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change WAITING -> RUNNING
+2020-08-22 01:40:35,400+0000 INFO  [quartz-6-thread-20]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change RUNNING -> WAITING (OK)
+2020-08-22 01:53:12,202+0000 INFO  [quartz-6-thread-20]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change WAITING -> RUNNING
+2020-08-22 01:53:12,210+0000 INFO  [quartz-6-thread-20]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change RUNNING -> WAITING (OK)
+2020-08-22 02:06:18,586+0000 INFO  [quartz-6-thread-20]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change WAITING -> RUNNING
+2020-08-22 02:06:18,594+0000 INFO  [quartz-6-thread-20]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change RUNNING -> WAITING (OK)
+2020-08-22 02:19:44,316+0000 INFO  [quartz-6-thread-20]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change WAITING -> RUNNING
+2020-08-22 02:19:44,323+0000 INFO  [quartz-6-thread-20]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change RUNNING -> WAITING (OK)
+2020-08-22 02:20:00,300+0000 INFO  [quartz-6-thread-20]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change WAITING -> RUNNING
+2020-08-22 02:20:00,308+0000 INFO  [quartz-6-thread-20]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change RUNNING -> WAITING (OK)
+2020-08-22 02:36:17,582+0000 INFO  [quartz-6-thread-20]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change WAITING -> RUNNING
+2020-08-22 02:36:17,615+0000 INFO  [quartz-6-thread-20]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change RUNNING -> WAITING (OK)
+2020-08-22 02:40:27,354+0000 INFO  [quartz-6-thread-20]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change WAITING -> RUNNING
+2020-08-22 02:40:27,362+0000 INFO  [quartz-6-thread-20]  *SYSTEM org.sonatype.nexus.quartz.internal.task.QuartzTaskInfo - Task 'Storage facet cleanup' [repository.storage-facet-cleanup] state change RUNNING -> WAITING (OK)
+2020-08-22 02:49:18,514+0000 WARN  [SIGTERM handler]  *SYSTEM com.orientechnologies.orient.core.OSignalHandler - Received signal: SIGTERM
+2020-08-22 02:49:18,558+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.repository.httpbridge.internal.ViewServlet - Destroyed
+2020-08-22 02:49:18,560+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.siesta.SiestaServlet - Destroyed
+2020-08-22 02:49:18,586+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.extender.NexusContextListener - Uptime: 51 minutes, 29 seconds and 955 milliseconds (nexus-oss-edition/3.24.0.02)
+2020-08-22 02:49:18,587+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.extender.NexusLifecycleManager - Shutting down
+2020-08-22 02:49:18,590+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.extender.NexusLifecycleManager - Stop TASKS
+2020-08-22 02:49:18,599+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.quartz.internal.QuartzSchedulerSPI - Scheduler put into stand-by mode
+2020-08-22 02:49:18,603+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.extender.NexusLifecycleManager - Stop CAPABILITIES
+2020-08-22 02:49:18,623+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.extender.NexusLifecycleManager - Stop SERVICES
+2020-08-22 02:49:18,797+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.extender.NexusLifecycleManager - Stop SECURITY
+2020-08-22 02:49:18,803+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.extender.NexusLifecycleManager - Stop EVENTS
+2020-08-22 02:49:18,804+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.extender.NexusLifecycleManager - Stop SCHEMAS
+2020-08-22 02:49:18,815+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.extender.NexusLifecycleManager - Stop UPGRADE
+2020-08-22 02:49:18,816+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.extender.NexusLifecycleManager - Stop RESTORE
+2020-08-22 02:49:18,817+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.extender.NexusLifecycleManager - Stop STORAGE
+2020-08-22 02:49:18,823+0000 INFO  [FelixStartLevel]  *SYSTEM org.ehcache.core.EhcacheManager - Cache 'nuget-group#odata-query-cache' removed from EhcacheManager.
+2020-08-22 02:49:18,824+0000 INFO  [FelixStartLevel]  *SYSTEM org.ehcache.core.EhcacheManager - Cache 'NexusAuthenticatingRealm.authenticationCache' removed from EhcacheManager.
+2020-08-22 02:49:18,825+0000 INFO  [FelixStartLevel]  *SYSTEM org.ehcache.core.EhcacheManager - Cache 'NexusAuthorizingRealm.authorizationCache' removed from EhcacheManager.
+2020-08-22 02:49:18,828+0000 INFO  [FelixStartLevel]  *SYSTEM org.ehcache.core.EhcacheManager - Cache 'nugetV3ServiceIndexCache' removed from EhcacheManager.
+2020-08-22 02:49:18,829+0000 INFO  [FelixStartLevel]  *SYSTEM org.ehcache.core.EhcacheManager - Cache 'maven-central#negative-cache' removed from EhcacheManager.
+2020-08-22 02:49:18,831+0000 INFO  [FelixStartLevel]  *SYSTEM org.ehcache.core.EhcacheManager - Cache 'nuget.org-proxy#odata-query-cache' removed from EhcacheManager.
+2020-08-22 02:49:18,832+0000 INFO  [FelixStartLevel]  *SYSTEM org.ehcache.core.EhcacheManager - Cache 'nuget.org-proxy#negative-cache' removed from EhcacheManager.
+2020-08-22 02:49:18,841+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.cache.internal.ehcache.EhCacheManagerProvider - Cache-manager closed
+2020-08-22 02:49:18,844+0000 INFO  [FelixStartLevel]  *SYSTEM org.elasticsearch.node - [59D806F5-C081FE28-9D2733A7-AEB0ED62-C9A42212] stopping ...
+2020-08-22 02:49:18,947+0000 INFO  [FelixStartLevel]  *SYSTEM org.elasticsearch.node - [59D806F5-C081FE28-9D2733A7-AEB0ED62-C9A42212] stopped
+2020-08-22 02:49:18,950+0000 INFO  [FelixStartLevel]  *SYSTEM org.elasticsearch.node - [59D806F5-C081FE28-9D2733A7-AEB0ED62-C9A42212] closing ...
+2020-08-22 02:49:18,966+0000 INFO  [FelixStartLevel]  *SYSTEM org.elasticsearch.node - [59D806F5-C081FE28-9D2733A7-AEB0ED62-C9A42212] closed
+2020-08-22 02:49:18,973+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.internal.orient.DatabaseManagerImpl - Stopping 3 pools
+2020-08-22 02:49:18,974+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.internal.orient.DatabaseManagerImpl - Stopping pool: security
+2020-08-22 02:49:18,975+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.internal.orient.DatabaseManagerImpl - Stopping pool: component
+2020-08-22 02:49:18,976+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.internal.orient.DatabaseManagerImpl - Stopping pool: config
+2020-08-22 02:49:18,979+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.internal.orient.DatabaseServerImpl$1 - OrientDB Server is shutting down...
+2020-08-22 02:49:18,980+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.internal.orient.DatabaseServerImpl$1 - Shutting down protocols
+2020-08-22 02:49:18,982+0000 INFO  [FelixStartLevel]  *SYSTEM com.orientechnologies.orient.server.plugin.OServerPluginManager - Shutting down plugins:
+2020-08-22 02:49:18,983+0000 INFO  [FelixStartLevel]  *SYSTEM com.orientechnologies.orient.server.plugin.OServerPluginManager - - jmx
+2020-08-22 02:49:18,985+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.internal.orient.DatabaseServerImpl$1 - OrientDB Server shutdown complete
+2020-08-22 02:49:18,986+0000 INFO  [FelixStartLevel]  *SYSTEM com.orientechnologies.orient.core.Orient - Orient Engine is shutting down...
+2020-08-22 02:49:18,990+0000 INFO  [FelixStartLevel]  *SYSTEM com.orientechnologies.orient.core.Orient - - shutdown storage: component...
+2020-08-22 02:49:19,234+0000 INFO  [FelixStartLevel]  *SYSTEM com.orientechnologies.orient.core.Orient - - shutdown storage: security...
+2020-08-22 02:49:19,410+0000 INFO  [FelixStartLevel]  *SYSTEM com.orientechnologies.orient.core.Orient - - shutdown storage: config...
+2020-08-22 02:49:19,782+0000 INFO  [FelixStartLevel]  *SYSTEM com.orientechnologies.orient.core.Orient - - shutdown storage: OSystem...
+2020-08-22 02:49:21,191+0000 INFO  [FelixStartLevel]  *SYSTEM com.orientechnologies.orient.core.Orient - OrientDB Engine shutdown complete
+2020-08-22 02:49:21,194+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.internal.orient.DatabaseServerImpl - Shutdown
+2020-08-22 02:49:21,196+0000 INFO  [FelixStartLevel]  *SYSTEM org.sonatype.nexus.extender.NexusLifecycleManager - Stop KERNEL

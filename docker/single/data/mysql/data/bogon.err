@@ -1,0 +1,917 @@
+2019-04-16T01:04:52.6NZ mysqld_safe Logging to '/usr/local/var/mysql/bogon.err'.
+2019-04-16T01:04:52.6NZ mysqld_safe Starting mysqld daemon with databases from /usr/local/var/mysql
+2019-04-16T01:04:54.162415Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2019-04-16T01:04:54.163356Z 0 [Warning] Insecure configuration for --secure-file-priv: Current value does not restrict location of generated files. Consider setting it to a valid, non-empty path.
+2019-04-16T01:04:54.163996Z 0 [Note] /usr/local/opt/mysql@5.7/bin/mysqld (mysqld 5.7.25-log) starting as process 1020 ...
+2019-04-16T01:04:54.710258Z 0 [Warning] Setting lower_case_table_names=2 because file system for /usr/local/var/mysql/ is case insensitive
+2019-04-16T01:04:55.411038Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2019-04-16T01:04:55.411099Z 0 [Note] InnoDB: Uses event mutexes
+2019-04-16T01:04:55.411123Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2019-04-16T01:04:55.411144Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2019-04-16T01:04:55.412834Z 0 [Note] InnoDB: Number of pools: 1
+2019-04-16T01:04:55.414360Z 0 [Note] InnoDB: Using CPU crc32 instructions
+2019-04-16T01:04:55.416526Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2019-04-16T01:04:55.789562Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2019-04-16T01:04:57.160980Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2019-04-16T01:04:58.398469Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2019-04-16T01:04:58.398676Z 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2019-04-16T01:04:58.436323Z 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+2019-04-16T01:04:58.437535Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2019-04-16T01:04:58.437569Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2019-04-16T01:04:58.437900Z 0 [Note] InnoDB: Waiting for purge to start
+2019-04-16T01:04:58.562865Z 0 [Note] InnoDB: 5.7.25 started; log sequence number 14723715
+2019-04-16T01:04:58.563065Z 0 [Note] InnoDB: Loading buffer pool(s) from /usr/local/var/mysql/ib_buffer_pool
+2019-04-16T01:04:58.563489Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2019-04-16T01:04:58.827207Z 0 [Note] InnoDB: Buffer pool(s) load completed at 190416  1:04:58
+2019-04-16T01:04:58.828494Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+2019-04-16T01:04:58.828525Z 0 [Note] Skipping generation of SSL certificates as certificate files are present in data directory.
+2019-04-16T01:04:58.831442Z 0 [Warning] CA certificate ca.pem is self signed.
+2019-04-16T01:04:58.831913Z 0 [Note] Skipping generation of RSA key pair as key files are present in data directory.
+2019-04-16T01:04:58.832347Z 0 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+2019-04-16T01:04:58.832399Z 0 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+2019-04-16T01:04:58.832503Z 0 [Note] Server socket created on IP: '127.0.0.1'.
+2019-04-16T01:04:58.881125Z 0 [Note] Failed to start slave threads for channel ''
+2019-04-16T01:04:58.956894Z 0 [Note] Event Scheduler: Loaded 0 events
+2019-04-16T01:04:58.957090Z 0 [Note] /usr/local/opt/mysql@5.7/bin/mysqld: ready for connections.
+Version: '5.7.25-log'  socket: '/tmp/mysql.sock'  port: 3306  Homebrew
+2019-04-16T01:31:21.694935Z 114 [Note] Aborted connection 114 to db: 'rui_offline_loan' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-16T01:42:43.525236Z 62 [Note] Aborted connection 62 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-16T01:48:26.676012Z 119 [Note] Aborted connection 119 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-16T02:29:58.797145Z 118 [Note] Aborted connection 118 to db: 'rui_uc' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-16T02:29:58.797244Z 116 [Note] Aborted connection 116 to db: 'information_schema' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-16T02:30:04.818670Z 120 [Note] Aborted connection 120 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-16T10:20:39.497888Z 0 [Note] Giving 0 client threads a chance to die gracefully
+2019-04-16T10:20:39.498224Z 0 [Note] Shutting down slave threads
+2019-04-16T10:20:39.498731Z 0 [Note] Forcefully disconnecting 0 remaining clients
+2019-04-16T10:20:39.498788Z 0 [Note] Event Scheduler: Purging the queue. 0 events
+2019-04-16T10:20:39.499297Z 0 [Note] Binlog end
+2019-04-16T10:20:39.585347Z 0 [Note] Shutting down plugin 'ngram'
+2019-04-16T10:20:39.585421Z 0 [Note] Shutting down plugin 'partition'
+2019-04-16T10:20:39.585436Z 0 [Note] Shutting down plugin 'BLACKHOLE'
+2019-04-16T10:20:39.585446Z 0 [Note] Shutting down plugin 'ARCHIVE'
+2019-04-16T10:20:39.585456Z 0 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2019-04-16T10:20:39.585529Z 0 [Note] Shutting down plugin 'MRG_MYISAM'
+2019-04-16T10:20:39.585765Z 0 [Note] Shutting down plugin 'MyISAM'
+2019-04-16T10:20:39.585877Z 0 [Note] Shutting down plugin 'INNODB_SYS_VIRTUAL'
+2019-04-16T10:20:39.585892Z 0 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2019-04-16T10:20:39.585901Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2019-04-16T10:20:39.585909Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2019-04-16T10:20:39.585917Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2019-04-16T10:20:39.585925Z 0 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2019-04-16T10:20:39.585933Z 0 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2019-04-16T10:20:39.585941Z 0 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2019-04-16T10:20:39.585949Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2019-04-16T10:20:39.585957Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2019-04-16T10:20:39.585965Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2019-04-16T10:20:39.585973Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2019-04-16T10:20:39.585981Z 0 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2019-04-16T10:20:39.585989Z 0 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2019-04-16T10:20:39.585997Z 0 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2019-04-16T10:20:39.586005Z 0 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2019-04-16T10:20:39.586013Z 0 [Note] Shutting down plugin 'INNODB_METRICS'
+2019-04-16T10:20:39.586021Z 0 [Note] Shutting down plugin 'INNODB_TEMP_TABLE_INFO'
+2019-04-16T10:20:39.586029Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2019-04-16T10:20:39.586037Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2019-04-16T10:20:39.586045Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2019-04-16T10:20:39.586052Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2019-04-16T10:20:39.586060Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2019-04-16T10:20:39.586068Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2019-04-16T10:20:39.586076Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2019-04-16T10:20:39.586084Z 0 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2019-04-16T10:20:39.586092Z 0 [Note] Shutting down plugin 'INNODB_CMP'
+2019-04-16T10:20:39.586100Z 0 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2019-04-16T10:20:39.586108Z 0 [Note] Shutting down plugin 'INNODB_LOCKS'
+2019-04-16T10:20:39.586116Z 0 [Note] Shutting down plugin 'INNODB_TRX'
+2019-04-16T10:20:39.586133Z 0 [Note] Shutting down plugin 'InnoDB'
+2019-04-16T10:20:39.586499Z 0 [Note] InnoDB: FTS optimize thread exiting.
+2019-04-16T10:20:39.586683Z 0 [Note] InnoDB: Starting shutdown...
+2019-04-16T10:20:40.249652Z 0 [Note] InnoDB: Dumping buffer pool(s) to /usr/local/var/mysql/ib_buffer_pool
+2019-04-16T10:20:40.250824Z 0 [Note] InnoDB: Buffer pool(s) dump completed at 190416 10:20:40
+2019-04-16T10:20:41.134596Z 0 [Note] InnoDB: Shutdown completed; log sequence number 14834319
+2019-04-16T10:20:41.134856Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2019-04-16T10:20:41.134872Z 0 [Note] Shutting down plugin 'MEMORY'
+2019-04-16T10:20:41.134880Z 0 [Note] Shutting down plugin 'CSV'
+2019-04-16T10:20:41.134891Z 0 [Note] Shutting down plugin 'sha256_password'
+2019-04-16T10:20:41.134905Z 0 [Note] Shutting down plugin 'mysql_native_password'
+2019-04-16T10:20:41.135228Z 0 [Note] Shutting down plugin 'binlog'
+2019-04-16T10:20:41.140144Z 0 [Note] /usr/local/opt/mysql@5.7/bin/mysqld: Shutdown complete
+
+2019-04-17T00:45:46.6NZ mysqld_safe Logging to '/usr/local/var/mysql/bogon.err'.
+2019-04-17T00:45:46.6NZ mysqld_safe Starting mysqld daemon with databases from /usr/local/var/mysql
+2019-04-17T00:45:46.515417Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2019-04-17T00:45:46.516058Z 0 [Warning] Insecure configuration for --secure-file-priv: Current value does not restrict location of generated files. Consider setting it to a valid, non-empty path.
+2019-04-17T00:45:46.516611Z 0 [Note] /usr/local/opt/mysql@5.7/bin/mysqld (mysqld 5.7.25-log) starting as process 1041 ...
+2019-04-17T00:45:46.527629Z 0 [Warning] Setting lower_case_table_names=2 because file system for /usr/local/var/mysql/ is case insensitive
+2019-04-17T00:45:46.570151Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2019-04-17T00:45:46.570195Z 0 [Note] InnoDB: Uses event mutexes
+2019-04-17T00:45:46.570214Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2019-04-17T00:45:46.570230Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2019-04-17T00:45:46.610558Z 0 [Note] InnoDB: Number of pools: 1
+2019-04-17T00:45:46.611694Z 0 [Note] InnoDB: Using CPU crc32 instructions
+2019-04-17T00:45:46.613532Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2019-04-17T00:45:46.629348Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2019-04-17T00:45:46.686260Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2019-04-17T00:45:46.908916Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2019-04-17T00:45:46.909062Z 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2019-04-17T00:45:46.925374Z 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+2019-04-17T00:45:46.926104Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2019-04-17T00:45:46.926128Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2019-04-17T00:45:46.926354Z 0 [Note] InnoDB: Waiting for purge to start
+2019-04-17T00:45:47.049782Z 0 [Note] InnoDB: 5.7.25 started; log sequence number 14834319
+2019-04-17T00:45:47.050014Z 0 [Note] InnoDB: Loading buffer pool(s) from /usr/local/var/mysql/ib_buffer_pool
+2019-04-17T00:45:47.050518Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2019-04-17T00:45:47.141973Z 0 [Note] InnoDB: Buffer pool(s) load completed at 190417  0:45:47
+2019-04-17T00:45:47.145947Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+2019-04-17T00:45:47.145975Z 0 [Note] Skipping generation of SSL certificates as certificate files are present in data directory.
+2019-04-17T00:45:47.148348Z 0 [Warning] CA certificate ca.pem is self signed.
+2019-04-17T00:45:47.148795Z 0 [Note] Skipping generation of RSA key pair as key files are present in data directory.
+2019-04-17T00:45:47.149244Z 0 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+2019-04-17T00:45:47.149315Z 0 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+2019-04-17T00:45:47.149426Z 0 [Note] Server socket created on IP: '127.0.0.1'.
+2019-04-17T00:45:47.221036Z 0 [Note] Failed to start slave threads for channel ''
+2019-04-17T00:45:47.302815Z 0 [Note] Event Scheduler: Loaded 0 events
+2019-04-17T00:45:47.302984Z 0 [Note] /usr/local/opt/mysql@5.7/bin/mysqld: ready for connections.
+Version: '5.7.25-log'  socket: '/tmp/mysql.sock'  port: 3306  Homebrew
+2019-04-17T08:09:19.391269Z 53 [Note] Aborted connection 53 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:20:09.438083Z 208 [Note] Aborted connection 208 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.202882Z 301 [Note] Aborted connection 301 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203003Z 293 [Note] Aborted connection 293 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203464Z 306 [Note] Aborted connection 306 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203522Z 272 [Note] Aborted connection 272 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203550Z 296 [Note] Aborted connection 296 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203574Z 292 [Note] Aborted connection 292 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203628Z 284 [Note] Aborted connection 284 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203646Z 265 [Note] Aborted connection 265 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203666Z 295 [Note] Aborted connection 295 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203745Z 294 [Note] Aborted connection 294 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203361Z 300 [Note] Aborted connection 300 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203404Z 268 [Note] Aborted connection 268 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203420Z 275 [Note] Aborted connection 275 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203426Z 277 [Note] Aborted connection 277 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203432Z 266 [Note] Aborted connection 266 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203437Z 310 [Note] Aborted connection 310 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203440Z 263 [Note] Aborted connection 263 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203453Z 299 [Note] Aborted connection 299 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203457Z 297 [Note] Aborted connection 297 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203472Z 288 [Note] Aborted connection 288 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203474Z 305 [Note] Aborted connection 305 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203489Z 278 [Note] Aborted connection 278 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203494Z 269 [Note] Aborted connection 269 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203534Z 267 [Note] Aborted connection 267 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203539Z 270 [Note] Aborted connection 270 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203553Z 264 [Note] Aborted connection 264 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203562Z 289 [Note] Aborted connection 289 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203599Z 307 [Note] Aborted connection 307 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203599Z 285 [Note] Aborted connection 285 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203629Z 273 [Note] Aborted connection 273 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203632Z 302 [Note] Aborted connection 302 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203662Z 286 [Note] Aborted connection 286 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203663Z 303 [Note] Aborted connection 303 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203677Z 290 [Note] Aborted connection 290 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203683Z 280 [Note] Aborted connection 280 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203697Z 276 [Note] Aborted connection 276 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203704Z 279 [Note] Aborted connection 279 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203708Z 304 [Note] Aborted connection 304 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203713Z 271 [Note] Aborted connection 271 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203724Z 262 [Note] Aborted connection 262 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203067Z 308 [Note] Aborted connection 308 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.202954Z 298 [Note] Aborted connection 298 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203729Z 274 [Note] Aborted connection 274 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203066Z 291 [Note] Aborted connection 291 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203169Z 287 [Note] Aborted connection 287 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203172Z 283 [Note] Aborted connection 283 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203183Z 282 [Note] Aborted connection 282 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203238Z 281 [Note] Aborted connection 281 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203744Z 261 [Note] Aborted connection 261 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:27:37.203260Z 309 [Note] Aborted connection 309 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.552921Z 334 [Note] Aborted connection 334 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.552911Z 332 [Note] Aborted connection 332 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553052Z 326 [Note] Aborted connection 326 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553084Z 330 [Note] Aborted connection 330 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553187Z 321 [Note] Aborted connection 321 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553422Z 317 [Note] Aborted connection 317 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553447Z 359 [Note] Aborted connection 359 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553457Z 354 [Note] Aborted connection 354 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553468Z 313 [Note] Aborted connection 313 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553477Z 351 [Note] Aborted connection 351 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553487Z 350 [Note] Aborted connection 350 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553496Z 342 [Note] Aborted connection 342 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553511Z 331 [Note] Aborted connection 331 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553526Z 329 [Note] Aborted connection 329 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553516Z 319 [Note] Aborted connection 319 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553533Z 327 [Note] Aborted connection 327 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553549Z 347 [Note] Aborted connection 347 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553551Z 341 [Note] Aborted connection 341 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553566Z 323 [Note] Aborted connection 323 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553578Z 336 [Note] Aborted connection 336 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553582Z 322 [Note] Aborted connection 322 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553596Z 353 [Note] Aborted connection 353 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553597Z 335 [Note] Aborted connection 335 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553610Z 315 [Note] Aborted connection 315 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553621Z 344 [Note] Aborted connection 344 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553632Z 316 [Note] Aborted connection 316 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553639Z 343 [Note] Aborted connection 343 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553648Z 333 [Note] Aborted connection 333 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553652Z 361 [Note] Aborted connection 361 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553661Z 348 [Note] Aborted connection 348 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553679Z 328 [Note] Aborted connection 328 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553692Z 325 [Note] Aborted connection 325 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553692Z 339 [Note] Aborted connection 339 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553705Z 349 [Note] Aborted connection 349 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553706Z 324 [Note] Aborted connection 324 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553722Z 318 [Note] Aborted connection 318 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553730Z 314 [Note] Aborted connection 314 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553736Z 345 [Note] Aborted connection 345 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553747Z 352 [Note] Aborted connection 352 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553748Z 320 [Note] Aborted connection 320 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553753Z 355 [Note] Aborted connection 355 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553765Z 340 [Note] Aborted connection 340 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553770Z 357 [Note] Aborted connection 357 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553772Z 360 [Note] Aborted connection 360 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553783Z 356 [Note] Aborted connection 356 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553785Z 312 [Note] Aborted connection 312 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553785Z 338 [Note] Aborted connection 338 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553797Z 337 [Note] Aborted connection 337 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553802Z 346 [Note] Aborted connection 346 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:36:31.553809Z 358 [Note] Aborted connection 358 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222285Z 401 [Note] Aborted connection 401 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222284Z 402 [Note] Aborted connection 402 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222309Z 395 [Note] Aborted connection 395 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222325Z 409 [Note] Aborted connection 409 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222344Z 408 [Note] Aborted connection 408 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222418Z 383 [Note] Aborted connection 383 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222452Z 380 [Note] Aborted connection 380 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222454Z 378 [Note] Aborted connection 378 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222646Z 370 [Note] Aborted connection 370 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222656Z 403 [Note] Aborted connection 403 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222664Z 399 [Note] Aborted connection 399 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222656Z 405 [Note] Aborted connection 405 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222678Z 393 [Note] Aborted connection 393 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222683Z 364 [Note] Aborted connection 364 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222708Z 396 [Note] Aborted connection 396 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222718Z 391 [Note] Aborted connection 391 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222720Z 385 [Note] Aborted connection 385 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222721Z 407 [Note] Aborted connection 407 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222726Z 384 [Note] Aborted connection 384 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222743Z 392 [Note] Aborted connection 392 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222751Z 382 [Note] Aborted connection 382 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222758Z 377 [Note] Aborted connection 377 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222765Z 372 [Note] Aborted connection 372 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222779Z 379 [Note] Aborted connection 379 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222790Z 367 [Note] Aborted connection 367 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222801Z 365 [Note] Aborted connection 365 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222828Z 366 [Note] Aborted connection 366 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222818Z 363 [Note] Aborted connection 363 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222813Z 412 [Note] Aborted connection 412 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222844Z 410 [Note] Aborted connection 410 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222910Z 389 [Note] Aborted connection 389 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222947Z 375 [Note] Aborted connection 375 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222953Z 369 [Note] Aborted connection 369 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222955Z 374 [Note] Aborted connection 374 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222959Z 371 [Note] Aborted connection 371 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222960Z 390 [Note] Aborted connection 390 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222973Z 373 [Note] Aborted connection 373 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222976Z 400 [Note] Aborted connection 400 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222975Z 368 [Note] Aborted connection 368 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222977Z 411 [Note] Aborted connection 411 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222982Z 386 [Note] Aborted connection 386 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222986Z 394 [Note] Aborted connection 394 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222985Z 397 [Note] Aborted connection 397 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222985Z 387 [Note] Aborted connection 387 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222988Z 398 [Note] Aborted connection 398 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222990Z 381 [Note] Aborted connection 381 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222995Z 376 [Note] Aborted connection 376 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222995Z 406 [Note] Aborted connection 406 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.222998Z 404 [Note] Aborted connection 404 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T08:43:51.223007Z 388 [Note] Aborted connection 388 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T09:03:51.085317Z 105 [Note] Aborted connection 105 to db: 'rui_activity' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T10:11:22.679936Z 413 [Note] Aborted connection 413 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-17T10:11:33.058633Z 0 [Note] Giving 0 client threads a chance to die gracefully
+2019-04-17T10:11:33.058713Z 0 [Note] Shutting down slave threads
+2019-04-17T10:11:33.060839Z 0 [Note] Forcefully disconnecting 0 remaining clients
+2019-04-17T10:11:33.060887Z 0 [Note] Event Scheduler: Purging the queue. 0 events
+2019-04-17T10:11:33.061310Z 0 [Note] Binlog end
+2019-04-17T10:11:33.110825Z 0 [Note] Shutting down plugin 'ngram'
+2019-04-17T10:11:33.114700Z 0 [Note] Shutting down plugin 'partition'
+2019-04-17T10:11:33.114719Z 0 [Note] Shutting down plugin 'BLACKHOLE'
+2019-04-17T10:11:33.114737Z 0 [Note] Shutting down plugin 'ARCHIVE'
+2019-04-17T10:11:33.114743Z 0 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2019-04-17T10:11:33.114797Z 0 [Note] Shutting down plugin 'MRG_MYISAM'
+2019-04-17T10:11:33.115018Z 0 [Note] Shutting down plugin 'MyISAM'
+2019-04-17T10:11:33.115146Z 0 [Note] Shutting down plugin 'INNODB_SYS_VIRTUAL'
+2019-04-17T10:11:33.115157Z 0 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2019-04-17T10:11:33.115163Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2019-04-17T10:11:33.115168Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2019-04-17T10:11:33.115173Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2019-04-17T10:11:33.115179Z 0 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2019-04-17T10:11:33.115184Z 0 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2019-04-17T10:11:33.115189Z 0 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2019-04-17T10:11:33.115195Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2019-04-17T10:11:33.115200Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2019-04-17T10:11:33.115205Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2019-04-17T10:11:33.115211Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2019-04-17T10:11:33.115216Z 0 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2019-04-17T10:11:33.115221Z 0 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2019-04-17T10:11:33.115227Z 0 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2019-04-17T10:11:33.115232Z 0 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2019-04-17T10:11:33.115237Z 0 [Note] Shutting down plugin 'INNODB_METRICS'
+2019-04-17T10:11:33.115243Z 0 [Note] Shutting down plugin 'INNODB_TEMP_TABLE_INFO'
+2019-04-17T10:11:33.115248Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2019-04-17T10:11:33.115253Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2019-04-17T10:11:33.115258Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2019-04-17T10:11:33.115264Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2019-04-17T10:11:33.115269Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2019-04-17T10:11:33.115274Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2019-04-17T10:11:33.115280Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2019-04-17T10:11:33.115285Z 0 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2019-04-17T10:11:33.115290Z 0 [Note] Shutting down plugin 'INNODB_CMP'
+2019-04-17T10:11:33.115296Z 0 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2019-04-17T10:11:33.115301Z 0 [Note] Shutting down plugin 'INNODB_LOCKS'
+2019-04-17T10:11:33.115307Z 0 [Note] Shutting down plugin 'INNODB_TRX'
+2019-04-17T10:11:33.115312Z 0 [Note] Shutting down plugin 'InnoDB'
+2019-04-17T10:11:33.115593Z 0 [Note] InnoDB: FTS optimize thread exiting.
+2019-04-17T10:11:33.115716Z 0 [Note] InnoDB: Starting shutdown...
+2019-04-17T10:11:33.251555Z 0 [Note] InnoDB: Dumping buffer pool(s) to /usr/local/var/mysql/ib_buffer_pool
+2019-04-17T10:11:33.255028Z 0 [Note] InnoDB: Buffer pool(s) dump completed at 190417 10:11:33
+2019-04-17T10:11:34.406934Z 0 [Note] InnoDB: Shutdown completed; log sequence number 14919299
+2019-04-17T10:11:34.407209Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2019-04-17T10:11:34.407226Z 0 [Note] Shutting down plugin 'MEMORY'
+2019-04-17T10:11:34.407234Z 0 [Note] Shutting down plugin 'CSV'
+2019-04-17T10:11:34.407243Z 0 [Note] Shutting down plugin 'sha256_password'
+2019-04-17T10:11:34.407249Z 0 [Note] Shutting down plugin 'mysql_native_password'
+2019-04-17T10:11:34.407446Z 0 [Note] Shutting down plugin 'binlog'
+2019-04-17T10:11:34.409209Z 0 [Note] /usr/local/opt/mysql@5.7/bin/mysqld: Shutdown complete
+
+2019-04-18T00:48:05.6NZ mysqld_safe Logging to '/usr/local/var/mysql/bogon.err'.
+2019-04-18T00:48:05.6NZ mysqld_safe Starting mysqld daemon with databases from /usr/local/var/mysql
+2019-04-18T00:48:05.504895Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2019-04-18T00:48:05.505445Z 0 [Warning] Insecure configuration for --secure-file-priv: Current value does not restrict location of generated files. Consider setting it to a valid, non-empty path.
+2019-04-18T00:48:05.505975Z 0 [Note] /usr/local/opt/mysql@5.7/bin/mysqld (mysqld 5.7.25-log) starting as process 1245 ...
+2019-04-18T00:48:05.515877Z 0 [Warning] Setting lower_case_table_names=2 because file system for /usr/local/var/mysql/ is case insensitive
+2019-04-18T00:48:05.586910Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2019-04-18T00:48:05.587009Z 0 [Note] InnoDB: Uses event mutexes
+2019-04-18T00:48:05.587082Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2019-04-18T00:48:05.587131Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2019-04-18T00:48:05.589078Z 0 [Note] InnoDB: Number of pools: 1
+2019-04-18T00:48:05.590419Z 0 [Note] InnoDB: Using CPU crc32 instructions
+2019-04-18T00:48:05.592803Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2019-04-18T00:48:05.717786Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2019-04-18T00:48:05.777043Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2019-04-18T00:48:06.343676Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2019-04-18T00:48:06.343879Z 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2019-04-18T00:48:06.354580Z 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+2019-04-18T00:48:06.355729Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2019-04-18T00:48:06.355761Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2019-04-18T00:48:06.356068Z 0 [Note] InnoDB: Waiting for purge to start
+2019-04-18T00:48:06.479357Z 0 [Note] InnoDB: 5.7.25 started; log sequence number 14919299
+2019-04-18T00:48:06.479595Z 0 [Note] InnoDB: Loading buffer pool(s) from /usr/local/var/mysql/ib_buffer_pool
+2019-04-18T00:48:06.480040Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2019-04-18T00:48:06.607626Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+2019-04-18T00:48:06.607672Z 0 [Note] Skipping generation of SSL certificates as certificate files are present in data directory.
+2019-04-18T00:48:06.610302Z 0 [Warning] CA certificate ca.pem is self signed.
+2019-04-18T00:48:06.610820Z 0 [Note] InnoDB: Buffer pool(s) load completed at 190418  0:48:06
+2019-04-18T00:48:06.610821Z 0 [Note] Skipping generation of RSA key pair as key files are present in data directory.
+2019-04-18T00:48:06.611386Z 0 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+2019-04-18T00:48:06.611436Z 0 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+2019-04-18T00:48:06.611526Z 0 [Note] Server socket created on IP: '127.0.0.1'.
+2019-04-18T00:48:06.634668Z 0 [Note] Failed to start slave threads for channel ''
+2019-04-18T00:48:06.700286Z 0 [Note] Event Scheduler: Loaded 0 events
+2019-04-18T00:48:06.700467Z 0 [Note] /usr/local/opt/mysql@5.7/bin/mysqld: ready for connections.
+Version: '5.7.25-log'  socket: '/tmp/mysql.sock'  port: 3306  Homebrew
+2019-04-18T03:31:20.642903Z 2 [Note] Aborted connection 2 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-18T03:32:00.742939Z 327 [Note] Aborted connection 327 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-18T03:32:30.391627Z 328 [Note] Aborted connection 328 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-18T03:39:34.249171Z 329 [Note] Aborted connection 329 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-18T04:11:30.326050Z 432 [Note] Aborted connection 432 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-18T04:12:13.114255Z 433 [Note] Aborted connection 433 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-18T04:13:12.620806Z 434 [Note] Aborted connection 434 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-18T04:13:48.314590Z 435 [Note] Aborted connection 435 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-18T05:21:12.190982Z 436 [Note] Aborted connection 436 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-18T05:21:36.990671Z 537 [Note] Aborted connection 537 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-18T05:21:55.890256Z 538 [Note] Aborted connection 538 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-18T05:22:22.779033Z 539 [Note] Aborted connection 539 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-18T05:23:02.579581Z 540 [Note] Aborted connection 540 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-18T05:23:30.450557Z 541 [Note] Aborted connection 541 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-18T05:26:06.685495Z 204 [Note] Aborted connection 204 to db: 'rui_uc' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-18T05:40:49.449384Z 542 [Note] Aborted connection 542 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-18T05:55:10.823899Z 593 [Note] Aborted connection 593 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-18T07:16:27.798339Z 747 [Note] Aborted connection 747 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-18T08:05:33.760387Z 899 [Note] Aborted connection 899 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-18T08:46:06.203253Z 953 [Note] Aborted connection 953 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-18T08:46:39.132696Z 1007 [Note] Aborted connection 1007 to db: 'rui_uc' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-18T08:46:39.132902Z 1005 [Note] Aborted connection 1005 to db: 'rui_uc' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-18T08:46:39.132919Z 1004 [Note] Aborted connection 1004 to db: 'rui_uc' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-18T08:46:39.132940Z 1006 [Note] Aborted connection 1006 to db: 'rui_uc' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-18T08:46:39.132956Z 952 [Note] Aborted connection 952 to db: 'rui_uc' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-18T09:32:29.103550Z 1008 [Note] Aborted connection 1008 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-18T09:36:11.051707Z 1161 [Note] Aborted connection 1161 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-18T09:39:20.407126Z 1162 [Note] Aborted connection 1162 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-18T10:18:30.060659Z 1264 [Note] Aborted connection 1264 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-18T10:22:27.846146Z 1318 [Note] Aborted connection 1318 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-18T10:32:14.886866Z 1319 [Note] Aborted connection 1319 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-18T12:33:07.003814Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 7200963ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-04-18T14:33:16.004649Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 7200171ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-04-18T16:33:26.009967Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 7200474ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-04-18T18:33:36.004732Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 7200565ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-04-18T20:33:46.004348Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 7200633ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-04-18T22:33:57.004413Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 7200549ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-04-19T00:48:33.007942Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 8056953ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-04-19T00:50:55.416334Z 1266 [Note] Aborted connection 1266 to db: 'rui_uc' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-19T00:50:55.416337Z 1320 [Note] Aborted connection 1320 to db: 'rui_uc' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-19T00:50:55.416340Z 1009 [Note] Aborted connection 1009 to db: 'rui_uc' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-19T00:50:55.416525Z 1265 [Note] Aborted connection 1265 to db: 'rui_uc' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-19T02:45:08.834367Z 1321 [Note] Aborted connection 1321 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-19T02:50:59.213687Z 1373 [Note] Aborted connection 1373 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-19T03:03:59.393105Z 1374 [Note] Aborted connection 1374 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-19T03:17:51.514287Z 1426 [Note] Aborted connection 1426 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-19T03:27:00.073591Z 1427 [Note] Aborted connection 1427 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-19T03:28:51.458485Z 1428 [Note] Aborted connection 1428 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-19T03:30:38.873452Z 1430 [Note] Aborted connection 1430 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-19T03:31:54.261006Z 1482 [Note] Aborted connection 1482 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-19T03:32:23.234377Z 1484 [Note] Aborted connection 1484 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-19T03:34:19.557516Z 1485 [Note] Aborted connection 1485 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-19T03:40:28.833023Z 1486 [Note] Aborted connection 1486 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-19T03:43:49.579132Z 1483 [Note] Aborted connection 1483 to db: 'rui_uc' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-19T03:43:49.579238Z 1429 [Note] Aborted connection 1429 to db: 'rui_uc' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-19T03:43:49.579241Z 1442 [Note] Aborted connection 1442 to db: 'rui_uc' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-19T03:46:18.142464Z 1488 [Note] Aborted connection 1488 to db: 'rui_uc' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-19T05:24:45.476536Z 1487 [Note] Aborted connection 1487 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-19T06:21:28.030010Z 1639 [Note] Aborted connection 1639 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-19T06:40:22.753167Z 1691 [Note] Aborted connection 1691 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-19T06:59:01.173553Z 1742 [Note] Aborted connection 1742 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-19T06:59:41.657081Z 1743 [Note] Aborted connection 1743 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-19T07:19:29.415873Z 1744 [Note] Aborted connection 1744 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-19T07:25:02.311507Z 1771 [Note] Aborted connection 1771 to db: 'rui_offline_loan' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-19T07:25:02.311510Z 1770 [Note] Aborted connection 1770 to db: 'rui_offline_loan' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-19T07:25:02.311563Z 1745 [Note] Aborted connection 1745 to db: 'rui_uc' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-19T07:32:37.141692Z 1849 [Note] Aborted connection 1849 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-19T07:33:56.187306Z 1851 [Note] Aborted connection 1851 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-19T07:34:35.698307Z 1852 [Note] Aborted connection 1852 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-19T08:20:30.931794Z 1853 [Note] Aborted connection 1853 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-19T08:31:33.484332Z 1850 [Note] Aborted connection 1850 to db: 'rui_uc' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-04-19T10:11:57.859353Z 0 [Note] Giving 0 client threads a chance to die gracefully
+2019-04-19T10:11:57.859570Z 0 [Note] Shutting down slave threads
+2019-04-19T10:11:57.859944Z 0 [Note] Forcefully disconnecting 0 remaining clients
+2019-04-19T10:11:57.859996Z 0 [Note] Event Scheduler: Purging the queue. 0 events
+2019-04-19T10:11:57.860474Z 0 [Note] Binlog end
+2019-04-19T10:11:57.896513Z 0 [Note] Shutting down plugin 'ngram'
+2019-04-19T10:11:57.901908Z 0 [Note] Shutting down plugin 'partition'
+2019-04-19T10:11:57.901945Z 0 [Note] Shutting down plugin 'BLACKHOLE'
+2019-04-19T10:11:57.901956Z 0 [Note] Shutting down plugin 'ARCHIVE'
+2019-04-19T10:11:57.901964Z 0 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2019-04-19T10:11:57.902049Z 0 [Note] Shutting down plugin 'MRG_MYISAM'
+2019-04-19T10:11:57.902379Z 0 [Note] Shutting down plugin 'MyISAM'
+2019-04-19T10:11:57.902548Z 0 [Note] Shutting down plugin 'INNODB_SYS_VIRTUAL'
+2019-04-19T10:11:57.902562Z 0 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2019-04-19T10:11:57.902570Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2019-04-19T10:11:57.902577Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2019-04-19T10:11:57.902585Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2019-04-19T10:11:57.902592Z 0 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2019-04-19T10:11:57.902626Z 0 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2019-04-19T10:11:57.902632Z 0 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2019-04-19T10:11:57.902637Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2019-04-19T10:11:57.902643Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2019-04-19T10:11:57.902648Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2019-04-19T10:11:57.902653Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2019-04-19T10:11:57.902658Z 0 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2019-04-19T10:11:57.902663Z 0 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2019-04-19T10:11:57.902668Z 0 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2019-04-19T10:11:57.902674Z 0 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2019-04-19T10:11:57.902679Z 0 [Note] Shutting down plugin 'INNODB_METRICS'
+2019-04-19T10:11:57.902684Z 0 [Note] Shutting down plugin 'INNODB_TEMP_TABLE_INFO'
+2019-04-19T10:11:57.902689Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2019-04-19T10:11:57.902694Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2019-04-19T10:11:57.902699Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2019-04-19T10:11:57.902704Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2019-04-19T10:11:57.902710Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2019-04-19T10:11:57.902715Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2019-04-19T10:11:57.902720Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2019-04-19T10:11:57.902725Z 0 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2019-04-19T10:11:57.902730Z 0 [Note] Shutting down plugin 'INNODB_CMP'
+2019-04-19T10:11:57.902736Z 0 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2019-04-19T10:11:57.902741Z 0 [Note] Shutting down plugin 'INNODB_LOCKS'
+2019-04-19T10:11:57.902747Z 0 [Note] Shutting down plugin 'INNODB_TRX'
+2019-04-19T10:11:57.902763Z 0 [Note] Shutting down plugin 'InnoDB'
+2019-04-19T10:11:57.905085Z 0 [Note] InnoDB: FTS optimize thread exiting.
+2019-04-19T10:11:57.905569Z 0 [Note] InnoDB: Starting shutdown...
+2019-04-19T10:11:58.079752Z 0 [Note] InnoDB: Dumping buffer pool(s) to /usr/local/var/mysql/ib_buffer_pool
+2019-04-19T10:11:58.080675Z 0 [Note] InnoDB: Buffer pool(s) dump completed at 190419 10:11:58
+2019-04-19T10:11:59.040997Z 0 [Note] InnoDB: Shutdown completed; log sequence number 15161133
+2019-04-19T10:11:59.041275Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2019-04-19T10:11:59.041293Z 0 [Note] Shutting down plugin 'MEMORY'
+2019-04-19T10:11:59.041301Z 0 [Note] Shutting down plugin 'CSV'
+2019-04-19T10:11:59.041309Z 0 [Note] Shutting down plugin 'sha256_password'
+2019-04-19T10:11:59.041315Z 0 [Note] Shutting down plugin 'mysql_native_password'
+2019-04-19T10:11:59.041649Z 0 [Note] Shutting down plugin 'binlog'
+2019-04-19T10:11:59.043693Z 0 [Note] /usr/local/opt/mysql@5.7/bin/mysqld: Shutdown complete
+
+2019-07-23T00:51:00.6NZ mysqld_safe Logging to '/usr/local/var/mysql/bogon.err'.
+2019-07-23T00:51:00.6NZ mysqld_safe Starting mysqld daemon with databases from /usr/local/var/mysql
+2019-07-23T00:51:01.048858Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2019-07-23T00:51:01.049374Z 0 [Warning] Insecure configuration for --secure-file-priv: Current value does not restrict location of generated files. Consider setting it to a valid, non-empty path.
+2019-07-23T00:51:01.049863Z 0 [Note] /usr/local/opt/mysql@5.7/bin/mysqld (mysqld 5.7.25-log) starting as process 1021 ...
+2019-07-23T00:51:01.058124Z 0 [Warning] Setting lower_case_table_names=2 because file system for /usr/local/var/mysql/ is case insensitive
+2019-07-23T00:51:01.083326Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2019-07-23T00:51:01.083366Z 0 [Note] InnoDB: Uses event mutexes
+2019-07-23T00:51:01.083381Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2019-07-23T00:51:01.083390Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2019-07-23T00:51:01.084686Z 0 [Note] InnoDB: Number of pools: 1
+2019-07-23T00:51:01.085670Z 0 [Note] InnoDB: Using CPU crc32 instructions
+2019-07-23T00:51:01.087152Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2019-07-23T00:51:01.099367Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2019-07-23T00:51:01.116580Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2019-07-23T00:51:01.207372Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2019-07-23T00:51:01.207514Z 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2019-07-23T00:51:01.228850Z 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+2019-07-23T00:51:01.229776Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2019-07-23T00:51:01.229797Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2019-07-23T00:51:01.230071Z 0 [Note] InnoDB: Waiting for purge to start
+2019-07-23T00:51:01.339893Z 0 [Note] InnoDB: 5.7.25 started; log sequence number 18708338
+2019-07-23T00:51:01.340091Z 0 [Note] InnoDB: Loading buffer pool(s) from /usr/local/var/mysql/ib_buffer_pool
+2019-07-23T00:51:01.340545Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2019-07-23T00:51:01.509485Z 0 [Note] InnoDB: Buffer pool(s) load completed at 190723  0:51:01
+2019-07-23T00:51:01.518067Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+2019-07-23T00:51:01.518089Z 0 [Note] Skipping generation of SSL certificates as certificate files are present in data directory.
+2019-07-23T00:51:01.520174Z 0 [Warning] CA certificate ca.pem is self signed.
+2019-07-23T00:51:01.520555Z 0 [Note] Skipping generation of RSA key pair as key files are present in data directory.
+2019-07-23T00:51:01.520925Z 0 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+2019-07-23T00:51:01.520969Z 0 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+2019-07-23T00:51:01.521054Z 0 [Note] Server socket created on IP: '127.0.0.1'.
+2019-07-23T00:51:01.543906Z 0 [Note] Failed to start slave threads for channel ''
+2019-07-23T00:51:01.591148Z 0 [Note] Event Scheduler: Loaded 0 events
+2019-07-23T00:51:01.591311Z 0 [Note] /usr/local/opt/mysql@5.7/bin/mysqld: ready for connections.
+Version: '5.7.25-log'  socket: '/tmp/mysql.sock'  port: 3306  Homebrew
+2019-07-23T01:02:52.001499Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 22153ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-07-23T01:20:28.001694Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 129006ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-07-23T02:14:27.006054Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 111029ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-07-23T02:36:11.005139Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 10882ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-07-23T02:41:14.005428Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 84342ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-07-23T02:45:15.007366Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 60154ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-07-23T03:00:51.003897Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 102701ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-07-23T03:08:16.003934Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 29652ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-07-23T03:13:47.004530Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 28027ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-07-23T03:31:04.003009Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 23525ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-07-23T03:41:25.004933Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 24410ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-07-23T03:50:31.004501Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 163533ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-07-23T03:56:19.447677Z 2 [Note] Aborted connection 2 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-07-23T05:23:01.005098Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 4215605ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-07-23T05:44:18.402701Z 310 [Note] Aborted connection 310 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-07-23T06:48:13.802506Z 413 [Note] Aborted connection 413 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-07-23T07:30:08.609936Z 566 [Note] Aborted connection 566 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-07-23T07:54:39.232421Z 719 [Note] Aborted connection 719 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-07-23T07:56:26.069548Z 773 [Note] Aborted connection 773 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-07-23T08:51:46.474644Z 825 [Note] Aborted connection 825 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-07-23T10:32:34.232039Z 1029 [Note] Aborted connection 1029 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-07-23T10:32:50.895775Z 1183 [Note] Aborted connection 1183 to db: 'unconnected' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-07-23T10:32:50.895781Z 772 [Note] Aborted connection 772 to db: 'unconnected' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-07-23T10:33:04.943875Z 0 [Note] Giving 0 client threads a chance to die gracefully
+2019-07-23T10:33:04.943910Z 0 [Note] Shutting down slave threads
+2019-07-23T10:33:04.944256Z 0 [Note] Forcefully disconnecting 0 remaining clients
+2019-07-23T10:33:04.944306Z 0 [Note] Event Scheduler: Purging the queue. 0 events
+2019-07-23T10:33:04.944728Z 0 [Note] Binlog end
+2019-07-23T10:33:05.033197Z 0 [Note] Shutting down plugin 'ngram'
+2019-07-23T10:33:05.034916Z 0 [Note] Shutting down plugin 'partition'
+2019-07-23T10:33:05.034962Z 0 [Note] Shutting down plugin 'BLACKHOLE'
+2019-07-23T10:33:05.034981Z 0 [Note] Shutting down plugin 'ARCHIVE'
+2019-07-23T10:33:05.034997Z 0 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2019-07-23T10:33:05.035085Z 0 [Note] Shutting down plugin 'MRG_MYISAM'
+2019-07-23T10:33:05.035336Z 0 [Note] Shutting down plugin 'MyISAM'
+2019-07-23T10:33:05.035452Z 0 [Note] Shutting down plugin 'INNODB_SYS_VIRTUAL'
+2019-07-23T10:33:05.035472Z 0 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2019-07-23T10:33:05.035485Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2019-07-23T10:33:05.035497Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2019-07-23T10:33:05.035508Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2019-07-23T10:33:05.035520Z 0 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2019-07-23T10:33:05.035531Z 0 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2019-07-23T10:33:05.035543Z 0 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2019-07-23T10:33:05.035554Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2019-07-23T10:33:05.035566Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2019-07-23T10:33:05.035577Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2019-07-23T10:33:05.035589Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2019-07-23T10:33:05.035600Z 0 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2019-07-23T10:33:05.035632Z 0 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2019-07-23T10:33:05.035641Z 0 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2019-07-23T10:33:05.035649Z 0 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2019-07-23T10:33:05.035657Z 0 [Note] Shutting down plugin 'INNODB_METRICS'
+2019-07-23T10:33:05.035665Z 0 [Note] Shutting down plugin 'INNODB_TEMP_TABLE_INFO'
+2019-07-23T10:33:05.035673Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2019-07-23T10:33:05.035681Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2019-07-23T10:33:05.035689Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2019-07-23T10:33:05.035697Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2019-07-23T10:33:05.035705Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2019-07-23T10:33:05.035713Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2019-07-23T10:33:05.035721Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2019-07-23T10:33:05.035729Z 0 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2019-07-23T10:33:05.035736Z 0 [Note] Shutting down plugin 'INNODB_CMP'
+2019-07-23T10:33:05.035744Z 0 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2019-07-23T10:33:05.035752Z 0 [Note] Shutting down plugin 'INNODB_LOCKS'
+2019-07-23T10:33:05.035760Z 0 [Note] Shutting down plugin 'INNODB_TRX'
+2019-07-23T10:33:05.035768Z 0 [Note] Shutting down plugin 'InnoDB'
+2019-07-23T10:33:05.035890Z 0 [Note] InnoDB: FTS optimize thread exiting.
+2019-07-23T10:33:05.036023Z 0 [Note] InnoDB: Starting shutdown...
+2019-07-23T10:33:05.207018Z 0 [Note] InnoDB: Dumping buffer pool(s) to /usr/local/var/mysql/ib_buffer_pool
+2019-07-23T10:33:05.209712Z 0 [Note] InnoDB: Buffer pool(s) dump completed at 190723 10:33:05
+2019-07-23T10:33:06.584507Z 0 [Note] InnoDB: Shutdown completed; log sequence number 19058805
+2019-07-23T10:33:06.587367Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2019-07-23T10:33:06.587423Z 0 [Note] Shutting down plugin 'MEMORY'
+2019-07-23T10:33:06.587438Z 0 [Note] Shutting down plugin 'CSV'
+2019-07-23T10:33:06.587460Z 0 [Note] Shutting down plugin 'sha256_password'
+2019-07-23T10:33:06.587471Z 0 [Note] Shutting down plugin 'mysql_native_password'
+2019-07-23T10:33:06.587704Z 0 [Note] Shutting down plugin 'binlog'
+2019-07-23T10:33:06.590601Z 0 [Note] /usr/local/opt/mysql@5.7/bin/mysqld: Shutdown complete
+
+2019-07-24T00:44:34.6NZ mysqld_safe Logging to '/usr/local/var/mysql/bogon.err'.
+2019-07-24T00:44:34.6NZ mysqld_safe Starting mysqld daemon with databases from /usr/local/var/mysql
+2019-07-24T00:44:34.806283Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2019-07-24T00:44:34.807159Z 0 [Warning] Insecure configuration for --secure-file-priv: Current value does not restrict location of generated files. Consider setting it to a valid, non-empty path.
+2019-07-24T00:44:34.807866Z 0 [Note] /usr/local/opt/mysql@5.7/bin/mysqld (mysqld 5.7.25-log) starting as process 1050 ...
+2019-07-24T00:44:34.818175Z 0 [Warning] Setting lower_case_table_names=2 because file system for /usr/local/var/mysql/ is case insensitive
+2019-07-24T00:44:34.844933Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2019-07-24T00:44:34.844976Z 0 [Note] InnoDB: Uses event mutexes
+2019-07-24T00:44:34.844988Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2019-07-24T00:44:34.844998Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2019-07-24T00:44:34.846495Z 0 [Note] InnoDB: Number of pools: 1
+2019-07-24T00:44:34.847663Z 0 [Note] InnoDB: Using CPU crc32 instructions
+2019-07-24T00:44:34.849164Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2019-07-24T00:44:34.862330Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2019-07-24T00:44:34.936227Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2019-07-24T00:44:35.048384Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2019-07-24T00:44:35.048524Z 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2019-07-24T00:44:35.069236Z 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+2019-07-24T00:44:35.070074Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2019-07-24T00:44:35.070094Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2019-07-24T00:44:35.070286Z 0 [Note] InnoDB: Waiting for purge to start
+2019-07-24T00:44:35.191219Z 0 [Note] InnoDB: 5.7.25 started; log sequence number 19058805
+2019-07-24T00:44:35.191407Z 0 [Note] InnoDB: Loading buffer pool(s) from /usr/local/var/mysql/ib_buffer_pool
+2019-07-24T00:44:35.227151Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2019-07-24T00:44:35.336055Z 0 [Note] InnoDB: Buffer pool(s) load completed at 190724  0:44:35
+2019-07-24T00:44:35.337719Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+2019-07-24T00:44:35.337744Z 0 [Note] Skipping generation of SSL certificates as certificate files are present in data directory.
+2019-07-24T00:44:35.340455Z 0 [Warning] CA certificate ca.pem is self signed.
+2019-07-24T00:44:35.340866Z 0 [Note] Skipping generation of RSA key pair as key files are present in data directory.
+2019-07-24T00:44:35.341303Z 0 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+2019-07-24T00:44:35.341351Z 0 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+2019-07-24T00:44:35.341441Z 0 [Note] Server socket created on IP: '127.0.0.1'.
+2019-07-24T00:44:35.384932Z 0 [Note] Failed to start slave threads for channel ''
+2019-07-24T00:44:35.456230Z 0 [Note] Event Scheduler: Loaded 0 events
+2019-07-24T00:44:35.456452Z 0 [Note] /usr/local/opt/mysql@5.7/bin/mysqld: ready for connections.
+Version: '5.7.25-log'  socket: '/tmp/mysql.sock'  port: 3306  Homebrew
+2019-07-24T00:53:40.003861Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 408067ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-07-24T01:55:23.098426Z 2 [Note] Aborted connection 2 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-07-24T01:56:40.148034Z 54 [Note] Aborted connection 54 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-07-24T05:11:54.551115Z 55 [Note] Aborted connection 55 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-07-24T17:19:44.379253Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 40970909ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-07-25T05:19:53.552339Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 43194766ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-07-24T07:23:58.287664Z 712 [Note] Aborted connection 712 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-07-24T09:10:32.489313Z 804 [Note] Aborted connection 804 to db: 'rui_public' user: 'demo' host: 'localhost' (Got an error reading communication packets)
+2019-07-24T10:19:27.549725Z 0 [Note] Giving 0 client threads a chance to die gracefully
+2019-07-24T10:19:27.551163Z 0 [Note] Shutting down slave threads
+2019-07-24T10:19:27.551582Z 0 [Note] Forcefully disconnecting 0 remaining clients
+2019-07-24T10:19:27.551634Z 0 [Note] Event Scheduler: Purging the queue. 0 events
+2019-07-24T10:19:27.551821Z 0 [Note] Binlog end
+2019-07-24T10:19:27.574665Z 0 [Note] Shutting down plugin 'ngram'
+2019-07-24T10:19:27.579034Z 0 [Note] Shutting down plugin 'partition'
+2019-07-24T10:19:27.579065Z 0 [Note] Shutting down plugin 'BLACKHOLE'
+2019-07-24T10:19:27.579076Z 0 [Note] Shutting down plugin 'ARCHIVE'
+2019-07-24T10:19:27.579085Z 0 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2019-07-24T10:19:27.579156Z 0 [Note] Shutting down plugin 'MRG_MYISAM'
+2019-07-24T10:19:27.579604Z 0 [Note] Shutting down plugin 'MyISAM'
+2019-07-24T10:19:27.579886Z 0 [Note] Shutting down plugin 'INNODB_SYS_VIRTUAL'
+2019-07-24T10:19:27.579900Z 0 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2019-07-24T10:19:27.579909Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2019-07-24T10:19:27.579917Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2019-07-24T10:19:27.579925Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2019-07-24T10:19:27.579933Z 0 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2019-07-24T10:19:27.579941Z 0 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2019-07-24T10:19:27.579949Z 0 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2019-07-24T10:19:27.579957Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2019-07-24T10:19:27.579965Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2019-07-24T10:19:27.579973Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2019-07-24T10:19:27.579980Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2019-07-24T10:19:27.579989Z 0 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2019-07-24T10:19:27.579996Z 0 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2019-07-24T10:19:27.580004Z 0 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2019-07-24T10:19:27.580012Z 0 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2019-07-24T10:19:27.580020Z 0 [Note] Shutting down plugin 'INNODB_METRICS'
+2019-07-24T10:19:27.580028Z 0 [Note] Shutting down plugin 'INNODB_TEMP_TABLE_INFO'
+2019-07-24T10:19:27.580036Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2019-07-24T10:19:27.580044Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2019-07-24T10:19:27.580052Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2019-07-24T10:19:27.580060Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2019-07-24T10:19:27.580069Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2019-07-24T10:19:27.580077Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2019-07-24T10:19:27.580086Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2019-07-24T10:19:27.580094Z 0 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2019-07-24T10:19:27.580102Z 0 [Note] Shutting down plugin 'INNODB_CMP'
+2019-07-24T10:19:27.580112Z 0 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2019-07-24T10:19:27.580120Z 0 [Note] Shutting down plugin 'INNODB_LOCKS'
+2019-07-24T10:19:27.580130Z 0 [Note] Shutting down plugin 'INNODB_TRX'
+2019-07-24T10:19:27.580141Z 0 [Note] Shutting down plugin 'InnoDB'
+2019-07-24T10:19:27.585017Z 0 [Note] InnoDB: FTS optimize thread exiting.
+2019-07-24T10:19:27.585145Z 0 [Note] InnoDB: Starting shutdown...
+2019-07-24T10:19:27.744460Z 0 [Note] InnoDB: Dumping buffer pool(s) to /usr/local/var/mysql/ib_buffer_pool
+2019-07-24T10:19:27.745558Z 0 [Note] InnoDB: Buffer pool(s) dump completed at 190724 10:19:27
+2019-07-24T10:19:28.703517Z 0 [Note] InnoDB: Shutdown completed; log sequence number 19259206
+2019-07-24T10:19:28.706485Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2019-07-24T10:19:28.706558Z 0 [Note] Shutting down plugin 'MEMORY'
+2019-07-24T10:19:28.706584Z 0 [Note] Shutting down plugin 'CSV'
+2019-07-24T10:19:28.706616Z 0 [Note] Shutting down plugin 'sha256_password'
+2019-07-24T10:19:28.706635Z 0 [Note] Shutting down plugin 'mysql_native_password'
+2019-07-24T10:19:28.706877Z 0 [Note] Shutting down plugin 'binlog'
+2019-07-24T10:19:28.709806Z 0 [Note] /usr/local/opt/mysql@5.7/bin/mysqld: Shutdown complete
+
+2019-10-10T13:36:34.6NZ mysqld_safe Logging to '/usr/local/var/mysql/bogon.err'.
+2019-10-10T13:36:34.6NZ mysqld_safe Starting mysqld daemon with databases from /usr/local/var/mysql
+2019-10-10T13:36:34.955599Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+2019-10-10T13:36:34.956361Z 0 [Warning] Insecure configuration for --secure-file-priv: Current value does not restrict location of generated files. Consider setting it to a valid, non-empty path.
+2019-10-10T13:36:34.956919Z 0 [Note] /usr/local/opt/mysql@5.7/bin/mysqld (mysqld 5.7.25-log) starting as process 1027 ...
+2019-10-10T13:36:34.967421Z 0 [Warning] Setting lower_case_table_names=2 because file system for /usr/local/var/mysql/ is case insensitive
+2019-10-10T13:36:34.998536Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+2019-10-10T13:36:34.998580Z 0 [Note] InnoDB: Uses event mutexes
+2019-10-10T13:36:34.998595Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+2019-10-10T13:36:34.998604Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+2019-10-10T13:36:35.000135Z 0 [Note] InnoDB: Number of pools: 1
+2019-10-10T13:36:35.001362Z 0 [Note] InnoDB: Using CPU crc32 instructions
+2019-10-10T13:36:35.003298Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2019-10-10T13:36:35.038949Z 0 [Note] InnoDB: Completed initialization of buffer pool
+2019-10-10T13:36:35.109843Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+2019-10-10T13:36:36.074505Z 0 [Note] InnoDB: Log scan progressed past the checkpoint lsn 21218213
+2019-10-10T13:36:36.074556Z 0 [Note] InnoDB: Doing recovery: scanned up to log sequence number 21218222
+2019-10-10T13:36:36.074579Z 0 [Note] InnoDB: Database was not shutdown normally!
+2019-10-10T13:36:36.074595Z 0 [Note] InnoDB: Starting crash recovery.
+2019-10-10T13:36:36.662825Z 0 [Note] InnoDB: Last MySQL binlog file position 0 509, file name mysql-bin.000089
+2019-10-10T13:36:36.938313Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2019-10-10T13:36:36.938344Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2019-10-10T13:36:36.938496Z 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2019-10-10T13:36:36.947177Z 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+2019-10-10T13:36:36.947862Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+2019-10-10T13:36:36.947880Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+2019-10-10T13:36:36.948033Z 0 [Note] InnoDB: Waiting for purge to start
+2019-10-10T13:36:37.027749Z 0 [Note] InnoDB: 5.7.25 started; log sequence number 21218222
+2019-10-10T13:36:37.028014Z 0 [Note] InnoDB: Loading buffer pool(s) from /usr/local/var/mysql/ib_buffer_pool
+2019-10-10T13:36:37.028464Z 0 [Note] Plugin 'FEDERATED' is disabled.
+2019-10-10T13:36:37.040068Z 0 [Note] InnoDB: Buffer pool(s) load completed at 191010 13:36:37
+2019-10-10T13:36:37.111280Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+2019-10-10T13:36:37.111323Z 0 [Note] Skipping generation of SSL certificates as certificate files are present in data directory.
+2019-10-10T13:36:37.145654Z 0 [Warning] CA certificate ca.pem is self signed.
+2019-10-10T13:36:37.145746Z 0 [Note] Skipping generation of RSA key pair as key files are present in data directory.
+2019-10-10T13:36:37.146227Z 0 [Note] Server hostname (bind-address): '127.0.0.1'; port: 3306
+2019-10-10T13:36:37.146275Z 0 [Note]   - '127.0.0.1' resolves to '127.0.0.1';
+2019-10-10T13:36:37.146347Z 0 [Note] Server socket created on IP: '127.0.0.1'.
+2019-10-10T13:36:37.207274Z 0 [Note] Failed to start slave threads for channel ''
+2019-10-10T13:36:37.266776Z 0 [Note] Event Scheduler: Loaded 0 events
+2019-10-10T13:36:37.266931Z 0 [Note] /usr/local/opt/mysql@5.7/bin/mysqld: ready for connections.
+Version: '5.7.25-log'  socket: '/tmp/mysql.sock'  port: 3306  Homebrew
+2019-10-11T03:34:17.011554Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 43257516ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-11T05:00:01.010719Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 5141667ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-11T05:15:05.140704Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 901684ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-11T05:30:06.873467Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 899106ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-11T05:45:09.004107Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 900596ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-11T08:30:08.867693Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 9898825ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-11T11:30:10.469945Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 10799714ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-11T12:30:02.478996Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 3590855ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-11T14:14:07.009078Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 6243774ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-11T15:11:35.152929Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 557909ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-11T17:02:19.011325Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 6611275ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-11T23:45:03.614698Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 24161609ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-12T02:45:03.007172Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 10797788ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-12T03:03:14.005963Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 1088742ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-12T05:45:04.007525Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 9707720ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-12T07:15:04.008105Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 5397704ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-12T11:45:05.008571Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 16198730ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-12T15:30:00.009335Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 13492730ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-12T16:15:07.469008Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 2705160ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-12T18:30:07.817690Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 8098483ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-12T22:17:14.820093Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 13622446ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-13T01:17:34.010812Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 10803175ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-13T01:32:38.747132Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 902043ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-13T01:47:40.496626Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 900763ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-13T02:02:42.478113Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 900946ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-13T02:17:44.505163Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 900859ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-13T02:32:46.479041Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 900849ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-13T02:47:48.481683Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 900863ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-13T03:02:50.484582Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 900846ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-13T03:17:52.493469Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 897437ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-13T06:02:52.486856Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 9895442ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-13T09:02:54.450954Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 10797435ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-13T10:18:30.386188Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 4531497ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-13T12:02:56.500313Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 6261432ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-13T15:02:58.117450Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 10797430ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-13T16:32:58.499717Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 5395452ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-13T21:03:00.370411Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 16197469ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-14T01:33:02.485539Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 16192855ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-14T03:00:02.580392Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 5215472ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-14T04:00:02.370924Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 3595457ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-14T10:00:02.480122Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 21590894ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-14T11:00:02.386532Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 3595426ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-14T14:24:01.876299Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 12234435ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-14T15:42:29.010179Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 3601470ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-14T15:57:33.937575Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 901359ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-14T16:12:35.482956Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 899040ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-14T16:27:37.883712Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 899706ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-14T16:42:39.874832Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 899712ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-14T16:57:41.504818Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 899708ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-14T17:12:43.255264Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 899703ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-14T17:27:45.808880Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 899725ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-14T17:42:48.510309Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 900715ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-14T20:27:47.554620Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 9896715ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-14T23:27:49.372880Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 10799705ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-15T02:27:51.369177Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 10799721ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-15T02:43:26.477573Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 931728ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-15T05:09:25.487325Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 8757855ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-15T05:16:19.020011Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 94109ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-15T10:26:56.015694Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 18579510ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-15T14:32:14.011610Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 10802542ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-15T23:33:13.484765Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 32457163ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-16T02:33:14.478501Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 10797573ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-16T05:33:16.882171Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 10798343ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-16T08:33:18.464450Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 10797452ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-16T11:33:20.816281Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 10797443ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-16T12:33:22.651668Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 3597439ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-16T17:38:07.010230Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 7200949ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-17T03:39:06.061313Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 36056714ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-17T06:39:07.477933Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 10799173ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-17T08:09:07.500646Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 5397332ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-17T11:15:02.371413Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 11152732ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-17T12:39:08.005660Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 5043644ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-17T13:42:36.230671Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 3804724ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-17T23:15:05.010271Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 33515992ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-17T23:30:09.905987Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 902439ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-17T23:45:11.818219Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 899437ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-18T00:00:13.369227Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 899519ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-18T00:15:15.374361Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 899542ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-18T00:30:17.473975Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 899710ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-18T00:45:19.459398Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 899715ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-18T01:00:21.289784Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 897456ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-18T01:15:23.373961Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 899712ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-18T01:57:28.451525Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 2522756ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-18T04:00:23.368317Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 7372735ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-18T07:00:25.487906Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 10799718ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-18T10:00:27.404998Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 10799743ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-18T12:15:02.510976Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 8072706ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-18T14:30:28.006502Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 8123617ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-18T14:45:00.009665Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 868573ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-18T19:00:30.512060Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 15326654ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-18T23:30:32.477018Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 16198587ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-18T23:40:56.069170Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 618426ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-19T00:10:30.010128Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 1199777ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-19T00:16:52.008966Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 344601ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-19T00:38:45.011123Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 512784ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-19T08:50:59.008945Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 28800424ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-19T11:59:54.011045Z 0 [Note] InnoDB: page_cleaner: 1000ms intended loop took 11331570ms. The settings might not be optimal. (flushed=0 and evicted=0, during the time.)
+2019-10-19T12:00:19.444885Z 0 [Note] Giving 0 client threads a chance to die gracefully
+2019-10-19T12:00:19.444920Z 0 [Note] Shutting down slave threads
+2019-10-19T12:00:19.445387Z 0 [Note] Forcefully disconnecting 0 remaining clients
+2019-10-19T12:00:19.445434Z 0 [Note] Event Scheduler: Purging the queue. 0 events
+2019-10-19T12:00:19.447084Z 0 [Note] Binlog end
+2019-10-19T12:00:19.480388Z 0 [Note] Shutting down plugin 'ngram'
+2019-10-19T12:00:19.480457Z 0 [Note] Shutting down plugin 'partition'
+2019-10-19T12:00:19.480471Z 0 [Note] Shutting down plugin 'BLACKHOLE'
+2019-10-19T12:00:19.480482Z 0 [Note] Shutting down plugin 'ARCHIVE'
+2019-10-19T12:00:19.480490Z 0 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+2019-10-19T12:00:19.480579Z 0 [Note] Shutting down plugin 'MRG_MYISAM'
+2019-10-19T12:00:19.480593Z 0 [Note] Shutting down plugin 'MyISAM'
+2019-10-19T12:00:19.481167Z 0 [Note] Shutting down plugin 'INNODB_SYS_VIRTUAL'
+2019-10-19T12:00:19.490650Z 0 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+2019-10-19T12:00:19.490677Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+2019-10-19T12:00:19.490685Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+2019-10-19T12:00:19.490692Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+2019-10-19T12:00:19.490700Z 0 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+2019-10-19T12:00:19.490707Z 0 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+2019-10-19T12:00:19.490714Z 0 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+2019-10-19T12:00:19.490721Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+2019-10-19T12:00:19.490728Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+2019-10-19T12:00:19.490735Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+2019-10-19T12:00:19.490742Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+2019-10-19T12:00:19.490749Z 0 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+2019-10-19T12:00:19.490756Z 0 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+2019-10-19T12:00:19.490763Z 0 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+2019-10-19T12:00:19.490770Z 0 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+2019-10-19T12:00:19.490777Z 0 [Note] Shutting down plugin 'INNODB_METRICS'
+2019-10-19T12:00:19.490784Z 0 [Note] Shutting down plugin 'INNODB_TEMP_TABLE_INFO'
+2019-10-19T12:00:19.490791Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+2019-10-19T12:00:19.490798Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+2019-10-19T12:00:19.490804Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+2019-10-19T12:00:19.490815Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+2019-10-19T12:00:19.490822Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+2019-10-19T12:00:19.490829Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+2019-10-19T12:00:19.490836Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM'
+2019-10-19T12:00:19.490843Z 0 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+2019-10-19T12:00:19.490850Z 0 [Note] Shutting down plugin 'INNODB_CMP'
+2019-10-19T12:00:19.490857Z 0 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+2019-10-19T12:00:19.490864Z 0 [Note] Shutting down plugin 'INNODB_LOCKS'
+2019-10-19T12:00:19.490871Z 0 [Note] Shutting down plugin 'INNODB_TRX'
+2019-10-19T12:00:19.490877Z 0 [Note] Shutting down plugin 'InnoDB'
+2019-10-19T12:00:19.492120Z 0 [Note] InnoDB: FTS optimize thread exiting.
+2019-10-19T12:00:19.492372Z 0 [Note] InnoDB: Starting shutdown...
+2019-10-19T12:00:19.677221Z 0 [Note] InnoDB: Dumping buffer pool(s) to /usr/local/var/mysql/ib_buffer_pool
+2019-10-19T12:00:19.688447Z 0 [Note] InnoDB: Buffer pool(s) dump completed at 191019 12:00:19
+2019-10-19T12:00:20.693607Z 0 [Note] InnoDB: Shutdown completed; log sequence number 21218250
+2019-10-19T12:00:20.693911Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2019-10-19T12:00:20.693930Z 0 [Note] Shutting down plugin 'MEMORY'
+2019-10-19T12:00:20.694260Z 0 [Note] Shutting down plugin 'CSV'
+2019-10-19T12:00:20.694302Z 0 [Note] Shutting down plugin 'sha256_password'
+2019-10-19T12:00:20.694318Z 0 [Note] Shutting down plugin 'mysql_native_password'
+2019-10-19T12:00:20.695425Z 0 [Note] Shutting down plugin 'binlog'
+2019-10-19T12:00:20.704008Z 0 [Note] /usr/local/opt/mysql@5.7/bin/mysqld: Shutdown complete
+
