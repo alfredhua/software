@@ -4,7 +4,7 @@ source ~/software/soft/nvim/setting/keymaps.vim
 
 if has('ide')
 	" =============== idea配置 ==================
-	source ~/Software/soft/nvim/idea/ideaMaps.vim
+	source ~/software/soft/nvim/idea/ideaMaps.vim
 else
 	" =============== 插件管理 ==================
 	call plug#begin('~/.vim/plugged')

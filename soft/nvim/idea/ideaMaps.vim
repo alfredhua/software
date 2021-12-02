@@ -41,6 +41,7 @@ nnoremap gb :action Back<CR>
 nnoremap <C-o> :action OptimizeImports<CR>
 nnoremap <Leader>sg :action Generate<CR>
 
-nnoremap <Leader>er :action Run<CR>
-nnoremap <Leader>ed :action Debug<CR>
-nnoremap <Leader>es :action Stop<CR>
+nnoremap <Leader>rr <C-S-r>
+nnoremap <Leader>ro :action Run<CR>
+nnoremap <Leader>rd :action Debug<CR>
+nnoremap <Leader>rs :action Stop<CR>

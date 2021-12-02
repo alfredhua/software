@@ -19,7 +19,7 @@ noremap <silent> J 5j
 noremap <silent> N 0
 
 " =============== 更新 ==================
-noremap <LEADER>ri :source $HOME/software/soft/nvim/init.vim<CR>
+noremap <LEADER>ui :source $HOME/software/soft/nvim/init.vim<CR>
 
 " =================打开文本 e========================
 noremap <LEADER>ei :e ~/software/soft/nvim/init.vim<CR>
