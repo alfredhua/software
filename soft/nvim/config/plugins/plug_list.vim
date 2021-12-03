@@ -11,7 +11,8 @@ autocmd VimEnter *
 
 call plug#begin('~/.config/plugged')
 
-		Plug 'preservim/nerdtree', {'on':'NERDTreeToggle'}   " 树形目录
+		"Plug 'preservim/nerdtree', {'on':'NERDTreeToggle'}   " 树形目录
+
 		Plug 'preservim/tagbar' " 函数窗口预览
 		Plug 'Xuyuanp/nerdtree-git-plugin'  " git 显示
 		Plug 'tpope/vim-fugitive'  " git 操作
