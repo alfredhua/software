@@ -1,10 +1,10 @@
 " =============== vim公共设置 ==================
-source ~/software/soft/nvim/setting/settings.vim
-source ~/software/soft/nvim/setting/keymaps.vim
+source ~/software/soft/nvim/config/settings.vim
+source ~/software/soft/nvim/config/keymaps.vim
 
 if has('ide')
-" =============== idea配置 ==================
-source ~/software/soft/nvim/idea/ideaMaps.vim
+	" =============== idea配置 ==================
+	source ~/software/soft/nvim/config/idea_keymaps.vim
 else
 
 endif

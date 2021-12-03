@@ -1,4 +1,3 @@
-
 nnoremap <silent> > >>
 nnoremap <silent> P "+p
 vnoremap <silent> Y "+y
@@ -21,7 +20,7 @@ noremap <LEADER>ui :source $HOME/software/soft/nvim/init.vim<CR>
 
 " =================打开文本 e========================
 noremap <LEADER>ei :e ~/software/soft/nvim/init.vim<CR>
-noremap <LEADER>ek :e ~/software/soft/nvim/setting/keymaps.vim<CR>
-noremap <LEADER>es :e ~/software/soft/nvim/setting/settings.vim<CR>
-noremap <LEADER>ed :e ~/software/soft/nvim/idea/ideaMaps.vim<CR>
+noremap <LEADER>ek :e ~/software/soft/nvim/config/keymaps.vim<CR>
+noremap <LEADER>es :e ~/software/soft/nvim/config/settings.vim<CR>
+noremap <LEADER>ed :e ~/software/soft/nvim/config/idea_keymaps.vim<CR>
 
