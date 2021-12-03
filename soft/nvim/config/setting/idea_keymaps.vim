@@ -25,7 +25,7 @@ map sc :action FindInPath<CR>
 map sr :action ReplaceInPath<CR>
 
 " =============== 窗口 ==================
-nnoremap tt :NERDTreeToggle<CR>
+"nnoremap tt :NERDTreeToggle<CR>
 nnoremap tb :action ActivateStructureToolWindow<CR>
 nnoremap tm :action ShowPopupMenu<CR>
 nnoremap tc :action HideAllWindows<CR>

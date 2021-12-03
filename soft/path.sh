@@ -4,6 +4,10 @@ SOFT_WARE_PATH=$HOME/software/soft
 
 source $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# 设置
+export LANG='UTC-8'
+export LC_ALL='en_US.UTF-8'
+
 #### node 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -75,5 +79,8 @@ alias java17="export JAVA_HOME=$JAVA_17_HOME"
 
 
 ## nvim
-export NEOVIM_HOME=$SOFT_WARE_PATH/nvim
-export PATH=$PATH:$NEOVIM_HOME/bin
+export VIM=$SOFT_WARE_PATH/nvim
+export PATH=$PATH:$VIM/bin
+
+export VIMRUNTIME=$SOFT_WARE_PATH/nvim/share/nvim/runtime
+
