@@ -8,3 +8,4 @@ if has('ide')
 else
 	source ~/software/soft/nvim/config/plugins/plug_list.vim
 endif
+
