@@ -72,3 +72,8 @@ export CLASS_PATH=.:$JAVA_HOME/bin:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.ja
 
 alias java11="export JAVA_HOME=$JAVA_11_HOME"
 alias java17="export JAVA_HOME=$JAVA_17_HOME"
+
+
+## nvim
+export NEOVIM_HOME=$SOFT_WARE_PATH/nvim
+export PATH=$PATH:$NEOVIM_HOME/bin
