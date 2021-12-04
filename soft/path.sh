@@ -5,8 +5,6 @@ SOFT_WARE_PATH=$HOME/software/soft
 source $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # 设置
-export LANG='UTC-8'
-export LC_ALL='en_US.UTF-8'
 
 #### node 
 export NVM_DIR="$HOME/.nvm"
@@ -83,4 +81,7 @@ export VIM=$SOFT_WARE_PATH/nvim
 export PATH=$PATH:$VIM/bin
 
 export VIMRUNTIME=$SOFT_WARE_PATH/nvim/share/nvim/runtime
+
+export LANG='UTC-8'
+#export LC_ALL="zh_CN.UTF-8"
 
