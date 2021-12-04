@@ -1569,7 +1569,6 @@ $XDG_DATA_HOME	starting.txt	/*$XDG_DATA_HOME*
 :XMLent	insert.txt	/*:XMLent*
 :XMLns	insert.txt	/*:XMLns*
 :[range]	motion.txt	/*:[range]*
-:[vV\x16]	autocmd.txt	/*:[vV\\x16]*
 :\bar	cmdline.txt	/*:\\bar*
 :_!	cmdline.txt	/*:_!*
 :_#	cmdline.txt	/*:_#*
@@ -4179,7 +4178,6 @@ Mac-format	editing.txt	/*Mac-format*
 Mac-format-write	editing.txt	/*Mac-format-write*
 Mark	motion.txt	/*Mark*
 MenuPopup	autocmd.txt	/*MenuPopup*
-ModeChanged	autocmd.txt	/*ModeChanged*
 Myspell	spell.txt	/*Myspell*
 N	pattern.txt	/*N*
 N%	motion.txt	/*N%*

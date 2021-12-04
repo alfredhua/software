@@ -1,16 +1,12 @@
 #!/bin/sh
 source $HOME/software/soft/path.sh
 source $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $HOME/software/tool/git.sh
-source $HOME/software/tool/maven.sh
-source $HOME/software/tool/linux.sh
-source $HOME/software/tool/docker.sh
-source $HOME/software/tool/vim.sh
-source $HOME/software/tool/deploy.sh
+source $HOME/software/script/alias.sh
+
 
 # Shell
-alias shClearEclipse='$HOME/software/tool/clear_eclipse_temp_file.sh'
-alias shInstall='$HOME/software/tool/install.sh'
+alias shClearEclipse='$HOME/software/script/clear_eclipse_temp_file.sh'
+alias shInstall='$HOME/software/script/install.sh'
 
 ## 项目管理相关
 WORK_SPACE="$HOME/workspace"
