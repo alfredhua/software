@@ -6,5 +6,5 @@ if has('ide')
 	source ~/software/config/nvim/setting/idea_keymaps.vim
 else
 	source ~/software/config/nvim/setting/vim_keymaps.vim
-	source ~/software/config/nvim/plug.vim
+	source ~/software/config/nvim/plugins/plug.vim
 endif

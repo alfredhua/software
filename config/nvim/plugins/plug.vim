@@ -14,17 +14,17 @@ call plug#begin('~/.config/plugged')
 		Plug 'preservim/nerdtree', {'on':'NERDTreeToggle'}
 
 		" =============== tool ==================
-		Plug 'junegunn/vim-easy-align' " 符号对齐
+		Plug 'junegunn/vim-easy-align' 
 		Plug 'mhinz/vim-startify'
-		Plug 'tpope/vim-surround'        " vim 环绕输入
-		Plug 'Xuyuanp/nerdtree-git-plugin'  " git 显示
-		Plug 'tpope/vim-fugitive'  " git 操作
-		Plug 'kevinhwang91/rnvimr'  " 文件浏览
-		Plug 'Lokaltog/vim-easymotion'   "快速定位
-		Plug 'tommcdo/vim-exchange'   "单词交换cxw
-		Plug 'preservim/nerdcommenter' " 注释插件
-		Plug 'alvan/vim-closetag'  " 输入框匹配
-		Plug 'jiangmiao/auto-pairs' " 自动匹配括号
+		Plug 'tpope/vim-surround'
+		Plug 'Xuyuanp/nerdtree-git-plugin'
+		Plug 'tpope/vim-fugitive'
+		Plug 'kevinhwang91/rnvimr'
+		Plug 'Lokaltog/vim-easymotion'
+		Plug 'tommcdo/vim-exchange'
+		Plug 'preservim/nerdcommenter'
+		Plug 'alvan/vim-closetag'
+		Plug 'jiangmiao/auto-pairs'
 		Plug 'terryma/vim-multiple-cursors'
 
 		" =============== snippets ==================
@@ -59,7 +59,4 @@ call plug#begin('~/.config/plugged')
 
 call plug#end()
 
-source ~/software/config/nvim/plugins/theme.vim
-source ~/software/config/nvim/plugins/rnvimr.vim
-source ~/software/config/nvim/plugins/closetag.vim
-source ~/software/config/nvim/plugins/snippets.vim
+source ~/software/config/nvim/plugins/plug_setting.vim

@@ -1,8 +1,8 @@
 " =============== 搜索,替换相关 s ==================
 noremap sf :Files<CR>
-noremap sc :Ack  ./*<left><left><left><left>
 noremap sd :Fardo<CR>
 noremap sr :Farr<CR>
+noremap sc :Ack  ./*<left><left><left><left>
 
 " =============== 窗口相关 t ==================
 nnoremap to :RnvimrToggle<CR><C-\><C-n>:RnvimrResize 0<CR>
@@ -13,8 +13,6 @@ nnoremap tj :set splitbelow<CR>:split<CR>
 nnoremap tl :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
 
 " =============== 格式化相关 g ==================
-xmap ga <Plug>(EasyAlign)
-map ga <Plug>(EasyAlign)
 noremap <LEADER>gb :Git blame<CR>
 
 " =============== help ==================
