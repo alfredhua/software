@@ -5,6 +5,7 @@ noremap sr :Farr<CR>
 noremap sc :Ack  ./*<left><left><left><left>
 
 " =============== 窗口相关 t ==================
+nnoremap tt :NERDTreeToggle<CR>
 nnoremap to :RnvimrToggle<CR><C-\><C-n>:RnvimrResize 0<CR>
 nnoremap tb :TagbarToggle<CR>
 nnoremap tm :TableModeToggle<CR>
