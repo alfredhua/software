@@ -11,7 +11,7 @@ autocmd VimEnter *
 
 call plug#begin('~/.config/plugged')
 
-		"Plug 'preservim/nerdtree', {'on':'NERDTreeToggle'}   " 树形目录
+		Plug 'preservim/nerdtree', {'on':'NERDTreeToggle'}   " 树形目录
 		Plug 'mhinz/vim-startify'   " 历史打开
 		Plug 'tpope/vim-surround'        " vim 环绕输入
 		" =============== 主题 ==================

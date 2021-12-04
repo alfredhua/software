@@ -16,11 +16,13 @@ noremap <silent> J 5j
 noremap <silent> N 0
 
 " =============== 更新 ==================
-noremap <LEADER>ui :source $HOME/software/soft/nvim/init.vim<CR>
+noremap <LEADER>ri :source $HOME/software/config/nvim/init.vim<CR>
 
 " =================打开文本 e========================
-noremap <LEADER>ei :e ~/software/soft/nvim/config/init.vim<CR>
-noremap <LEADER>ek :e ~/software/soft/nvim/config/setting/keymaps.vim<CR>
-noremap <LEADER>es :e ~/software/soft/nvim/config/setting/settings.vim<CR>
-noremap <LEADER>ed :e ~/software/soft/nvim/config/setting/idea_keymaps.vim<CR>
+noremap <LEADER>ei :e ~/software/config/nvim/init.vim<CR>
+noremap <LEADER>ek :e ~/software/config/nvim/setting/keymaps.vim<CR>
+noremap <LEADER>ev :e ~/software/config/nvim/setting/vim_keymaps.vim<CR>
+noremap <LEADER>ed :e ~/software/config/nvim/setting/idea_keymaps.vim<CR>
+noremap <LEADER>es :e ~/software/config/nvim/setting/settings.vim<CR>
+noremap <LEADER>ep :e ~/software/config/nvim/plug.vim<CR>
 

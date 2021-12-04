@@ -1,7 +1,4 @@
 " ============= rnvimr文件浏览插件 =================
-" 可以打开后进行文件的复制，粘贴，删除等操作
-" ==================================================
-
 let g:rnvimr_ex_enable = 1
 let g:rnvimr_pick_enable = 1
 let g:rnvimr_draw_border = 0
@@ -33,3 +30,4 @@ let g:rnvimr_layout = {
             \ }
 
 
+nnoremap to :RnvimrToggle<CR><C-\><C-n>:RnvimrResize 0<CR>
