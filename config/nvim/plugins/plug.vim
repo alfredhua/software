@@ -57,6 +57,7 @@ call plug#begin('~/.config/plugged')
 		Plug 'itchyny/lightline.vim'
 		Plug 'morhetz/gruvbox'
 		Plug 'mhartington/oceanic-next'
+		Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
