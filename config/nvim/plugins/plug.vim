@@ -33,7 +33,7 @@ call plug#begin('~/.config/plugged')
 
 		" =============== code ==================
 		Plug 'neoclide/coc.nvim', {'branch': 'release'}
-		Plug 'Chiel92/vim-autoformat'  " 格式化
+		Plug 'Chiel92/vim-autoformat'
 
 		" =============== search ==================
 		Plug '/usr/local/opt/fzf'
@@ -49,11 +49,12 @@ call plug#begin('~/.config/plugged')
 		Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 		Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle', 'for': ['text', 'markdown', 'vim-plug'] }
 		Plug 'mzlogin/vim-markdown-toc', { 'for': ['gitignore', 'markdown', 'vim-plug'] }
-		Plug 'suan/vim-instant-markdown' " markdown预览
+		Plug 'suan/vim-instant-markdown'
 
 		" =========== theme ============
-		Plug 'vim-airline/vim-airline'
-		Plug 'vim-airline/vim-airline-themes'
+		Plug 'kyazdani42/nvim-web-devicons'
+		Plug 'romgrk/barbar.nvim'
+		Plug 'itchyny/lightline.vim'
 		Plug 'morhetz/gruvbox'
 		Plug 'mhartington/oceanic-next'
 

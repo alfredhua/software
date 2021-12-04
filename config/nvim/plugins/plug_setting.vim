@@ -40,17 +40,26 @@ let g:UltiSnipsSnippetDirectories=[$HOME.'/software/config/nvim/Ultisnips']
 
 
 " =============== theme ==================
-let g:airline_theme='google_dark'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#buffer_nr_show = 1
-
-
 syntax enable
 if (has("termguicolors"))
 	set termguicolors
 endif
 "colorscheme OceanicNext
 colorscheme gruvbox
+
+let g:lightline = {
+			\ 'colorscheme': 'solarized',
+			\ 'active': {
+			\   'left': [ [ 'mode', 'paste' ],
+			\             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+			\ },
+			\ 'component_function': {
+			\   'gitbranch': 'FugitiveHead'
+			\ },
+			\ }
+
+let bufferline = get(g:, 'bufferline', {})
+let bufferline.icons = v:true
 
 " =============== vim-easy-align ==================
 xmap ga <Plug>(EasyAlign)
@@ -87,6 +96,7 @@ nnoremap <Space>g= :GitGutterNextHunk<CR>
 " =============== markdown ==================
 " vim-instany-markdown
 let g:instant_markdown_autostart = 0
+let g:instant_markdown_port = 8888
 nnoremap mp :InstantMarkdownPreview<CR>
 
 
