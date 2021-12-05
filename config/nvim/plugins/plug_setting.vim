@@ -1,5 +1,3 @@
-" ========= closetag =========================
-let g:closetag_filetypes = 'html,xhtml,phtml,vue,jsx,js'
 
 " ============= rnvimr文件浏览插件 =================
 " 可以打开后进行文件的复制，粘贴，删除等操作
@@ -126,6 +124,8 @@ let g:tagbar_width=30
 let g:tagbar_right=1
 let g:tagbar_autoclose=1
 
+" ========= closetag =========================
+let g:closetag_filetypes = 'html,xhtml,phtml,vue,jsx,js'
 
 " =============== coc ==================
 let g:coc_global_extensions = [
