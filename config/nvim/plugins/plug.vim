@@ -13,12 +13,12 @@ call plug#begin('~/.config/plugged')
 
 		Plug 'preservim/nerdtree', {'on':'NERDTreeToggle'}
 		Plug 'Xuyuanp/nerdtree-git-plugin'
+		Plug 'tpope/vim-fugitive'
 
 		" =============== tool ==================
 		Plug 'junegunn/vim-easy-align'
 		Plug 'mhinz/vim-startify'
 		Plug 'tpope/vim-surround'
-		Plug 'tpope/vim-fugitive'
 		Plug 'kevinhwang91/rnvimr'
 		Plug 'Lokaltog/vim-easymotion'
 		Plug 'tommcdo/vim-exchange'
