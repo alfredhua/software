@@ -12,12 +12,12 @@ autocmd VimEnter *
 call plug#begin('~/.config/plugged')
 
 		Plug 'preservim/nerdtree', {'on':'NERDTreeToggle'}
+		Plug 'Xuyuanp/nerdtree-git-plugin'
 
 		" =============== tool ==================
-		Plug 'junegunn/vim-easy-align' 
+		Plug 'junegunn/vim-easy-align'
 		Plug 'mhinz/vim-startify'
 		Plug 'tpope/vim-surround'
-		Plug 'Xuyuanp/nerdtree-git-plugin'
 		Plug 'tpope/vim-fugitive'
 		Plug 'kevinhwang91/rnvimr'
 		Plug 'Lokaltog/vim-easymotion'
@@ -26,6 +26,7 @@ call plug#begin('~/.config/plugged')
 		Plug 'alvan/vim-closetag'
 		Plug 'jiangmiao/auto-pairs'
 		Plug 'terryma/vim-multiple-cursors'
+		Plug 'lambdalisue/suda.vim'
 
 		" =============== snippets ==================
 		Plug 'SirVer/ultisnips'
@@ -55,9 +56,7 @@ call plug#begin('~/.config/plugged')
 		Plug 'kyazdani42/nvim-web-devicons'
 		Plug 'romgrk/barbar.nvim'
 		Plug 'itchyny/lightline.vim'
-		Plug 'morhetz/gruvbox'
 		Plug 'mhartington/oceanic-next'
-		Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 

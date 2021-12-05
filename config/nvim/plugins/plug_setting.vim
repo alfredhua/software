@@ -1,4 +1,3 @@
-
 " ============= rnvimr文件浏览插件 =================
 " 可以打开后进行文件的复制，粘贴，删除等操作
 " ==================================================
@@ -43,7 +42,6 @@ if (has("termguicolors"))
 	set termguicolors
 endif
 colorscheme OceanicNext
-"colorscheme gruvbox
 
 let g:lightline = {
 			\ 'colorscheme': 'solarized',
@@ -58,6 +56,7 @@ let g:lightline = {
 
 let bufferline = get(g:, 'bufferline', {})
 let bufferline.icons = v:true
+
 
 " =============== vim-easy-align ==================
 xmap ga <Plug>(EasyAlign)
