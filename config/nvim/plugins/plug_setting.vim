@@ -44,8 +44,8 @@ syntax enable
 if (has("termguicolors"))
 	set termguicolors
 endif
-"colorscheme OceanicNext
-colorscheme gruvbox
+colorscheme OceanicNext
+"colorscheme gruvbox
 
 let g:lightline = {
 			\ 'colorscheme': 'solarized',
