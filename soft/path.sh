@@ -83,5 +83,5 @@ export PATH=$PATH:$VIM/bin
 export VIMRUNTIME=$SOFT_WARE_PATH/nvim/share/nvim/runtime
 
 export LANG='UTC-8'
-#export LC_ALL="zh_CN.UTF-8"
+export LC_ALL="zh_CN.UTF-8"
 
