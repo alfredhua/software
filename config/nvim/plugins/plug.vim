@@ -34,7 +34,8 @@ call plug#begin('~/.config/plugged')
 
 		" =============== code ==================
 		Plug 'neoclide/coc.nvim', {'branch': 'release'}
-		Plug 'Chiel92/vim-autoformat'
+		"Plug 'Chiel92/vim-autoformat'
+		Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 		" =============== search ==================
 		Plug '/usr/local/opt/fzf'
@@ -43,8 +44,8 @@ call plug#begin('~/.config/plugged')
 		Plug 'mileszs/ack.vim'
 
 		" =========== react ===============
-		Plug 'yuezk/vim-js'
-		Plug 'maxmellon/vim-jsx-pretty'
+		"Plug 'yuezk/vim-js'
+		"Plug 'maxmellon/vim-jsx-pretty'
 
 		" =============== markdown ==================
 		Plug 'suan/vim-instant-markdown', {'for': 'markdown'}

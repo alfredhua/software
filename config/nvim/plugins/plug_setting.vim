@@ -7,30 +7,31 @@ let g:rnvimr_draw_border = 0
 let g:rnvimr_bw_enable = 1
 highlight link RnvimrNormal CursorLine
 let g:rnvimr_ranger_views = [
-            \ {'minwidth': 90, 'ratio': []},
-            \ {'minwidth': 50, 'maxwidth': 89, 'ratio': [1,1]},
-            \ {'maxwidth': 49, 'ratio': [1]}
-            \ ]
+			\ {'minwidth': 90, 'ratio': []},
+			\ {'minwidth': 50, 'maxwidth': 89, 'ratio': [1,1]},
+			\ {'maxwidth': 49, 'ratio': [1]}
+			\ ]
 
 let g:rnvimr_action = {
-            \ '<C-t>': 'NvimEdit tabedit',
-            \ '<C-x>': 'NvimEdit split',
-            \ '<C-v>': 'NvimEdit vsplit',
-            \ 'gw': 'JumpNvimCwd',
-            \ 'yw': 'EmitRangerCwd'
-            \ }
+			\ '<C-t>': 'NvimEdit tabedit',
+			\ '<C-x>': 'NvimEdit split',
+			\ '<C-v>': 'NvimEdit vsplit',
+			\ 'gw': 'JumpNvimCwd',
+			\ 'yw': 'EmitRangerCwd'
+			\ }
 
 let g:rnvimr_layout = {
-            \ 'relative': 'editor',
-            \ 'width': float2nr(round(0.7 * &columns)),
-            \ 'height': float2nr(round(0.7 * &lines)),
-            \ 'col': float2nr(round(0.15 * &columns)),
-            \ 'row': float2nr(round(0.15 * &lines)),
-            \ 'style': 'minimal'
-            \ }
+			\ 'relative': 'editor',
+			\ 'width': float2nr(round(0.7 * &columns)),
+			\ 'height': float2nr(round(0.7 * &lines)),
+			\ 'col': float2nr(round(0.15 * &columns)),
+			\ 'row': float2nr(round(0.15 * &lines)),
+			\ 'style': 'minimal'
+			\ }
 
 
 " ===============  snippets ==================
+let g:UltiSnipsUsePythonVersion=3
 let g:vimspector_enable_mappings = 'HUMAN'
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetDirectories=[$HOME.'/software/config/nvim/Ultisnips']
@@ -44,15 +45,15 @@ endif
 colorscheme OceanicNext
 
 let g:lightline = {
-			\ 'colorscheme': 'solarized',
-			\ 'active': {
-			\   'left': [ [ 'mode', 'paste' ],
-			\             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-			\ },
-			\ 'component_function': {
-			\   'gitbranch': 'FugitiveHead'
-			\ },
-			\ }
+			\'colorscheme': 'solarized',
+			\'active': {
+				\   'left': [ [ 'mode', 'paste' ],
+				\             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+				\},
+				\'component_function': {
+					\   'gitbranch': 'FugitiveHead'
+					\ },
+					\}
 
 let bufferline = get(g:, 'bufferline', {})
 let bufferline.icons = v:true
@@ -128,15 +129,15 @@ let g:closetag_filetypes = 'html,xhtml,phtml,vue,jsx,js'
 
 " =============== coc ==================
 let g:coc_global_extensions = [
-	\ 'coc-css',
-	\ 'coc-html',
-	\ 'coc-json',
-	\ 'coc-pyright',
-	\ 'coc-syntax',
-	\ 'coc-translator',
-	\ 'coc-vetur',
-	\ 'coc-tsserver',
-	\ 'coc-vimlsp']
+			\ 'coc-css',
+			\ 'coc-html',
+			\ 'coc-json',
+			\ 'coc-pyright',
+			\ 'coc-syntax',
+			\ 'coc-translator',
+			\ 'coc-vetur',
+			\ 'coc-tsserver',
+			\ 'coc-vimlsp']
 
 nmap <Space>ct <Plug>(coc-translator-p)
 nmap <silent> gd <Plug>(coc-definition)
@@ -147,3 +148,25 @@ nmap <silent> gD :tab sp<CR><Plug>(coc-definition)
 let g:coc_snippet_next = '<C-e>'
 let g:coc_snippet_prev = '<C-n>'
 
+
+lua << EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = {"html", "css", "vim", "lua", "javascript", "typescript", "tsx","vue"},
+  highlight = {
+    enable = true,
+    additional_vim_regex_highlighting = false
+  },
+  incremental_selection = {
+    enable = true,
+    keymaps = {
+      init_selection = '<CR>',
+      node_incremental = '<CR>',
+      node_decremental = '<BS>',
+      scope_incremental = '<TAB>',
+    }
+  },
+  indent = {
+    enable = true
+  }
+}
+EOF
