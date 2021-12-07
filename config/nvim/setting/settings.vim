@@ -46,3 +46,5 @@ set encoding=utf-8
 set fileencodings=utf-8,chinese,latin-1
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
+
+
