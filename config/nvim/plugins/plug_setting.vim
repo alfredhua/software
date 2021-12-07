@@ -149,6 +149,7 @@ let g:coc_snippet_next = '<C-e>'
 let g:coc_snippet_prev = '<C-n>'
 
 
+" =============== treesitter ==================
 lua << EOF
 require'nvim-treesitter.configs'.setup {
   ensure_installed = {"html", "css", "vim", "lua", "javascript", "typescript", "tsx","vue"},

@@ -10,7 +10,7 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set autoindent
-set list
+"set list
 set listchars=tab:\|\ ,trail:▫
 set scrolloff=4
 set ttimeoutlen=0
@@ -30,12 +30,11 @@ set showcmd
 set wildmenu
 set ignorecase
 set smartcase
-set shortmess+=c
 set inccommand=split
 set completeopt=longest,noinsert,menuone,noselect,preview
 set ttyfast "should make scrolling faster
 set lazyredraw "same as above
-set visualbell
+"set visualbell
 
 let mapleader=" "
 
