@@ -14,7 +14,7 @@ noremap <silent> L 5l
 noremap <silent> H 5h
 noremap <silent> J 5j
 noremap <silent> N 0
-noremap <silent> ns :set nohlsearch<CR>
+noremap <silent> ns :nohlsearch<CR>
 
 " =============== 更新 ==================
 noremap <LEADER>ri :source $HOME/software/config/nvim/init.vim<CR>
