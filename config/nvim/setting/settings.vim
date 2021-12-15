@@ -1,4 +1,5 @@
 syntax enable
+set nocompatible
 set exrc
 set secure
 set number
