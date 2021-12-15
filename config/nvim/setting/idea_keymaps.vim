@@ -20,15 +20,15 @@ xmap <S-C-p> <Plug>AllWholeOccurrence
 map <Space> <Plug>(easymotion-prefix)
 
 " =============== 搜索 ==================
-map sf :action SearchEverywhere<CR>
-map sc :action FindInPath<CR>
-map sr :action ReplaceInPath<CR>
+map <Leader>sf :action SearchEverywhere<CR>
+map <Leader>sc :action FindInPath<CR>
+map <Leader>sr :action ReplaceInPath<CR>
 
 " =============== 窗口 ==================
 "nnoremap tt :NERDTreeToggle<CR>
-nnoremap tb :action ActivateStructureToolWindow<CR>
-nnoremap tm :action ShowPopupMenu<CR>
-nnoremap tc :action HideAllWindows<CR>
+nnoremap <Leader>tb :action ActivateStructureToolWindow<CR>
+nnoremap <Leader>tm :action ShowPopupMenu<CR>
+nnoremap <Leader>tc :action HideAllWindows<CR>
 
 " =============== 文件 ==================
 nnoremap <Leader>rf :action RenameFile<CR>
@@ -43,5 +43,12 @@ nnoremap <Leader>sg :action Generate<CR>
 
 nnoremap <Leader>rr <C-S-r>
 nnoremap <Leader>ro :action Run<CR>
-nnoremap <Leader>rd :action Debug<CR>
+nnoremap <Leader>rd :action ChooseDebugConfiguration<CR>
 nnoremap <Leader>rs :action Stop<CR>
+
+
+nnoremap <Leader>bb :action ToggleLineBreakpoint<CR>
+nnoremap <Leader>br :action ViewBreakpoints<CR>
+
+
+
