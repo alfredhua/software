@@ -23,29 +23,33 @@ map <Space> <Plug>(easymotion-prefix)
 map <Leader>sf :action SearchEverywhere<CR>
 map <Leader>sc :action FindInPath<CR>
 map <Leader>sr :action ReplaceInPath<CR>
+nnoremap <Leader>sp :action ShowFilePath<CR>
 
 " =============== 窗口 ==================
 "nnoremap tt :NERDTreeToggle<CR>
 nnoremap <Leader>tb :action ActivateStructureToolWindow<CR>
 nnoremap <Leader>tm :action ShowPopupMenu<CR>
-nnoremap <Leader>tc :action HideAllWindows<CR>
+nnoremap <Leader>th :action HideAllWindows<CR>
+nnoremap <Leader>tc :action CloseActiveTab<CR>
 
 " =============== 文件 ==================
 nnoremap <Leader>rf :action RenameFile<CR>
+nnoremap <Leader>re :action RenameElement<CR>
 nnoremap <Leader>nc :action NewClass<CR>
 
 " =============== 代码，跳转 ==================
 nnoremap gi :action GotoImplementation<CR>
 nnoremap gd :action GotoDeclaration<CR>
 nnoremap gb :action Back<CR>
-nnoremap <C-o> :action OptimizeImports<CR>
+nnoremap gc :action GotoClass<CR>
+nnoremap su :action ShowUsages<CR>
 nnoremap <Leader>sg :action Generate<CR>
 
-nnoremap <Leader>rr <C-S-r>
+nnoremap <C-o> :action OptimizeImports<CR>
+
 nnoremap <Leader>ro :action Run<CR>
 nnoremap <Leader>rd :action ChooseDebugConfiguration<CR>
 nnoremap <Leader>rs :action Stop<CR>
-
 
 nnoremap <Leader>bb :action ToggleLineBreakpoint<CR>
 nnoremap <Leader>br :action ViewBreakpoints<CR>
