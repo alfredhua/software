@@ -14,6 +14,7 @@ noremap <silent> L 5l
 noremap <silent> H 5h
 noremap <silent> J 5j
 noremap <silent> N 0
+noremap <silent> U <C-r>
 noremap <silent> ns :nohlsearch<CR>
 noremap <silent> tn :bn<CR>
 noremap <silent> tp :bp<CR>
