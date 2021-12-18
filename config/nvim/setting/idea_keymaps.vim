@@ -43,7 +43,7 @@ nnoremap gd :action GotoDeclaration<CR>
 nnoremap gb :action Back<CR>
 nnoremap gc :action GotoClass<CR>
 nnoremap su :action ShowUsages<CR>
-nnoremap <Leader>sg :action Generate<CR>
+nnoremap sg :action Generate<CR>
 
 nnoremap <C-o> :action OptimizeImports<CR>
 
@@ -55,16 +55,5 @@ nnoremap <Leader>dc :action DebugClass<CR>
 nnoremap <Leader>bb :action ToggleLineBreakpoint<CR>
 nnoremap <Leader>br :action ViewBreakpoints<CR>
 
-
-nnoremap <Leader>sb :action ToggleBookmark<CR>
-nnoremap <Leader>mb :action ToggleBookmark<CR>
-nnoremap <Leader>m0 :action ToggleBookmark0<CR>
-nnoremap <Leader>m1 :action ToggleBookmark1<CR>
-nnoremap <Leader>m2 :action ToggleBookmark2<CR>
-nnoremap <Leader>m3 :action ToggleBookmark3<CR>
-nnoremap <Leader>m4 :action ToggleBookmark4<CR>
-nnoremap <Leader>m5 :action ToggleBookmark5<CR>
-nnoremap <Leader>m6 :action ToggleBookmark6<CR>
-nnoremap <Leader>m7 :action ToggleBookmark7<CR>
-nnoremap <Leader>m8 :action ToggleBookmark8<CR>
-nnoremap <Leader>m9 :action ToggleBookmark9<CR>
+nnoremap ms :action ShowBookmarks<CR>
+nnoremap mb :action ToggleBookmark<CR>
