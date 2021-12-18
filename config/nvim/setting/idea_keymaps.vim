@@ -47,11 +47,15 @@ nnoremap sg :action Generate<CR>
 
 nnoremap <C-o> :action OptimizeImports<CR>
 
-nnoremap <Leader>ro :action Run<CR>
 nnoremap <Leader>rc :action RunClass<CR>
-nnoremap <Leader>rd :action ChooseDebugConfiguration<CR>
-nnoremap <Leader>rs :action Stop<CR>
 nnoremap <Leader>dc :action DebugClass<CR>
+
+nnoremap <Leader>ro :action Run<CR>
+nnoremap <Leader>do :action Debug<CR>
+
+nnoremap <Leader>rd :action ChooseDebugConfiguration<CR>
+
+nnoremap <Leader>rs :action Stop<CR>
 nnoremap <Leader>bb :action ToggleLineBreakpoint<CR>
 nnoremap <Leader>br :action ViewBreakpoints<CR>
 
