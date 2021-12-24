@@ -23,7 +23,6 @@ noremap <LEADER>hm :Maps<CR>
 noremap <LEADER>hh :tab help <right>
 
 
-
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 autocmd BufNewFile,BufRead *.html,*.hml set filetype=md
 map <Leader> <Plug>(easymotion-prefix)

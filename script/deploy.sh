@@ -1,10 +1,10 @@
 #! /bin/sh
 
-alias deploy_node="node"
+alias deploy_node="deploy"
 
 ALI_HOST=39.98.143.124
 
-function node(){
+function deploy(){
 	npm run build
 	tar -cf public.tar public && echo '压缩文件'
 	deploy_path=/root/$1
