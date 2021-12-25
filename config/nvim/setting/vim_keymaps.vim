@@ -9,11 +9,21 @@ cnoreabbrev Ack Ack!
 " =============== 窗口相关 t ==================
 nnoremap <LEADER>tt :NERDTreeToggle<CR>
 nnoremap <LEADER>to :RnvimrToggle<CR><C-\><C-n>:RnvimrResize 0<CR>
-nnoremap <LEADER>tb :TagbarToggle<CR>
+"nnoremap <LEADER>tb :TagbarToggle<CR>
 nnoremap <LEADER>tm :TableModeToggle<CR>
 nnoremap <LEADER>tr :NERDTreeRefreshRoot<CR>
 nnoremap <LEADER>tj :set splitbelow<CR>:split<CR>
 nnoremap <LEADER>tl :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
+
+" =============== coc ==================
+nmap <Space>ct <Plug>(coc-translator-p)
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+nmap <silent> gD :tab sp<CR><Plug>(coc-definition)
+let g:coc_snippet_next = '<C-e>'
+let g:coc_snippet_prev = '<C-n>'
 
 " =============== 格式化相关 g ==================
 noremap <LEADER>gb :Git blame<CR>
@@ -23,6 +33,15 @@ noremap <LEADER>hm :Maps<CR>
 noremap <LEADER>hh :tab help <right>
 
 
-autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
-autocmd BufNewFile,BufRead *.html,*.hml set filetype=md
+
 map <Leader> <Plug>(easymotion-prefix)
+
+
+nnoremap <silent>  <leader>1 :BufferGoto 1<CR>
+nnoremap <silent>  <leader>2 :BufferGoto 2<CR>
+nnoremap <silent>  <leader>3 :BufferGoto 3<CR>
+nnoremap <silent>  <leader>4 :BufferGoto 4<CR>
+nnoremap <silent>  <leader>5 :BufferGoto 5<CR>
+nnoremap <silent>  <leader>6 :BufferGoto 6<CR>
+nnoremap <silent>  <leader>7 :BufferGoto 7<CR>
+nnoremap <silent>  <leader>8 :BufferGoto 8<CR>

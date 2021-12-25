@@ -44,7 +44,11 @@ autocmd BufEnter * silent! lcd %:p:h
 
 set encoding=utf-8
 set fileencodings=utf-8,chinese,latin-1
+
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
 
 
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
+autocmd BufNewFile,BufRead *.html,*.hml set filetype=md
+autocmd BufNewFile,BufRead *.xml set filetype=xml

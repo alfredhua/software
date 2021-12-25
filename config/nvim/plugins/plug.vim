@@ -1,6 +1,8 @@
 call plug#begin('~/.config/plugged')
 
-		Plug 'preservim/nerdtree', {'on':'NERDTreeToggle'}
+		" =============== window ==================
+    Plug 'preservim/nerdtree', {'on':'NERDTreeToggle'}
+		Plug 'kevinhwang91/rnvimr'
 		Plug 'Xuyuanp/nerdtree-git-plugin'
 		Plug 'tpope/vim-fugitive'
 
@@ -8,8 +10,7 @@ call plug#begin('~/.config/plugged')
 		Plug 'junegunn/vim-easy-align'
 		Plug 'mhinz/vim-startify'
 		Plug 'tpope/vim-surround'
-		Plug 'kevinhwang91/rnvimr'
-		Plug 'Lokaltog/vim-easymotion'
+		Plug 'Lokaltowg/vim-easymotion'
 		Plug 'tommcdo/vim-exchange'
 		Plug 'preservim/nerdcommenter'
 		Plug 'alvan/vim-closetag'
@@ -46,6 +47,7 @@ call plug#begin('~/.config/plugged')
 call plug#end()
 
 source ~/software/config/nvim/plugins/plug_setting.vim
+source ~/software/config/nvim/plugins/coc_setting.vim
 
 
 if empty(glob('~/.config/nvim/autoload/plug.vim'))

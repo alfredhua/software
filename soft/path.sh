@@ -1,4 +1,6 @@
 #!/bin/sh
+export LANG='UTC-8'
+export LC_ALL="zh_CN.UTF-8"
 
 SOFT_WARE_PATH=$HOME/software/soft
 
@@ -77,11 +79,7 @@ alias java17="export JAVA_HOME=$JAVA_17_HOME"
 
 
 ## nvim
-export VIM=$SOFT_WARE_PATH/nvim
-export PATH=$PATH:$VIM/bin
-export VIMRUNTIME=$SOFT_WARE_PATH/nvim/share/nvim/runtime
-export EDITOR=$VIM/bin/nvim
+export NVIM_HOME=$SOFT_WARE_PATH/nvim
+export PATH=$PATH:$NVIM_HOME/bin
 
-export LANG='UTC-8'
-export LC_ALL="zh_CN.UTF-8"
 
