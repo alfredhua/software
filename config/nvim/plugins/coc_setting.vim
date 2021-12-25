@@ -11,6 +11,7 @@ let g:coc_global_extensions = [
 			\ 'coc-tsserver',
 			\ 'coc-vimlsp']
 
+autocmd CursorHold * silent call CocActionAsync('highlight')
 
 
 " =============== treesitter ==================

@@ -1,3 +1,5 @@
+map <Leader> <Plug>(easymotion-prefix)
+
 " =============== 搜索,替换相关 s ==================
 noremap <LEADER>sf :Files<CR>
 noremap <LEADER>sd :Fardo<CR>
@@ -18,14 +20,14 @@ nnoremap <LEADER>tl :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
 " =============== coc ==================
 nmap <Space>ct <Plug>(coc-translator-p)
 nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gD :tab sp<CR><Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
-nmap <silent> gD :tab sp<CR><Plug>(coc-definition)
 let g:coc_snippet_next = '<C-e>'
 let g:coc_snippet_prev = '<C-n>'
 
-" =============== 格式化相关 g ==================
+" ===============  git ==================
 noremap <LEADER>gb :Git blame<CR>
 
 " =============== help ==================
@@ -33,8 +35,6 @@ noremap <LEADER>hm :Maps<CR>
 noremap <LEADER>hh :tab help <right>
 
 
-
-map <Leader> <Plug>(easymotion-prefix)
 
 
 nnoremap <silent>  <leader>1 :BufferGoto 1<CR>
