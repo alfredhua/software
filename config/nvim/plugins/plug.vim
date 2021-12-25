@@ -10,7 +10,7 @@ call plug#begin('~/.config/plugged')
 		Plug 'junegunn/vim-easy-align'
 		Plug 'mhinz/vim-startify'
 		Plug 'tpope/vim-surround'
-		Plug 'Lokaltowg/vim-easymotion'
+		Plug 'easymotion/vim-easymotion'
 		Plug 'tommcdo/vim-exchange'
 		Plug 'preservim/nerdcommenter'
 		Plug 'alvan/vim-closetag'
@@ -43,11 +43,13 @@ call plug#begin('~/.config/plugged')
 		Plug 'romgrk/barbar.nvim'
 		Plug 'itchyny/lightline.vim'
 		Plug 'mhartington/oceanic-next'
+		Plug 'joshdick/onedark.vim'
 
 call plug#end()
 
 source ~/software/config/nvim/plugins/plug_setting.vim
-source ~/software/config/nvim/plugins/coc_setting.vim
+source ~/software/config/nvim/plugins/coc.vim
+source ~/software/config/nvim/plugins/theme.vim
 
 
 if empty(glob('~/.config/nvim/autoload/plug.vim'))

@@ -35,8 +35,6 @@ noremap <LEADER>hm :Maps<CR>
 noremap <LEADER>hh :tab help <right>
 
 
-
-
 nnoremap <silent>  <leader>1 :BufferGoto 1<CR>
 nnoremap <silent>  <leader>2 :BufferGoto 2<CR>
 nnoremap <silent>  <leader>3 :BufferGoto 3<CR>
