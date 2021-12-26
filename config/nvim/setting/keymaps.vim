@@ -1,8 +1,8 @@
 nnoremap <silent> > >>
 nnoremap <silent> P "+p
 vnoremap <silent> Y "+y
-noremap Q :q<CR>
-noremap <C-q> :bd<CR>
+noremap <C-q> :q<CR>
+noremap Q :bd<CR>
 noremap S :w<CR>
 inoremap <C-a> <ESC>A
 nnoremap <silent> <C-s> :w<CR>
