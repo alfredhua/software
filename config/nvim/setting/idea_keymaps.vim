@@ -42,7 +42,7 @@ nnoremap gi :action GotoImplementation<CR>
 nnoremap gd :action GotoDeclaration<CR>
 nnoremap gb :action Back<CR>
 nnoremap gc :action GotoClass<CR>
-nnoremap su :action ShowUsages<CR>
+nnoremap gn :action ShowUsages<CR>
 nnoremap sg :action Generate<CR>
 
 nnoremap <C-o> :action OptimizeImports<CR>
