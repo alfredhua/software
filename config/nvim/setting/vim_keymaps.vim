@@ -1,9 +1,9 @@
 map <Leader> <Plug>(easymotion-prefix)
 
 " =============== 搜索,替换相关 s ==================
-noremap <LEADER>sf :Files<CR>
+noremap <c-o> :Files<CR>
 noremap <LEADER>sd :Fardo<CR>
-noremap <LEADER>sr :Farr<CR>
+noremap <C-S-f>sr :Farr<CR>
 noremap <LEADER>sc :Ack  ./*<left><left><left><left>
 
 cnoreabbrev Ack Ack!
