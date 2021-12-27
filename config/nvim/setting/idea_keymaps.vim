@@ -26,11 +26,14 @@ nnoremap tm :action ToggleBookmark<cr>
 nnoremap tp :action ActivateProjectToolWindow<CR>
 nnoremap ts :action ShowBookmarks<CR>
 nnoremap tv :action ViewBreakpoints<CR>
+nnoremap tf :action FindInPath<CR>
+nnoremap tr :action ReplaceInPath<CR>
 
 " =============== 代码，跳转 g ==================
+nnoremap ge :action SearchEverywhere<CR>
 nnoremap ga :<C-u>action GotoAction<CR>
 nnoremap gb :<C-u>action JumpToLastChange<CR>
-nnoremap gc :<C-u>action GotoClass<CR>
+nnoremap gcl :<C-u>action GotoClass<CR>
 nnoremap gd :<C-u>action GotoDeclaration<CR>
 nnoremap gs :<C-u>action GotoSuperMethod<CR>
 nnoremap gi :<C-u>action GotoImplementation<CR>
@@ -46,14 +49,12 @@ nnoremap gg :<C-u>action Generate<CR>
 
 " =============== 搜索 ==================
 nnoremap noi :action OptimizeImports<CR>
-nnoremap nsf :action SearchEverywhere<CR>
-nnoremap nsc :action FindInPath<CR>
-nnoremap nsr :action ReplaceInPath<CR>
+
 " =============== 文件 ==================
 nnoremap nrf :action RenameFile<CR>
 nnoremap nre :action RenameElement<CR>
 
-" =============== run ==================
+" =============== 运行 ==================
 nnoremap nrc :action RunClass<CR>
 nnoremap ndc :action DebugClass<CR>
 nnoremap nro :action Run<CR>
