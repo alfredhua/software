@@ -28,6 +28,7 @@ nnoremap ts :action ShowBookmarks<CR>
 nnoremap tv :action ViewBreakpoints<CR>
 nnoremap tf :action FindInPath<CR>
 nnoremap tr :action ReplaceInPath<CR>
+nnoremap te :action RecentFiles<CR>
 
 " =============== 代码，跳转 g ==================
 nnoremap ge :action SearchEverywhere<CR>
@@ -42,11 +43,10 @@ nnoremap gm :<C-u>action GotoSymbol<CR>
 nnoremap gu :<C-u>action ShowUsages<CR>
 nnoremap gt :<C-u>action GotoTest<CR>
 nnoremap gp :<C-u>action FindInPath<CR>
-nnoremap gr :<C-u>action RecentFiles<CR>
 nnoremap gh :<C-u>action Back<CR>
 nnoremap gl :<C-u>action Forward<CR>
 nnoremap gg :<C-u>action Generate<CR>
-nnoremap no :action OptimizeImports<CR>
+nnoremap mo :action OptimizeImports<CR>
 
 " =============== 文件 ==================
 nnoremap mrf :action RenameFile<CR>
