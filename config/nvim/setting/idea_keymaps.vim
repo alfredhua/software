@@ -49,13 +49,13 @@ nnoremap gg :<C-u>action Generate<CR>
 nnoremap no :action OptimizeImports<CR>
 
 " =============== 文件 ==================
-nnoremap nrf :action RenameFile<CR>
-nnoremap nre :action RenameElement<CR>
+nnoremap mrf :action RenameFile<CR>
+nnoremap mre :action RenameElement<CR>
 
 " =============== 运行 ==================
-nnoremap nrc :action RunClass<CR>
-nnoremap ndc :action DebugClass<CR>
-nnoremap nro :action Run<CR>
-nnoremap ndo :action Debug<CR>
-nnoremap ncc :action ChooseDebugConfiguration<CR>
-nnoremap nst :action Stop<CR>
+nnoremap mrc :action RunClass<CR>
+nnoremap mdc :action DebugClass<CR>
+nnoremap mro :action Run<CR>
+nnoremap mdo :action Debug<CR>
+nnoremap mcc :action ChooseDebugConfiguration<CR>
+nnoremap mst :action Stop<CR>
