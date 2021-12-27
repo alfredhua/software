@@ -46,9 +46,7 @@ nnoremap gr :<C-u>action RecentFiles<CR>
 nnoremap gh :<C-u>action Back<CR>
 nnoremap gl :<C-u>action Forward<CR>
 nnoremap gg :<C-u>action Generate<CR>
-
-" =============== 搜索 ==================
-nnoremap noi :action OptimizeImports<CR>
+nnoremap no :action OptimizeImports<CR>
 
 " =============== 文件 ==================
 nnoremap nrf :action RenameFile<CR>
