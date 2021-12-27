@@ -19,13 +19,15 @@ xmap <S-C-p> <Plug>AllWholeOccurrence
 
 map <Space> <Plug>(easymotion-prefix)
 
-" =============== 窗口 ==================
+" =============== 窗口  t ==================
 nnoremap ta :action Annotate<cr>  
 nnoremap tb :action ToggleLineBreakpoint<cr>  
 nnoremap tm :action ToggleBookmark<cr>  
 nnoremap tp :action ActivateProjectToolWindow<CR>
+nnoremap ts :action ShowBookmarks<CR>
+nnoremap tv :action ViewBreakpoints<CR>
 
-" =============== 代码，跳转 ==================
+" =============== 代码，跳转 g ==================
 nnoremap ga :<C-u>action GotoAction<CR>
 nnoremap gb :<C-u>action JumpToLastChange<CR>
 nnoremap gc :<C-u>action GotoClass<CR>
@@ -42,28 +44,19 @@ nnoremap gh :<C-u>action Back<CR>
 nnoremap gl :<C-u>action Forward<CR>
 nnoremap gg :<C-u>action Generate<CR>
 
-
-
 " =============== 搜索 ==================
-map <Leader>sf :action SearchEverywhere<CR>
-map <Leader>sc :action FindInPath<CR>
-map <Leader>sr :action ReplaceInPath<CR>
-nnoremap <Leader>sp :action ShowFilePath<CR>
-
-
+nnoremap noi :action OptimizeImports<CR>
+nnoremap nsf :action SearchEverywhere<CR>
+nnoremap nsc :action FindInPath<CR>
+nnoremap nsr :action ReplaceInPath<CR>
 " =============== 文件 ==================
-nnoremap <Leader>rf :action RenameFile<CR>
-nnoremap <Leader>re :action RenameElement<CR>
-nnoremap <Leader>nc :action NewClass<CR>
+nnoremap nrf :action RenameFile<CR>
+nnoremap nre :action RenameElement<CR>
 
-nnoremap <C-o> :action OptimizeImports<CR>
-nnoremap <Leader>rc :action RunClass<CR>
-nnoremap <Leader>dc :action DebugClass<CR>
-nnoremap <Leader>ro :action Run<CR>
-nnoremap <Leader>do :action Debug<CR>
-nnoremap <Leader>rd :action ChooseDebugConfiguration<CR>
-nnoremap <Leader>rs :action Stop<CR>
-nnoremap <Leader>bb :action ToggleLineBreakpoint<CR>
-nnoremap <Leader>br :action ViewBreakpoints<CR>
-nnoremap ms :action ShowBookmarks<CR>
-nnoremap mb :action ToggleBookmark<CR>
+" =============== run ==================
+nnoremap nrc :action RunClass<CR>
+nnoremap ndc :action DebugClass<CR>
+nnoremap nro :action Run<CR>
+nnoremap ndo :action Debug<CR>
+nnoremap ncc :action ChooseDebugConfiguration<CR>
+nnoremap nst :action Stop<CR>

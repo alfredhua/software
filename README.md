@@ -7,8 +7,8 @@
 |-|-|-|
 |esc|C-[| C-[|
 |文件搜索|gf| cmd+shift+o|
-| 目录窗口打开 | tp | cmd+1|
-| git blame | ta | ta|
+|目录窗口打开 | tp | cmd+1|
+|git blame | ta | ta|
 |断点|tb|tb|
 |书签|tm|tm|
 |搜索Action|ga|ga|
@@ -28,3 +28,25 @@
 |关闭文件|Q|Q|
 |切换文件上一个|C-j|C-j|
 |切换文件下一个|C-k|C-k|
+|搜索|nsf|nsf|
+|搜索内容|nsc|nsc|
+|替换|nsr|nsr|
+|文件重命名|nrf|nrf|
+  
+
+" =============== 文件 ==================
+nnoremap <Leader>rf :action RenameFile<CR>
+nnoremap <Leader>re :action RenameElement<CR>
+nnoremap <Leader>nc :action NewClass<CR>
+
+nnoremap <C-o> :action OptimizeImports<CR>
+nnoremap <Leader>rc :action RunClass<CR>
+nnoremap <Leader>dc :action DebugClass<CR>
+nnoremap <Leader>ro :action Run<CR>
+nnoremap <Leader>do :action Debug<CR>
+nnoremap <Leader>rd :action ChooseDebugConfiguration<CR>
+nnoremap <Leader>rs :action Stop<CR>
+nnoremap <Leader>bb :action ToggleLineBreakpoint<CR>
+nnoremap <Leader>br :action ViewBreakpoints<CR>
+nnoremap ms :action ShowBookmarks<CR>
+nnoremap mb :action ToggleBookmark<CR>
