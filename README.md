@@ -33,20 +33,3 @@
 |替换|nsr|nsr|
 |文件重命名|nrf|nrf|
   
-
-" =============== 文件 ==================
-nnoremap <Leader>rf :action RenameFile<CR>
-nnoremap <Leader>re :action RenameElement<CR>
-nnoremap <Leader>nc :action NewClass<CR>
-
-nnoremap <C-o> :action OptimizeImports<CR>
-nnoremap <Leader>rc :action RunClass<CR>
-nnoremap <Leader>dc :action DebugClass<CR>
-nnoremap <Leader>ro :action Run<CR>
-nnoremap <Leader>do :action Debug<CR>
-nnoremap <Leader>rd :action ChooseDebugConfiguration<CR>
-nnoremap <Leader>rs :action Stop<CR>
-nnoremap <Leader>bb :action ToggleLineBreakpoint<CR>
-nnoremap <Leader>br :action ViewBreakpoints<CR>
-nnoremap ms :action ShowBookmarks<CR>
-nnoremap mb :action ToggleBookmark<CR>

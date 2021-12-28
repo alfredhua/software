@@ -34,7 +34,7 @@ nnoremap te :action RecentFiles<CR>
 nnoremap ge :action SearchEverywhere<CR>
 nnoremap ga :<C-u>action GotoAction<CR>
 nnoremap gb :<C-u>action JumpToLastChange<CR>
-nnoremap gcl :<C-u>action GotoClass<CR>
+nnoremap go :<C-u>action GotoClass<CR>
 nnoremap gd :<C-u>action GotoDeclaration<CR>
 nnoremap gs :<C-u>action GotoSuperMethod<CR>
 nnoremap gi :<C-u>action GotoImplementation<CR>
@@ -46,16 +46,17 @@ nnoremap gp :<C-u>action FindInPath<CR>
 nnoremap gh :<C-u>action Back<CR>
 nnoremap gl :<C-u>action Forward<CR>
 nnoremap gg :<C-u>action Generate<CR>
+
 nnoremap mo :action OptimizeImports<CR>
 
 " =============== 文件 ==================
-nnoremap mrf :action RenameFile<CR>
-nnoremap mre :action RenameElement<CR>
+nnoremap mr :action RenameFile<CR>
+nnoremap me :action RenameElement<CR>
 
 " =============== 运行 ==================
-nnoremap mrc :action RunClass<CR>
-nnoremap mdc :action DebugClass<CR>
-nnoremap mro :action Run<CR>
-nnoremap mdo :action Debug<CR>
-nnoremap mcc :action ChooseDebugConfiguration<CR>
-nnoremap mst :action Stop<CR>
+nnoremap mc :action RunClass<CR>
+nnoremap md :action DebugClass<CR>
+nnoremap mu :action Run<CR>
+nnoremap mb :action Debug<CR>
+nnoremap mf :action ChooseDebugConfiguration<CR>
+nnoremap mt :action Stop<CR>
