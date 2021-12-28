@@ -20,43 +20,44 @@ xmap <S-C-p> <Plug>AllWholeOccurrence
 map <Space> <Plug>(easymotion-prefix)
 
 " =============== 窗口  t ==================
-nnoremap ta :action Annotate<cr>  
-nnoremap tb :action ToggleLineBreakpoint<cr>  
-nnoremap tm :action ToggleBookmark<cr>  
-nnoremap tp :action ActivateProjectToolWindow<CR>
-nnoremap ts :action ShowBookmarks<CR>
-nnoremap tv :action ViewBreakpoints<CR>
-nnoremap tf :action FindInPath<CR>
-nnoremap tr :action ReplaceInPath<CR>
-nnoremap te :action RecentFiles<CR>
+map ta :action Annotate<cr>  
+map tb :action ToggleLineBreakpoint<cr>  
+map tm :action ToggleBookmark<cr>  
+map tp :action ActivateProjectToolWindow<CR>
+map ts :action ShowBookmarks<CR>
+map tv :action ViewBreakpoints<CR>
+map tf :action FindInPath<CR>
+map tr :action ReplaceInPath<CR>
+map te :action RecentFiles<CR>
+map tj :set splitbelow<CR>:split<CR>
+map tl :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
 
 " =============== 代码，跳转 g ==================
-nnoremap ge :action SearchEverywhere<CR>
-nnoremap ga :<C-u>action GotoAction<CR>
-nnoremap gb :<C-u>action JumpToLastChange<CR>
-nnoremap go :<C-u>action GotoClass<CR>
-nnoremap gd :<C-u>action GotoDeclaration<CR>
-nnoremap gs :<C-u>action GotoSuperMethod<CR>
-nnoremap gi :<C-u>action GotoImplementation<CR>
-nnoremap gf :<C-u>action GotoFile<CR>
-nnoremap gm :<C-u>action GotoSymbol<CR>
-nnoremap gu :<C-u>action ShowUsages<CR>
-nnoremap gt :<C-u>action GotoTest<CR>
-nnoremap gp :<C-u>action FindInPath<CR>
-nnoremap gh :<C-u>action Back<CR>
-nnoremap gl :<C-u>action Forward<CR>
-nnoremap gg :<C-u>action Generate<CR>
+map ge :action SearchEverywhere<CR>
+map ga :<C-u>action GotoAction<CR>
+map gb :<C-u>action JumpToLastChange<CR>
+map go :<C-u>action GotoClass<CR>
+map gd :<C-u>action GotoDeclaration<CR>
+map gs :<C-u>action GotoSuperMethod<CR>
+map gi :<C-u>action GotoImplementation<CR>
+map gf :<C-u>action GotoFile<CR>
+map gm :<C-u>action GotoSymbol<CR>
+map gu :<C-u>action ShowUsages<CR>
+map gt :<C-u>action GotoTest<CR>
+map gh :<C-u>action Back<CR>
+map gl :<C-u>action Forward<CR>
+map gg :<C-u>action Generate<CR>
 
-nnoremap mo :action OptimizeImports<CR>
+map mo :action OptimizeImports<CR>
 
 " =============== 文件 ==================
-nnoremap mr :action RenameFile<CR>
-nnoremap me :action RenameElement<CR>
+map mr :action RenameFile<CR>
+map me :action RenameElement<CR>
 
 " =============== 运行 ==================
-nnoremap mc :action RunClass<CR>
-nnoremap md :action DebugClass<CR>
-nnoremap mu :action Run<CR>
-nnoremap mb :action Debug<CR>
-nnoremap mf :action ChooseDebugConfiguration<CR>
-nnoremap mt :action Stop<CR>
+map mc :action RunClass<CR>
+map md :action DebugClass<CR>
+map mu :action Run<CR>
+map mb :action Debug<CR>
+map mf :action ChooseDebugConfiguration<CR>
+map mt :action Stop<CR>

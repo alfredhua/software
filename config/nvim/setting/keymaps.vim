@@ -5,6 +5,7 @@ noremap <C-q> :q<CR>
 noremap Q :bd<CR>
 inoremap <C-a> <ESC>A
 nnoremap <silent> <C-s> :w<CR>
+nnoremap <silent> S :w<CR>
 nnoremap <silent> <C-j> :bn<CR>
 nnoremap <silent> <C-k> :bp<CR>
 noremap <silent> M J
