@@ -6,8 +6,6 @@ noremap Q :bd<CR>
 inoremap <C-a> <ESC>A
 nnoremap <silent> <C-s> :w<CR>
 nnoremap <silent> S :w<CR>
-nnoremap <silent> <C-j> :bn<CR>
-nnoremap <silent> <C-k> :bp<CR>
 noremap <silent> M J
 noremap <silent> K 5k
 noremap <silent> L 5l
@@ -16,6 +14,8 @@ noremap <silent> J 5j
 noremap <silent> N 0
 noremap <silent> U <C-r>
 noremap <silent> ns :nohlsearch<CR>
+nnoremap <silent> <C-j> :bn<CR>
+nnoremap <silent> <C-k> :bp<CR>
 
 " =============== 更新 ==================
 noremap <LEADER>ri :source $HOME/software/config/nvim/init.vim<CR>

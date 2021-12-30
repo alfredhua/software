@@ -19,6 +19,7 @@ xmap <S-C-p> <Plug>AllWholeOccurrence
 
 map <Space> <Plug>(easymotion-prefix)
 
+
 " =============== 窗口  t ==================
 map ta :action Annotate<cr>  
 map tb :action ToggleLineBreakpoint<cr>  
