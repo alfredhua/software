@@ -47,9 +47,9 @@ call plug#begin('~/.config/plugged')
 
 call plug#end()
 
-source ~/software/config/nvim/plugins/plug_setting.vim
-source ~/software/config/nvim/plugins/coc.vim
-source ~/software/config/nvim/plugins/theme.vim
+source ~/software/config/nvim/neovim/plugins/plug_setting.vim
+source ~/software/config/nvim/neovim/plugins/coc.vim
+source ~/software/config/nvim/neovim/plugins/theme.vim
 
 
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
