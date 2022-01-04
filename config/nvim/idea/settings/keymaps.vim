@@ -22,7 +22,7 @@ map <Space> <Plug>(easymotion-prefix)
 
 " =============== 窗口  t ==================
 map ta :action Annotate<cr>  
-map tb :action ToggleLineBreakpoint<cr>  
+map tb :action ToggleLineBreakpoint<cr>
 map tm :action ToggleBookmark<cr>  
 map tp :action ActivateProjectToolWindow<CR>
 map ts :action ShowBookmarks<CR>
@@ -49,16 +49,18 @@ map gh :<C-u>action Back<CR>
 map gl :<C-u>action Forward<CR>
 map gg :<C-u>action Generate<CR>
 
-map mo :action OptimizeImports<CR>
+map <leader>o :action OptimizeImports<CR>
 
 " =============== 文件 ==================
-map mr :action RenameFile<CR>
-map me :action RenameElement<CR>
+map <leader>rf :action RenameFile<CR>
+map <leader>re :action RenameElement<CR>
 
 " =============== 运行 ==================
-map mc :action RunClass<CR>
-map md :action DebugClass<CR>
-map mu :action Run<CR>
-map mb :action Debug<CR>
-map mf :action ChooseDebugConfiguration<CR>
-map mt :action Stop<CR>
+map <leader>rc :action RunClass<CR>
+map <leader>ru :action Run<CR>
+
+map <leader>dc :action DebugClass<CR>
+map <leader>db :action Debug<CR>
+
+map <leader>cc :action ChooseDebugConfiguration<CR>
+map <leader>st :action Stop<CR>
