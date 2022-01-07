@@ -20,34 +20,35 @@ xmap <S-C-p> <Plug>AllWholeOccurrence
 map <Space> <Plug>(easymotion-prefix)
 
 
+map <C-[> :<ESC>
 " =============== 窗口  t ==================
-map ta :action Annotate<cr>  
-map tb :action ToggleLineBreakpoint<cr>
-map tm :action ToggleBookmark<cr>  
-map tp :action ActivateProjectToolWindow<CR>
-map ts :action ShowBookmarks<CR>
-map tv :action ViewBreakpoints<CR>
-map tf :action FindInPath<CR>
-map tr :action ReplaceInPath<CR>
-map te :action RecentFiles<CR>
-map tj :set splitbelow<CR>:split<CR>
-map tl :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
+" map ta :action Annotate<cr>
+"map tb :action ToggleLineBreakpoint<cr>
+"map tm :action ToggleBookmark<cr>
+"map tp :action ActivateProjectToolWindow<CR>
+"map ts :action ShowBookmarks<CR>
+"map tv :action ViewBreakpoints<CR>
+"map tf :action FindInPath<CR>
+"map tr :action ReplaceInPath<CR>
+"map te :action RecentFiles<CR>
+"map tj :set splitbelow<CR>:split<CR>
+"map tl :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
 
 " =============== 代码，跳转 g ==================
 map ge :action SearchEverywhere<CR>
-map ga :<C-u>action GotoAction<CR>
-map gb :<C-u>action JumpToLastChange<CR>
-map go :<C-u>action GotoClass<CR>
-map gd :<C-u>action GotoDeclaration<CR>
-map gs :<C-u>action GotoSuperMethod<CR>
-map gi :<C-u>action GotoImplementation<CR>
 map gf :<C-u>action GotoFile<CR>
 map gm :<C-u>action GotoSymbol<CR>
+map gc :<C-u>action GotoClass<CR>
+map ga :<C-u>action GotoAction<CR>
+
+map gs :<C-u>action GotoSuperMethod<CR>
+map gb :<C-u>action JumpToLastChange<CR>
+map gd :<C-u>action GotoDeclaration<CR>
+map gi :<C-u>action GotoImplementation<CR>
 map gu :<C-u>action ShowUsages<CR>
-map gt :<C-u>action GotoTest<CR>
 map gh :<C-u>action Back<CR>
 map gl :<C-u>action Forward<CR>
-map gt :<C-u>action Generate<CR>
+map gn :<C-u>action Generate<CR>
 
 map <leader>o :action OptimizeImports<CR>
 
