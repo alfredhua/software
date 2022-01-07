@@ -3,6 +3,8 @@ map <Leader> <Plug>(easymotion-prefix)
 
 nnoremap <silent> zt :TableModeToggle<CR>
 
+cnoreabbrev Ack Ack!
+
 " =============== 窗口相关 t ==================
 nnoremap <silent> ta :Git blame<CR>
 nnoremap <silent> tp :NERDTreeToggle<CR>
@@ -36,4 +38,3 @@ nnoremap <silent> <leader>7 :BufferGoto 7<CR>
 nnoremap <silent> <leader>8 :BufferGoto 8<CR>
 
 
-cnoreabbrev Ack Ack!

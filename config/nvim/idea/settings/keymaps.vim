@@ -47,7 +47,7 @@ map gu :<C-u>action ShowUsages<CR>
 map gt :<C-u>action GotoTest<CR>
 map gh :<C-u>action Back<CR>
 map gl :<C-u>action Forward<CR>
-map gg :<C-u>action Generate<CR>
+map gt :<C-u>action Generate<CR>
 
 map <leader>o :action OptimizeImports<CR>
 
