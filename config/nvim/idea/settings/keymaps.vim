@@ -35,10 +35,11 @@ map <C-[> :<ESC>
 "map tl :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
 
 " =============== 代码，跳转 g ==================
+map a :action SelectIn<CR>
 map ge :action SearchEverywhere<CR>
 map gf :<C-u>action GotoFile<CR>
 map gm :<C-u>action GotoSymbol<CR>
-map gc :<C-u>action GotoClass<CR>
+map go :<C-u>action GotoClass<CR>
 map ga :<C-u>action GotoAction<CR>
 
 map gs :<C-u>action GotoSuperMethod<CR>
