@@ -31,10 +31,10 @@ map tp :action ActivateProjectToolWindow<CR>
 map tt :action ActivateTerminalToolWindow<CR>
 map tb :set splitbelow<CR>:split<CR>
 map tl :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
-map <leader>m :action ToggleBookmark<cr>
 map tm :action ShowBookmarks<CR>
 map tb :action ToggleLineBreakpoint<cr>
 
+map <leader>m :action ToggleBookmark<cr>
 map <leader>tp :action SelectIn<CR>
 map <leader>tn :action Generate<CR>
 
