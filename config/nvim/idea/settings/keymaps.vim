@@ -22,21 +22,20 @@ map <Space> <Plug>(easymotion-prefix)
 
 map <C-[> :<ESC>
 " =============== 窗口  t ==================
-" map ta :action Annotate<cr>
+"map ta :action Annotate<cr>
 "map tv :action ViewBreakpoints<CR>
 "map tf :action FindInPath<CR>
 "map tr :action ReplaceInPath<CR>
 "map te :action RecentFiles<CR>
 map tp :action ActivateProjectToolWindow<CR>
 map tt :action ActivateTerminalToolWindow<CR>
-map tb :set splitbelow<CR>:split<CR>
-map tl :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
+map tsb :set splitbelow<CR>:split<CR>
+map tsl :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
 map tm :action ShowBookmarks<CR>
 map tb :action ToggleLineBreakpoint<cr>
-
-map <leader>m :action ToggleBookmark<cr>
-map <leader>tp :action SelectIn<CR>
+map <M-t> :action SelectIn<CR>
 map <leader>tn :action Generate<CR>
+map <leader>ts :action ToggleFullScreen<CR>
 
 " =============== 代码，跳转 g ==================
 map ge :action SearchEverywhere<CR>
@@ -62,9 +61,10 @@ map <leader>re :action RenameElement<CR>
 " =============== 运行 ==================
 map <leader>rc :action RunClass<CR>
 map <leader>ru :action Run<CR>
-
 map <leader>dc :action DebugClass<CR>
 map <leader>db :action Debug<CR>
-
 map <leader>cc :action ChooseDebugConfiguration<CR>
 map <leader>st :action Stop<CR>
+
+
+map <leader>m :action ToggleBookmark<cr>
