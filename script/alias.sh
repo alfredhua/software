@@ -1,4 +1,7 @@
 #!/bin/sh
+
+uname=`uname`
+
 ##============== docker ============
 alias denter="docker_enter"
 alias dstart="docker_compose_start"
