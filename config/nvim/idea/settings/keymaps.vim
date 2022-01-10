@@ -33,9 +33,11 @@ map tsb :set splitbelow<CR>:split<CR>
 map tsl :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
 map tm :action ShowBookmarks<CR>
 map tb :action ToggleLineBreakpoint<cr>
-map <M-t> :action SelectIn<CR>
 map <leader>tn :action Generate<CR>
 map <leader>ts :action ToggleFullScreen<CR>
+
+map <M-t> :action SelectIn<CR>
+map <leader>tg :action RecentProjectListGroup<CR>
 
 " =============== 代码，跳转 g ==================
 map ge :action SearchEverywhere<CR>
