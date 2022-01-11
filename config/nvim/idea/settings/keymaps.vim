@@ -19,7 +19,6 @@ xmap <S-C-p> <Plug>AllWholeOccurrence
 
 map <Space> <Plug>(easymotion-prefix)
 
-
 map <leader>- :action EditorDecreaseFontSize<CR>
 map <leader>= :action EditorIncreaseFontSize<CR>
 
