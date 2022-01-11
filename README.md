@@ -1,5 +1,15 @@
 # 配置
 
+执行 tool/init.sh	
+
+idea 插件：
+
+ideaVim 
+ideaVim-EasyMotion
+ideaVimExtension
+maven helper
+AceJump
+leetcode
 
 ```
 filename:
@@ -23,5 +33,6 @@ public class $!velocityTool.camelCaseName(${question.titleSlug})_$!{question.fro
 }
 
 ```
-执行 tool/init.sh	
+
+
 
