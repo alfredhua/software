@@ -7,20 +7,15 @@ services:
     privileged: true
     environment:
       TZ: Asia/Shanghai
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     ports:
-      - '3306:3306'
+      - '3306:${MYSQL_PORT}'
     volumes:
-      - mysql_data:/var/lib/mysql
-      - mysql_conf:/etc/mysql/conf.d
+      - ${MYSQL_DATA_PATH}:/var/lib/mysql
+      - ${MYSQL_CONFIG_PATH}:/etc/mysql/conf.d
     networks:
       - net
         
-volumes:
-  mysql_data:
-    driver: local
-  mysql_conf:
-    driver: local
 networks:
   net:
     external: false

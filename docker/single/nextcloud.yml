@@ -1,0 +1,16 @@
+version: '3'
+services:
+  nextcloud:
+    image: nextcloud 
+    container_name: nextcloud
+    restart: always
+    volumes:
+      - "${DATA_DIR}/nextcloud:/var/www/html"
+    environment:
+      MYSQL_HOST: 
+      MYSQL_DATABASE: nextcloud
+      MYSQL_USER: root
+      MYSQL_PASSWORD: nopassword
+      VIRTUAL_HOST: ${HOST}
+      LETSENCRYPT_HOST: ${HOST}
+  

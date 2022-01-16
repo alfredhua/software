@@ -7,12 +7,10 @@ services:
     container_name: zookeeper
     ports:
       - 2181:2181
+    volumes:
+      - ${ZK_DATA_PATH}:/data
     networks:
       - net
-
-volumes:
-  zk_data:
-    driver: local
 
 networks:
   net:
