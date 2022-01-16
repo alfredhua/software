@@ -4,13 +4,15 @@ services:
     image: nextcloud 
     container_name: nextcloud
     restart: always
+    ports:
+      - '8000:80'
     volumes:
-      - "${DATA_DIR}/nextcloud:/var/www/html"
+      - "${NEXT_CLOUD_PORT}/nextcloud:/var/www/html"
     environment:
-      MYSQL_HOST: 
+      MYSQL_HOST: ${NEXT_CLOUD_MYSQL_HOST}
       MYSQL_DATABASE: nextcloud
       MYSQL_USER: root
-      MYSQL_PASSWORD: nopassword
-      VIRTUAL_HOST: ${HOST}
-      LETSENCRYPT_HOST: ${HOST}
+      MYSQL_PASSWORD: root
+      VIRTUAL_HOST: ${NEXT_CLOUD_VIRTUAL_HOST}
+      LETSENCRYPT_HOST: ${NEXT_CLOUD_LETSENCRYPT_HOST}
   
