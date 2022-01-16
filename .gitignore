@@ -1,7 +1,6 @@
 .DS_Store
-
-/single/data/*
-/many/data/*
+docker/single/data/*
+docker/cluster/data/*
 /soft/*
 !/soft/install
 !/soft/install.sh
