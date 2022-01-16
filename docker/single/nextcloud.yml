@@ -4,6 +4,7 @@ services:
     image: nextcloud 
     container_name: nextcloud
     restart: always
+    privileged:true
     ports:
       - '8000:80'
     volumes:
