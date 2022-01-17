@@ -10,8 +10,13 @@ services:
     volumes:
       - ${ZK_DATA_PATH}:/data
     networks:
-      - net
-
+      net:
+        ipv4_address: 172.19.0.4
 networks:
-  net:
-    external: false
+   net:
+      ipam:
+         config:
+         - subnet: 172.19.0.0/16
+           gateway: 172.19.0.1
+
+
