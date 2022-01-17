@@ -14,11 +14,11 @@ services:
       - ${REDIS_CONFIG_PATH}:/etc/redis
     networks:
       net:
-        ipv4_address: 172.19.0.3
+        ipv4_address: ${REDIS_IP}
 
 networks:
    net:
       ipam:
          config:
-         - subnet: 172.19.0.0/16
-           gateway: 172.19.0.1     
+         - subnet: ${SUB_NET}
+           gateway: ${GATEWAY_IP}
