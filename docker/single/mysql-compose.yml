@@ -14,8 +14,11 @@ services:
       - ${MYSQL_DATA_PATH}:/var/lib/mysql
       - ${MYSQL_CONFIG_PATH}:/etc/mysql/conf.d
     networks:
-      - net
-        
+      net:
+        ipv4_address: 172.19.0.2
 networks:
-  net:
-    external: false
+   net:
+      ipam:
+         config:
+         - subnet: 172.19.0.0/16
+           gateway: 172.19.0.1

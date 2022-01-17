@@ -13,8 +13,12 @@ services:
       - ${REDIS_DATA_PATH}:/data
       - ${REDIS_CONFIG_PATH}:/etc/redis
     networks:
-      - net
-      
+      net:
+        ipv4_address: 172.19.0.3
+
 networks:
-  net:
-    external: false
+   net:
+      ipam:
+         config:
+         - subnet: 172.19.0.0/16
+           gateway: 172.19.0.1     
