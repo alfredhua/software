@@ -1,17 +1,9 @@
 version: '3'
 services:
-  cerebro:
-    image: lmenezes/cerebro:0.8.3
-    container_name: cerebro
-    ports:
-      - "9000:9000"
-    command:
-      - -Dhosts.0.host=http://es:9200
-    networks:
-      - net
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.1.0
     container_name: es
+    privileged: true
     environment:
       - discovery.type=single-node
       - cluster.name=elasticsearch
@@ -23,19 +15,34 @@ services:
         soft: -1
         hard: -1
     volumes:
-      - es_data:/usr/share/elasticsearch
+      - ${ES_DATA_PATH}:/usr/share/elasticsearch/data
     ports:
-      - "9200:9200"
-      - "9300:9300"
+      - "${ES_PORT}:9200"
+      - "${ES_PORT2}:9300"
     networks:
-      - net
+      net:
+        ipv4_address: ${ES_IP}
+
+  cerebro:
+    image: lmenezes/cerebro:0.8.3
+    container_name: cerebro
+    privileged: true
+    ports:
+      - "${CEREBRO_PORT}:9000"
+    command:
+      - -Dhosts.0.host=http://${ES_IP}:9200
+    networks:
+      net:
+        ipv4_address: ${CEREBRO_IP}
+
   kibana:
     image: docker.elastic.co/kibana/kibana:7.1.0
     container_name: kibana
+    privileged: true
     ports:
       - "5601:5601"
     environment:
-      - elasticsearch.hosts=http://es:9200
+      - elasticsearch.hosts=http://${ES_IP}:9200
       - server.name=kibana
       - server.host=0
       - I18N_LOCALE=zh-CN
@@ -43,11 +50,12 @@ services:
       - TIMELION_ENABLED=true
       - XPACK_MONITORING_COLLECTION_ENABLED="true"
     networks:
-      - net
-volumes:
-  es_data:
-    driver: local
+      net:
+        ipv4_address: ${KIBANA_IP}
 
 networks:
-  net:
-    external: false
+   net:
+      ipam:
+         config:
+         - subnet: ${SUB_NET}
+           gateway: ${GATEWAY_IP}
