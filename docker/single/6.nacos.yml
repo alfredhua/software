@@ -8,8 +8,8 @@ services:
     - PREFER_HOST_MODE=hostname
     - MODE=standalone
     ports:
-     - "${NACOS_IP}:8848"
-     - "${NACOS_IP2}:9100"
+     - "${NACOS_PORT}:8848"
+     - "${NACOS_PORT2}:9100"
     networks:
       net:
         ipv4_address: ${NACOS_IP}
