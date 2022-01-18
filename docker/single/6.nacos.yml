@@ -8,15 +8,15 @@ services:
     - PREFER_HOST_MODE=hostname
     - MODE=standalone
     ports:
-     - "8848:8848"
-     - "9100:9100"
+     - "${NACOS_IP}:8848"
+     - "${NACOS_IP2}:9100"
     networks:
-      - net
+      net:
+        ipv4_address: ${NACOS_IP}
 
-volumes:
-  nacos_data:
-    driver: local
-    
 networks:
-  net:
-    external: false
+   net:
+      ipam:
+         config:
+         - subnet: ${SUB_NET}
+           gateway: ${GATEWAY_IP}

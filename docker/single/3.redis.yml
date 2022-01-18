@@ -6,7 +6,7 @@ services:
     container_name: redis
     privileged: true
     ports:
-      - 6379:${REDIS_PORT}
+      - ${REDIS_PORT}:6379
     command: 
       redis-server --appendonly yes
     volumes:

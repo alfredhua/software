@@ -1,0 +1,25 @@
+version: '3'
+services:
+  rabbitmq:
+    image: 'rabbitmq'
+    restart: always
+    privileged: true
+    container_name: rabbitmq
+    ports:
+      - ${RABBITMQ_PORT}:5672
+      - ${RABBITMQ_WEB_PORT}:15672
+    environment:
+      - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER}
+      - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}
+    volumes:
+      - ${RABBITMQ_DATA_PATH}:/var/lib/rabbitmq
+    networks:
+      net:
+        ipv4_address: ${RABBITMQ_IP}
+
+networks:
+   net:
+      ipam:
+         config:
+         - subnet: ${SUB_NET}
+           gateway: ${GATEWAY_IP}
