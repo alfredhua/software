@@ -7,7 +7,15 @@ alias denter="docker_enter"
 alias dstart="docker_compose_start"
 alias dstop="docker_compose_stop"
 alias dps="docker ps -a"
+alias dlogs="docker_logs"
+alias dinspect="docker_inspect"
 
+function docker_inspect(){
+    docker inspect $1 
+}
+function docker_logs(){
+    docker logs $1 
+}
 function docker_enter(){
     docker exec -it $1 bash
 }
