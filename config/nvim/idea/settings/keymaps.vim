@@ -7,6 +7,7 @@ set commentary  " gc
 set ReplaceWithRegister  " gr grr
 set argtextobj  " 参数 (d,c,v)aa/ia
 set exchange  " 更换，cx(iw,ap), cxx, X, cxc
+"set keep-english-in-normal
 
 nmap <C-m> <Plug>NextWholeOccurrence
 xmap <C-m> <Plug>NextWholeOccurrence
@@ -67,12 +68,12 @@ map <leader>o :action OptimizeImports<CR>
 map <leader>rf :action RenameFile<CR>
 map <leader>re :action RenameElement<CR>
 
-" =============== 运行 ==================
-map <leader>rc :action RunClass<CR>
-map <leader>ru :action Run<CR>
-map <leader>dc :action DebugClass<CR>
-map <leader>db :action Debug<CR>
-map <leader>cc :action ChooseDebugConfiguration<CR>
+" =============== 运行 leader s ==================
+map <leader>sr :action Run<CR>
+map <leader>sb :action Debug<CR>
+map <leader>sc :action RunClass<CR>
+map <leader>sd :action DebugClass<CR>
+map <leader>sf :action ChooseDebugConfiguration<CR>
 map <leader>st :action Stop<CR>
 
 
