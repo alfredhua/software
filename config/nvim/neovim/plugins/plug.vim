@@ -27,10 +27,11 @@ call plug#begin('~/.config/plugged')
 		Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 		" =============== search ==================
-		Plug '/usr/local/opt/fzf'
-		Plug 'junegunn/fzf.vim'
-		Plug 'brooth/far.vim'
-		Plug 'mileszs/ack.vim'
+		"Plug '/usr/local/opt/fzf'
+		"Plug 'junegunn/fzf.vim'
+		"Plug 'brooth/far.vim'
+		"Plug 'mileszs/ack.vim'
+		Plug 'Yggdroot/LeaderF'
 
 		" =============== markdown ==================
 		Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
@@ -50,6 +51,7 @@ call plug#end()
 source ~/software/config/nvim/neovim/plugins/plug_setting.vim
 source ~/software/config/nvim/neovim/plugins/coc.vim
 source ~/software/config/nvim/neovim/plugins/theme.vim
+source ~/software/config/nvim/neovim/plugins/leaderf.vim
 
 
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
