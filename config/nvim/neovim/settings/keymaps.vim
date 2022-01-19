@@ -10,11 +10,13 @@ nnoremap <silent> <leader>8 :BufferGoto 8<CR>
 " =============== help ==================
 nnoremap <LEADER>hm :Maps<CR>
 nnoremap <LEADER>hh :tab help <right>
+
 map <Leader> <Plug>(easymotion-prefix)
 
 " =============== 代码跳转g ==================
 let g:coc_snippet_next = '<C-j>'
 let g:coc_snippet_prev = '<C-k>'
+
 nnoremap <silent> gd <Plug>(coc-definition)
 nnoremap <silent> gD :tab sp<CR><Plug>(coc-definition)
 nnoremap <silent> gy <Plug>(coc-type-definition)
@@ -38,8 +40,8 @@ nnoremap <silent> tl :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
 nnoremap <silent> gf :Leaderf file<CR>
 nnoremap <silent> gm :LeaderfMruCwd<CR> 
 nnoremap <silent> <leader>fs :LeaderfRgInteractive<CR> 
-nmap <unique> <leader>fra <Plug>LeaderfRgCwordLiteralNoBoundary 
-vmap <unique> <leader>fra <Plug>LeaderfRgVisualLiteralNoBoundary <CR>
+nmap <unique> <leader>fa <Plug>LeaderfRgCwordLiteralNoBoundary 
+vmap <unique> <leader>fa <Plug>LeaderfRgVisualLiteralNoBoundary <CR>
 	
 
 nnoremap <silent> zt :TableModeToggle<CR>

@@ -102,5 +102,6 @@ let g:tagbar_right=1
 let g:tagbar_autoclose=1
 
 " ========= closetag =========================
-let g:closetag_filetypes = 'html,xhtml,phtml,vue,jsx,js'
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js,*.jsx,*.vue,*.md'
+let g:closetag_filetypes = 'html,xhtml,phtml,vue,jsx,js,md'
 
