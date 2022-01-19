@@ -1,4 +1,5 @@
 inoremap <silent> <C-a> <ESC>A
+inoremap <silent> jj <ESC>
 
 vnoremap <silent> Y "+y
 
