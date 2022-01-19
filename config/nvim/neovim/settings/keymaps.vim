@@ -42,7 +42,7 @@ nnoremap <silent> gm :LeaderfMruCwd<CR>
 nnoremap <silent> <leader>fs :LeaderfRgInteractive<CR> 
 nmap <unique> <leader>fa <Plug>LeaderfRgCwordLiteralNoBoundary 
 vmap <unique> <leader>fa <Plug>LeaderfRgVisualLiteralNoBoundary <CR>
-	
+noremap gp :<C-U><C-R>=printf("Leaderf! rg -e %s ", expand("<cword>"))<CR>
 
 nnoremap <silent> zt :TableModeToggle<CR>
 

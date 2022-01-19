@@ -3,7 +3,7 @@
 "--------------
 "let g:Lf_Ctags="ctags"
 let g:Lf_WorkingDirectoryMode = 'AF'
-let g:Lf_RootMarkers = ['.logs','.git', '.svn', '.hg', '.project', '.root','node_module']
+let g:Lf_RootMarkers = ['.logs','.git', '.svn', '.hg', '.project', '.root','node_module','build','dist']
 let g:Lf_UseVersionControlTool=1 "default value, can ignore
 let g:Lf_DefaultExternalTool='rg'
 let g:Lf_PreviewInPopup = 1

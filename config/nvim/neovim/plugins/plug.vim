@@ -32,7 +32,7 @@ call plug#begin('~/.config/plugged')
 		"Plug 'junegunn/fzf.vim'
 		"Plug 'brooth/far.vim'
 		"Plug 'mileszs/ack.vim'
-		Plug 'Yggdroot/LeaderF'
+		Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 
 		" =============== markdown ==================
 		Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
