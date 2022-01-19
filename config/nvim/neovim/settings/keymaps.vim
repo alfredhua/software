@@ -33,6 +33,7 @@ nnoremap <silent> tp :NERDTreeToggle<CR>
 nnoremap <silent> tj :set splitbelow<CR>:split<CR>
 nnoremap <silent> tl :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
 
+
 " =============== leaderf ==================
 nnoremap <silent> gf :Leaderf file<CR>
 nnoremap <silent> gm :LeaderfMruCwd<CR> 

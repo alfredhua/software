@@ -21,6 +21,7 @@ call plug#begin('~/.config/plugged')
 		" =============== snippets ==================
 		Plug 'SirVer/ultisnips'
 		Plug 'honza/vim-snippets'
+		Plug 'MattesGroeger/vim-bookmarks'
 
 		" =============== code ==================
 		Plug 'neoclide/coc.nvim', {'branch': 'release'}

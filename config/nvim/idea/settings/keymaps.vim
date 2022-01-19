@@ -52,7 +52,6 @@ map tv :action ViewBreakpoints<CR>
 map te :action RecentFiles<CR>
 map tp :action ActivateProjectToolWindow<CR>
 map tt :action ActivateTerminalToolWindow<CR>
-map tm :action ShowBookmarks<CR>
 map tb :action ToggleLineBreakpoint<cr>
 
 " =============== 文件内部窗口 leader t ==================
@@ -62,7 +61,9 @@ map <leader>ti :action SelectIn<CR>
 map <leader>tg :action RecentProjectListGroup<CR>
 map <leader>tb :set splitbelow<CR>:split<CR>
 map <leader>tl :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
-map <leader>m :action ToggleBookmark<cr>
+
+map mm :action ToggleBookmark<cr>
+map ma :action ShowBookmarks<CR>
 
 " =============== git leader g  ==================
 map <leader>gb :action Annotate<cr>
