@@ -7,7 +7,7 @@ set commentary  " gc
 set ReplaceWithRegister  " gr grr
 set argtextobj  " 参数 (d,c,v)aa/ia
 set exchange  " 更换，cx(iw,ap), cxx, X, cxc
-"set keep-english-in-normal
+set keep-english-in-normal
 
 nmap <C-m> <Plug>NextWholeOccurrence
 xmap <C-m> <Plug>NextWholeOccurrence
