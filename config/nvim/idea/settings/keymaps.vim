@@ -37,7 +37,7 @@ map gl :<C-u>action Forward<CR>
 " =============== 搜索相关 g ==================
 map gf :action GotoFile<CR>
 map gp :action FindInPath<CR>
-map gr :action ReplaceInPath<CR>
+map ge :action ReplaceInPath<CR>
 
 " =============== 运行 leader r ==================
 map <leader>rr :action Run<CR>

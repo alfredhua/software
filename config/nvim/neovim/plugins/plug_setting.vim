@@ -105,3 +105,7 @@ let g:tagbar_autoclose=1
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js,*.jsx,*.vue,*.md'
 let g:closetag_filetypes = 'html,xhtml,phtml,vue,jsx,js,md'
 
+
+" ========= bookmarks =========================
+let g:bookmark_auto_save = 1
+
