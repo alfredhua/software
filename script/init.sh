@@ -13,7 +13,7 @@ echo "source $HOME/software/base.sh " >> $HOME/.zshrc
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-brew install zsh-syntax-highlighting fzf ack ctags-exuberant diff-so-fancy
+brew install zsh-syntax-highlighting fzf ack ctags-exuberant diff-so-fancy ripgrep
 
 pip3 install ranger-fm pynvim
 
