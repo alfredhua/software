@@ -33,8 +33,6 @@ call plug#begin('~/.config/plugged')
 		" =============== markdown ==================
 		Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 		Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle', 'for': ['text', 'markdown', 'vim-plug'] }
-		Plug 'mzlogin/vim-markdown-toc', { 'for': ['gitignore', 'markdown', 'vim-plug'] }
-		Plug 'suan/vim-instant-markdown'
 
 		" =========== theme ============
 		Plug 'kyazdani42/nvim-web-devicons'

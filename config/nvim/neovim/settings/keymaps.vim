@@ -13,7 +13,6 @@ nmap      <silent>      <leader>7        :BufferGoto 7<CR>
 nmap      <silent>      <leader>8        :BufferGoto 8<CR>
 
 " =============== bookmarks ==================
-nmap      <silent>      <Leader><Leader> <Plug>BookmarkToggle
 nmap      <silent>      mm               <Plug>BookmarkToggle
 nmap      <silent>      mc               <Plug>BookmarkClearAll
 nmap      <silent>      ms               <Plug>BookmarkShowAll
@@ -41,12 +40,12 @@ nmap      <silent>      tj               :set splitbelow<CR>:split<CR>
 nmap      <silent>      tl               :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
 
 " =============== leaderf ==================
-nmap      <silent>      gf               :Leaderf file<CR>
-nmap      <silent>      gm               :LeaderfMruCwd<CR>
+nmap      <silent>      <leader>ff       :Leaderf file<CR>
+nmap      <silent>      <leader>fm       :LeaderfMruCwd<CR>
+nmap      <silent>      <leader>fp       :<C-U><C-R>=printf("Leaderf! rg -e %s ", expand("<cword>"))<CR>
 nmap      <silent>      <leader>fs       :LeaderfRgInteractive<CR>
 nmap      <unique>      <leader>fa       <Plug>LeaderfRgCwordLiteralNoBoundary
 vmap      <unique>      <leader>fa       <Plug>LeaderfRgVisualLiteralNoBoundary <CR>
-nmap      <silent>      gp               :<C-U><C-R>=printf("Leaderf! rg -e %s ", expand("<cword>"))<CR>
 
 nmap      <silent>      zt               :TableModeToggle<CR>
 
