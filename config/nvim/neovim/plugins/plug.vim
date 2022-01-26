@@ -28,10 +28,6 @@ call plug#begin('~/.config/plugged')
 		Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 		" =============== search ==================
-		"Plug '/usr/local/opt/fzf'
-		"Plug 'junegunn/fzf.vim'
-		"Plug 'brooth/far.vim'
-		"Plug 'mileszs/ack.vim'
 		Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 
 		" =============== markdown ==================
