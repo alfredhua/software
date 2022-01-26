@@ -34,9 +34,3 @@ public class $!velocityTool.camelCaseName(${question.titleSlug})_$!{question.fro
 
 ```
 
-|容器|ip|
-|---|---|
-|mysql| 172.19.0.2|
-|redis| 172.19.0.3|
-|zk| 172.19.0.4|
-
