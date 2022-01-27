@@ -12,7 +12,7 @@ call plug#begin('~/.config/plugged')
 		Plug 'tpope/vim-surround'
 		Plug 'easymotion/vim-easymotion'
 		Plug 'tommcdo/vim-exchange'
-		Plug 'preservim/nerdcommenter'
+		Plug 'tpope/vim-commentary'
 		Plug 'alvan/vim-closetag'
 		Plug 'jiangmiao/auto-pairs'
 		Plug 'terryma/vim-multiple-cursors'
