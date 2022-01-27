@@ -5,8 +5,6 @@ vnoremap <silent> Y "+y
 
 nnoremap <silent> > >>
 nnoremap <silent> P "+p
-nnoremap <silent> Q :q<CR>
-nnoremap <silent> <C-q> :bd<CR>
 nnoremap <silent> <C-s> :w<CR>
 nnoremap <silent> M J
 nnoremap <silent> K 5k
