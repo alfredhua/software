@@ -35,7 +35,7 @@ let g:rnvimr_layout = {
 "let g:vimspector_enable_mappings = 'HUMAN'
 "let g:UltiSnipsEditSplit="vertical"
 "let g:UltiSnipsSnippetDirectories=[$HOME.'/software/config/nvim/neovim/Ultisnips']
-
+"
 
 " =============== vim-easy-align ==================
 xmap ga <Plug>(EasyAlign)

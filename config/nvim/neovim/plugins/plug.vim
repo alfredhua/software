@@ -1,7 +1,7 @@
 call plug#begin('~/.config/plugged')
 
 		" =============== window ==================
-    Plug 'preservim/nerdtree', {'on':'NERDTreeToggle'}
+		Plug 'preservim/nerdtree', {'on':'NERDTreeToggle'}
 		Plug 'kevinhwang91/rnvimr'
 		Plug 'Xuyuanp/nerdtree-git-plugin'
 		Plug 'tpope/vim-fugitive'
@@ -36,10 +36,11 @@ call plug#begin('~/.config/plugged')
 
 		" =========== theme ============
 		Plug 'kyazdani42/nvim-web-devicons'
-		Plug 'romgrk/barbar.nvim'
-		Plug 'itchyny/lightline.vim'
+		"Plug 'romgrk/barbar.nvim'
 		Plug 'mhartington/oceanic-next'
-		Plug 'joshdick/onedark.vim'
+		Plug 'itchyny/lightline.vim'
+		Plug 'akinsho/bufferline.nvim'
+
 
 call plug#end()
 

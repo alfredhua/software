@@ -5,20 +5,12 @@ if (has("termguicolors"))
 endif
 colorscheme OceanicNext 
 
-
-"let g:lightline = {
-"\'colorscheme': 'solarized',
-"\'active': {
-			"\   'left': [ [ 'mode', 'paste' ],
-			"\             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-"\},
-"\'component_function': {
-			"\   'gitbranch': 'FugitiveHead'
-			"\ },
-"\}
-
-"let bufferline = get(g:, 'bufferline', {})
-"let bufferline.icons = v:true
-
-
-
+lua << EOF
+require("bufferline").setup{
+	options = {
+		numbers="ordinal",
+		modified_icon = '●',
+		show_buffer_icons = true
+	}
+}
+EOF
