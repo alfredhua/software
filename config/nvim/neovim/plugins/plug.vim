@@ -17,6 +17,7 @@ call plug#begin('~/.config/plugged')
 		Plug 'jiangmiao/auto-pairs'
 		Plug 'terryma/vim-multiple-cursors'
 		Plug 'lambdalisue/suda.vim'
+		Plug 'vim-scripts/argtextobj.vim'
 
 		" =============== snippets ==================
 		Plug 'SirVer/ultisnips'
