@@ -1,5 +1,12 @@
 #!/bin/sh
 
+## 修改程序图标排列个数
+defaults write com.apple.dock springboard-columns -int 11
+
+defaults write com.apple.dock ResetLaunchPad -bool true
+
+killall Dock
+
 ## zsh install
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
