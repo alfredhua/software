@@ -9,6 +9,9 @@ source $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.
 # 设置
 
 #### node 
+export NVM_DIR="$HOME/.nvm"
+nvm() { . "$NVM_DIR/nvm.sh" ; nvm $@ ; }
+export PATH=$HOME/.nvm/versions/node/v12.22.10/bin/:$PATH
 
 ####  maven环境变量
 MAVEN_HOME=$SOFT_WARE_PATH/maven
