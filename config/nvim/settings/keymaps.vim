@@ -1,17 +1,20 @@
 inoremap <silent> <C-a> <ESC>A
 inoremap <C-[> <ESC>
 
-vnoremap <silent> Y "+y
-
-nnoremap <silent> > >>
-nnoremap <silent> P "+p
-nnoremap <silent> <C-s> :w<CR>
-nnoremap <silent> M J
 nnoremap <silent> K 5k
 nnoremap <silent> L 5l
 nnoremap <silent> H 5h
 nnoremap <silent> J 5j
-nnoremap <silent> N 0
+vnoremap <silent> K 5k
+vnoremap <silent> L 5l
+vnoremap <silent> H 5h
+vnoremap <silent> J 5j
+vnoremap <silent> Y "+y
+nnoremap <silent> > >>
+nnoremap <silent> P "+p
+nnoremap <silent> <C-s> :w<CR>
+nnoremap <silent> M J
+
 nnoremap <silent> U <C-r>
 nnoremap <silent> <LEADER><CR> :nohlsearch<CR>
 nnoremap <silent> <C-j> :bn<CR>
