@@ -1,34 +1,39 @@
 #!/bin/sh
 
 down_load_path=$HOME/software/soft
-dic=(
-[maven]="zip,apache-maven-3.8.3-bin.zip,apache-maven-3.8.3,https://dlcdn.apache.org/maven/maven-3/3.8.3/binaries/apache-maven-3.8.3-bin.zip"
-[gradle]="zip,gradle-6.0.1-bin.zip,gradle-6.0.1,https://downloads.gradle-dn.com/distributions/gradle-6.0.1-bin.zip "
-[flink]="tgz,flink-1.14.0-bin-scala_2.11.tgz,flink-1.14.0,https://dlcdn.apache.org/flink/flink-1.14.0/flink-1.14.0-bin-scala_2.11.tgz"
-[hadoop]="gz,hadoop-3.2.2.tar.gz,hadoop-3.2.2,https://ftp.jaist.ac.jp/pub/apache/hadoop/common/hadoop-3.2.2/hadoop-3.2.2.tar.gz"
-[jad]="zip,jad158g.mac.intel.zip,,https://varaneckas.com/jad/jad158g.mac.intel.zip"
-[scala]="tgz,scala-2.11.1.tgz,scala-2.11.1,https://downloads.lightbend.com/scala/2.11.1/scala-2.11.1.tgz"
+soft_list=(
+"maven,zip,apache-maven-3.8.3-bin.zip,apache-maven-3.8.3,https://dlcdn.apache.org/maven/maven-3/3.8.3/binaries/apache-maven-3.8.3-bin.zip"
+"gradle,zip,gradle-7.4-bin.zip,gradle-7.4,https://downloads.gradle-dn.com/distributions/gradle-7.4-bin.zip"
+"flink,tgz,flink-1.14.0-bin-scala_2.11.tgz,flink-1.14.0,https://dlcdn.apache.org/flink/flink-1.14.0/flink-1.14.0-bin-scala_2.11.tgz"
+"hadoop,gz,hadoop-3.2.2.tar.gz,hadoop-3.2.2,https://ftp.jaist.ac.jp/pub/apache/hadoop/common/hadoop-3.2.2/hadoop-3.2.2.tar.gz"
+"jad,zip,jad158g.mac.intel.zip,,https://varaneckas.com/jad/jad158g.mac.intel.zip"
+"scala,tgz,scala-2.11.1.tgz,scala-2.11.1,https://downloads.lightbend.com/scala/2.11.1/scala-2.11.1.tgz"
 )
 
 function install(){
 	echo ' begin install ' $1 
-	soft=${dic[$1]}
-	echo ${soft}
-	file_type=`echo ${soft}|awk -F[,] '{print $1}'`
-	file_name=`echo ${soft}|awk -F[,] '{print $2}'`
-	dic_name=`echo ${soft}|awk -F[,] '{print $3}'`
-	url=`echo ${soft}|awk -F[,] '{print $4}'`
-	echo $file_type $file_name $dic_name $url
-	if [ ! -d $down_load_path/$1 ]; then
-		echo "$1 download...."
-		cd $down_load_path && wget $url 
-		if [ "zip" == $file_type  ]; then
-			unzip -n $file_name -d $1
-		else
-			tar -xzvf $file_name  && mv $dic_name $1
+	for soft in ${soft_list[@]};
+	do
+		soft_name=`echo ${soft}|awk -F[,] '{print $1}'`
+		if [ $soft_name == $1 ]
+		then
+			file_type=`echo ${soft}|awk -F[,] '{print $2}'`
+			file_name=`echo ${soft}|awk -F[,] '{print $3}'`
+			dic_name=`echo ${soft}|awk -F[,] '{print $4}'`
+			url=`echo ${soft}|awk -F[,] '{print $5}'`
+			echo $file_type $file_name $dic_name $url
+			if [ ! -d $down_load_path/$1 ]; then
+				echo "$1 download...."
+				cd $down_load_path && wget $url 
+				if [ "zip" == $file_type  ]; then
+					unzip -n $file_name -d $1
+				else
+					tar -xzvf $file_name  && mv $dic_name $1
+				fi
+				rm -rf $file_name 
+			fi
 		fi
-		rm -rf $file_name 
-	fi
+	done;
 	echo ' end ' $1
 }
 

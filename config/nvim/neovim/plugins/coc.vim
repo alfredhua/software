@@ -9,6 +9,7 @@ let g:coc_global_extensions = [
 			\ 'coc-translator',
 			\ 'coc-vetur',
 			\ 'coc-tsserver',
+			\ 'coc-imselect',
 			\ 'coc-vimlsp']
 
 autocmd CursorHold * silent call CocActionAsync('highlight')
