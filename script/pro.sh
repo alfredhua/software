@@ -3,15 +3,15 @@
 ## 项目管理相关
 alias gclean="./gradlew clean"
 
-WORK_SPACE="$HOME/workspace"
 
+WORK_SPACE="$HOME/workspace"
 alias jblog="cd $WORK_SPACE/self/blog"
 alias jsoft="cd $HOME/software"
 alias jtest="cd $WORK_SPACE/self/test"
 alias jself="cd $WORK_SPACE/self"
 alias jopen="cd $WORK_SPACE/open"
 
-
+# =============== project ==================
 alias jpro="cd $WORK_SPACE/self/project"
 alias pbuildcommon="cd $WORK_SPACE/self/project && ./tool/build-common.sh"
 alias pdevadmin="cd $WORK_SPACE/self/project && ./tool/dev-start.sh admin"
@@ -20,7 +20,7 @@ alias pdevadmin="cd $WORK_SPACE/self/project && ./tool/dev-start.sh admin"
 alias pdevwebadmin="cd $WORK_SPACE/self/project/web-admin && npm run dev"
 alias pdevwebsite="cd $WORK_SPACE/self/project/web-site && npm run dev"
 
-### jd
+# =============== jd ==================
 alias jd="cd $WORK_SPACE/jd"
 alias jhg="cd $WORK_SPACE/jd/keeper"
 alias jpk="cd $WORK_SPACE/jd/keeper/pinkong"
