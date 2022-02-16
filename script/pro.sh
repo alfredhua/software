@@ -1,6 +1,8 @@
 #!/bin/sh
 
 ## 项目管理相关
+alias gclean="./gradlew clean"
+
 WORK_SPACE="$HOME/workspace"
 
 alias jblog="cd $WORK_SPACE/self/blog"
@@ -9,13 +11,14 @@ alias jtest="cd $WORK_SPACE/self/test"
 alias jself="cd $WORK_SPACE/self"
 alias jopen="cd $WORK_SPACE/open"
 
+
 alias jpro="cd $WORK_SPACE/self/project"
-alias p_build_common="cd $WORK_SPACE/self/project && ./tool/build-common.sh"
-alias p_build_server="cd $WORK_SPACE/self/project && ./tool/build-server.sh"
-
-
-
-alias gclean="./gradlew clean"
+alias pbuildcommon="cd $WORK_SPACE/self/project && ./tool/build-common.sh"
+alias pdevadmin="cd $WORK_SPACE/self/project && ./tool/dev-start.sh admin"
+alias pdevsite="cd $WORK_SPACE/self/project && ./tool/dev-start.sh site"
+alias pdevadmin="cd $WORK_SPACE/self/project && ./tool/dev-start.sh admin"
+alias pdevwebadmin="cd $WORK_SPACE/self/project/web-admin && npm run dev"
+alias pdevwebsite="cd $WORK_SPACE/self/project/web-site && npm run dev"
 
 ### jd
 alias jd="cd $WORK_SPACE/jd"
