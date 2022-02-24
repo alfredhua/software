@@ -3,7 +3,10 @@ syntax enable
 if (has("termguicolors"))
 	set termguicolors
 endif
-colorscheme OceanicNext 
+
+let g:gruvbox_italic=1
+" colorscheme OceanicNext 
+colorscheme gruvbox
 
 lua << EOF
 require("bufferline").setup{

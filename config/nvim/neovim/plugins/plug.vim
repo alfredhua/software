@@ -37,7 +37,8 @@ call plug#begin('~/.config/plugged')
 
 		" =========== theme ============
 		Plug 'kyazdani42/nvim-web-devicons'
-		Plug 'mhartington/oceanic-next'
+		" Plug 'mhartington/oceanic-next'
+		Plug 'morhetz/gruvbox'
 		Plug 'itchyny/lightline.vim'
 		Plug 'akinsho/bufferline.nvim'
 
