@@ -124,3 +124,9 @@ alias viidea="vim $HOME/software/config/nvim/setting/idea_keymap.vim"
 alias vibase="vim $HOME/software/base.sh"
 alias vipath="vim $HOME/software/soft/path.sh"
 alias viblog="cd $HOME/workspace/self/blog/ && vim ."
+
+##============== path ============
+alias jdown="cd $HOME/Downloads"
+alias jde="cd $HOME/Desktop"
+alias jdoc="cd $HOME/Documents"
+
