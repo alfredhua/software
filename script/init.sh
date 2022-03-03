@@ -5,6 +5,8 @@
 
 brew install zsh-syntax-highlighting fzf ack ctags-exuberant diff-so-fancy ripgrep n
 
+curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 #===========  修改程序图标排列个数 =======================
 defaults write com.apple.dock springboard-columns -int 11 && defaults write com.apple.dock ResetLaunchPad -bool true && killall Dock
 
