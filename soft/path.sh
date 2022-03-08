@@ -64,13 +64,13 @@ export PATH=$GRADLE_HOME:$PATH
 # export PATH=$PATH:$FLINK_HOME/bin/
 
 ## jdk8
-# export JAVA_8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_321.jdk/Contents/home
+export JAVA_8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_321.jdk/Contents/Home
 # export JAVA_11_HOME=/Library/Java/JavaVirtualMachines/jdk-11.0.13.jdk/Contents/Home
 # export JAVA_17_HOME=/Library/Java/JavaVirtualMachines/jdk-17.0.1.jdk/Contents/Home
 
-# export JAVA_HOME=$JAVA_8_HOME
+export JAVA_HOME=$JAVA_8_HOME
+export PATH=$PATH:$JAVA_HOME/bin/
 
-# export PATH=$PATH:$JAVA_HOME/bin/
 # export CLASS_PATH=.:$JAVA_HOME/bin:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 
 

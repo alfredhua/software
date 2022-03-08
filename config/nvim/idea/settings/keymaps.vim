@@ -11,6 +11,7 @@ set  keep-english-in-normal
 
 map  <Space>            <Plug>(easymotion-prefix)
 map  <C-[>              :<ESC>
+inoremap  jj            <ESC>
 nmap <C-q>              :q<CR>
 
 nmap <C-m>              <Plug>NextWholeOccurrence
