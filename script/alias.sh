@@ -130,3 +130,9 @@ alias jdown="cd $HOME/Downloads"
 alias jde="cd $HOME/Desktop"
 alias jdoc="cd $HOME/Documents"
 
+##============== heap ============
+
+alias heap="java_heap"
+function java_heap(){
+   java -Xmx2g -jar $HOME/software/soft/heap/ha457.jar
+}

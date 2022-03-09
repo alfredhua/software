@@ -7,4 +7,4 @@ docker/cluster/data/*
 !/soft/path.sh
 !/soft/vim
 !/soft/nvim
-!/soft/bak
+!/soft/heap
