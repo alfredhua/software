@@ -48,6 +48,7 @@ nmap <silent>   tl     :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
 " =============== leaderf ==================
 nmap <silent>  <leader>ff :Leaderf file<CR>
 nmap <silent>  <leader>fm :LeaderfMruCwd<CR>
+nmap <silent>  <leader>fl :<C-U><C-R>=printf("Leaderf line %s", "")<CR><CR>
 nmap <silent>  <leader>fp :<C-U><C-R>=printf("Leaderf! rg -e %s ", expand("<cword>"))<CR>
 nmap <silent>  <leader>fs :LeaderfRgInteractive<CR>
 nmap <unique>  <leader>fa <Plug>LeaderfRgCwordLiteralNoBoundary
