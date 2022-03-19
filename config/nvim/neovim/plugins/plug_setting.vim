@@ -51,22 +51,6 @@ vmap <C-_> <Plug>NERDCommenterToggle<CR>gv
 let g:far#enable_undo=1
 let g:far#mapping = { "replace_undo" : ["l"] }
 
-" =============== gitgutter ==================
-let g:gitgutter_sign_allow_clobber = 1
-let g:gitgutter_map_keys = 0
-let g:gitgutter_override_sign_column_highlight = 0
-let g:gitgutter_preview_win_floating = 1
-let g:gitgutter_sign_added = '▎'
-let g:gitgutter_sign_modified = '░'
-let g:gitgutter_sign_removed = '▏'
-let g:gitgutter_sign_removed_first_line = '▔'
-let g:gitgutter_sign_modified_removed = '▒'
-nnoremap <Space>gf :GitGutterFold<CR>
-nnoremap H :GitGutterPreviewHunk<CR>
-nnoremap <Space>g- :GitGutterPrevHunk<CR>
-nnoremap <Space>g= :GitGutterNextHunk<CR>
-" autocmd BufWritePost * GitGutter
-
 
 " =============== markdown ==================
 " vim-instany-markdown
@@ -105,7 +89,7 @@ let g:tagbar_autoclose=1
 " ========= closetag =========================
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js,*.jsx,*.vue,*.md'
 let g:closetag_filetypes = 'html,xhtml,phtml,vue,jsx,js,md'
-
+let g:closetag_shortcut = '>'
 
 " ========= bookmarks =========================
 let g:bookmark_auto_save = 1
@@ -122,3 +106,6 @@ let g:Lf_PreviewInPopup = 1
 let g:Lf_StlSeparator = { 'left': "\ue0b0", 'right': "\ue0b2", 'font': "DejaVu Sans Mono for Powerline" }
 let g:Lf_PreviewResult = {'Function': 0, 'BufTag': 0 }
 
+" ========= vim-multiple-cursors =========================
+let g:multi_cursor_start_word_key      = '<C-m>'
+let g:multi_cursor_select_all_word_key = '<A-m>'

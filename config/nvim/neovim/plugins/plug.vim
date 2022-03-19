@@ -4,7 +4,6 @@ call plug#begin('~/.config/plugged')
 		Plug 'preservim/nerdtree', {'on':'NERDTreeToggle'}
 		Plug 'kevinhwang91/rnvimr'
 		Plug 'Xuyuanp/nerdtree-git-plugin'
-		Plug 'tpope/vim-fugitive'
 
 		" =============== tool ==================
 		Plug 'junegunn/vim-easy-align'
