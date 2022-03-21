@@ -9,7 +9,6 @@ set  argtextobj          " 参数 (d,c,v)aa/ia
 set  exchange            " 更换，cx(iw,ap), cxx, X, cxc
 set  keep-english-in-normal
 
-map  <Space>            <Plug>(easymotion-prefix)
 map  <C-[>              :<ESC>
 inoremap  jj            <ESC>
 nmap <C-q>              :q<CR>
@@ -23,8 +22,20 @@ xmap <C-p>              <Plug>RemoveOccurrence
 xmap <S-C-p>            <Plug>AllWholeOccurrence
 xmap <S-C-p>            <Plug>AllWholeOccurrence
 
+map  <leader>1           :b1<CR>
+map  <leader>2           :b2<CR>
+map  <leader>3           :b3<CR>
+map  <leader>4           :b4<CR>
+map  <leader>5           :b5<CR>
+map  <leader>6           :b6<CR>
+map  <leader>7           :b7<CR>
+map  <leader>8           :b8<CR>
+map  <leader>9           :b9<CR>
+
 map  <leader>-           :action EditorDecreaseFontSize<CR>
 map  <leader>=           :action EditorIncreaseFontSize<CR>
+
+map <Leader> <Plug>(easymotion-prefix)
 
 " =============== 代码，跳转 g ==================
 map  ge                  :action SearchEverywhere<CR>
