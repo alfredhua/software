@@ -1,4 +1,5 @@
 source ~/software/config/nvim/settings/settings.vim
+
 source ~/software/config/nvim/settings/keymaps.vim
 			
 if has('ide')
