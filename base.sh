@@ -8,5 +8,4 @@ source $HOME/software/script/deploy.sh
 
 # Shell
 alias sh_clear_sclipse='$HOME/software/script/clear_eclipse_temp_file.sh'
-alias sh_install='$HOME/software/script/install.sh'
 
