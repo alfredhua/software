@@ -19,7 +19,7 @@ function install_pierced(){
 #===========  brew =======================
 function install_brew(){
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-	brew install neovim zsh-syntax-highlighting fzf ack ctags-exuberant diff-so-fancy ripgrep n
+	brew install zsh-syntax-highlighting fzf ack ctags-exuberant diff-so-fancy ripgrep n
 }
 
 #===========  zsh =======================
@@ -27,11 +27,13 @@ function install_brew(){
 function install_zsh(){
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 	cd $HOME/.oh-my-zsh/plugins && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+	brew install zsh-syntax-highlighting
 	echo "source $HOME/software/base.sh " >> $HOME/.zshrc
 }
 
 #===========  vim =======================
 function install_neovim(){
+	brew install neovim
 	curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	curl -Ls https://raw.githubusercontent.com/daipeihust/im-select/master/install_mac.sh | sh
 	ln -s ~/software/config/nvim/init.vim   ~/.config/nvim/init.vim
