@@ -4,9 +4,9 @@ if (has("termguicolors"))
 	set termguicolors
 endif
 
-let g:gruvbox_italic=1
-" colorscheme OceanicNext 
-colorscheme gruvbox
+" let g:gruvbox_italic=1
+" colorscheme gruvbox
+colorscheme onedark
 
 lua << EOF
 require("bufferline").setup{

@@ -39,7 +39,7 @@ call plug#begin('~/.config/plugged')
 		Plug 'morhetz/gruvbox'
 		Plug 'itchyny/lightline.vim'
 		Plug 'akinsho/bufferline.nvim'
-
+		Plug 'joshdick/onedark.vim'
 
 call plug#end()
 
