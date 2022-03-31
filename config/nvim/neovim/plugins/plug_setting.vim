@@ -1,7 +1,7 @@
 " ============= rnvimr文件浏览插件 =================
 " 可以打开后进行文件的复制，粘贴，删除等操作
 " ==================================================
-let g:rnvimr_enable_ex = 1
+" let g:rnvimr_enable_ex = 1
 let g:rnvimr_enable_picker = 1
 let g:rnvimr_draw_border = 0
 
@@ -11,7 +11,6 @@ let g:rnvimr_ranger_views = [
 			\ {'minwidth': 50, 'maxwidth': 89, 'ratio': [1,1]},
 			\ {'maxwidth': 49, 'ratio': [1]}
 			\ ]
-
 let g:rnvimr_action = {
 			\ '<C-t>': 'NvimEdit tabedit',
 			\ '<C-x>': 'NvimEdit split',

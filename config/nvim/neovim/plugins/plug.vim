@@ -36,7 +36,7 @@ call plug#begin('~/.config/plugged')
 
 		" =========== theme ============
 		Plug 'kyazdani42/nvim-web-devicons'
-		Plug 'morhetz/gruvbox'
+		" Plug 'morhetz/gruvbox'
 		Plug 'itchyny/lightline.vim'
 		Plug 'akinsho/bufferline.nvim'
 		Plug 'joshdick/onedark.vim'
