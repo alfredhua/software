@@ -134,5 +134,5 @@ alias jdoc="cd $HOME/Documents"
 
 alias heap="java_heap"
 function java_heap(){
-   cd $HOME/Downloads && java -Xmx2g -jar $HOME/software/soft/heap/ha457.jar
+   cd $HOME/Downloads && java -Xmx4g -jar $HOME/software/soft/heap/ha457.jar
 }
