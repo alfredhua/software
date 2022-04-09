@@ -94,7 +94,7 @@ let g:closetag_shortcut = '>'
 let g:bookmark_auto_save = 1
 
 " ========= leaderf =========================
-let g:Lf_CommandMap = {'<C-P>': ['<Up>'], '<C-N>': ['<Down>']}
+let g:Lf_CommandMap = {'<C-j>': ['<C-n>'], '<C-k>': ['<C-p>']}
 let g:Lf_HideHelp = 1
 let g:Lf_UseCache = 0
 let g:Lf_UseVersionControlTool = 0
