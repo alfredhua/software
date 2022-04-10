@@ -24,13 +24,8 @@ call plug#begin('~/.config/plugged')
 		Plug 'MattesGroeger/vim-bookmarks'
 
 		" =============== code ==================
-		" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+		Plug 'neoclide/coc.nvim', {'branch': 'release'}
 		Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-		Plug 'neovim/nvim-lspconfig'
-		Plug 'hrsh7th/nvim-cmp' " Autocompletion plugin
-		Plug 'hrsh7th/cmp-nvim-lsp' " LSP source for nvim-cmp
-		Plug 'saadparwaiz1/cmp_luasnip' " Snippets source for nvim-cmp
-		Plug 'L3MON4D3/LuaSnip' " Snippets plugin
 
 		" =============== search ==================
 		" Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
@@ -62,7 +57,9 @@ autocmd VimEnter *
 
 source ~/software/config/nvim/neovim/themes.vim
 
+source ~/software/config/nvim/neovim/settings/lsp.vim
 let s:files=split(globpath("~/software/config/nvim/neovim/settings/", '*'),'\n')
+
 for s:filePath in s:files
 	runtime s:filePath
 endfor

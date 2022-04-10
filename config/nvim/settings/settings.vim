@@ -20,7 +20,10 @@ set viewoptions=cursor,folds,slash,unix
 set wrap
 set tw=0
 set indentexpr=
-set foldmethod=indent
+
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
+
 set foldlevel=99
 set foldenable
 set formatoptions-=tc
