@@ -52,3 +52,4 @@ set fileencodings=utf-8,chinese,latin-1
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 autocmd BufNewFile,BufRead *.html,*.hml set filetype=md
 autocmd BufNewFile,BufRead *.xml set filetype=xml
+
