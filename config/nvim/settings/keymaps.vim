@@ -29,10 +29,9 @@ nnoremap <LEADER>e :e ~/software/config/nvim/init.vim<CR>
 nnoremap <LEADER>ek :e ~/software/config/nvim/settings/keymaps.vim<CR>
 nnoremap <LEADER>es :e ~/software/config/nvim/settings/settings.vim<CR>
 " neovim
-nnoremap <LEADER>ep :e ~/software/config/nvim/neovim/plugins/plug.vim<CR>
-nnoremap <LEADER>ec :e ~/software/config/nvim/neovim/plugins/coc.vim<CR>
-nnoremap <LEADER>et :e ~/software/config/nvim/neovim/plugins/theme.vim<CR>
-nnoremap <LEADER>en :e ~/software/config/nvim/neovim/settings/keymaps.vim<CR>
+nnoremap <LEADER>ep :e ~/software/config/nvim/neovim/plug.vim<CR>
+nnoremap <LEADER>et :e ~/software/config/nvim/neovim/theme.vim<CR>
+nnoremap <LEADER>en :e ~/software/config/nvim/neovim/keymaps.vim<CR>
 " idea 
 nnoremap <LEADER>ed :e ~/software/config/nvim/idea/settings/keymaps.vim<CR>
 " vscode

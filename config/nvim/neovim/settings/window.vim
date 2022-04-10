@@ -28,36 +28,6 @@ let g:rnvimr_layout = {
 			\ 'style': 'minimal'
 			\ }
 
-
-" ===============  snippets ==================
-let g:UltiSnipsUsePythonVersion=3
-let g:vimspector_enable_mappings = 'HUMAN'
-let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsSnippetDirectories=[$HOME.'/software/config/nvim/neovim/Ultisnips']
-
-
-" =============== vim-easy-align ==================
-xmap ga <Plug>(EasyAlign)
-map ga <Plug>(EasyAlign)
-
-
-" =============== nerd comment ==================
-nmap <C-_> <Plug>NERDCommenterToggle
-vmap <C-_> <Plug>NERDCommenterToggle<CR>gv
-
-
-" =============== far ==================
-let g:far#enable_undo=1
-let g:far#mapping = { "replace_undo" : ["l"] }
-
-
-" =============== markdown ==================
-" vim-instany-markdown
-let g:instant_markdown_autostart = 0
-let g:instant_markdown_port = 8888
-nnoremap mp :InstantMarkdownPreview<CR>
-
-
 " =============== nerdtree ==================
 " 创建：ma，删除：md，修改：mm
 let g:NERDTreeWinSize = 25 "设定 NERDTree 视窗大小
@@ -74,37 +44,17 @@ let g:NERDTreeHidden=0     "不显示隐藏文件
 let NERDTreeDirArrows = 1
 
 
-" =============== suda ==================
-cnoreabbrev sudowrite w suda://%
-cnoreabbrev sw w suda://%
-
-
 " ============ 函数窗口 ===========
 " 成员函数,变量列表
 let g:tagbar_width=30
 let g:tagbar_right=1
 let g:tagbar_autoclose=1
 
-" ========= closetag =========================
-let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js,*.jsx,*.vue,*.md'
-let g:closetag_filetypes = 'html,xhtml,phtml,vue,jsx,js,md'
-let g:closetag_shortcut = '>'
 
 " ========= bookmarks =========================
 let g:bookmark_auto_save = 1
 
-" ========= leaderf =========================
-let g:Lf_CommandMap = {'<C-j>': ['<C-n>'], '<C-k>': ['<C-p>']}
-let g:Lf_HideHelp = 1
-let g:Lf_UseCache = 0
-let g:Lf_UseVersionControlTool = 0
-let g:Lf_IgnoreCurrentBufferName = 1
-" popup mode
-let g:Lf_WindowPosition = 'popup'
-let g:Lf_PreviewInPopup = 1
-let g:Lf_StlSeparator = { 'left': "\ue0b0", 'right': "\ue0b2", 'font': "DejaVu Sans Mono for Powerline" }
-let g:Lf_PreviewResult = {'Function': 0, 'BufTag': 0 }
 
-" ========= vim-multiple-cursors =========================
-let g:multi_cursor_start_word_key      = '<C-m>'
-let g:multi_cursor_select_all_word_key = '<A-m>'
+" =============== far ==================
+let g:far#enable_undo=1
+let g:far#mapping = { "replace_undo" : ["l"] }

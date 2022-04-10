@@ -49,16 +49,6 @@ call plug#begin('~/.config/plugged')
 
 call plug#end()
 
-" source ~/software/config/nvim/neovim/plugins/coc.vim
-" source ~/software/config/nvim/neovim/plugins/leaderf.vim
-source ~/software/config/nvim/neovim/plugins/lsp.vim
-source ~/software/config/nvim/neovim/plugins/plug_setting.vim
-source ~/software/config/nvim/neovim/plugins/telescope.vim
-source ~/software/config/nvim/neovim/ui/ui.vim
-
-
-let g:dashboard_default_executive ='clap'
-
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
 	silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs  
 				\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -69,4 +59,21 @@ autocmd VimEnter *
   \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   \|   PlugInstall --sync | q
   \| endif
+
+source ~/software/config/nvim/neovim/themes.vim
+
+let s:files=split(globpath("~/software/config/nvim/neovim/settings/", '*'),'\n')
+for s:filePath in s:files
+	runtime s:filePath
+endfor
+
+" source ~/software/config/nvim/neovim/settings/*
+" source ~/software/config/nvim/neovim/plugins/coc.vim
+" source ~/software/config/nvim/neovim/plugins/leaderf.vim
+" source ~/software/config/nvim/neovim/settings/lsp.vim
+" source ~/software/config/nvim/neovim/settings/plug_setting.vim
+" source ~/software/config/nvim/neovim/settings/telescope.vim
+
+
+
 

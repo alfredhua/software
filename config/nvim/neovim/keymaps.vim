@@ -47,6 +47,13 @@ nmap <silent>   tb     :Tagbar<CR>
 nmap <silent>   tj     :set splitbelow<CR>:split<CR>
 nmap <silent>   tl     :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
 
+
+" =============== telescope  ==================
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
 " =============== leaderf ==================
 " nmap <silent>  <leader>ff :Leaderf file<CR>
 " nmap <silent>  <leader>fm :LeaderfMruCwd<CR>
