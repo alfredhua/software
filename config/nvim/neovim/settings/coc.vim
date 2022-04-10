@@ -14,5 +14,6 @@ let g:coc_global_extensions = [
 
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
+nmap <leader>rn <Plug>(coc-rename)
 
 

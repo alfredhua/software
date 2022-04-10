@@ -20,10 +20,8 @@ set viewoptions=cursor,folds,slash,unix
 set wrap
 set tw=0
 set indentexpr=
-
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
-
 set foldlevel=99
 set foldenable
 set formatoptions-=tc
@@ -38,8 +36,10 @@ set inccommand=split
 set completeopt=longest,noinsert,menuone,noselect,preview
 set ttyfast "should make scrolling faster
 set lazyredraw "same as above
+set updatetime=300
 "set visualbell
 set clipboard=unnamed
+
 
 let mapleader=" "
 
