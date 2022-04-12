@@ -7,6 +7,7 @@ call plug#begin('~/.config/plugged')
 		Plug 'mhinz/vim-startify'
 
 		" =============== tool ==================
+		Plug 'tpope/vim-fugitive'
 		Plug 'junegunn/vim-easy-align'
 		Plug 'tpope/vim-surround'
 		Plug 'easymotion/vim-easymotion'
@@ -20,7 +21,6 @@ call plug#begin('~/.config/plugged')
 
 		" =============== snippets ==================
 		Plug 'SirVer/ultisnips'
-		" Plug 'honza/vim-snippets'
 		Plug 'MattesGroeger/vim-bookmarks'
 
 		" =============== code ==================
