@@ -38,7 +38,8 @@ set ttyfast "should make scrolling faster
 set lazyredraw "same as above
 set updatetime=300
 "set visualbell
-set clipboard=unnamed
+" set clipboard=unnamedplus
+
 
 
 let mapleader=" "
