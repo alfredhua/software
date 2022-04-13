@@ -6,7 +6,7 @@ nmap <silent>  <C-q>    :bd<CR>
 
 map  <silent>  <Leader>  <Plug>(easymotion-prefix)
 
-nmap <silent>  ss        :source ~/.config/nvim/init.vim<CR>
+nmap <silent>  ss   :source ~/.config/nvim/init.vim<CR>
 
 nmap <silent>  <leader>1  <Cmd>BufferLineGoToBuffer 1<CR>
 nmap <silent>  <leader>2  <Cmd>BufferLineGoToBuffer 2<CR>
@@ -48,21 +48,14 @@ nmap <silent>   tj     :set splitbelow<CR>:split<CR>
 nmap <silent>   tl     :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
 
 
-" =============== telescope  ==================
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-
-" =============== leaderf ==================
-" nmap <silent>  <leader>ff :Leaderf file<CR>
-" nmap <silent>  <leader>fm :LeaderfMruCwd<CR>
-" nmap <silent>  <leader>fl :<C-U><C-R>=printf("Leaderf line %s", "")<CR><CR>
-" nmap <silent>  <leader>fp :<C-U><C-R>=printf("Leaderf! rg -e %s ", expand("<cword>"))<CR>
-" nmap <silent>  <leader>fs :LeaderfRgInteractive<CR>
-" nmap <unique>  <leader>fa <Plug>LeaderfRgCwordLiteralNoBoundary
-" vmap <unique>  <leader>fa <Plug>LeaderfRgVisualLiteralNoBoundary <CR>
-
+" =============== fzf  ==================
+nnoremap <leader>ff :Files <CR>
+nnoremap <leader>fg :Rg <CR> 
+nnoremap <leader>fb :BFiles <CR>
+nnoremap <leader>fl :Lines <CR>
+nnoremap <leader>ft :BTags <CR>
+nnoremap <leader>fm :BTags <CR>
+nnoremap <leader>fc :Commits <CR>
 
 nmap <silent>  zt     :TableModeToggle<CR>
 

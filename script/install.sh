@@ -33,7 +33,7 @@ function install_zsh(){
 
 #===========  vim =======================
 function install_neovim(){
-	brew install neovim
+	brew install neovim the_silver_searcher 
 	curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	curl -Ls https://raw.githubusercontent.com/daipeihust/im-select/master/install_mac.sh | sh
 	ln -s ~/software/config/nvim/init.vim   ~/.config/nvim/init.vim

@@ -60,10 +60,9 @@ source ~/software/config/nvim/neovim/themes.vim
 
 " 配置
 source ~/software/config/nvim/neovim/settings/coc.vim
-" source ~/software/config/nvim/neovim/settings/leaderf.vim
 source ~/software/config/nvim/neovim/settings/lsp.vim
 source ~/software/config/nvim/neovim/settings/markdown.vim
-source ~/software/config/nvim/neovim/settings/telescope.vim
+" source ~/software/config/nvim/neovim/settings/telescope.vim
 source ~/software/config/nvim/neovim/settings/tool.vim
 source ~/software/config/nvim/neovim/settings/treesitter.vim
 source ~/software/config/nvim/neovim/settings/ultisnips.vim
