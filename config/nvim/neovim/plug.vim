@@ -28,8 +28,11 @@ call plug#begin('~/.config/plugged')
 		Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 		" =============== search ==================
-		Plug 'nvim-lua/plenary.nvim'
+		" Plug 'nvim-lua/plenary.nvim'
 		Plug 'nvim-telescope/telescope.nvim'
+		" Plug '/usr/local/opt/fzf'
+		Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+		Plug 'junegunn/fzf'
 
 		" =============== markdown ==================
 		Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
@@ -58,7 +61,7 @@ source ~/software/config/nvim/neovim/themes.vim
 
 " 配置
 source ~/software/config/nvim/neovim/settings/coc.vim
-source ~/software/config/nvim/neovim/settings/leaderf.vim
+" source ~/software/config/nvim/neovim/settings/leaderf.vim
 source ~/software/config/nvim/neovim/settings/lsp.vim
 source ~/software/config/nvim/neovim/settings/markdown.vim
 source ~/software/config/nvim/neovim/settings/telescope.vim
@@ -66,6 +69,7 @@ source ~/software/config/nvim/neovim/settings/tool.vim
 source ~/software/config/nvim/neovim/settings/treesitter.vim
 source ~/software/config/nvim/neovim/settings/ultisnips.vim
 source ~/software/config/nvim/neovim/settings/window.vim
+source ~/software/config/nvim/neovim/settings/fzf.vim
 
 " let s:files=split(globpath("~/software/config/nvim/neovim/settings/", '*'),'\n')
 " for s:filePath in s:files
