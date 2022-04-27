@@ -136,3 +136,6 @@ alias heap="java_heap"
 function java_heap(){
    cd $HOME/Downloads && java -Xmx4g -jar $HOME/software/soft/heap/ha457.jar
 }
+
+
+alias ssh110="ssh root@192.168.0.110"
