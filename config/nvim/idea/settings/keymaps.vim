@@ -49,7 +49,7 @@ map  gl                  :<C-u>action Forward<CR>
 
 " =============== 搜索相关 g ==================
 map  <leader>ff          :action GotoFile<CR>
-map  <leader>fa          :action FindInPath<CR>
+map  <leader>fg          :action FindInPath<CR>
 map  <leader>fr          :action ReplaceInPath<CR>
 
 " =============== 运行 leader r ==================
