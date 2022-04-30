@@ -2,6 +2,11 @@
 
 SOFT=$HOME/software/soft
 
+#===========  修改程序图标排列个数 =======================
+function change_dock(){
+	defaults write com.apple.dock springboard-columns -int 11 && defaults write com.apple.dock ResetLaunchPad -bool true && killall Dock
+}
+
 #===========  piereced =======================
 function install_pierced(){
 	current_path=$SOFT
@@ -47,4 +52,21 @@ function install_nvm(){
 	source $HOME/.zshrc
 	nvm install v12.22.10
 }
+
+
+#===========  arthas =======================
+function install_arthas(){
+	if [ ! -d "$HOME/software/soft/arthas" ];then
+		mkdir $HOME/software/soft/arthas 
+	fi
+	cd $HOME/software/soft/arthas && curl -O https://arthas.aliyun.com/arthas-boot.jar
+}
+
+alias change_dock="change_dock"
+alias install_brew="install_brew"
+alias install_zsh="install_zsh"
+alias install_neovim="install_neovim"
+alias install_nvm="install_nvm"
+alias install_pierced="install_pierced"
+alias install_arthas="install_arthas"
 

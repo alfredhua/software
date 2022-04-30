@@ -139,3 +139,7 @@ function java_heap(){
 
 
 alias ssh110="ssh root@192.168.0.110"
+
+#============== install ============
+source $HOME/software/script/install.sh
+
