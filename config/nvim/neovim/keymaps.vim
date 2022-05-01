@@ -47,6 +47,7 @@ nmap <silent>   tb     :Tagbar<CR>
 nmap <silent>   tj     :set splitbelow<CR>:split<CR>
 nmap <silent>   tl     :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
 
+nmap <silent>   <leader>ti :NERDTreeFind<CR>
 
 " =============== fzf  ==================
 nnoremap <leader>ff :Files <CR>
