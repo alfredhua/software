@@ -61,12 +61,12 @@ source ~/software/config/nvim/neovim/themes.vim
 source ~/software/config/nvim/neovim/settings/coc.vim
 source ~/software/config/nvim/neovim/settings/lsp.vim
 source ~/software/config/nvim/neovim/settings/markdown.vim
-" source ~/software/config/nvim/neovim/settings/telescope.vim
 source ~/software/config/nvim/neovim/settings/tool.vim
 source ~/software/config/nvim/neovim/settings/treesitter.vim
 source ~/software/config/nvim/neovim/settings/ultisnips.vim
 source ~/software/config/nvim/neovim/settings/window.vim
 source ~/software/config/nvim/neovim/settings/fzf.vim
+" source ~/software/config/nvim/neovim/settings/telescope.vim
 
 " let s:files=split(globpath("~/software/config/nvim/neovim/settings/", '*'),'\n')
 " for s:filePath in s:files

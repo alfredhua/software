@@ -1,22 +1,28 @@
 inoremap <silent> <C-a> <ESC>A
 inoremap <C-[> <ESC>
 
-nnoremap <silent> K 5k
-nnoremap <silent> L 5l
-nnoremap <silent> H 5h
-nnoremap <silent> J 5j
-vnoremap <silent> K 5k
-vnoremap <silent> L 5l
-vnoremap <silent> H 5h
-vnoremap <silent> J 5j
 vnoremap <silent> Y "+y
-nnoremap <silent> > >>
+nnoremap <silent> Y "+y
+vnoremap <silent> P "+p
 nnoremap <silent> P "+p
+
+nnoremap <silent> K 5k
+vnoremap <silent> K 5k
+nnoremap <silent> L 5l
+vnoremap <silent> L 5l
+nnoremap <silent> H 5h
+vnoremap <silent> H 5h
+nnoremap <silent> J 5j
+vnoremap <silent> J 5j
+
+nnoremap <silent> > >>
 nnoremap <silent> <C-s> :w<CR>
 nnoremap <silent> M J
 
 nnoremap <silent> U <C-r>
+
 nnoremap <silent> <LEADER><CR> :nohlsearch<CR>
+
 nnoremap <silent> <C-j> :bn<CR>
 nnoremap <silent> <C-k> :bp<CR>
 
@@ -34,6 +40,5 @@ nnoremap <LEADER>et :e ~/software/config/nvim/neovim/theme.vim<CR>
 nnoremap <LEADER>en :e ~/software/config/nvim/neovim/keymaps.vim<CR>
 " idea 
 nnoremap <LEADER>ed :e ~/software/config/nvim/idea/settings/keymaps.vim<CR>
-" vscode
 
 

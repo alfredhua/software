@@ -6,8 +6,6 @@ nmap <silent>  <C-q>    :bd<CR>
 
 map  <silent>  <Leader>  <Plug>(easymotion-prefix)
 
-nmap <silent>  ss   :source ~/.config/nvim/init.vim<CR>
-
 nmap <silent>  <leader>1  <Cmd>BufferLineGoToBuffer 1<CR>
 nmap <silent>  <leader>2  <Cmd>BufferLineGoToBuffer 2<CR>
 nmap <silent>  <leader>3  <Cmd>BufferLineGoToBuffer 3<CR>
