@@ -10,7 +10,6 @@ set  exchange            " 更换，cx(iw,ap), cxx, X, cxc
 set  keep-english-in-normal
 
 map  <C-[>              :<ESC>
-inoremap  jj            <ESC>
 nmap <C-q>              :q<CR>
 
 nmap <C-m>              <Plug>NextWholeOccurrence

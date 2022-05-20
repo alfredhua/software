@@ -33,7 +33,7 @@ call plug#begin('~/.config/plugged')
 		Plug 'junegunn/fzf.vim'
 
 		" =============== markdown ==================
-		Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+		Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 		Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle', 'for': ['text', 'markdown', 'vim-plug'] }
 
 		" =========== theme ============

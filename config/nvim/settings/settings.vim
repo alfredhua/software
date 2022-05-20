@@ -7,11 +7,10 @@ set relativenumber
 set cursorline
 set hidden
 set noexpandtab
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set autoindent
-"set list
 set listchars=tab:\|\ ,trail:▫
 set scrolloff=4
 set ttimeoutlen=0
@@ -37,10 +36,6 @@ set completeopt=longest,noinsert,menuone,noselect,preview
 set ttyfast "should make scrolling faster
 set lazyredraw "same as above
 set updatetime=300
-"set visualbell
-" set clipboard=unnamedplus
-
-
 
 let mapleader=" "
 
@@ -49,9 +44,6 @@ let mapleader=" "
 
 set encoding=utf-8
 set fileencodings=utf-8,chinese,latin-1
-
-" source $VIMRUNTIME/delmenu.vim
-" source $VIMRUNTIME/menu.vim
 
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 autocmd BufNewFile,BufRead *.html,*.hml set filetype=md

@@ -16,4 +16,3 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 
 nmap <leader>rn <Plug>(coc-rename)
 
-
