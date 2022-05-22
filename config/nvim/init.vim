@@ -3,6 +3,7 @@ source ~/software/config/nvim/settings/keymaps.vim
 
 if has('ide')
 		" =============== idea配置 ==================
+	source ~/software/config/nvim/idea/settings/setting.vim
 	source ~/software/config/nvim/idea/settings/keymaps.vim
 
 else

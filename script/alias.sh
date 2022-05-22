@@ -144,3 +144,6 @@ alias ssh110="ssh root@192.168.0.110"
 source $HOME/software/script/install.sh
 
 alias arthas="java -jar $HOME/software/soft/arthas/arthas-boot.jar"
+
+
+alias idea="/Applications/IntelliJ\ IDEA.app/Contents/MacOS/idea"
