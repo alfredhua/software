@@ -10,3 +10,10 @@ else
 	source ~/software/config/nvim/neovim/keymaps.vim
 	source ~/software/config/nvim/neovim/plug.vim
 endif
+
+
+if exists('g:vscode')
+	source ~/software/config/nvim/vscode/keymaps.vim
+else
+
+endif
