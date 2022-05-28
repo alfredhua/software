@@ -79,7 +79,7 @@ export PATH=$PATH:$JAVA_HOME/bin/
 
 
 ## nvim
-# export NVIM_HOME=$SOFT_WARE_PATH/nvim
-# export PATH=$PATH:$NVIM_HOME/bin:/opt/homebrew/bin
+export NVIM_HOME=$SOFT_WARE_PATH/neovim
+export PATH=$PATH:$NVIM_HOME/bin
 
 export PATH=$PATH:/opt/homebrew/bin

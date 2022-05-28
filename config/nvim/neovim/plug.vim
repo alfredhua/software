@@ -1,9 +1,9 @@
 call plug#begin('~/.config/plugged')
 
 		" =============== window ==================
-		Plug 'preservim/nerdtree', {'on':'NERDTreeToggle'}
+    Plug 'preservim/nerdtree'	
 		Plug 'kevinhwang91/rnvimr'
-		Plug 'Xuyuanp/nerdtree-git-plugin'
+		Plug 'xuyuanp/nerdtree-git-plugin'
 		Plug 'mhinz/vim-startify'
 
 		" =============== tool ==================
@@ -20,12 +20,17 @@ call plug#begin('~/.config/plugged')
 		Plug 'vim-scripts/argtextobj.vim'
 
 		" =============== snippets ==================
-		Plug 'SirVer/ultisnips'
-		Plug 'MattesGroeger/vim-bookmarks'
+		Plug 'sirver/ultisnips'
+		Plug 'mattesgroeger/vim-bookmarks'
 
 		" =============== code ==================
-		Plug 'neoclide/coc.nvim', {'branch': 'release'}
-		Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+		" plug 'neoclide/coc.nvim', {'branch': 'release'}
+		Plug 'neovim/nvim-lspconfig'
+		Plug 'hrsh7th/nvim-cmp' 
+		Plug 'hrsh7th/cmp-nvim-lsp' 
+		" Plug 'saadparwaiz1/cmp_luasnip' 
+		" Plug 'l3mon4d3/luasnip' 
+		Plug 'nvim-treesitter/nvim-treesitter', {'do': ':tsupdate'}
 
 		" =============== search ==================
 		Plug 'nvim-telescope/telescope.nvim'
@@ -34,7 +39,7 @@ call plug#begin('~/.config/plugged')
 
 		" =============== markdown ==================
 		Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
-		Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle', 'for': ['text', 'markdown', 'vim-plug'] }
+		Plug 'dhruvasagar/vim-table-mode', { 'for': ['text', 'markdown', 'vim-plug'] }
 
 		" =========== theme ============
 		Plug 'kyazdani42/nvim-web-devicons'
@@ -45,20 +50,20 @@ call plug#begin('~/.config/plugged')
 call plug#end()
 
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
-	silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs  
+	silent !curl -flo ~/.config/nvim/autoload/plug.vim --create-dirs  
 				\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+	autocmd vimenter * pluginstall --sync | source $myvimrc
 endif
 
-autocmd VimEnter *
+autocmd vimenter *
   \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
-  \|   PlugInstall --sync | q
+  \|   pluginstall --sync | q
   \| endif
 
 source ~/software/config/nvim/neovim/themes.vim
 
 " 配置
-source ~/software/config/nvim/neovim/settings/coc.vim
+" source ~/software/config/nvim/neovim/settings/coc.vim
 source ~/software/config/nvim/neovim/settings/lsp.vim
 source ~/software/config/nvim/neovim/settings/markdown.vim
 source ~/software/config/nvim/neovim/settings/tool.vim
@@ -69,8 +74,8 @@ source ~/software/config/nvim/neovim/settings/fzf.vim
 " source ~/software/config/nvim/neovim/settings/telescope.vim
 
 " let s:files=split(globpath("~/software/config/nvim/neovim/settings/", '*'),'\n')
-" for s:filePath in s:files
-" 	 runtime s:filePath
+" for s:filepath in s:files
+" 	 runtime s:filepath
 " endfor
 
 

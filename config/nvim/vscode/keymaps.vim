@@ -41,7 +41,7 @@ map  ge                  :action SearchEverywhere<CR>
 map  gs                  :<C-u>action GotoSuperMethod<CR>
 map  gb                  :<C-u>action JumpToLastChange<CR>
 
-map  gd                  :<C-u>action GotoImplementation<CR>
+" map  gd                  :<C-u>action GotoImplementation<CR>
 map  gu                  :<C-u>action ShowUsages<CR>
 map  gh                  :<C-u>action Back<CR>
 map  gl                  :<C-u>action Forward<CR>
