@@ -65,11 +65,11 @@ function install_arthas(){
 	cd $HOME/software/soft/arthas && curl -O https://arthas.aliyun.com/arthas-boot.jar
 }
 
-alias change_dock="change_dock"
-alias install_brew="install_brew"
-alias install_zsh="install_zsh"
-alias install_neovim="install_neovim"
-alias install_nvm="install_nvm"
-alias install_pierced="install_pierced"
-alias install_arthas="install_arthas"
+alias in_change_dock="change_dock"
+alias in_brew="install_brew"
+alias in_zsh="install_zsh"
+alias in_neovim="install_neovim"
+alias in_nvm="install_nvm"
+alias in_pierced="install_pierced"
+alias in_arthas="install_arthas"
 
