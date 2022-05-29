@@ -29,7 +29,7 @@ call plug#begin('~/.config/plugged')
 		Plug 'hrsh7th/nvim-cmp' 
 		Plug 'hrsh7th/cmp-nvim-lsp' 
 		" Plug 'saadparwaiz1/cmp_luasnip' 
-		" Plug 'l3mon4d3/luasnip' 
+		Plug 'l3mon4d3/luasnip' 
 		Plug 'nvim-treesitter/nvim-treesitter', {'do': ':tsupdate'}
 
 		" =============== search ==================
@@ -55,10 +55,10 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 	autocmd vimenter * pluginstall --sync | source $myvimrc
 endif
 
-autocmd vimenter *
-  \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
-  \|   pluginstall --sync | q
-  \| endif
+" autocmd vimenter *
+"   \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+"   \|   pluginstall --sync | q
+"   \| endif
 
 source ~/software/config/nvim/neovim/themes.vim
 
@@ -71,11 +71,3 @@ source ~/software/config/nvim/neovim/settings/treesitter.vim
 source ~/software/config/nvim/neovim/settings/ultisnips.vim
 source ~/software/config/nvim/neovim/settings/window.vim
 source ~/software/config/nvim/neovim/settings/fzf.vim
-" source ~/software/config/nvim/neovim/settings/telescope.vim
-
-" let s:files=split(globpath("~/software/config/nvim/neovim/settings/", '*'),'\n')
-" for s:filepath in s:files
-" 	 runtime s:filepath
-" endfor
-
-
