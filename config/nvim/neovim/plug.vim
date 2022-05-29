@@ -28,7 +28,7 @@ call plug#begin('~/.config/plugged')
 		Plug 'neovim/nvim-lspconfig'
 		Plug 'hrsh7th/nvim-cmp' 
 		Plug 'hrsh7th/cmp-nvim-lsp' 
-		" Plug 'saadparwaiz1/cmp_luasnip' 
+		Plug 'saadparwaiz1/cmp_luasnip' 
 		Plug 'l3mon4d3/luasnip' 
 		Plug 'nvim-treesitter/nvim-treesitter', {'do': ':tsupdate'}
 

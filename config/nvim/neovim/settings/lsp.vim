@@ -6,11 +6,14 @@ capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 local lspconfig = require('lspconfig')
 
-local servers = { 'pyright', 'tsserver' }
+local servers = { 'pyright', 'tsserver','jdtls','vuels' }
+
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup {
 		capabilities = capabilities,
-		}
-	end
+	}
+end
+
+
 
 EOF
