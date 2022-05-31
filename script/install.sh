@@ -52,10 +52,6 @@ function install_nvm(){
 	nvm install v12.22.10
 }
 
-function install_nvm_lsp(){
-
-}
-
 #===========  arthas =======================
 function install_arthas(){
 	if [ ! -d "$HOME/software/soft/arthas" ];then
