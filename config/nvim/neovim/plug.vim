@@ -55,10 +55,10 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 	autocmd vimenter * pluginstall --sync | source $myvimrc
 endif
 
-" autocmd vimenter *
-"   \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
-"   \|   pluginstall --sync | q
-"   \| endif
+autocmd vimenter *
+  \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \|   pluginstall --sync | q
+  \| endif
 
 source ~/software/config/nvim/neovim/themes.vim
 
