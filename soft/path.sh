@@ -4,8 +4,6 @@ export LC_ALL="zh_CN.UTF-8"
 
 SOFT_WARE_PATH=$HOME/software/soft
 
-source $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # 设置
 
 #### node 
