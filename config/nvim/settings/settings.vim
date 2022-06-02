@@ -6,7 +6,8 @@ set number
 set relativenumber
 set cursorline
 set hidden
-set noexpandtab
+set expandtab 
+" set noexpandtab
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2

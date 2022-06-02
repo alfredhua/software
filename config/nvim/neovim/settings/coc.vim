@@ -13,7 +13,7 @@ let g:coc_global_extensions = [
 			\ 'coc-java',
 			\ 'coc-vimlsp']
 
-autocmd CursorHold * silent call CocActionAsync('highlight')
+" autocmd CursorHold * silent call CocActionAsync('highlight')
 
 nmap <leader>rn <Plug>(coc-rename)
 

@@ -18,18 +18,15 @@ call plug#begin('~/.config/plugged')
 		Plug 'terryma/vim-multiple-cursors'
 		Plug 'lambdalisue/suda.vim'
 		Plug 'vim-scripts/argtextobj.vim'
+		Plug 'Yggdroot/indentLine'
+		Plug 'chiel92/vim-autoformat'
 
 		" =============== snippets ==================
 		Plug 'sirver/ultisnips'
 		Plug 'mattesgroeger/vim-bookmarks'
 
 		" =============== code ==================
-		" plug 'neoclide/coc.nvim', {'branch': 'release'}
-		Plug 'neovim/nvim-lspconfig'
-		Plug 'hrsh7th/nvim-cmp' 
-		Plug 'hrsh7th/cmp-nvim-lsp' 
-		Plug 'saadparwaiz1/cmp_luasnip' 
-		Plug 'l3mon4d3/luasnip' 
+		Plug 'neoclide/coc.nvim', {'branch': 'release'}
 		Plug 'nvim-treesitter/nvim-treesitter', {'do': ':tsupdate'}
 
 		" =============== search ==================
@@ -57,14 +54,14 @@ endif
 
 autocmd vimenter *
   \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
-  \|   pluginstall --sync | q
+  \|   PlugInstall --sync | q
   \| endif
 
 source ~/software/config/nvim/neovim/themes.vim
 
 " 配置
-" source ~/software/config/nvim/neovim/settings/coc.vim
-source ~/software/config/nvim/neovim/settings/lsp.vim
+source ~/software/config/nvim/neovim/settings/coc.vim
+" source ~/software/config/nvim/neovim/settings/lsp.vim
 source ~/software/config/nvim/neovim/settings/markdown.vim
 source ~/software/config/nvim/neovim/settings/tool.vim
 source ~/software/config/nvim/neovim/settings/treesitter.vim
