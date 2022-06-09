@@ -4,10 +4,7 @@ if (has("termguicolors"))
 	set termguicolors
 endif
 
-" let g:gruvbox_italic=1
-" colorscheme gruvbox
 colorscheme onedark
-
 lua << EOF
 require("bufferline").setup{
 	options = {
@@ -16,4 +13,6 @@ require("bufferline").setup{
 		show_buffer_icons = true
 	}
 }
+
+require('lualine').setup()
 EOF
