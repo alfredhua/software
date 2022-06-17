@@ -20,6 +20,8 @@ call plug#begin('~/.config/plugged')
 		Plug 'vim-scripts/argtextobj.vim'
 		Plug 'Yggdroot/indentLine'
 		Plug 'chiel92/vim-autoformat'
+    Plug 'majutsushi/tagbar'
+
 
 		" =============== snippets ==================
 		Plug 'sirver/ultisnips'
