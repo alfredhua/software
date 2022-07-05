@@ -110,10 +110,6 @@ function npm_install_g(){
     npm install $1 -g
 }
 
-##============== python ============
-alias python="python3"
-alias py="python3"
-alias pip="pip3"
 
 ##============== vim ============
 alias vi="nvim"

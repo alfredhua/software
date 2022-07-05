@@ -38,7 +38,7 @@ function install_zsh(){
 
 #===========  neovim  =======================
 function install_neovim(){
-	cd $SOFT && curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim-macos.tar.gz && tar xzf nvim-macos.tar.gz && mv nvim-osx64 neovim 
+  brew install neovim
 	# curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	# curl -Ls https://raw.githubusercontent.com/daipeihust/im-select/master/install_mac.sh | sh
 	# ln -s ~/software/config/nvim/init.vim   ~/.config/nvim/init.vim

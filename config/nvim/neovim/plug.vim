@@ -58,6 +58,7 @@ autocmd vimenter *
   \|   PlugInstall --sync | q
   \| endif
 
+source ~/software/config/nvim/neovim/settings/setting.vim
 source ~/software/config/nvim/neovim/themes.vim
 
 " 配置
