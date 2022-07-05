@@ -128,15 +128,13 @@ alias jdown="cd $HOME/Downloads"
 alias jde="cd $HOME/Desktop"
 alias jdoc="cd $HOME/Documents"
 
+alias idea="/Applications/IntelliJ\ IDEA.app/Contents/MacOS/idea"
 ##============== heap ============
 alias heap="java_heap"
 function java_heap(){
    cd $HOME/Downloads && java -Xmx4g -jar $HOME/software/soft/heap/ha457.jar
 }
 
-
-alias ssh110="ssh root@192.168.0.110"
-
 alias arthas="java -jar $HOME/software/soft/arthas/arthas-boot.jar"
 
-alias idea="/Applications/IntelliJ\ IDEA.app/Contents/MacOS/idea"
+alias ssh110="root@192.168.0.110"
