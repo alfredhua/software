@@ -3,7 +3,6 @@
 ## 项目管理相关
 alias gclean="./gradlew clean"
 
-
 WORK_SPACE="$HOME/workspace"
 alias jblog="cd $WORK_SPACE/self/blog"
 alias jsoft="cd $HOME/software"

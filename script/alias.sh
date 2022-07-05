@@ -1,4 +1,6 @@
 #!/bin/sh
+source $HOME/software/script/project/pro.sh
+source $HOME/software/script/project/deploy.sh
 
 uname=`uname`
 
@@ -127,7 +129,6 @@ alias jde="cd $HOME/Desktop"
 alias jdoc="cd $HOME/Documents"
 
 ##============== heap ============
-
 alias heap="java_heap"
 function java_heap(){
    cd $HOME/Downloads && java -Xmx4g -jar $HOME/software/soft/heap/ha457.jar
@@ -136,10 +137,6 @@ function java_heap(){
 
 alias ssh110="ssh root@192.168.0.110"
 
-#============== install ============
-source $HOME/software/script/install.sh
-
 alias arthas="java -jar $HOME/software/soft/arthas/arthas-boot.jar"
-
 
 alias idea="/Applications/IntelliJ\ IDEA.app/Contents/MacOS/idea"
