@@ -4,4 +4,4 @@ source $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.
 
 source $HOME/software/script/alias.sh
 
-export install=$HOME/software/script/install/
+export script=$HOME/software/script/
