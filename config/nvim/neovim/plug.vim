@@ -20,6 +20,8 @@ call plug#begin('~/.config/plugged')
 		Plug 'vim-scripts/argtextobj.vim'
 		Plug 'Yggdroot/indentLine'
 		Plug 'chiel92/vim-autoformat'
+    Plug 'majutsushi/tagbar'
+
 
 		" =============== snippets ==================
 		Plug 'sirver/ultisnips'
@@ -40,7 +42,6 @@ call plug#begin('~/.config/plugged')
 
 		" =========== theme ============
 		Plug 'kyazdani42/nvim-web-devicons'
-		" Plug 'itchyny/lightline.vim'
 		Plug 'akinsho/bufferline.nvim'
     Plug 'nvim-lualine/lualine.nvim'
 		Plug 'joshdick/onedark.vim'
