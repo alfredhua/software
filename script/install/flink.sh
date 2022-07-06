@@ -3,7 +3,7 @@ function install_flink(){
     echo "软件已存在"
 	fi
   cd $HOME/software/soft/  && wget https://dlcdn.apache.org/flink/flink-1.15.0/flink-1.15.0-bin-scala_2.12.tgz
-  tar -xzvf flink-1.15.0-bin-scala_2.12.tgz
+  tar -xzvf flink-1.15.0-bin-scala_2.12.tgz && mv flink-1.15.0 flink
 }
 
 install_flink
