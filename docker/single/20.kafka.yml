@@ -22,18 +22,6 @@ services:
     networks:
       net:
         ipv4_address: ${KAFKA_IP}
-
-  kafka-manager:
-    image: dockerkafka/kafka-manager
-    container_name: kafka-manager
-    environment:
-    - ZK_HOSTS=${ZK_IP}:2181
-    ports:
-      - "${KAFKA_MANAGE_PORT}:9000"
-    networks:
-      net:
-        ipv4_address: ${KAFKA_MANAGE_IP}
-
 networks:
    net:
       ipam:
