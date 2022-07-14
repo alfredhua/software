@@ -9,6 +9,7 @@ services:
       - ${ZK_PORT}:2181
     volumes:
       - ${ZK_DATA_PATH}:/data
+      - ${ZK_CONF_PATH}:/conf/zoo.cfg
     networks:
       net:
         ipv4_address: ${ZK_IP}
