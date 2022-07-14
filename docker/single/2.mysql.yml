@@ -12,8 +12,7 @@ services:
       - '${MYSQL_PORT}:3306'
     volumes:
       - ${MYSQL_DATA_PATH}:/var/lib/mysql
-      - ${MYSQL_CONFIG_PATH}:/etc/mysql/conf.d
-      - ${MYSQL_CONFIG}:/etc/my.cnf
+      - ${MYSQL_CONFIG_PATH}:/etc/mysql/conf.d/my.cnf
     networks:
       net:
         ipv4_address: ${MYSQL_IP}
