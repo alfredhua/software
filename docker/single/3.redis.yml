@@ -11,7 +11,7 @@ services:
       redis-server --appendonly yes
     volumes:
       - ${REDIS_DATA_PATH}:/data
-      - ${REDIS_CONFIG_PATH}:/etc/redis
+      - ${REDIS_CONFIG_PATH}:/etc/redis/redis.conf
     networks:
       net:
         ipv4_address: ${REDIS_IP}
