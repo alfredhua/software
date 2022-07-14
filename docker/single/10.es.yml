@@ -6,9 +6,7 @@ services:
     privileged: true
     environment:
       - discovery.type=single-node
-      - cluster.name=elasticsearch
       - bootstrap.memory_lock=true
-      - network.host=0.0.0.0
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
     ulimits:
       memlock:
@@ -16,24 +14,13 @@ services:
         hard: -1
     volumes:
       - ${ES_DATA_PATH}:/usr/share/elasticsearch/data
+      - ${ES_CONFIG_PATH}:/usr/share/elasticsearch/config/elasticsearch.yml
     ports:
       - "${ES_PORT}:9200"
       - "${ES_PORT2}:9300"
     networks:
       net:
         ipv4_address: ${ES_IP}
-
-  cerebro:
-    image: lmenezes/cerebro:0.8.3
-    container_name: cerebro
-    privileged: true
-    ports:
-      - "${CEREBRO_PORT}:9000"
-    command:
-      - -Dhosts.0.host=http://${ES_IP}:9200
-    networks:
-      net:
-        ipv4_address: ${CEREBRO_IP}
 
   kibana:
     image: docker.elastic.co/kibana/kibana:7.1.0

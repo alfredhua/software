@@ -10,6 +10,9 @@ services:
     ports:
      - "${NACOS_PORT}:8848"
      - "${NACOS_PORT2}:9100"
+    volumes:
+      - ${NACOS_CONFIG_PATH}:/home/nacos/conf/application.properties
+
     networks:
       net:
         ipv4_address: ${NACOS_IP}
