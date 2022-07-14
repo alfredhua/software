@@ -13,6 +13,7 @@ services:
       - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}
     volumes:
       - ${RABBITMQ_DATA_PATH}:/var/lib/rabbitmq
+      - ${RABBITMQ_CONFIG_PATH}:/opt/rabbitmq/etc/rabbitmq/rabbitmq.config
     networks:
       net:
         ipv4_address: ${RABBITMQ_IP}
