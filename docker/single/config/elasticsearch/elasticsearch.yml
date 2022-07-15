@@ -1,3 +1,4 @@
+discovery.type: single-node
 cluster.name: "elasticsearch"
 network.host: 0.0.0.0
 bootstrap.memory_lock: false
