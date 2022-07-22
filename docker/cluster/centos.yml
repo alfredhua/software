@@ -8,6 +8,8 @@ services:
     networks:
       net1:
         ipv4_address: 172.18.0.21
+    ports:
+      - '8080:80'
     extra_hosts:
       - "centos01:172.18.0.21"
       - "centos02:172.18.0.22"
@@ -21,6 +23,8 @@ services:
     networks:
       net1:
         ipv4_address: 172.18.0.22
+    ports:
+      - '8081:80'
     extra_hosts:
       - "centos01:172.18.0.21"
       - "centos02:172.18.0.22"
@@ -34,6 +38,8 @@ services:
     networks:
       net1:
         ipv4_address: 172.18.0.23
+    ports:
+      - '8082:80'
     extra_hosts:
       - "centos01:172.18.0.21"
       - "centos02:172.18.0.22"
