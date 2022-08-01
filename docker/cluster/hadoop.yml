@@ -5,6 +5,8 @@ services:
     image: guozhenhua/hadoop:5
     container_name: hadoop02
     privileged: true
+    command: 
+      - "sshd -D &"
     ports:
       - 9870:9870
       - 9864:9864
@@ -28,6 +30,8 @@ services:
     privileged: true
     ports:
       - 8088:8088
+    command: 
+      - "sshd -D &"
     networks:
       net1:
         ipv4_address: 172.18.0.13
@@ -44,6 +48,8 @@ services:
     image: guozhenhua/hadoop:5
     container_name: hadoop04
     privileged: true
+    command: 
+      - "sshd -D &"
     ports:
       - 9868:9868
     networks:
