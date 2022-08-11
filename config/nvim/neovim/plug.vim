@@ -22,7 +22,6 @@ call plug#begin('~/.config/plugged')
 		Plug 'chiel92/vim-autoformat'
     Plug 'majutsushi/tagbar'
 
-
 		" =============== snippets ==================
 		Plug 'sirver/ultisnips'
 		Plug 'mattesgroeger/vim-bookmarks'
@@ -71,3 +70,4 @@ source ~/software/config/nvim/neovim/settings/treesitter.vim
 source ~/software/config/nvim/neovim/settings/ultisnips.vim
 source ~/software/config/nvim/neovim/settings/window.vim
 source ~/software/config/nvim/neovim/settings/fzf.vim
+source ~/software/config/nvim/neovim/settings/ranger.vim

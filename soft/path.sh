@@ -56,3 +56,10 @@ alias java17="export JAVA_HOME=$JAVA_17_HOME"
 export NVIM_HOME=$SOFT_WARE_PATH/neovim
 export PATH=$PATH:$NVIM_HOME/bin
 
+if [ -d "/opt/homebrew/opt/python@3.10" ];then
+  export PATH=/opt/homebrew/opt/python@3.10/bin:$PATH
+fi
+
+if [ -d "/opt/homebrew/bin" ];then
+  export PATH=/opt/homebrew/bin:$PATH
+fi
