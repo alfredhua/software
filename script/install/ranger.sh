@@ -1,5 +1,5 @@
 function install_ranger(){
-    # brew install ranger
+    pip3 install ranger-fm pynvim
     rm -rf ~/.config/ranger && mkdir ~/.config/ranger
     echo 'mime ^text,  label editor = nvim -- "$@"' >> ~/.config/ranger/rifle.conf
     echo 'mime ^text,  label pager  = "$PAGER" -- "$@"' >> ~/.config/ranger/rifle.conf
