@@ -48,13 +48,18 @@ nmap <silent>   tl     :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
 nmap <silent>   <leader>ti :NERDTreeFind<CR>
 
 " =============== fzf  ==================
-nnoremap <leader>ff :Files <CR>
-nnoremap <leader>fg :Rg <CR> 
-nnoremap <leader>fb :BFiles <CR>
-nnoremap <leader>fl :Lines <CR>
-nnoremap <leader>ft :BTags <CR>
-nnoremap <leader>fm :BTags <CR>
-nnoremap <leader>fc :Commits <CR>
+" nnoremap <leader>ff :Files <CR>
+" nnoremap <leader>fg :Rg <CR> 
+" nnoremap <leader>fb :BFiles <CR>
+" nnoremap <leader>fl :Lines <CR>
+" nnoremap <leader>ft :BTags <CR>
+" nnoremap <leader>fm :BTags <CR>
+" nnoremap <leader>fc :Commits <CR>
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 nmap <silent>  zt     :TableModeToggle<CR>
 
+nnoremap <silent><leader>yy <cmd>lua require('ithua').markdownCopyPlus()<CR>

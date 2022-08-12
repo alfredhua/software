@@ -1,6 +1,8 @@
 
 let g:rnvimr_draw_border = 1
 
+let g:rnvimr_enable_picker = 1
+
 let g:rnvimr_ranger_cmd = 'ranger --cmd="set draw_borders both"'
 
 let g:rnvimr_enable_ex = 1
@@ -12,6 +14,14 @@ let g:rnvimr_border_attr = {'fg': 14, 'bg': -1}
 let g:rnvimr_edit_cmd = 'tabedit'
 
 highlight link RnvimrNormal CursorLine
+
+let g:rnvimr_action = {
+            \ '<Enter>': 'NvimEdit tabedit',
+            \ '<C-x>': 'NvimEdit split',
+            \ '<C-v>': 'NvimEdit vsplit',
+            \ 'gw': 'JumpNvimCwd',
+            \ 'yw': 'EmitRangerCwd'
+            \ }
 
 let g:rnvimr_ranger_views = [
             \ {'minwikth': 90, 'ratio': []},
