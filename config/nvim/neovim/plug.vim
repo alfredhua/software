@@ -32,11 +32,10 @@ call plug#begin('~/.config/plugged')
 
 		" =============== search ==================
     Plug 'nvim-lua/plenary.nvim'
-		" Plug 'nvim-telescope/telescope.nvim'
     Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
     Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
-		Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-		Plug 'junegunn/fzf.vim'
+		" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+		" Plug 'junegunn/fzf.vim'
 
 		" =============== markdown ==================
 		Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
@@ -67,11 +66,11 @@ source ~/software/config/nvim/neovim/themes.vim
 " 配置
 source ~/software/config/nvim/neovim/settings/coc.vim
 " source ~/software/config/nvim/neovim/settings/lsp.vim
+" source ~/software/config/nvim/neovim/settings/fzf.vim
 source ~/software/config/nvim/neovim/settings/markdown.vim
 source ~/software/config/nvim/neovim/settings/tool.vim
 source ~/software/config/nvim/neovim/settings/treesitter.vim
 source ~/software/config/nvim/neovim/settings/ultisnips.vim
 source ~/software/config/nvim/neovim/settings/window.vim
-source ~/software/config/nvim/neovim/settings/fzf.vim
 source ~/software/config/nvim/neovim/settings/ranger.vim
 source ~/software/config/nvim/neovim/settings/telescope.vim
