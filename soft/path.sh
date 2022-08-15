@@ -3,9 +3,6 @@ export LANG='UTC-8'
 export LC_ALL="zh_CN.UTF-8"
 
 SOFT_WARE_PATH=$HOME/software/soft
-
-export PATH=$PATH:/opt/homebrew/bin
-
 # 设置
 
 #### node 
