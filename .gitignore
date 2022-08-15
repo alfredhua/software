@@ -6,5 +6,4 @@ docker/cluster/data/*
 !/soft/install.sh
 !/soft/path.sh
 !/soft/vim
-!/soft/nvim
 !/soft/heap
