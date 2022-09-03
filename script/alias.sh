@@ -138,3 +138,5 @@ function java_heap(){
 alias arthas="java -jar $HOME/software/soft/arthas/arthas-boot.jar"
 
 alias ssh110="ssh root@192.168.0.110"
+alias ssh105="ssh 192.168.0.105 -p 8022"
+
