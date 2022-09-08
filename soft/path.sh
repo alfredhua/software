@@ -49,13 +49,6 @@ export PATH=$PATH:$JAVA_HOME/bin/
 alias java11="export JAVA_HOME=$JAVA_11_HOME"
 alias java17="export JAVA_HOME=$JAVA_17_HOME"
 
-## nvim
-export NVIM_HOME=$SOFT_WARE_PATH/neovim
-export PATH=$PATH:$NVIM_HOME/bin
-
-if [ -d "/opt/homebrew/opt/python@3.10" ];then
-  export PATH=/opt/homebrew/opt/python@3.10/bin:$PATH
-fi
 
 if [ -d "/opt/homebrew/bin" ];then
   export PATH=/opt/homebrew/bin:$PATH
