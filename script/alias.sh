@@ -1,7 +1,4 @@
 #!/bin/sh
-source $HOME/software/script/project/pro.sh
-source $HOME/software/script/project/deploy.sh
-
 uname=`uname`
 
 ##============== docker ============
@@ -112,7 +109,6 @@ function npm_install_g(){
     npm install $1 -g
 }
 
-
 ##============== vim ============
 alias vi="nvim"
 alias vim="nvim"
@@ -129,14 +125,13 @@ alias jde="cd $HOME/Desktop"
 alias jdoc="cd $HOME/Documents"
 
 alias idea="/Applications/IntelliJ\ IDEA.app/Contents/MacOS/idea"
+
 ##============== heap ============
+alias arthas="java -jar $HOME/software/soft/arthas/arthas-boot.jar"
 alias heap="java_heap"
 function java_heap(){
    cd $HOME/Downloads && java -Xmx4g -jar $HOME/software/soft/heap/ha457.jar
 }
 
-alias arthas="java -jar $HOME/software/soft/arthas/arthas-boot.jar"
-
 alias ssh110="ssh root@192.168.0.110"
-alias ssh105="ssh 192.168.0.105 -p 8022"
 
