@@ -1,6 +1,22 @@
 #! /bin/sh
-#####清除编译文件脚本
-server_path=`pwd`
+#============= 清除编译文件脚本 ==========
+
+alias c_temp="ls_delete_file"
+
+function ls_delete_file(){
+  server_path=`pwd`
+  delete_dir $server_path
+  for one_file in `ls`
+  do
+    if [ -d $server_path/$one_file ]
+    then
+      delete_dir $server_path/$one_file
+    else
+      echo $one_file 'is ignore'
+    fi
+  done
+}
+
 
 function delete_file(){
 	rm -rf $1/.gradle
@@ -28,17 +44,4 @@ function delete_dir(){
 	done
 }
 
-
-# begin
-delete_dir $server_path
-
-for one_file in `ls`
-do
-	if [ -d $server_path/$one_file ]
-	then
-		delete_dir $server_path/$one_file
-	else
-		echo $one_file 'is ignore'
-	fi
-done
 
