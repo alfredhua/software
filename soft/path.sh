@@ -53,3 +53,9 @@ alias java17="export JAVA_HOME=$JAVA_17_HOME"
 if [ -d "/opt/homebrew/bin" ];then
   export PATH=/opt/homebrew/bin:$PATH
 fi
+
+## neovim
+if [ -d "$HOME/software/soft/neovim" ];then
+  export NEOVIM_HOME=$SOFT_WARE_PATH/neovim
+  export PATH=$PATH:$NEOVIM_HOME/bin/
+fi
