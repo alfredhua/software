@@ -9,7 +9,6 @@ services:
       - ${REDIS_PORT}:6379
     volumes:
       - ${REDIS_DATA_PATH}:/data
-      # - ${REDIS_CONFIG_PATH}:/redis-stack.conf
     networks:
       net:
         ipv4_address: ${REDIS_IP}
