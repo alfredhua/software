@@ -43,7 +43,7 @@ fi
 ## jdk8
 export JAVA_8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_321.jdk/Contents/Home
 export JAVA_11_HOME=/Library/Java/JavaVirtualMachines/jdk-11.0.12.jdk/Contents/Home
-export JAVA_17_HOME=/Library/Java/JavaVirtualMachines/jdk-17.0.1.jdk/Contents/Home
+export JAVA_17_HOME=/Library/Java/JavaVirtualMachines/jdk-17.0.4.1.jdk/Contents/Home
 export JAVA_HOME=$JAVA_8_HOME
 export PATH=$PATH:$JAVA_HOME/bin/
 alias java11="export JAVA_HOME=$JAVA_11_HOME"
