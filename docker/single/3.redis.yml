@@ -1,17 +1,15 @@
 version: '3'
 services:
   redis:
-    image: 'redis'
+    image: 'redis/redis-stack-server:latest'
     restart: always
-    container_name: redis
+    container_name: redis-stack-server
     privileged: true
     ports:
       - ${REDIS_PORT}:6379
-    command: 
-      redis-server /etc/redis/redis.conf 
     volumes:
       - ${REDIS_DATA_PATH}:/data
-      - ${REDIS_CONFIG_PATH}:/etc/redis/redis.conf
+      # - ${REDIS_CONFIG_PATH}:/redis-stack.conf
     networks:
       net:
         ipv4_address: ${REDIS_IP}
