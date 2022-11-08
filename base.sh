@@ -7,3 +7,4 @@ source $HOME/software/script/install.sh
 source $HOME/software/script/project/pro.sh
 source $HOME/software/script/project/deploy.sh
 source $HOME/software/script/tool/clearTempFile.sh
+
