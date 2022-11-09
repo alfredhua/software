@@ -84,6 +84,7 @@ map  <leader>gp          :action Git.Pull<cr>
 
 
 map  <leader>o           :action OptimizeImports<CR>
+map  <leader>a           :action ShowIntentionActions<CR>
 
 " =============== 文件 leader r ==================
 map  <leader>rf          :action RenameFile<CR>

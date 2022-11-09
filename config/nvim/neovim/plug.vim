@@ -23,7 +23,7 @@ call plug#begin('~/.config/plugged')
     Plug 'majutsushi/tagbar'
 
 		" =============== snippets ==================
-		Plug 'sirver/ultisnips'
+		" Plug 'sirver/ultisnips'
 		Plug 'mattesgroeger/vim-bookmarks'
 
 		" =============== code ==================
