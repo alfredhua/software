@@ -1,8 +1,8 @@
 let  g:coc_snippet_next =      '<C-j>'
 let  g:coc_snippet_prev =      '<C-k>'
 
-nmap <silent>  Q      :q<CR>
-nmap <silent>  <C-q>    :bd<CR>
+nmap <silent>  Q   :q<CR>
+nmap <silent>  <C-q>     :bd<CR>
 
 map  <silent>  <Leader>  <Plug>(easymotion-prefix)
 
@@ -62,4 +62,3 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 nmap <silent>  zt     :TableModeToggle<CR>
 
-nnoremap <silent><leader>yy <cmd>lua require('ithua').markdownCopyPlus()<CR>
