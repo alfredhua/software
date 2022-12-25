@@ -1,6 +1,7 @@
 let  g:coc_snippet_next =      '<C-j>'
 let  g:coc_snippet_prev =      '<C-k>'
 
+imap <silent>  jj     <Esc>
 nmap <silent>  Q   :q<CR>
 nmap <silent>  <C-q>     :bd<CR>
 
@@ -48,13 +49,6 @@ nmap <silent>   tl     :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
 nmap <silent>   <leader>ti :NERDTreeFind<CR>
 
 " =============== fzf  ==================
-" nnoremap <leader>ff :Files <CR>
-" nnoremap <leader>fg :Rg <CR> 
-" nnoremap <leader>fb :BFiles <CR>
-" nnoremap <leader>fl :Lines <CR>
-" nnoremap <leader>ft :BTags <CR>
-" nnoremap <leader>fm :BTags <CR>
-" nnoremap <leader>fc :Commits <CR>
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>

@@ -34,8 +34,6 @@ call plug#begin('~/.config/plugged')
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
     Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
-		" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-		" Plug 'junegunn/fzf.vim'
 
 		" =============== markdown ==================
 		Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
