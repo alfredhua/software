@@ -13,7 +13,7 @@ function install_arthas(){
 #=========== neovim =========
 alias i_neovim="install_neovim"
 function install_neovim(){
-  brew install neovim
+  brew install neovim ctags
   curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   ln -s ~/software/config/nvim/init.vim   ~/.config/nvim/init.vim
   ln -s ~/software/config/nvim/init.vim  ~/.ideavimrc
