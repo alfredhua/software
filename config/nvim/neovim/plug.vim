@@ -27,13 +27,14 @@ call plug#begin('~/.config/plugged')
 		Plug 'mattesgroeger/vim-bookmarks'
 
 		" =============== code ==================
-		" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+		Plug 'neoclide/coc.nvim', {'branch': 'release'}
 		Plug 'nvim-treesitter/nvim-treesitter', {'do': ':tsupdate'}
+    " Plug 'williamboman/nvim-lsp-installer'
+    " Plug 'neovim/nvim-lspconfig'
 
 		" =============== search ==================
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
-    Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 
 		" =============== markdown ==================
 		Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
@@ -62,9 +63,8 @@ source ~/software/config/nvim/neovim/settings/setting.vim
 source ~/software/config/nvim/neovim/themes.vim
 
 " 配置
-" source ~/software/config/nvim/neovim/settings/coc.vim
+source ~/software/config/nvim/neovim/settings/coc.vim
 " source ~/software/config/nvim/neovim/settings/lsp.vim
-" source ~/software/config/nvim/neovim/settings/fzf.vim
 source ~/software/config/nvim/neovim/settings/markdown.vim
 source ~/software/config/nvim/neovim/settings/tool.vim
 source ~/software/config/nvim/neovim/settings/treesitter.vim
