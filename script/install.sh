@@ -9,7 +9,7 @@ export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_pr
 # jdk8
 brew install --cask homebrew/cask-versions/adoptopenjdk8
 
-brew install git maven ctags neovim nvm python3
+brew install git maven ctags neovim nvm python3 rg
 
 echo "export JAVA_HOME=\$(/usr/libexec/java_home)" >>$HOME/.zshrc
 
