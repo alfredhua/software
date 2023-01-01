@@ -1,5 +1,5 @@
 # /usr/bin
-current_path=$HOME/software/soft
+
 # homebrew
 export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
 
@@ -55,4 +55,6 @@ rm -rf ~/.config/ranger && mkdir ~/.config/ranger
 echo 'mime ^text,  label editor = nvim -- "$@"' >> ~/.config/ranger/rifle.conf
 echo 'mime ^text,  label pager  = "$PAGER" -- "$@"' >> ~/.config/ranger/rifle.conf
 echo '!mime ^text, label editor, ext xml|json|csv|tex|py|pl|rb|js|sh|php = nvim -- "$@"' >> ~/.config/ranger/rifle.conf
+
+
 
