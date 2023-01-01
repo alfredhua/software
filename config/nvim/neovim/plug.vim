@@ -27,7 +27,7 @@ call plug#begin('~/.config/plugged')
 		Plug 'mattesgroeger/vim-bookmarks'
 
 		" =============== code ==================
-		Plug 'neoclide/coc.nvim', {'branch': 'release'}
+		" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 		Plug 'nvim-treesitter/nvim-treesitter', {'do': ':tsupdate'}
 
 		" =============== search ==================
@@ -62,7 +62,7 @@ source ~/software/config/nvim/neovim/settings/setting.vim
 source ~/software/config/nvim/neovim/themes.vim
 
 " 配置
-source ~/software/config/nvim/neovim/settings/coc.vim
+" source ~/software/config/nvim/neovim/settings/coc.vim
 " source ~/software/config/nvim/neovim/settings/lsp.vim
 " source ~/software/config/nvim/neovim/settings/fzf.vim
 source ~/software/config/nvim/neovim/settings/markdown.vim
