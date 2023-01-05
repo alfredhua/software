@@ -9,7 +9,7 @@
 # jdk8
 brew install --cask homebrew/cask-versions/adoptopenjdk8
 
-brew install git maven ctags neovim nvm python3 rg
+brew install git maven ctags neovim nvm python3 rg 
 
 echo "export JAVA_HOME=\$(/usr/libexec/java_home)" >>$HOME/.zshrc
 
