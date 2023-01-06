@@ -18,10 +18,8 @@ require('packer').startup(function(use)
     requires = { 'nvim-tree/nvim-web-devicons', },
     tag = 'nightly'
   }
-  -- use 'preservim/nerdtree'	
-  use "numToStr/FTerm.nvim"
+  use 'numToStr/FTerm.nvim'
   use 'kevinhwang91/rnvimr'
-  -- use 'xuyuanp/nerdtree-git-plugin'
   use 'mhinz/vim-startify'
 
   -- =============== tool ==================
@@ -69,3 +67,4 @@ require('packer').startup(function(use)
 end)
 
 require('plugins/nvim_tree')
+require('plugins/fterm')
