@@ -61,8 +61,8 @@ autocmd vimenter *
   \|   PlugInstall --sync | q
   \| endif
 
-source ~/software/config/nvim/neovim/settings/setting.vim
 source ~/software/config/nvim/neovim/themes.vim
+
 for file in split(glob("~/software/config/nvim/neovim/plugins/*.vim"), '\n')
     exe 'source' file
 endfor
