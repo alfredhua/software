@@ -1,7 +1,5 @@
 call plug#begin('~/.config/plugged')
-
 		" =============== window ==================
-    " Plug 'preservim/nerdtree'	
     Plug 'nvim-tree/nvim-tree.lua'
     Plug 'numToStr/FTerm.nvim'
 		Plug 'kevinhwang91/rnvimr'
