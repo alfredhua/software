@@ -34,9 +34,8 @@ curl -Ls https://raw.githubusercontent.com/daipeihust/im-select/master/install_m
 #nvm 
 cd ~ && mkdir ~/.nvm
 echo 'export NVM_DIR="$HOME/.nvm"' >> $HOME/.zshrc
-echo '    [ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && \. "$(brew --prefix)/opt/nvm/nvm.sh" # This loads nvm ' >> $HOME/.zshrc
-echo '    [ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm"' >> $HOME/.zshrc
-
+echo '    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  --no-use ' >> $HOME/.zshrc
+    
 source ~/.zshrc
 
 # arthas
