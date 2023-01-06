@@ -1,7 +1,9 @@
 call plug#begin('~/.config/plugged')
 
 		" =============== window ==================
-    Plug 'preservim/nerdtree'	
+    " Plug 'preservim/nerdtree'	
+    Plug 'nvim-tree/nvim-tree.lua'
+    Plug 'numToStr/FTerm.nvim'
 		Plug 'kevinhwang91/rnvimr'
 		Plug 'xuyuanp/nerdtree-git-plugin'
 		Plug 'mhinz/vim-startify'
@@ -72,3 +74,5 @@ source ~/software/config/nvim/neovim/settings/ultisnips.vim
 source ~/software/config/nvim/neovim/settings/window.vim
 source ~/software/config/nvim/neovim/settings/ranger.vim
 source ~/software/config/nvim/neovim/settings/telescope.vim
+source ~/software/config/nvim/neovim/settings/nvim_tree.vim
+source ~/software/config/nvim/neovim/settings/term.vim

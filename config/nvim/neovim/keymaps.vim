@@ -40,7 +40,8 @@ nmap <silent>   <leader>gl :Git pull<CR>
 nmap <silent>   <leader>gs :Git status<CR>
 
 " =============== 窗口相关 t ==================
-nmap <silent>   tp     :NERDTreeToggle<CR>
+nmap <silent>   tp     :NvimTreeToggle<CR>
+nmap <silent>   tt     :lua require('FTerm').open()<CR>
 nmap <silent>   tr     :RnvimrToggle<CR>
 nmap <silent>   tb     :Tagbar<CR>
 nmap <silent>   tj     :set splitbelow<CR>:split<CR>
