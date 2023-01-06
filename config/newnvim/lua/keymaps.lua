@@ -36,3 +36,4 @@ vim.api.nvim_set_keymap("n", "sv", ":vsp<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "sh", ":sp<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "sc", ":close<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "so", ":only<CR>", {noremap = true, silent = true})
+

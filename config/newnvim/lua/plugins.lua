@@ -24,7 +24,7 @@ require('packer').startup(function(use)
 
   -- =============== tool ==================
   use 'tpope/vim-fugitive'
-  use 'junegunn/vim-easy-align'
+  -- use 'junegunn/vim-easy-align'
   use 'tpope/vim-surround'
   use 'easymotion/vim-easymotion'
   use 'tommcdo/vim-exchange'
