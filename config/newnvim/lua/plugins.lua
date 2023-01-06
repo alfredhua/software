@@ -19,6 +19,7 @@ require('packer').startup(function(use)
     tag = 'nightly'
   }
   -- use 'preservim/nerdtree'	
+  use "numToStr/FTerm.nvim"
   use 'kevinhwang91/rnvimr'
   -- use 'xuyuanp/nerdtree-git-plugin'
   use 'mhinz/vim-startify'
