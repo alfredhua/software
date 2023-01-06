@@ -13,9 +13,14 @@ local packer_bootstrap = ensure_packer()
 
 require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
-  use 'preservim/nerdtree'	
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = { 'nvim-tree/nvim-web-devicons', },
+    tag = 'nightly'
+  }
+  -- use 'preservim/nerdtree'	
   use 'kevinhwang91/rnvimr'
-  use 'xuyuanp/nerdtree-git-plugin'
+  -- use 'xuyuanp/nerdtree-git-plugin'
   use 'mhinz/vim-startify'
 
   -- =============== tool ==================
@@ -35,7 +40,7 @@ require('packer').startup(function(use)
   use 'majutsushi/tagbar'
 
   -- =============== snippets ==================
-  use 'sirver/ultisnips'
+  -- use 'sirver/ultisnips'
   use 'mattesgroeger/vim-bookmarks'
 
   -- =============== code ==================
@@ -61,3 +66,5 @@ require('packer').startup(function(use)
     require('packer').sync()
   end
 end)
+
+require('plugins/nvim_tree')
