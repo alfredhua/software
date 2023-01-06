@@ -63,16 +63,8 @@ autocmd vimenter *
 
 source ~/software/config/nvim/neovim/settings/setting.vim
 source ~/software/config/nvim/neovim/themes.vim
+for file in split(glob("~/software/config/nvim/neovim/plugins/*.vim"), '\n')
+    exe 'source' file
+endfor
 
-" 配置
-source ~/software/config/nvim/neovim/settings/coc.vim
-" source ~/software/config/nvim/neovim/settings/lsp.vim
-source ~/software/config/nvim/neovim/settings/markdown.vim
-source ~/software/config/nvim/neovim/settings/tool.vim
-source ~/software/config/nvim/neovim/settings/treesitter.vim
-source ~/software/config/nvim/neovim/settings/ultisnips.vim
-source ~/software/config/nvim/neovim/settings/window.vim
-source ~/software/config/nvim/neovim/settings/ranger.vim
-source ~/software/config/nvim/neovim/settings/telescope.vim
-source ~/software/config/nvim/neovim/settings/nvim_tree.vim
-source ~/software/config/nvim/neovim/settings/term.vim
+
