@@ -6,14 +6,14 @@ if has('ide')
   source ~/software/config/nvim/idea/settings/setting.vim
   source ~/software/config/nvim/idea/settings/keymaps.vim
 
+elseif exists('g:vscode')
+
+  source ~/software/config/nvim/vscode/keymaps.vim
+
 else
+
   source ~/software/config/nvim/neovim/keymaps.vim
   source ~/software/config/nvim/neovim/plug.vim
-endif
-
-
-if exists('g:vscode')
-  source ~/software/config/nvim/vscode/keymaps.vim
-else
 
 endif
+
