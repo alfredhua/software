@@ -33,8 +33,6 @@ curl -Ls https://raw.githubusercontent.com/daipeihust/im-select/master/install_m
 
 #nvm 
 cd ~ && mkdir ~/.nvm
-echo 'export NVM_DIR="$HOME/.nvm"' >> $HOME/.zshrc
-echo '    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  --no-use ' >> $HOME/.zshrc
     
 source ~/.zshrc
 

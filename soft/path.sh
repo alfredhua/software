@@ -13,6 +13,7 @@ else
   export JAVA_HOME=$(/usr/libexec/java_home)
 fi
 
-# expor NVM_DIR="$HOME/.nvm"
-#     [ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && \. "$(brew --prefix)/opt/nvm/nvm.sh" # This loads nvm 
-#     [ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm"
+export NVM_DIR="$HOME/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  --no-use 
+
+export PATH=$HOME/.nvm/versions/node/v14.14.0/bin:$PATH
