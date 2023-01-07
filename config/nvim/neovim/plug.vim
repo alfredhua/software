@@ -27,10 +27,15 @@ call plug#begin('~/.config/plugged')
 		Plug 'mattesgroeger/vim-bookmarks'
 
 		" =============== code ==================
-		Plug 'neoclide/coc.nvim', {'branch': 'release'}
+		" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 		Plug 'nvim-treesitter/nvim-treesitter', {'do': ':tsupdate'}
-    " Plug 'williamboman/nvim-lsp-installer'
-    " Plug 'neovim/nvim-lspconfig'
+    Plug 'williamboman/nvim-lsp-installer'
+    Plug 'neovim/nvim-lspconfig'
+    Plug 'hrsh7th/cmp-nvim-lsp'
+    Plug 'hrsh7th/cmp-buffer'
+    Plug 'hrsh7th/cmp-path'
+    Plug 'hrsh7th/cmp-cmdline'
+    Plug 'hrsh7th/nvim-cmp'
 
 		" =============== search ==================
     Plug 'nvim-lua/plenary.nvim'
@@ -64,5 +69,4 @@ source ~/software/config/nvim/neovim/themes.vim
 for file in split(glob("~/software/config/nvim/neovim/plugins/*.vim"), '\n')
     exe 'source' file
 endfor
-
 

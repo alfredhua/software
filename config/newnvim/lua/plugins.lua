@@ -39,7 +39,6 @@ require('packer').startup(function(use)
   use 'majutsushi/tagbar'
 
   -- =============== snippets ==================
-  -- use 'sirver/ultisnips'
   use 'mattesgroeger/vim-bookmarks'
 
   -- =============== code ==================
