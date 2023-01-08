@@ -21,7 +21,7 @@ vim.api.nvim_set_keymap("v", "H", "5h", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "J", "5j", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("v", "J", "5j", {noremap = true, silent = true})
 
-vim.api.nvim_set_keymap("n", ">", ">>", {noremap = true, silent = true})
+	vim.api.nvim_set_keymap("n", ">", ">>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "<C-s>", ":w<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "M", "J", {noremap = true, silent = true})
 vim.api.nvim_set_keymap("n", "U", "<C-r>", {noremap = true, silent = true})
