@@ -1,57 +1,67 @@
 
 vim.g.mapleader = ' '
 
-vim.api.nvim_set_keymap("n", "<C-a>", "<ESC>A", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<C-[>", "<ESC>", {noremap = true, silent = true})
+vim.keymap.set("i", "<C-a>", "<ESC>A")
+vim.keymap.set("n", "<C-[>", "<ESC>")
 
-vim.api.nvim_set_keymap("v", "Y", "\"+y", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "P", "\"+p", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("v", "P", "\"+p", {noremap = true, silent = true})
+vim.keymap.set("v", "Y", "\"+y")
+vim.keymap.set("n", "P", "\"+p")
+vim.keymap.set("v", "P", "\"+p")
 
-vim.api.nvim_set_keymap("n", "K", "5k", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("v", "K", "5k", {noremap = true, silent = true})
+vim.keymap.set("n", "K", "5k")
+vim.keymap.set("v", "K", "5k")
 
-vim.api.nvim_set_keymap("n", "L", "5l", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("v", "L", "5l", {noremap = true, silent = true})
+vim.keymap.set("n", "L", "5l")
+vim.keymap.set("v", "L", "5l")
 
-vim.api.nvim_set_keymap("n", "H", "5h", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("v", "H", "5h", {noremap = true, silent = true})
-
-
-vim.api.nvim_set_keymap("n", "J", "5j", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("v", "J", "5j", {noremap = true, silent = true})
-
-	vim.api.nvim_set_keymap("n", ">", ">>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<C-s>", ":w<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "M", "J", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "U", "<C-r>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<leader><CR>", ":nohlsearch<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<C-j>", ":bn<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<C-k>", ":bp<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<C-q>", ":bd<CR>", {noremap = true, silent = true})
+vim.keymap.set("n", "H", "5h")
+vim.keymap.set("v", "H", "5h")
 
 
-vim.api.nvim_set_keymap("n", "<leader>ei", ":e ~/software/config/nvim/init.vim<CR>", {noremap = true, silent = true})
+vim.keymap.set("n", "J", "5j")
+vim.keymap.set("v", "J", "5j")
 
-vim.api.nvim_set_keymap("n", "sv", ":vsp<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "sh", ":sp<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "sc", ":close<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "so", ":only<CR>", {noremap = true, silent = true})
+vim.keymap.set("n", ">", ">>")
+vim.keymap.set("n", "<C-s>", ":w<CR>")
+vim.keymap.set("n", "M", "J")
+vim.keymap.set("n", "U", "<C-r>")
+vim.keymap.set("n", "<leader><CR>", ":nohlsearch<CR>")
+vim.keymap.set("n", "<C-j>", ":bn<CR>")
+vim.keymap.set("n", "<C-k>", ":bp<CR>")
+vim.keymap.set("n", "<C-q>", ":bd<CR>")
+
+
+vim.keymap.set("n", "<leader>ei", ":e ~/software/config/nvim/init.vim<CR>")
+
+vim.keymap.set("n", "sv", ":vsp<CR>")
+vim.keymap.set("n", "sh", ":sp<CR>")
+vim.keymap.set("n", "sc", ":close<CR>")
+vim.keymap.set("n", "so", ":only<CR>")
 
 -- tb
-vim.api.nvim_set_keymap("n", "tb", ":TagbarToggle<CR>", {noremap = true, silent = true})
+vim.keymap.set("n", "tb", ":TagbarToggle<CR>")
 
 -- telescope
-vim.api.nvim_set_keymap("n", "<leader>ff", ":Telescope find_files<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<leader>fg", ":Telescope live_grep<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<leader>fb", ":Telescope buffers<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "<leader>fh", ":Telescope help_tags<CR>", {noremap = true, silent = true})
+vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>")
+vim.keymap.set("n", "<leader>fg", ":Telescope live_grep<CR>")
+vim.keymap.set("n", "<leader>fb", ":Telescope buffers<CR>")
+vim.keymap.set("n", "<leader>fh", ":Telescope help_tags<CR>")
 
 -- nvimrc
-vim.api.nvim_set_keymap("n", "tp", ":NvimTreeToggle<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "tc", ":NvimTreeClose<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "ti", ":NvimTreeFindFile<CR>", {noremap = true, silent = true})
+vim.keymap.set("n", "tp", ":NvimTreeToggle<CR>")
+vim.keymap.set("n", "tc", ":NvimTreeClose<CR>")
+vim.keymap.set("n", "ti", ":NvimTreeFindFile<CR>")
 
 -- fterm
 vim.keymap.set('n', 'tt', '<CMD>lua require("FTerm").toggle()<CR>')
 vim.keymap.set('t', 'tt', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>')
+
+vim.keymap.set('n', '<leader>1', ':BufferLineGoToBuffer 1<CR>')
+vim.keymap.set('n', '<leader>2', ':BufferLineGoToBuffer 2<CR>')
+vim.keymap.set('n', '<leader>3', ':BufferLineGoToBuffer 3<CR>')
+vim.keymap.set('n', '<leader>4', ':BufferLineGoToBuffer 4<CR>')
+vim.keymap.set('n', '<leader>5', ':BufferLineGoToBuffer 5<CR>')
+vim.keymap.set('n', '<leader>6', ':BufferLineGoToBuffer 6<CR>')
+vim.keymap.set('n', '<leader>7', ':BufferLineGoToBuffer 7<CR>')
+vim.keymap.set('n', '<leader>8', ':BufferLineGoToBuffer 8<CR>')
+vim.keymap.set('n', '<leader>9', ':BufferLineGoToBuffer 9<CR>')
