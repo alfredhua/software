@@ -11,10 +11,12 @@ require("mason").setup({
 
 local lspconfig = require("lspconfig")
 local mason_lsconfig = require("mason-lspconfig")
+
 local servers = {
 	jsonls = require("lsp.config.json"),
 	html = require("lsp.config.html"),
-	tsserver,
+	tsserver = require("lsp.config.tsserver"),
+	vuels = require("lsp.config.vue")
 }
 
 local server_names = {}
