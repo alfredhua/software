@@ -18,9 +18,6 @@ vim.o.shiftround      = true
 -- >> << 时移动长度
 vim.o.shiftwidth      = 2
 vim.bo.shiftwidth     = 2
--- 空格替代tab
-vim.o.expandtab       = true
-vim.bo.expandtab      = true
 -- 新行对齐当前行
 vim.o.autoindent      = true
 vim.bo.autoindent     = true
@@ -28,8 +25,6 @@ vim.o.smartindent     = true
 -- 搜索大小写不敏感，除非包含大写
 vim.o.ignorecase      = true
 vim.o.smartcase       = true
--- 搜索不要高亮
-vim.o.hlsearch        = false
 -- 边输入边搜索
 vim.o.incsearch       = true
 -- 命令行高为2，提供足够的显示空间

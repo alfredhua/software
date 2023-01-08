@@ -23,6 +23,3 @@ require("nvim-tree").setup({
   },
 })
 
-vim.api.nvim_set_keymap("n", "tp", ":NvimTreeToggle<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "tc", ":NvimTreeClose<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "ti", ":NvimTreeFindFile<CR>", {noremap = true, silent = true})
