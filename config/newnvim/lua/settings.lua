@@ -75,3 +75,6 @@ vim.o.showmode        = false
 vim.opt.clipboard     = "unnamedplus"
 vim.o.conceallevel=0
 vim.cmd("colorscheme nightfox")
+vim.cmd("set expandtab")
+vim.cmd("set autoindent")
+
