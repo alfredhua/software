@@ -27,10 +27,10 @@ call plug#begin('~/.config/plugged')
 		Plug 'mattesgroeger/vim-bookmarks'
 
 		" =============== code ==================
-		" Plug 'neoclide/coc.nvim', {'branch': 'release'}
-		Plug 'nvim-treesitter/nvim-treesitter', {'do': ':tsupdate'}
-    Plug 'williamboman/nvim-lsp-installer'
-    Plug 'neovim/nvim-lspconfig'
+		Plug 'neoclide/coc.nvim', {'branch': 'release'}
+		" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':tsupdate'}
+    " Plug 'williamboman/nvim-lsp-installer'
+    " Plug 'neovim/nvim-lspconfig'
     Plug 'hrsh7th/cmp-nvim-lsp'
     Plug 'hrsh7th/cmp-buffer'
     Plug 'hrsh7th/cmp-path'
@@ -49,7 +49,7 @@ call plug#begin('~/.config/plugged')
 		Plug 'kyazdani42/nvim-web-devicons'
 		Plug 'akinsho/bufferline.nvim'
     Plug 'nvim-lualine/lualine.nvim'
-		Plug 'joshdick/onedark.vim'
+    Plug 'EdenEast/nightfox.nvim'
 
 call plug#end()
 

@@ -4,7 +4,7 @@ if (has("termguicolors"))
 	set termguicolors
 endif
 
-colorscheme onedark
+colorscheme nightfox
 lua << EOF
 require("bufferline").setup{
 	options = {

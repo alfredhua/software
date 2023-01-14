@@ -1,3 +1,6 @@
+set encoding=utf-8
+set fileencodings=utf-8,chinese,latin-1
+
 syntax enable
 set nocompatible
 set exrc
@@ -33,18 +36,12 @@ set wildmenu
 set ignorecase
 set smartcase
 set inccommand=split
-set completeopt=longest,noinsert,menuone,noselect,preview
+set completeopt=longest,noinsert,menuone,preview
 set ttyfast "should make scrolling faster
 set lazyredraw "same as above
 set updatetime=300
 
 let mapleader=" "
-
-" Auto change directory to current dir
-"autocmd BufEnter * silent! lcd %:p:h
-
-set encoding=utf-8
-set fileencodings=utf-8,chinese,latin-1
 
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 autocmd BufNewFile,BufRead *.html,*.hml set filetype=md
