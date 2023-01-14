@@ -54,7 +54,7 @@ vim.keymap.set("n", "ti", ":NvimTreeFindFile<CR>")
 
 -- fterm
 vim.keymap.set('n', 'tt', '<CMD>lua require("FTerm").toggle()<CR>')
-vim.keymap.set('t', 'tt', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>')
+-- vim.keymap.set('t', 'tt', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>')
 
 vim.keymap.set('n', '<C-1>', ':BufferLineGoToBuffer 1<CR>')
 vim.keymap.set('n', '<C-2>', ':BufferLineGoToBuffer 2<CR>')
