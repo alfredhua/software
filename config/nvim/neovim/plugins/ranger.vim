@@ -1,10 +1,10 @@
 let g:rnvimr_draw_border = 1
 
-let g:rnvimr_enable_picker = 1
+let g:rnvimr_enable_picker = 0
 
 let g:rnvimr_ranger_cmd = ['ranger','--cmd=set draw_borders both']
 
-let g:rnvimr_enable_ex = 1
+let g:rnvimr_enable_ex = 0
 
 let g:rnvimr_enable_bw = 1
 

@@ -10,6 +10,7 @@ let g:coc_global_extensions = [
 			\ 'coc-translator',
 			\ 'coc-vetur',
 			\ 'coc-tsserver',
+			\ 'coc-highlight',
 			\ 'coc-imselect',
 			\ 'coc-java',
 			\ 'coc-vimlsp']
