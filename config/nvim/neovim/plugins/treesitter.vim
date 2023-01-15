@@ -4,7 +4,7 @@ require'nvim-treesitter.configs'.setup {
   ensure_installed = {"html", "css", "vim", "json","java","yaml","python","lua", "javascript", "typescript", "tsx","vue"},
   highlight = {
     enable = true,
-    additional_vim_regex_highlighting = false
+    --additional_vim_regex_highlighting = false
   },
   incremental_selection = {
     enable = true,
@@ -17,6 +17,14 @@ require'nvim-treesitter.configs'.setup {
   },
   indent = {
     enable = true
+  },
+  playground = {
+    enable = true,
   }
 }
+
 EOF
+
+" TSToggle highlight
+
+
