@@ -1,7 +1,7 @@
 " =============== treesitter ==================
 lua << EOF
 require'nvim-treesitter.configs'.setup {
-  -- ensure_installed = {"html", "css", "vim", "json","java","yaml","python","lua", "javascript", "typescript", "tsx","vue"},
+  ensure_installed = {"html", "css", "vim", "json","java","yaml","python","lua", "javascript", "typescript", "tsx","vue"},
   highlight = {
     enable = true,
     additional_vim_regex_highlighting = false

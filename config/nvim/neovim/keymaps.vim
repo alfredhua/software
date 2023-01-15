@@ -55,4 +55,5 @@ nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 nmap <silent>  zt     :TableModeToggle<CR>
+nmap <silent>  =     :Format<CR>
 

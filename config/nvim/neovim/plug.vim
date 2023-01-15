@@ -19,7 +19,6 @@ call plug#begin('~/.config/plugged')
 		Plug 'lambdalisue/suda.vim'
 		Plug 'vim-scripts/argtextobj.vim'
 		Plug 'Yggdroot/indentLine'
-		Plug 'chiel92/vim-autoformat'
     Plug 'majutsushi/tagbar'
 
 		" =============== snippets ==================
@@ -28,9 +27,7 @@ call plug#begin('~/.config/plugged')
 
 		" =============== code ==================
 		Plug 'neoclide/coc.nvim', {'branch': 'release'}
-		" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':tsupdate'}
-    " Plug 'williamboman/nvim-lsp-installer'
-    " Plug 'neovim/nvim-lspconfig'
+		Plug 'nvim-treesitter/nvim-treesitter', {'do': ':tsupdate'}
     Plug 'hrsh7th/cmp-nvim-lsp'
     Plug 'hrsh7th/cmp-buffer'
     Plug 'hrsh7th/cmp-path'

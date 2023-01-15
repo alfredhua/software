@@ -13,7 +13,6 @@ let g:coc_global_extensions = [
 			\ 'coc-translator',
 			\ 'coc-vetur',
 			\ 'coc-tsserver',
-			\ 'coc-highlight',
 			\ 'coc-imselect',
 			\ 'coc-java',
 			\ 'coc-vimlsp']
@@ -43,4 +42,5 @@ augroup end
 command! -nargs=0 Format :call CocActionAsync('format')
 
 
-autocmd CursorHold * silent call CocActionAsync('highlight')
+" autocmd CursorHold * silent call CocActionAsync('highlight')
+
