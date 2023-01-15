@@ -46,8 +46,7 @@ nmap <silent>   tr     :RnvimrToggle<CR>
 nmap <silent>   tb     :Tagbar<CR>
 nmap <silent>   tj     :set splitbelow<CR>:split<CR>
 nmap <silent>   tl     :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
-
-nmap <silent>   <leader>ti :NERDTreeFind<CR>
+nmap <silent>   ti     :NvimTreeFocus<CR>
 
 " =============== fzf  ==================
 nnoremap <leader>ff <cmd>Telescope find_files<cr>

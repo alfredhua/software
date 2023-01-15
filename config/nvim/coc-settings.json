@@ -1,0 +1,10 @@
+{
+  "languageserver": {
+    "coc-html":{
+    }
+  },
+  "json.enable": true,
+  "json.validate.enable": true,
+  "json.format.enable": true,
+  "colors.enable": true
+}
