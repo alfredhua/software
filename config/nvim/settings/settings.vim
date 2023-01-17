@@ -49,3 +49,16 @@ autocmd BufNewFile,BufRead *.xml set filetype=xml
 
 set expandtab
 set autoindent
+
+let g:clipboard = {
+  \ 'name': 'pbcopy',
+  \ 'copy': {
+  \    '+': 'pbcopy',
+  \    '*': 'pbcopy',
+  \  },
+  \ 'paste': {
+  \    '+': 'pbpaste',
+  \    '*': 'pbpaste',
+  \ },
+  \ 'cache_enabled': 0,
+  \ } 
