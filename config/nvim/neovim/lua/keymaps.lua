@@ -1,67 +1,68 @@
+local keyset = vim.keymap.set
 
-vim.g.mapleader = ' '
+local opts = {silent = true, noremap = true, expr = true, replace_keycodes = false}
 
-vim.keymap.set("i", "<C-a>", "<ESC>A")
-vim.keymap.set("n", "<C-[>", "<ESC>")
+keyset("i", "<C-a>", "<ESC>A")
+keyset("n", "<C-[>", "<ESC>")
 
-vim.keymap.set("v", "Y", "\"+y")
-vim.keymap.set("n", "P", "\"+p")
-vim.keymap.set("v", "P", "\"+p")
+keyset("v", "Y", "\"+y")
+keyset("n", "P", "\"+p")
+keyset("v", "P", "\"+p")
 
-vim.keymap.set("n", "K", "5k")
-vim.keymap.set("v", "K", "5k")
+keyset("n", "K", "5k")
+keyset("v", "K", "5k")
 
-vim.keymap.set("n", "L", "5l")
-vim.keymap.set("v", "L", "5l")
+keyset("n", "L", "5l")
+keyset("v", "L", "5l")
 
-vim.keymap.set("n", "H", "5h")
-vim.keymap.set("v", "H", "5h")
-
-
-vim.keymap.set("n", "J", "5j")
-vim.keymap.set("v", "J", "5j")
-
-vim.keymap.set("n", ">", ">>")
-vim.keymap.set("n", "<C-s>", ":w<CR>")
-vim.keymap.set("n", "M", "J")
-vim.keymap.set("n", "U", "<C-r>")
-vim.keymap.set("n", "<leader><CR>", ":nohlsearch<CR>")
-vim.keymap.set("n", "<C-j>", ":bn<CR>")
-vim.keymap.set("n", "<C-k>", ":bp<CR>")
-vim.keymap.set("n", "<C-q>", ":bd<CR>")
+keyset("n", "H", "5h")
+keyset("v", "H", "5h")
 
 
-vim.keymap.set("n", "<leader>ei", ":e ~/software/config/nvim/init.vim<CR>")
+keyset("n", "J", "5j")
+keyset("v", "J", "5j")
 
-vim.keymap.set("n", "sv", ":vsp<CR>")
-vim.keymap.set("n", "sh", ":sp<CR>")
-vim.keymap.set("n", "sc", ":close<CR>")
-vim.keymap.set("n", "so", ":only<CR>")
+keyset("n", ">", ">>")
+keyset("n", "<C-s>", ":w<CR>")
+keyset("n", "M", "J")
+keyset("n", "U", "<C-r>")
+keyset("n", "<leader><CR>", ":nohlsearch<CR>")
+keyset("n", "<C-j>", ":bn<CR>")
+keyset("n", "<C-k>", ":bp<CR>")
+keyset("n", "<C-q>", ":bd<CR>")
+
+
+keyset("n", "<leader>ei", ":e ~/software/config/nvim/init.vim<CR>")
+
+keyset("n", "sv", ":vsp<CR>")
+keyset("n", "sh", ":sp<CR>")
+keyset("n", "sc", ":close<CR>")
+keyset("n", "so", ":only<CR>")
 
 -- tb
-vim.keymap.set("n", "tb", ":TagbarToggle<CR>")
+keyset("n", "tb", ":TagbarToggle<CR>")
 
 -- telescope
-vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>")
-vim.keymap.set("n", "<leader>fg", ":Telescope live_grep<CR>")
-vim.keymap.set("n", "<leader>fb", ":Telescope buffers<CR>")
-vim.keymap.set("n", "<leader>fh", ":Telescope help_tags<CR>")
+keyset("n", "<leader>ff", ":Telescope find_files<CR>")
+keyset("n", "<leader>fg", ":Telescope live_grep<CR>")
+keyset("n", "<leader>fb", ":Telescope buffers<CR>")
+keyset("n", "<leader>fh", ":Telescope help_tags<CR>")
 
 -- nvimrc
-vim.keymap.set("n", "tp", ":NvimTreeToggle<CR>")
-vim.keymap.set("n", "tc", ":NvimTreeClose<CR>")
-vim.keymap.set("n", "ti", ":NvimTreeFindFile<CR>")
+keyset("n", "tp", ":NvimTreeToggle<CR>")
+keyset("n", "tc", ":NvimTreeClose<CR>")
+keyset("n", "ti", ":NvimTreeFindFile<CR>")
 
 -- fterm
-vim.keymap.set('n', 'tt', '<CMD>lua require("FTerm").toggle()<CR>')
--- vim.keymap.set('t', 'tt', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>')
+keyset('n', 'tt', '<CMD>lua require("FTerm").toggle()<CR>')
+-- keyset('t', 'tt', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>')
 
-vim.keymap.set('n', '<C-1>', ':BufferLineGoToBuffer 1<CR>')
-vim.keymap.set('n', '<C-2>', ':BufferLineGoToBuffer 2<CR>')
-vim.keymap.set('n', '<C-3>', ':BufferLineGoToBuffer 3<CR>')
-vim.keymap.set('n', '<C-4>', ':BufferLineGoToBuffer 4<CR>')
-vim.keymap.set('n', '<C-5>', ':BufferLineGoToBuffer 5<CR>')
-vim.keymap.set('n', '<C-6>', ':BufferLineGoToBuffer 6<CR>')
-vim.keymap.set('n', '<C-7>', ':BufferLineGoToBuffer 7<CR>')
-vim.keymap.set('n', '<C-8>', ':BufferLineGoToBuffer 8<CR>')
-vim.keymap.set('n', '<C-9>', ':BufferLineGoToBuffer 9<CR>')
+keyset('n', '<C-1>', ':BufferLineGoToBuffer 1<CR>')
+keyset('n', '<C-2>', ':BufferLineGoToBuffer 2<CR>')
+keyset('n', '<C-3>', ':BufferLineGoToBuffer 3<CR>')
+keyset('n', '<C-4>', ':BufferLineGoToBuffer 4<CR>')
+keyset('n', '<C-5>', ':BufferLineGoToBuffer 5<CR>')
+keyset('n', '<C-6>', ':BufferLineGoToBuffer 6<CR>')
+keyset('n', '<C-7>', ':BufferLineGoToBuffer 7<CR>')
+keyset('n', '<C-8>', ':BufferLineGoToBuffer 8<CR>')
+keyset('n', '<C-9>', ':BufferLineGoToBuffer 9<CR>')
