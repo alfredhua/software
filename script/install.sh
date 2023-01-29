@@ -20,14 +20,19 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 
 cd $HOME/.oh-my-zsh/plugins && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 
-echo "source ~/software/base.sh " >> $HOME/.zshrc
+# 下载插件
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+## 主题
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+rm $HOME/.zshrc && ln -s ~/software/config/zsh/zshrc $HOME/.zshrc
 
 # neovim
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 ln -s ~/software/config/nvim/init.vim   ~/.config/nvim/init.vim
 
-ln -s ~/software/config/nvim/init.vim  ~/.ideavimrc
+ln -s ~/software/config/nvim/idea/ideavimrc ~/.ideavimrc
 
 curl -Ls https://raw.githubusercontent.com/daipeihust/im-select/master/install_mac.sh | sh
 

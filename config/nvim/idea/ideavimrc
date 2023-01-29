@@ -1,0 +1,5 @@
+source ~/software/config/nvim/common/keymaps.vim
+source ~/software/config/nvim/common/setting.vim
+
+source ~/software/config/nvim/idea/keymaps.vim
+source ~/software/config/nvim/idea/setting.vim

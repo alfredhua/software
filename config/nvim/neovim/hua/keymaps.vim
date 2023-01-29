@@ -46,7 +46,7 @@ nmap <silent>   tr     :RnvimrToggle<CR>
 nmap <silent>   tb     :Tagbar<CR>
 nmap <silent>   tj     :set splitbelow<CR>:split<CR>
 nmap <silent>   tl     :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
-nmap <silent>   ti     :NvimTreeFocus<CR>
+nmap <silent>   ti     :NvimTreeFindFile<CR>
 
 " =============== fzf  ==================
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
@@ -55,5 +55,5 @@ nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 nmap <silent>  zt     :TableModeToggle<CR>
-nmap <silent>  =     :Format<CR>
+nmap <silent>  <leader>=     :Format<CR>
 
