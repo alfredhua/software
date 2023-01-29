@@ -30,8 +30,8 @@ rm $HOME/.zshrc && ln -s ~/software/config/zsh/zshrc $HOME/.zshrc
 # neovim
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-ln -s ~/software/config/nvim/init.vim   ~/.config/nvim/init.vim
-
+ln -s ~/software/config/nvim/neovim/init.vim  ~/.config/nvim/init.vim
+##idea
 ln -s ~/software/config/nvim/idea/ideavimrc ~/.ideavimrc
 
 curl -Ls https://raw.githubusercontent.com/daipeihust/im-select/master/install_mac.sh | sh
