@@ -41,7 +41,6 @@ set ttyfast "should make scrolling faster
 set lazyredraw "same as above
 set updatetime=300
 
-let mapleader=" "
 
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 autocmd BufNewFile,BufRead *.html,*.hml set filetype=md

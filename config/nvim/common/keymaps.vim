@@ -1,3 +1,5 @@
+
+let mapleader=" "
 inoremap <silent> <C-a> <ESC>A
 inoremap <C-[> <ESC>
 

@@ -1,6 +1,6 @@
 
 
-let g:coc_config_home = '~/software/config/nvim/coc'
+let g:coc_config_home = '~/software/config/nvim/neovim/coc-config'
 
 let g:coc_global_extensions = [
 			\ 'coc-css',
