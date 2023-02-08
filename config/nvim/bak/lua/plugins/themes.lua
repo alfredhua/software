@@ -1,7 +1,6 @@
 -- 状态栏
 require('lualine').setup()
 
-
 -- bufferline
 require("bufferline").setup{
   options = {

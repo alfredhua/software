@@ -9,6 +9,18 @@ require('packer').startup(function(use)
 	-- use 'kevinhwang91/rnvimr' -- 文件管理
 	-- use 'mhinz/vim-startify' --起始页
   use { 'glepnir/dashboard-nvim' }
+  use {
+    "folke/which-key.nvim",
+    config = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 300
+      require("which-key").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end
+  }
 
 	-- =============== tool ==================
 	use 'tpope/vim-fugitive'
@@ -30,10 +42,10 @@ require('packer').startup(function(use)
 	use 'mattesgroeger/vim-bookmarks'
 
 	-- =============== code ==================
-	use 'nvim-treesitter/nvim-treesitter'
-	use 'neovim/nvim-lspconfig'
-	use({ "williamboman/mason.nvim" })
-	use({ "williamboman/mason-lspconfig.nvim" })
+	-- use 'nvim-treesitter/nvim-treesitter'
+	-- use 'neovim/nvim-lspconfig'
+	-- use({ "williamboman/mason.nvim" })
+	-- use({ "williamboman/mason-lspconfig.nvim" })
 	-- use 'hrsh7th/cmp-nvim-lsp'
 	-- use 'hrsh7th/cmp-buffer'
 	-- use 'hrsh7th/cmp-path'

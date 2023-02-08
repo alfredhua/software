@@ -1,5 +1,5 @@
 local keyset = vim.keymap.set
-local opts = {silent = true, noremap = true, expr = true, replace_keycodes = false}
+local opts = {silent = true, noremap = true, expr = true, replace_keycodes = false,remap = true}
 
 -- 复制粘贴
 keyset("v", "Y", "\"+y")
@@ -23,8 +23,8 @@ keyset("n", "<C-j>", ":bn<CR>")
 keyset("n", "<C-k>", ":bp<CR>")
 keyset("n", "<C-q>", ":bd<CR>")
 
-keyset('n', '<C-1>', ':BufferLineGoToBuffer 3<CR>')
-keyset('n', '<C-2>', ':BufferLineGoToBuffer 2<CR>')
+keyset('n', '<C-1>', ':BufferLineGoToBuffer 1<CR>')
+keyset('n', '<C-2>', ':BufferLineGoToBuffer 2')
 keyset('n', '<C-3>', ':BufferLineGoToBuffer 3<CR>')
 keyset('n', '<C-4>', ':BufferLineGoToBuffer 4<CR>')
 keyset('n', '<C-5>', ':BufferLineGoToBuffer 5<CR>')
