@@ -17,3 +17,8 @@ export NVM_DIR="$HOME/.nvm"
     [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  --no-use 
 
 export PATH=$HOME/.nvm/versions/node/v14.14.0/bin:$PATH
+
+# if [ -d $HOME/software/soft/neovim ];then
+#   export NEOVIM_HOME=$HOME/software/soft/neovim
+#   export PATH=$PATH:$NEOVIM_HOME/bin
+# fi
