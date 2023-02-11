@@ -15,5 +15,6 @@ require("bufferline").setup{
 
 }
 
-
-
+vim.cmd("colorscheme nightfox")
+vim.cmd("set expandtab")
+vim.cmd("set autoindent")
