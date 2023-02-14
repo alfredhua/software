@@ -74,8 +74,5 @@ vim.o.showmode        = false
 -- 配置剪切板
 vim.opt.clipboard     = "unnamedplus"
 vim.o.conceallevel=0
-vim.cmd("colorscheme nightfox")
-vim.cmd("set expandtab")
-vim.cmd("set autoindent")
 
 vim.g.mapleader = ' '
