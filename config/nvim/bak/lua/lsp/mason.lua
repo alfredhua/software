@@ -7,8 +7,8 @@ require("mason").setup({
         }
     }
 })
-
-local servers = { "lua_ls" }
+-- "lua_ls"
+local servers = { "volar"  }
 
 require("mason-lspconfig").setup {
     ensure_installed = servers
@@ -74,6 +74,11 @@ for _, lsp in ipairs(servers) do
     flags = {
       -- default in neovim 0.7+
       debounce_text_changes = 150,
+    },
+    settings = {
+      Lua = {
+        diagnostics = { globals = {'vim'} }
+      }
     }
   }
 end
