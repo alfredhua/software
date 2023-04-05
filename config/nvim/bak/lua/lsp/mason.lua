@@ -8,7 +8,7 @@ require("mason").setup({
     }
 })
 
-local servers = { "volar","lua_ls"  }
+local servers = { "volar","lua_ls", "html", "jsonls", "cssls"  }
 
 require("mason-lspconfig").setup {
     ensure_installed = servers
@@ -21,24 +21,6 @@ end
 
 
 local on_attach = function(client, bufnr)
-
-  -- if client.server_capabilities.documentHighlightProvider then
-  --   vim.api.nvim_create_augroup("lsp_document_highlight", { clear = true })
-  --   vim.api.nvim_clear_autocmds { buffer = bufnr, group = "lsp_document_highlight" }
-  --   vim.api.nvim_create_autocmd("CursorHold", {
-  --     callback = vim.lsp.buf.document_highlight,
-  --     buffer = bufnr,
-  --     group = "lsp_document_highlight",
-  --     desc = "Document Highlight",
-  --   })
-  --   vim.api.nvim_create_autocmd("CursorMoved", {
-  --     callback = vim.lsp.buf.clear_references,
-  --     buffer = bufnr,
-  --     group = "lsp_document_highlight",
-  --     desc = "Clear All the References",
-  --   })
-  -- end
-
   -- Mappings.
   -- See `:help vim.lsp.*` for documentation on any of the below functions
   local bufopts = { noremap=true, silent=true, buffer=bufnr }
@@ -60,11 +42,15 @@ local on_attach = function(client, bufnr)
 end
 
 local cmp_status_ok, cmp_nvim_lsp = pcall(require, 'cmp_nvim_lsp')
+
 if not cmp_status_ok then
   return
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
+--
+-- local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
 capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
 
 for _, lsp in ipairs(servers) do
@@ -83,3 +69,4 @@ for _, lsp in ipairs(servers) do
     }
   }
 end
+

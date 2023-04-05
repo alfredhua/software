@@ -31,22 +31,25 @@ require('packer').startup(function(use)
 
 	-- =============== code ==================
   use 'nvim-treesitter/nvim-treesitter'
-  use 'neovim/nvim-lspconfig'
   use({ "williamboman/mason.nvim", run = ":MasonUpdate"  })
   use({ "williamboman/mason-lspconfig.nvim" })
-	use 'hrsh7th/cmp-nvim-lsp'
+
+  use 'neovim/nvim-lspconfig'
+  use 'hrsh7th/cmp-nvim-lsp'
 	use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
 	use 'hrsh7th/cmp-cmdline'
 	use 'hrsh7th/nvim-cmp'
-	-- use 'hrsh7th/cmp-vsnip'
-	-- use 'hrsh7th/vim-vsnip'
-	-- use 'L3MON4D3/LuaSnip'
-	-- use 'saadparwaiz1/cmp_luasnip'
-	-- use 'SirVer/ultisnips'
-	-- use 'quangnguyen30192/cmp-nvim-ultisnips'
-	-- use 'dcampos/nvim-snippy'
-	-- use 'dcampos/cmp-snippy'
+
+  use 'hrsh7th/cmp-vsnip'
+  use 'hrsh7th/vim-vsnip'
+
+  -- lua snippets
+  use 'L3MON4D3/LuaSnip'
+  use 'saadparwaiz1/cmp_luasnip'
+
+  use "rafamadriz/friendly-snippets"
+  -- json
 	use 'b0o/schemastore.nvim'
 
 	-- =============== search ==================
@@ -65,9 +68,9 @@ require('packer').startup(function(use)
 	use 'nvim-lualine/lualine.nvim'
 	use "EdenEast/nightfox.nvim"
 
-	if install_plugins then
-		require('packer').sync()
-	end
+	-- if install_plugins then
+	-- 	require('packer').sync()
+	-- end
 end)
 
 
