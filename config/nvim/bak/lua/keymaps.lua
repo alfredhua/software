@@ -23,15 +23,15 @@ keyset("n", "<C-j>", ":bn<CR>")
 keyset("n", "<C-k>", ":bp<CR>")
 keyset("n", "<C-q>", ":bd<CR>")
 
-keyset('n', 't1', ':BufferLineGoToBuffer 1<CR>')
-keyset('n', 't2', ':BufferLineGoToBuffer 2<CR>')
-keyset('n', 't3', ':BufferLineGoToBuffer 3<CR>')
-keyset('n', 't4', ':BufferLineGoToBuffer 4<CR>')
-keyset('n', 't5', ':BufferLineGoToBuffer 5<CR>')
-keyset('n', 't6', ':BufferLineGoToBuffer 6<CR>')
-keyset('n', 't7', ':BufferLineGoToBuffer 7<CR>')
-keyset('n', 't8', ':BufferLineGoToBuffer 8<CR>')
-keyset('n', 't9', ':BufferLineGoToBuffer 9<CR>')
+keyset('n', '<leader>1', ':BufferLineGoToBuffer 1<CR>')
+keyset('n', '<leader>2', ':BufferLineGoToBuffer 2<CR>')
+keyset('n', '<leader>3', ':BufferLineGoToBuffer 3<CR>')
+keyset('n', '<leader>4', ':BufferLineGoToBuffer 4<CR>')
+keyset('n', '<leader>5', ':BufferLineGoToBuffer 5<CR>')
+keyset('n', '<leader>6', ':BufferLineGoToBuffer 6<CR>')
+keyset('n', '<leader>7', ':BufferLineGoToBuffer 7<CR>')
+keyset('n', '<leader>8', ':BufferLineGoToBuffer 8<CR>')
+keyset('n', '<leader>9', ':BufferLineGoToBuffer 9<CR>')
 
 keyset("n", ">", ">>")
 keyset("n", "<C-s>", ":w<CR>")
@@ -63,3 +63,6 @@ keyset('n', 'tt', '<CMD>lua require("FTerm").toggle()<CR>')
 
 -- 文件
 keyset("n", "<leader>ei", ":e ~/software/config/nvim/init.vim<CR>")
+
+-- git 
+keyset("n", "<leader>gb", ":Git blame<CR>")
