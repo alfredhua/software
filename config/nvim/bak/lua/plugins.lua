@@ -32,7 +32,7 @@ require('packer').startup(function(use)
 	-- =============== code ==================
   use 'nvim-treesitter/nvim-treesitter'
   use 'neovim/nvim-lspconfig'
-  use({ "williamboman/mason.nvim" })
+  use({ "williamboman/mason.nvim", run = ":MasonUpdate"  })
   use({ "williamboman/mason-lspconfig.nvim" })
 	use 'hrsh7th/cmp-nvim-lsp'
 	use 'hrsh7th/cmp-buffer'
